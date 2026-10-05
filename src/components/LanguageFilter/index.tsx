@@ -1,4 +1,5 @@
 /** 受控语言筛选，选项与外观由调用方提供。 */
+import styles from './index.module.less';
 interface Props<T extends string> {
   options: readonly (readonly [T, string])[];
   value: T;
@@ -7,21 +8,26 @@ interface Props<T extends string> {
 }
 
 export default function LanguageFilter<T extends string>({
-  options, value, onChange, variant,
+  options,
+  value,
+  onChange,
+  variant,
 }: Props<T>) {
   const segmented = variant === 'segmented';
   return (
-    <div className={segmented ? 'reveal flex rounded-full bg-white soft-shadow p-1 w-max' : 'flex gap-2'}>
+    <div className={segmented ? `reveal ${styles.segmented}` : styles.chips}>
       {options.map(([option, label]) => (
         <button
           key={option}
           onClick={() => onChange(option)}
-          className={`rounded-full font-medium transition-all ${
-            segmented ? 'px-5 py-2 text-sm' : 'px-4 py-2 text-xs'
+          className={`${styles.option} ${
+            segmented ? styles.segment : styles.chip
           } ${
             value === option
-              ? 'bg-deepblue text-white'
-              : segmented ? 'text-ink/60' : 'bg-white text-ink/70 hover:bg-powder/40'
+              ? styles.selected
+              : segmented
+                ? styles.segmentIdle
+                : styles.chipIdle
           }`}
         >
           {label}

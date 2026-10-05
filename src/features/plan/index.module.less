@@ -1,0 +1,198 @@
+@import (reference) '../../styles/patterns.less';
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.english {
+  background-color: rgb(var(--deepblue));
+}
+.japanese {
+  background-color: rgb(var(--aqua));
+}
+.review {
+  background-color: rgb(var(--navy));
+}
+.section {
+  .section-spacing();
+}
+.reset {
+  margin-top: 0.75rem;
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  &:hover {
+    color: hsl(var(--destructive));
+  }
+}
+.stats {
+  display: grid;
+  gap: 0.75rem;
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr auto;
+  }
+}
+.streak {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 1.4rem;
+  background-color: rgb(var(--navy));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(255 255 255);
+  box-shadow: var(--shadow-soft);
+  @media (min-width: 640px) {
+    flex-direction: column;
+  }
+}
+.streakValue {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  @media (min-width: 640px) {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+.streakLabel {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgb(255 255 255 / 0.7);
+}
+.days {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+  }
+}
+.day {
+  overflow: hidden;
+  border-radius: 1.4rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+}
+.current {
+  background-color: rgb(var(--navy));
+  color: rgb(255 255 255);
+  box-shadow: var(--shadow-large);
+}
+.completed {
+  background-color: rgb(var(--aqua) / 0.1);
+}
+.pending {
+  background-color: rgb(255 255 255);
+  box-shadow: var(--shadow-soft);
+}
+.dayToggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  @media (min-width: 640px) {
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.dayNumber {
+  width: 2.5rem;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: var(--font-mono);
+  @media (min-width: 640px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.currentNumber {
+  color: rgb(var(--powder));
+}
+.muted {
+  color: hsl(var(--muted-foreground));
+}
+.focusDot {
+  height: 0.5rem;
+  width: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+}
+.dayContent {
+  min-width: 0px;
+  flex: 1 1 0%;
+}
+.dayTitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  @media (min-width: 640px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.currentTitle {
+  color: rgb(255 255 255);
+}
+.defaultTitle {
+  color: rgb(var(--ink));
+}
+.dayMeta {
+  font-size: 11px;
+}
+.currentMeta {
+  color: rgb(255 255 255 / 0.6);
+}
+.completedIcon {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgb(var(--aqua));
+}
+.todayBadge {
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: rgb(var(--aqua));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgb(255 255 255);
+}
+.chevron {
+  flex-shrink: 0;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+}
+.expanded {
+  transform: rotate(180deg);
+}
+.currentChevron {
+  color: rgb(255 255 255 / 0.7);
+}

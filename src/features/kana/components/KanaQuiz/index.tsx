@@ -1,4 +1,5 @@
 /** 受控测验视图；题目、成绩及最佳记录由父组件保存。 */
+import styles from './index.module.less';
 import type { KanaCell } from '@/content/kana';
 
 interface Props {
@@ -13,34 +14,36 @@ interface Props {
 }
 
 export default function KanaQuiz({
-  idx, quiz, picked, score, accuracy, bestAccuracy, onAnswer, onReset,
+  idx,
+  quiz,
+  picked,
+  score,
+  accuracy,
+  bestAccuracy,
+  onAnswer,
+  onReset,
 }: Props) {
   return (
-    <div className="reveal rounded-[2rem] bg-white soft-shadow-lg px-6 py-10 text-center">
-      <div className="flex items-center justify-center gap-6 font-mono2 text-xs text-muted-foreground">
+    <div className={`reveal ${styles.quiz}`}>
+      <div className={styles.stats}>
         <span>
-          正确率 <span className="text-aqua font-bold">{accuracy}%</span>
+          正确率 <span className={styles.accuracy}>{accuracy}%</span>
         </span>
         <span>
           {score.right} / {score.total}
         </span>
         {bestAccuracy > 0 && (
           <span>
-            历史最佳 <span className="text-deepblue font-bold">{bestAccuracy}%</span>
+            历史最佳 <span className={styles.best}>{bestAccuracy}%</span>
           </span>
         )}
-        <button
-          onClick={onReset}
-          className="underline underline-offset-2 hover:text-ink"
-        >
+        <button onClick={onReset} className={styles.reset}>
           清零
         </button>
       </div>
-      <p className="mt-6 text-[11px] uppercase tracking-[0.3em] text-muted-foreground font-mono2">
-        哪个是
-      </p>
-      <p className="font-display mt-2 text-5xl text-ink">{quiz.answer.romaji}</p>
-      <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-3">
+      <p className={styles.prompt}>哪个是</p>
+      <p className={styles.question}>{quiz.answer.romaji}</p>
+      <div className={styles.options}>
         {quiz.options.map((cell) => {
           const isAnswer = cell.romaji === quiz.answer.romaji;
           const isPicked = picked === cell.romaji;
@@ -48,14 +51,14 @@ export default function KanaQuiz({
             <button
               key={cell.romaji}
               onClick={() => onAnswer(cell)}
-              className={`rounded-[1.2rem] py-5 text-3xl font-medium transition-all duration-300 active:scale-95 ${
+              className={`${styles.option} ${
                 picked
                   ? isAnswer
-                    ? 'bg-aqua text-white pop-in'
+                    ? `pop-in ${styles.correct}`
                     : isPicked
-                      ? 'bg-destructive text-white'
-                      : 'bg-sand text-ink/40'
-                  : 'bg-sand text-ink hover:bg-powder/50'
+                      ? styles.wrong
+                      : styles.dimmed
+                  : styles.idle
               }`}
             >
               <span lang="ja">{cell.kana[idx]}</span>
@@ -63,7 +66,7 @@ export default function KanaQuiz({
           );
         })}
       </div>
-      <p className="mt-6 text-xs text-muted-foreground">答对自动出下一题，答错会停顿让你看清楚</p>
+      <p className={styles.hint}>答对自动出下一题，答错会停顿让你看清楚</p>
     </div>
   );
 }

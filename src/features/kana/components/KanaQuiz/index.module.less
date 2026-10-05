@@ -1,0 +1,103 @@
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.quiz {
+  border-radius: 2rem;
+  background-color: rgb(255 255 255);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-large);
+}
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.accuracy {
+  font-weight: 700;
+  color: rgb(var(--aqua));
+}
+.best {
+  font-weight: 700;
+  color: rgb(var(--deepblue));
+}
+.reset {
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  &:hover {
+    color: rgb(var(--ink));
+  }
+}
+.prompt {
+  margin-top: 1.5rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.question {
+  margin-top: 0.5rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: rgb(var(--ink));
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.options {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: grid;
+  max-width: 20rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.option {
+  border-radius: 1.2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.correct {
+  background-color: rgb(var(--aqua));
+  color: rgb(255 255 255);
+  animation-duration: 0.35s;
+}
+.wrong {
+  background-color: hsl(var(--destructive));
+  color: rgb(255 255 255);
+}
+.dimmed {
+  background-color: rgb(var(--sand));
+  color: rgb(var(--ink) / 0.4);
+}
+.idle {
+  background-color: rgb(var(--sand));
+  color: rgb(var(--ink));
+  &:hover {
+    background-color: rgb(var(--powder) / 0.5);
+  }
+}
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(var(--muted-foreground));
+}

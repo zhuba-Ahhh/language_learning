@@ -1,0 +1,203 @@
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.scene {
+  position: relative;
+  perspective: 1200px;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  width: 100%;
+  border-radius: 2rem;
+  text-align: left;
+}
+.flipTrigger {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 2px rgb(var(--aqua));
+  }
+}
+.inner {
+  // 文本与装饰让点击落到独立翻面按钮，朗读按钮单独接收点击。
+  pointer-events: none;
+  position: relative;
+  height: 340px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  &.flipped {
+    transform: rotateY(180deg);
+  }
+  @media (min-width: 640px) {
+    height: 400px;
+  }
+}
+.face {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow-large);
+  button {
+    pointer-events: auto;
+  }
+}
+.front {
+  align-items: center;
+  background-color: rgb(255 255 255);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.deckLabel {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.counter {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.term {
+  text-align: center;
+  line-height: 1.25;
+  color: rgb(var(--ink));
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.japanese {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  @media (min-width: 640px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+.english {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  @media (min-width: 640px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+.reading {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--aqua));
+  font-family: var(--font-mono);
+}
+.speakWrap {
+  margin-top: 1.25rem;
+}
+.hint {
+  position: absolute;
+  bottom: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+  color: hsl(var(--muted-foreground));
+}
+.frontOrb {
+  pointer-events: none;
+  position: absolute;
+  bottom: -4rem;
+  right: -4rem;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 9999px;
+  background-color: rgb(var(--powder) / 0.3);
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: rgb(var(--navy));
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  color: rgb(255 255 255);
+  @media (min-width: 640px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+.backLabel {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgb(var(--powder));
+  font-family: var(--font-mono);
+}
+.meaning {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.375;
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.divider {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  height: 1px;
+  width: 4rem;
+  background-color: rgb(var(--aqua));
+}
+.example {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: rgb(255 255 255 / 0.9);
+  @media (min-width: 640px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.translationRow {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.translation {
+  flex: 1 1 0%;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(255 255 255 / 0.6);
+  @media (min-width: 640px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.backOrb {
+  pointer-events: none;
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 9999px;
+  background-color: rgb(var(--aqua) / 0.2);
+}

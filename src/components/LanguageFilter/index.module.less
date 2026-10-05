@@ -1,0 +1,50 @@
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.segmented {
+  display: flex;
+  width: max-content;
+  border-radius: 9999px;
+  background-color: rgb(255 255 255);
+  padding: 0.25rem;
+  box-shadow: var(--shadow-soft);
+}
+.chips {
+  display: flex;
+  gap: 0.5rem;
+}
+.option {
+  border-radius: 9999px;
+  font-weight: 500;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.segment {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.chip {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.selected {
+  background-color: rgb(var(--deepblue));
+  color: rgb(255 255 255);
+}
+.segmentIdle {
+  color: rgb(var(--ink) / 0.6);
+}
+.chipIdle {
+  background-color: rgb(255 255 255);
+  color: rgb(var(--ink) / 0.7);
+  &:hover {
+    background-color: rgb(var(--powder) / 0.4);
+  }
+}

@@ -1,8 +1,10 @@
 # LinguaDesk 目录整理方案
 
 更新日期：2026-10-05  
-状态：A+B 已实施；C/D 尚未实施。验证结果见第 12 节。  
+状态：A+B+C 已实施，并完成架构与 Less 整理；D 功能扩展尚未实施。当前目录见第 13 节。  
 关联文档：[功能现状与演进规划](./functional-roadmap.md)
+
+第 1—12 节保留首轮目录整理的方案与历史记录。后续模板清理、状态拆分、Less 接入已经完成，以第 13 节及[架构与 Less 实施记录](./architecture-less-plan.md)为准。
 
 ## 1. 整理目标
 
@@ -37,7 +39,7 @@ src/
 └── App.css                 # 未被引用的模板样式
 ```
 
-迁移前识别的问题（前五项已在 A+B 中处理，模板与根说明文档留到 C 批）：
+迁移前识别的问题（前六项已在 A+B 中处理，模板与根说明文档留到 C 批）：
 
 - `sections` 只表达页面区块，后续增加录音、错题和测验时，缺少明确的功能归属。
 - `useStudyState.tsx` 承担任务、打卡和词汇状态，属于共享业务模块，放在通用 `hooks` 下不够清晰。
@@ -50,9 +52,9 @@ src/
 
 当前目录未被 Git 识别为仓库。本轮迁移前已备份源码、文档与根配置，未初始化仓库或提交代码。
 
-## 3. A+B 完成后的实际目录
+## 3. A+B 完成时的历史目录
 
-以下目录已经落地；Ring 保留在 Today 内部，未额外拆分。
+以下是 A+B 完成时的目录快照；当前目录见第 13 节。Ring 保留在 Today 内部，未额外拆分。
 
 ```text
 docs/
@@ -130,14 +132,14 @@ src/
 
 ## 4. 模块职责与依赖
 
-| 目录 | 职责 | 允许依赖 | 不应依赖 |
-| --- | --- | --- | --- |
-| `pages` | 路由页面、导航、功能组合 | features、study、公共组件与 Hook | 其他页面的内部实现 |
-| `features` | 单个学习功能的界面与交互 | study、content、components、hooks、lib | 其他 feature 的私有组件和内部状态 |
-| `study` | 个人学习状态、跨功能学习规则与业务组件 | content、通用 Hook/工具/组件 | features、pages |
-| `content` | 类型、内置材料、课程定义、内容元数据 | 同目录内的纯数据和纯函数 | React 状态、浏览器 API、study、features |
-| `components` | 跨功能复用的展示和交互控件 | 通用 Hook/工具，必要的内容类型 | study 状态、feature 内部实现、特定课程 |
-| `hooks`、`lib` | 通用行为和浏览器能力 | 基础依赖与浏览器 API | 课程、目标、学习状态等业务规则 |
+| 目录           | 职责                                   | 允许依赖                               | 不应依赖                                |
+| -------------- | -------------------------------------- | -------------------------------------- | --------------------------------------- |
+| `pages`        | 路由页面、导航、功能组合               | features、study、公共组件与 Hook       | 其他页面的内部实现                      |
+| `features`     | 单个学习功能的界面与交互               | study、content、components、hooks、lib | 其他 feature 的私有组件和内部状态       |
+| `study`        | 个人学习状态、跨功能学习规则与业务组件 | content、通用 Hook/工具/组件           | features、pages                         |
+| `content`      | 类型、内置材料、课程定义、内容元数据   | 同目录内的纯数据和纯函数               | React 状态、浏览器 API、study、features |
+| `components`   | 跨功能复用的展示和交互控件             | 通用 Hook/工具，必要的内容类型         | study 状态、feature 内部实现、特定课程  |
+| `hooks`、`lib` | 通用行为和浏览器能力                   | 基础依赖与浏览器 API                   | 课程、目标、学习状态等业务规则          |
 
 补充约束：
 
@@ -152,25 +154,25 @@ src/
 
 表中的“移动”包括必要的相对引用和 `@/` 引用更新；保持函数逻辑、导出名称、数据内容和存储格式不变。
 
-| 迁移前路径 | A 批路径 | 说明 |
-| --- | --- | --- |
-| `src/pages/Home.tsx` | `src/pages/Home/index.tsx` | 页面组件独立目录 |
-| `src/sections/TodaySection.tsx` | `src/features/today/index.tsx` | 今日功能入口 |
-| `src/sections/FlashcardsSection.tsx` | `src/features/flashcards/index.tsx` | 闪卡功能入口 |
-| `src/sections/VocabSection.tsx` | `src/features/vocabulary/index.tsx` | 目录使用完整业务名称 |
-| `src/sections/SpeakingSection.tsx` | `src/features/speaking/index.tsx` | 口语功能入口 |
-| `src/sections/ReadingSection.tsx` | `src/features/reading/index.tsx` | 阅读功能入口 |
-| `src/sections/KanaSection.tsx` | `src/features/kana/index.tsx` | 假名功能入口 |
-| `src/sections/PlanSection.tsx` | `src/features/plan/index.tsx` | 计划功能入口 |
-| `src/components/FlipCard.tsx` | `src/features/flashcards/components/FlipCard/index.tsx` | 归入唯一使用方 |
-| `src/components/SpeakButton.tsx` | `src/components/SpeakButton/index.tsx` | 保留跨功能复用 |
-| `src/hooks/useStudyState.tsx` | `src/study/useStudyState.tsx` | 明确共享业务状态 |
-| `src/data/plan.ts` | `src/content/plan.ts` | 原样移动内容 |
-| `src/data/kana.ts` | `src/content/kana.ts` | 原样移动内容 |
-| `src/data/speaking.ts` | `src/content/speaking.ts` | 原样移动内容 |
-| `src/data/reading.ts` | `src/content/reading.ts` | 原样移动内容 |
-| `src/data/words.ts` | `src/content/words.ts` | 本批不拆分 |
-| `src/utils/speech.ts` | `src/lib/speech.ts` | 收敛工具目录 |
+| 迁移前路径                           | A 批路径                                                | 说明                 |
+| ------------------------------------ | ------------------------------------------------------- | -------------------- |
+| `src/pages/Home.tsx`                 | `src/pages/Home/index.tsx`                              | 页面组件独立目录     |
+| `src/sections/TodaySection.tsx`      | `src/features/today/index.tsx`                          | 今日功能入口         |
+| `src/sections/FlashcardsSection.tsx` | `src/features/flashcards/index.tsx`                     | 闪卡功能入口         |
+| `src/sections/VocabSection.tsx`      | `src/features/vocabulary/index.tsx`                     | 目录使用完整业务名称 |
+| `src/sections/SpeakingSection.tsx`   | `src/features/speaking/index.tsx`                       | 口语功能入口         |
+| `src/sections/ReadingSection.tsx`    | `src/features/reading/index.tsx`                        | 阅读功能入口         |
+| `src/sections/KanaSection.tsx`       | `src/features/kana/index.tsx`                           | 假名功能入口         |
+| `src/sections/PlanSection.tsx`       | `src/features/plan/index.tsx`                           | 计划功能入口         |
+| `src/components/FlipCard.tsx`        | `src/features/flashcards/components/FlipCard/index.tsx` | 归入唯一使用方       |
+| `src/components/SpeakButton.tsx`     | `src/components/SpeakButton/index.tsx`                  | 保留跨功能复用       |
+| `src/hooks/useStudyState.tsx`        | `src/study/useStudyState.tsx`                           | 明确共享业务状态     |
+| `src/data/plan.ts`                   | `src/content/plan.ts`                                   | 原样移动内容         |
+| `src/data/kana.ts`                   | `src/content/kana.ts`                                   | 原样移动内容         |
+| `src/data/speaking.ts`               | `src/content/speaking.ts`                               | 原样移动内容         |
+| `src/data/reading.ts`                | `src/content/reading.ts`                                | 原样移动内容         |
+| `src/data/words.ts`                  | `src/content/words.ts`                                  | 本批不拆分           |
+| `src/utils/speech.ts`                | `src/lib/speech.ts`                                     | 收敛工具目录         |
 
 需要检查或更新的引用：
 
@@ -188,12 +190,12 @@ src/
 
 ### 6.1 大文件
 
-| 文件 | 拆分方案 | 行为约束 |
-| --- | --- | --- |
+| 文件                            | 拆分方案                                                    | 行为约束                                       |
+| ------------------------------- | ----------------------------------------------------------- | ---------------------------------------------- |
 | `features/flashcards/index.tsx` | 队列和轮次逻辑抽为 `useFlashcardQueue.ts`；翻卡组件保持私有 | 拆分本身不改变掌握标记、队列规则或自动重置行为 |
-| `features/kana/index.tsx` | 字表和测验抽为 `KanaChart`、`KanaQuiz` | 保持平片模式、分数及最佳记录的生命周期 |
-| `features/plan/index.tsx` | 抽出 `Heatmap`，复用 `TaskList` | 保留展开状态、当前日显示和打卡行为 |
-| `content/words.ts` | 按类型、英语、日语和聚合拆为四个文件 | 词条内容、顺序、ID 和分组保持一致 |
+| `features/kana/index.tsx`       | 字表和测验抽为 `KanaChart`、`KanaQuiz`                      | 保持平片模式、分数及最佳记录的生命周期         |
+| `features/plan/index.tsx`       | 抽出 `Heatmap`，复用 `TaskList`                             | 保留展开状态、当前日显示和打卡行为             |
+| `content/words.ts`              | 按类型、英语、日语和聚合拆为四个文件                        | 词条内容、顺序、ID 和分组保持一致              |
 
 特别注意：当前假名分数在字表/测验切换时仍由父组件保存。拆出 `KanaQuiz` 时，应将需要保留的状态留在上层，避免因子组件卸载意外清零。
 
@@ -218,16 +220,16 @@ src/
 
 ## 7. C 批：模板与依赖整理
 
-| 对象 | 建议操作 | 前置核验 |
-| --- | --- | --- |
-| `src/App.css` | 确认无引用后删除 | 包括入口、样式 import 和工具配置 |
-| `components/ui/*` | 根据实际保留计划裁剪；全部不用时可删除该子树 | 检查业务引用、动态加载及组件之间依赖 |
-| `hooks/use-mobile.ts` | 随依赖它的 Sidebar 一起决定 | 不能仅凭业务入口未使用就单独删除依赖 |
-| `lib/utils.ts` | 保留给实际使用的 UI；完全无调用时再决定删除 | 同步检查 `components.json` |
-| `package.json` | 仅移除已经没有代码和工具使用的依赖 | 验证生产代码、配置、生成工具和构建链 |
-| 锁文件 | 以 pnpm 为标准核对锁文件，再移除 npm 锁文件 | 先确认 pnpm 锁文件与 package.json 一致 |
-| 根 `README.md` | 替换模板介绍，补充项目说明、命令和 docs 导航 | 命令与实际脚本一致 |
-| `info.md` | 将有效信息合并到 README，保留需要的历史说明后再删除 | 识别旧路径、过时结构和重复说明 |
+| 对象                  | 建议操作                                            | 前置核验                               |
+| --------------------- | --------------------------------------------------- | -------------------------------------- |
+| `src/App.css`         | 确认无引用后删除                                    | 包括入口、样式 import 和工具配置       |
+| `components/ui/*`     | 根据实际保留计划裁剪；全部不用时可删除该子树        | 检查业务引用、动态加载及组件之间依赖   |
+| `hooks/use-mobile.ts` | 随依赖它的 Sidebar 一起决定                         | 不能仅凭业务入口未使用就单独删除依赖   |
+| `lib/utils.ts`        | 保留给实际使用的 UI；完全无调用时再决定删除         | 同步检查 `components.json`             |
+| `package.json`        | 仅移除已经没有代码和工具使用的依赖                  | 验证生产代码、配置、生成工具和构建链   |
+| 锁文件                | 以 pnpm 为标准核对锁文件，再移除 npm 锁文件         | 先确认 pnpm 锁文件与 package.json 一致 |
+| 根 `README.md`        | 替换模板介绍，补充项目说明、命令和 docs 导航        | 命令与实际脚本一致                     |
+| `info.md`             | 将有效信息合并到 README，保留需要的历史说明后再删除 | 识别旧路径、过时结构和重复说明         |
 
 不因为源码未引用就宣称某依赖一定没有进入产物，也不把依赖删除和版本升级捆绑。
 
@@ -237,18 +239,18 @@ UI 模板若保留其上游生成结构，不为满足业务组件命名偏好�
 
 以下均为条件性扩展，不在本次目录整理中创建空目录。
 
-| 真实需求 | 建议落点 | 复用方式 |
-| --- | --- | --- |
-| 听力与精听 | `features/listening/` | 各目标共用播放器和练习交互 |
-| 写作 | `features/writing/` | 共用编辑、草稿、提交与反馈；题目与规则独立 |
-| 语法 | `features/grammar/` | 共用知识点与练习展示，内容按语言组织 |
-| 目标管理 | `features/goals/`、`study/goals.ts` | 界面和持久化业务规则分开 |
-| 复习调度 | `study/review.ts` | 服务今日和复习入口，不依赖具体考试页面 |
-| 阶段测评 | `features/assessment/` | 共用作答记录、计时和提交能力 |
-| 雅思课程 | `content/courses/ielts-academic.ts` 等 | 先用普通数据组合内容与规则 |
-| JLPT 课程 | `content/courses/jlpt-n5.ts` 等 | 按实际支持等级添加 |
-| 作答历史 | `study/attempts.ts` | 内容引用、作答和结果独立保存 |
-| 备份与恢复 | `study/backup.ts` | 集中处理学习数据的导出、校验和迁移 |
+| 真实需求   | 建议落点                               | 复用方式                                   |
+| ---------- | -------------------------------------- | ------------------------------------------ |
+| 听力与精听 | `features/listening/`                  | 各目标共用播放器和练习交互                 |
+| 写作       | `features/writing/`                    | 共用编辑、草稿、提交与反馈；题目与规则独立 |
+| 语法       | `features/grammar/`                    | 共用知识点与练习展示，内容按语言组织       |
+| 目标管理   | `features/goals/`、`study/goals.ts`    | 界面和持久化业务规则分开                   |
+| 复习调度   | `study/review.ts`                      | 服务今日和复习入口，不依赖具体考试页面     |
+| 阶段测评   | `features/assessment/`                 | 共用作答记录、计时和提交能力               |
+| 雅思课程   | `content/courses/ielts-academic.ts` 等 | 先用普通数据组合内容与规则                 |
+| JLPT 课程  | `content/courses/jlpt-n5.ts` 等        | 按实际支持等级添加                         |
+| 作答历史   | `study/attempts.ts`                    | 内容引用、作答和结果独立保存               |
+| 备份与恢复 | `study/backup.ts`                      | 集中处理学习数据的导出、校验和迁移         |
 
 先使用明确的类型和普通对象组织课程。多个目标出现真实的运行逻辑差异后，再评估是否需要独立考试模块；不提前实现插件注册中心、通用工作流引擎或多层存储接口。
 
@@ -258,13 +260,13 @@ UI 模板若保留其上游生成结构，不为满足业务组件命名偏好�
 
 目录整理期间必须保持以下 localStorage key 与数据含义：
 
-| Key | 当前内容 |
-| --- | --- |
-| `lingua.start` | 开始学习日期 |
-| `lingua.checks` | 计划日对应的已完成任务下标 |
-| `lingua.checkins` | 打卡日期列表 |
-| `lingua.marks` | 单词 ID 对应的认识/不认识标记 |
-| `lingua.kanaBest` | 假名最佳正确率和答题数量 |
+| Key               | 当前内容                      |
+| ----------------- | ----------------------------- |
+| `lingua.start`    | 开始学习日期                  |
+| `lingua.checks`   | 计划日对应的已完成任务下标    |
+| `lingua.checkins` | 打卡日期列表                  |
+| `lingua.marks`    | 单词 ID 对应的认识/不认识标记 |
+| `lingua.kanaBest` | 假名最佳正确率和答题数量      |
 
 - 移动与拆分文件不能改变序列化格式、读写时机和默认值。
 - 当前词条 ID 由语言、分组和组内下标生成；拆分词库时必须保留分组标识及组内顺序。
@@ -292,12 +294,12 @@ pnpm lint
 
 ### 10.2 逐批验证
 
-| 批次 | 检查重点 |
-| --- | --- |
-| A：移动 | TypeScript 与打包可解析新路径；旧路径无残余；内容导出一致 |
-| B：拆分 | 共用任务切换、语言筛选、闪卡队列、假名状态生命周期保持正确 |
+| 批次    | 检查重点                                                         |
+| ------- | ---------------------------------------------------------------- |
+| A：移动 | TypeScript 与打包可解析新路径；旧路径无残余；内容导出一致        |
+| B：拆分 | 共用任务切换、语言筛选、闪卡队列、假名状态生命周期保持正确       |
 | C：清理 | 删除对象无消费者；pnpm 依赖可解析；构建、lint 与生成工具配置一致 |
-| D：功能 | 为新业务规则设计验收场景，独立于目录迁移验收 |
+| D：功能 | 为新业务规则设计验收场景，独立于目录迁移验收                     |
 
 现有项目未配置测试脚本或发现独立测试文件，不假定已有测试框架。纯移动先检查引用与构建；涉及队列、日期、调度或数据迁移的行为修改，再增加有实际保护价值的针对性测试。
 
@@ -312,7 +314,7 @@ pnpm lint
 - 迁移前后的全部存储 key、主要值、词条 ID、词条总量和计划顺序一致。
 - 控制台与构建输出没有迁移新增错误，发现原有问题时单独记录。
 
-## 11. 评审建议
+## 11. A+B 阶段的历史评审建议
 
 A+B 已按用户授权实施。C 批独立核验模板与依赖，D 批依据功能优先级逐项实施。
 
@@ -323,3 +325,111 @@ A+B 已按用户授权实施。C 批独立核验模板与依赖，D 批依据功
 3. 首个考试训练单元面向哪类用户，以及内容从哪里获得。
 
 后续评审聚焦模板保留范围与首个训练单元，不需要重新决定已落地的 A+B 目录边界。
+
+## 12. A+B 实施记录
+
+实施日期：2026-10-05。已完成文件归位、组件拆分、重复展示逻辑复用和翻卡样式共置；没有增加依赖、修改构建配置或实现新功能。
+
+### 12.1 落地内容
+
+- 17 个原文件归入 `features`、`study`、`content`、组件目录及 `lib`，旧 `sections`、`data`、`utils` 目录已清空移除。
+- 闪卡队列抽为 `useFlashcardQueue`；假名字表与测验抽为受控视图；计划热力图独立。
+- 今日/计划复用 `TaskList`，保留两处尺寸与深浅背景差异；闪卡/词库复用受控 `LanguageFilter`。
+- 词库按类型、英语、日语和聚合入口拆分；翻卡样式迁入 CSS Module。
+- 32 个非模板 TS/TSX 文件均不超过 200 行，CSS 文件均不超过 300 行。
+- C 批模板 UI、依赖和根说明文档清理，以及 D 批考试能力均未实施。
+
+### 12.2 检查结果
+
+| 检查                           | 结果                                                                                     |
+| ------------------------------ | ---------------------------------------------------------------------------------------- |
+| TypeScript：`pnpm exec tsc -b` | 通过                                                                                     |
+| 标准构建：`pnpm build`         | 与迁移前相同，Kimi 检查插件缺少 `@babel/plugin-proposal-decorators`，无法完成标准构建    |
+| 临时生产构建                   | 通过 Vite API 临时排除该检查插件，原版与重构版均打包成功；未修改项目配置                 |
+| ESLint                         | 前后均 14 errors、0 warnings；规则分布一致，无新增问题                                   |
+| 全部内容导出深比较             | 词库、计划、假名、口语、阅读全部一致；13 卡组、148 词及 148 个唯一 ID 保持一致           |
+| 学习状态兼容                   | 状态管理实现除引用和注释外一致；五个存储 key 与数据格式保持不变                          |
+| 浏览器交互对照                 | 原版与重构版的 25 个状态、正文和学习记录一致；未捕获到 JavaScript 异常或 `console.error` |
+| 路径与文档                     | 源码旧 import 无残留，三份文档相对链接全部可解析                                         |
+
+浏览器使用临时生产静态产物和隔离上下文，预置任务、词汇及假名最佳记录。覆盖七个入口、今日/计划双向任务切换、刷新持久化、认识/不熟队列、翻面样式、卡组完成与重开、跨卡组复习、语言筛选与搜索、假名平片模式、作答后切换字表保留成绩，以及移动端导航。假名作答后的 `1 / 1` 与最佳记录在切换后保持一致。
+
+验证边界：浏览器对照屏蔽了外部 Google Fonts 请求，使用本地回退字体；默认 favicon 请求返回 404。截图包含动画过渡帧，不作为逐像素视觉验收。实际发音效果、外部阅读站点和完整考试能力不在本轮验证范围。
+
+原有 lint 分布：`react-hooks/set-state-in-effect` 4 项、`react-refresh/only-export-components` 9 项、`react-hooks/purity` 1 项。本轮未通过关闭规则或调整业务行为隐藏这些问题。动态内容显隐、复习完成计数与嵌套按钮等既有体验问题仍按功能规划单独处理。
+
+### 12.3 本地回溯资料
+
+- 迁移前备份：`/var/folders/9p/1z97bbp936v3mtsvpw8yqsyh0000gn/T/linguadesk-refactor-gfxv2kfv`。
+- 浏览器报告：[report.html](file:///Users/bytedance/Library/Caches/web-debug-harness/debug-reports/linguadesk-ab-20261005/report.html)。
+- 25 个状态的前后记录：[comparison.json](file:///Users/bytedance/Library/Caches/web-debug-harness/debug-reports/linguadesk-ab-20261005/comparison.json)。
+
+上述备份和报告位于本机临时/缓存目录，应按需另行保留。未初始化 Git、未提交代码、未启动开发服务器。
+
+## 13. 架构与 Less 整理后的当前目录
+
+模板清理 C 批已完成，所有业务组件采用共置的 Less Module。以下省略组件旁重复的 `index.module.less`：
+
+```text
+src/
+├── main.tsx
+├── App.tsx
+├── pages/Home/
+│   ├── index.tsx
+│   └── index.module.less
+├── features/
+│   ├── today/index.tsx
+│   ├── flashcards/
+│   │   ├── index.tsx
+│   │   ├── useFlashcardQueue.ts
+│   │   └── components/FlipCard/index.tsx
+│   ├── speaking/index.tsx
+│   ├── reading/index.tsx
+│   ├── vocabulary/index.tsx
+│   ├── kana/
+│   │   ├── index.tsx
+│   │   └── components/
+│   │       ├── KanaChart/index.tsx
+│   │       └── KanaQuiz/index.tsx
+│   └── plan/
+│       ├── index.tsx
+│       └── components/Heatmap/index.tsx
+├── study/
+│   ├── StudyProvider/index.tsx
+│   ├── context.ts
+│   ├── useStudy.ts
+│   └── components/TaskList/index.tsx
+├── content/
+│   ├── plan.ts
+│   ├── kana.ts
+│   ├── speaking.ts
+│   ├── reading.ts
+│   └── words/{index,types,en,ja}.ts
+├── components/
+│   ├── FeatureHeader/index.tsx
+│   ├── LanguageFilter/index.tsx
+│   └── SpeakButton/index.tsx
+├── hooks/
+│   ├── useLocalStorage.ts
+│   └── useScrollFx.ts
+├── lib/
+│   ├── date.ts
+│   └── speech.ts
+└── styles/
+    ├── index.less
+    ├── tokens.less
+    ├── base.less
+    ├── utilities.less
+    └── patterns.less
+
+scripts/check-boundaries.mjs
+eslint.config.js
+postcss.config.js
+vite.config.ts
+pnpm-lock.yaml
+```
+
+`components/ui`、`use-mobile.ts`、`lib/utils.ts`、`App.css`、旧全局 CSS 和 Tailwind 配置均已删除。Context 与日期函数不再从组件文件混合导出。
+新共享 `FeatureHeader` 统一六个功能的标题；朗读按钮通过 `tone` 选择既有配色。`patterns.less` 只提供已有布局的少量 mixin，其他视觉规则共置在组件目录中。
+
+依赖方向由现有 ESLint 执行检查，同时覆盖别名和相对路径。验证包括标准构建、12 个边界样例和 36 个浏览器状态前后对照；内容与持久化保持兼容。Lint 由 14 项降为 2 项既有闪卡问题，详细结果和报告见[实施记录](./architecture-less-plan.md#7-实施与验证记录)。

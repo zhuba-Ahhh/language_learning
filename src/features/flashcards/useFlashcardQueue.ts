@@ -1,7 +1,7 @@
 /** 管理卡组、复习队列与轮次，保持原有标记和重开规则。 */
 import { useEffect, useMemo, useState } from 'react';
 import { DECKS, type Word } from '@/content/words';
-import { useStudy } from '@/study/useStudyState';
+import { useStudy } from '@/study/useStudy';
 
 interface CardItem {
   word: Word;
@@ -20,9 +20,9 @@ export function useFlashcardQueue() {
       DECKS.flatMap((d) =>
         d.words
           .filter((w) => marks[w.id] === 'unknown')
-          .map((w) => ({ word: w, lang: d.lang }))
+          .map((w) => ({ word: w, lang: d.lang })),
       ),
-    [marks]
+    [marks],
   );
 
   const isReview = deckId === REVIEW_ID;
@@ -31,21 +31,28 @@ export function useFlashcardQueue() {
     ? unknownCards
     : deck!.words.map((w) => ({ word: w, lang: deck!.lang }));
 
-  const [queue, setQueue] = useState<string[]>(() => cards.map((c) => c.word.id));
+  const [queue, setQueue] = useState<string[]>(() =>
+    cards.map((c) => c.word.id),
+  );
   const [round, setRound] = useState(1);
 
   useEffect(() => {
     if (isReview) {
       setQueue(unknownCards.map((c) => c.word.id));
     } else {
-      const remaining = deck!.words.filter((w) => marks[w.id] !== 'known').map((w) => w.id);
+      const remaining = deck!.words
+        .filter((w) => marks[w.id] !== 'known')
+        .map((w) => w.id);
       setQueue(remaining.length ? remaining : deck!.words.map((w) => w.id));
     }
     setRound((r) => r + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckId]);
 
-  const cardMap = useMemo(() => new Map(cards.map((c) => [c.word.id, c])), [cards]);
+  const cardMap = useMemo(
+    () => new Map(cards.map((c) => [c.word.id, c])),
+    [cards],
+  );
   const current = queue.length ? cardMap.get(queue[0]) : undefined;
   const totalCount = cards.length;
   const knownInDeck = isReview
@@ -59,7 +66,7 @@ export function useFlashcardQueue() {
     if (!current) return;
     markWord(current.word.id, mark);
     setQueue((q) =>
-      mark === 'known' ? q.slice(1) : [...q.slice(1), current.word.id]
+      mark === 'known' ? q.slice(1) : [...q.slice(1), current.word.id],
     );
   };
 
@@ -83,7 +90,21 @@ export function useFlashcardQueue() {
     : `${deck!.subtitle} · ${deck!.title}`;
 
   return {
-    deckId, setDeckId, unknownCards, isReview, deck, queue, round, current,
-    totalCount, knownInDeck, doneCount, finished, answer, restart, progress, deckTitle,
+    deckId,
+    setDeckId,
+    unknownCards,
+    isReview,
+    deck,
+    queue,
+    round,
+    current,
+    totalCount,
+    knownInDeck,
+    doneCount,
+    finished,
+    answer,
+    restart,
+    progress,
+    deckTitle,
   };
 }

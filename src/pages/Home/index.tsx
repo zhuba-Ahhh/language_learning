@@ -1,6 +1,7 @@
 /** 组合七个学习入口，并统一挂载学习状态与导航。 */
+import styles from './index.module.less';
 import { useState, type ReactNode } from 'react';
-import { StudyProvider } from '@/study/useStudyState';
+import { StudyProvider } from '@/study/StudyProvider';
 import { useHideOnScroll, useReveal } from '@/hooks/useScrollFx';
 import TodaySection from '@/features/today';
 import FlashcardsSection from '@/features/flashcards';
@@ -17,7 +18,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'today',
     label: '今日',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <circle cx="12" cy="12" r="9" />
         <path d="M12 7v5l3 3" />
       </svg>
@@ -27,9 +37,33 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'cards',
     label: '闪卡',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="6" width="14" height="15" rx="2" transform="rotate(-6 3 6)" />
-        <rect x="8" y="3" width="14" height="15" rx="2" transform="rotate(4 8 3)" opacity="0.5" />
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect
+          x="3"
+          y="6"
+          width="14"
+          height="15"
+          rx="2"
+          transform="rotate(-6 3 6)"
+        />
+        <rect
+          x="8"
+          y="3"
+          width="14"
+          height="15"
+          rx="2"
+          transform="rotate(4 8 3)"
+          opacity="0.5"
+        />
       </svg>
     ),
   },
@@ -37,7 +71,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'speak',
     label: '口语',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <rect x="9" y="2" width="6" height="12" rx="3" />
         <path d="M5 10a7 7 0 0 0 14 0M12 19v3" />
       </svg>
@@ -47,7 +90,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'read',
     label: '阅读',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
         <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
       </svg>
@@ -57,7 +109,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'kana',
     label: '假名',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M4 4h16v16H4z" opacity="0" />
         <path d="M12 4c-2 3-4 5-7 6M8 8c1 4 3 8 8 10M16 6c-1 5-4 9-9 12" />
       </svg>
@@ -67,7 +128,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'plan',
     label: '计划',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <rect x="3" y="4" width="18" height="17" rx="2" />
         <path d="M3 9h18M8 2v4M16 2v4" />
       </svg>
@@ -77,7 +147,16 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
     id: 'vocab',
     label: '词库',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z" />
         <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5" />
       </svg>
@@ -91,43 +170,38 @@ function Shell() {
   const revealRef = useReveal<HTMLDivElement>([tab]);
 
   return (
-    <div className="min-h-screen bg-paper">
+    <div className={styles.shell}>
       {/* header */}
-      <header
-        ref={headerRef}
-        className="site-header fixed inset-x-0 top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-border/60"
-      >
-        <div className="mx-auto flex h-14 sm:h-16 max-w-3xl items-center justify-between px-4 sm:px-6">
-          <div className="flex items-baseline gap-2">
-            <span className="font-display text-lg sm:text-xl text-ink tracking-tight">
-              Lingua<span className="text-aqua">Desk</span>
+      <header ref={headerRef} className={`site-header ${styles.header}`}>
+        <div className={styles.headerContent}>
+          <div className={styles.brand}>
+            <span className={styles.logo}>
+              Lingua<span className={styles.logoAccent}>Desk</span>
             </span>
-            <span lang="ja" className="hidden sm:inline font-mono2 text-[10px] tracking-[0.25em] text-muted-foreground">
+            <span lang="ja" className={styles.tagline}>
               英日・双语学习台
             </span>
           </div>
           {/* desktop nav */}
-          <nav className="hidden sm:flex items-center gap-1">
+          <nav className={styles.desktopNav}>
             {TABS.map((t) => (
               <button
                 key={t.id}
                 onClick={() => setTab(t.id)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
-                  tab === t.id ? 'bg-deepblue text-white' : 'text-ink/60 hover:text-ink hover:bg-powder/30'
+                className={`${styles.navButton} ${
+                  tab === t.id ? styles.selected : styles.idle
                 }`}
               >
                 {t.label}
               </button>
             ))}
           </nav>
-          <span className="sm:hidden font-mono2 text-[10px] tracking-[0.25em] text-muted-foreground">
-            EN × JP
-          </span>
+          <span className={styles.mobileTagline}>EN × JP</span>
         </div>
       </header>
 
       {/* content */}
-      <main ref={revealRef} className="mx-auto max-w-3xl px-4 sm:px-6 pt-20 sm:pt-24 pb-28 sm:pb-16">
+      <main ref={revealRef} className={styles.main}>
         <div key={tab}>
           {tab === 'today' && <TodaySection />}
           {tab === 'cards' && <FlashcardsSection />}
@@ -138,29 +212,29 @@ function Shell() {
           {tab === 'vocab' && <VocabSection />}
         </div>
 
-        <footer className="mt-14 border-t border-border pt-6 pb-2 text-center">
-          <p className="font-mono2 text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
+        <footer className={styles.footer}>
+          <p className={styles.signature}>
             LinguaDesk — read it, say it, ship it.
           </p>
         </footer>
       </main>
 
       {/* mobile bottom nav */}
-      <nav className="sm:hidden fixed inset-x-0 bottom-0 z-40 border-t border-border bg-white/95 backdrop-blur-md pb-safe">
-        <div className="mx-auto grid max-w-md grid-cols-7">
+      <nav className={styles.mobileNav}>
+        <div className={styles.mobileNavContent}>
           {TABS.map((t) => (
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={`flex flex-col items-center gap-1 py-2.5 transition-colors ${
-                tab === t.id ? 'text-deepblue' : 'text-muted-foreground'
+              className={`${styles.mobileButton} ${
+                tab === t.id ? styles.mobileSelected : styles.mobileIdle
               }`}
             >
               {t.icon}
-              <span className="text-[10px] font-medium">{t.label}</span>
+              <span className={styles.mobileLabel}>{t.label}</span>
               <span
-                className={`h-1 w-1 rounded-full transition-all ${
-                  tab === t.id ? 'bg-aqua' : 'bg-transparent'
+                className={`${styles.indicator} ${
+                  tab === t.id ? styles.indicatorSelected : styles.indicatorIdle
                 }`}
               />
             </button>

@@ -1,0 +1,92 @@
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.chart {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rowLabel {
+  width: 2rem;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.cells {
+  display: grid;
+  flex: 1 1 0%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.cell {
+  border-radius: 0.9rem;
+  background-color: rgb(255 255 255);
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  box-shadow: var(--shadow-soft);
+  &:hover {
+    background-color: rgb(var(--powder) / 0.4);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  @media (min-width: 640px) {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+.character {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgb(var(--ink));
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.reading {
+  margin-top: 0.125rem;
+  display: block;
+  font-size: 10px;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+  .cell:hover & {
+    color: rgb(var(--aqua));
+  }
+}
+.nasal {
+  border-radius: 0.9rem;
+  background-color: rgb(255 255 255);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  box-shadow: var(--shadow-soft);
+  &:hover {
+    background-color: rgb(var(--powder) / 0.4);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.nasalReading {
+  display: block;
+  font-size: 10px;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}

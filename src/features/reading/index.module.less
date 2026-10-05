@@ -1,0 +1,129 @@
+@import (reference) '../../styles/patterns.less';
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.beginner {
+  background-color: rgb(var(--aqua) / 0.15);
+  color: rgb(var(--aqua));
+}
+.intermediate {
+  background-color: rgb(var(--deepblue) / 0.1);
+  color: rgb(var(--deepblue));
+}
+.advanced {
+  background-color: rgb(var(--navy) / 0.1);
+  color: rgb(var(--navy));
+}
+.section {
+  .section-spacing();
+}
+.groupHeading {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.groupTitle {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(var(--ink));
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: hsl(var(--muted-foreground));
+  font-family: var(--font-mono);
+}
+.resources {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.625rem;
+    margin-bottom: 0;
+  }
+}
+.resource {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1.4rem;
+  background-color: rgb(255 255 255);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  box-shadow: var(--shadow-soft);
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.content {
+  min-width: 0px;
+  flex: 1 1 0%;
+}
+.resourceHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: rgb(var(--ink));
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  .resource:hover & {
+    color: rgb(var(--deepblue));
+  }
+  @media (min-width: 640px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.level {
+  border-radius: 9999px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.descriptionText {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.625;
+  color: hsl(var(--muted-foreground));
+  @media (min-width: 640px) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+.arrow {
+  flex-shrink: 0;
+  color: hsl(var(--muted-foreground));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+  .resource:hover & {
+    transform: translate(0.25rem, 0);
+    color: rgb(var(--aqua));
+  }
+}
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+}

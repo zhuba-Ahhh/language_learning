@@ -1,0 +1,41 @@
+@import (reference) '../../styles/patterns.less';
+/* 组件语义样式；主题与字体统一引用全局 token。 */
+.section {
+  .section-spacing();
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.switchGroup {
+  display: flex;
+  border-radius: 9999px;
+  background-color: rgb(255 255 255);
+  padding: 0.25rem;
+  box-shadow: var(--shadow-soft);
+}
+.switchOption {
+  border-radius: 9999px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.selected {
+  background-color: rgb(var(--deepblue));
+  color: rgb(255 255 255);
+}
+.idle {
+  color: rgb(var(--ink) / 0.6);
+}
+.modeSelected {
+  background-color: rgb(var(--aqua));
+  color: rgb(255 255 255);
+}

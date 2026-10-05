@@ -16,7 +16,7 @@ export function useReveal<T extends HTMLElement>(deps: DependencyList = []) {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
     els.forEach((el) => io.observe(el));
     // fallback: guarantee visibility even if IO misses

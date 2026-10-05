@@ -1,49 +1,48 @@
 /** 展示平片假名字表，沿用平假名文本朗读。 */
+import styles from './index.module.less';
 import { GOJUON, NASAL } from '@/content/kana';
 import { speak, ttsSupported } from '@/lib/speech';
 
 export default function KanaChart({ idx }: { idx: 0 | 1 }) {
   return (
-    <div className="reveal space-y-2">
+    <div className={`reveal ${styles.chart}`}>
       {GOJUON.map((row) => (
-        <div key={row.row} className="flex items-center gap-2">
-          <span lang="ja" className="w-8 shrink-0 font-mono2 text-[10px] text-muted-foreground">
+        <div key={row.row} className={styles.row}>
+          <span lang="ja" className={styles.rowLabel}>
             {row.row}
           </span>
-          <div className="grid flex-1 grid-cols-5 gap-2">
+          <div className={styles.cells}>
             {row.cells.map((cell, i) =>
               cell ? (
                 <button
                   key={cell.romaji}
                   onClick={() => ttsSupported && speak(cell.kana[0], 'ja')}
-                  className="group rounded-[0.9rem] bg-white soft-shadow py-2.5 sm:py-3 text-center transition-all hover:bg-powder/40 active:scale-95"
+                  className={styles.cell}
                 >
-                  <span lang="ja" className="block text-xl sm:text-2xl font-medium text-ink">
+                  <span lang="ja" className={styles.character}>
                     {cell.kana[idx]}
                   </span>
-                  <span className="mt-0.5 block font-mono2 text-[10px] text-muted-foreground group-hover:text-aqua">
-                    {cell.romaji}
-                  </span>
+                  <span className={styles.reading}>{cell.romaji}</span>
                 </button>
               ) : (
                 <span key={`empty-${i}`} />
-              )
+              ),
             )}
           </div>
         </div>
       ))}
-      <div className="flex items-center gap-2">
-        <span lang="ja" className="w-8 shrink-0 font-mono2 text-[10px] text-muted-foreground">
+      <div className={styles.row}>
+        <span lang="ja" className={styles.rowLabel}>
           拨音
         </span>
         <button
           onClick={() => ttsSupported && speak(NASAL.kana[0], 'ja')}
-          className="rounded-[0.9rem] bg-white soft-shadow px-6 py-2.5 text-center transition-all hover:bg-powder/40 active:scale-95"
+          className={styles.nasal}
         >
-          <span lang="ja" className="block text-xl sm:text-2xl font-medium text-ink">
+          <span lang="ja" className={styles.character}>
             {NASAL.kana[idx]}
           </span>
-          <span className="block font-mono2 text-[10px] text-muted-foreground">n</span>
+          <span className={styles.nasalReading}>n</span>
         </button>
       </div>
     </div>

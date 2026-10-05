@@ -17,8 +17,13 @@ const d = (
   day: number,
   focus: Focus,
   title: string,
-  tasks: [string, number][]
-): PlanDay => ({ day, focus, title, tasks: tasks.map(([text, minutes]) => ({ text, minutes })) });
+  tasks: [string, number][],
+): PlanDay => ({
+  day,
+  focus,
+  title,
+  tasks: tasks.map(([text, minutes]) => ({ text, minutes })),
+});
 
 export const PLAN: PlanDay[] = [
   // 第 1 周：启动期 —— 五十音 + 英语习惯
@@ -89,7 +94,7 @@ export const PLAN: PlanDay[] = [
   // 第 3 周：教材 + 口语场景化
   d(15, 'EN', '口语模拟 · 站会', [
     ['读技术文章 1 篇', 30],
-    ['模拟站会汇报 2 分钟：Yesterday I… today I\'ll… blocked by…（录音）', 20],
+    ["模拟站会汇报 2 分钟：Yesterday I… today I'll… blocked by…（录音）", 20],
     ['Shadowing 跟读', 10],
   ]),
   d(16, 'JP', '大家的日语 第 1 课', [
