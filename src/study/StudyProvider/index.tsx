@@ -6,12 +6,20 @@ import { DECKS } from '@/content/words';
 import { todayStr } from '@/lib/date';
 import { StudyContext, type CardMark, type StudyState } from '../context';
 
+function normalizeTaskIds(day: number, values: (string | number)[]) {
+  const tasks = PLAN.find((item) => item.day === day)?.tasks ?? [];
+  return values.flatMap((value) => {
+    if (typeof value === 'string') return [value];
+    const task = tasks[value];
+    return task ? [task.id] : [];
+  });
+}
+
 export function StudyProvider({ children }: { children: ReactNode }) {
   const [startDate, setStartDate] = useLocalStorage<string>('lingua.start', '');
-  const [checks, setChecks] = useLocalStorage<Record<number, number[]>>(
-    'lingua.checks',
-    {},
-  );
+  const [storedChecks, setChecks] = useLocalStorage<
+    Record<number, (string | number)[]>
+  >('lingua.checks', {});
   const [checkins, setCheckins] = useLocalStorage<string[]>(
     'lingua.checkins',
     [],
@@ -26,6 +34,17 @@ export function StudyProvider({ children }: { children: ReactNode }) {
   }, [startDate, setStartDate]);
 
   const effectiveStart = startDate || todayStr();
+
+  const checks = useMemo<Record<number, string[]>>(
+    () =>
+      Object.fromEntries(
+        Object.entries(storedChecks).map(([dayKey, values]) => {
+          const day = Number(dayKey);
+          return [day, normalizeTaskIds(day, values)];
+        }),
+      ),
+    [storedChecks],
+  );
 
   const dayIndex = useMemo(() => {
     const ms =
@@ -46,12 +65,18 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     return n;
   }, [checkins]);
 
-  const toggleTask = (day: number, taskIdx: number, total: number) => {
+  const toggleTask = (day: number, taskId: string, total: number) => {
     setChecks((prev) => {
-      const cur = new Set(prev[day] ?? []);
-      if (cur.has(taskIdx)) cur.delete(taskIdx);
-      else cur.add(taskIdx);
-      const next = { ...prev, [day]: [...cur].sort((a, b) => a - b) };
+      const normalized = Object.fromEntries(
+        Object.entries(prev).map(([dayKey, values]) => [
+          Number(dayKey),
+          normalizeTaskIds(Number(dayKey), values),
+        ]),
+      );
+      const cur = new Set(normalized[day] ?? []);
+      if (cur.has(taskId)) cur.delete(taskId);
+      else cur.add(taskId);
+      const next = { ...normalized, [day]: [...cur] };
       // auto check-in when a day is fully completed
       if (cur.size === total && total > 0) {
         const today = todayStr();

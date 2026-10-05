@@ -10,9 +10,9 @@ interface CardItem {
 
 export const REVIEW_ID = '__review';
 
-export function useFlashcardQueue() {
+export function useFlashcardQueue(initialDeckId = DECKS[0].id) {
   const { marks, markWord, resetDeckMarks } = useStudy();
-  const [deckId, setDeckId] = useState(DECKS[0].id);
+  const [deckId, setDeckId] = useState(initialDeckId);
 
   // 跨卡组「不熟的词」复习集
   const unknownCards = useMemo<CardItem[]>(

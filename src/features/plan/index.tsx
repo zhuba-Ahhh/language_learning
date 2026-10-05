@@ -142,7 +142,9 @@ export default function PlanSection() {
                 <TaskList
                   tasks={p.tasks}
                   done={done}
-                  onToggle={(i) => toggleTask(p.day, i, p.tasks.length)}
+                  onToggle={(taskId) =>
+                    toggleTask(p.day, taskId, p.tasks.length)
+                  }
                   variant="plan"
                   dark={isToday}
                 />

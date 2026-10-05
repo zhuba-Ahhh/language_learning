@@ -6,8 +6,8 @@ export type CardMark = 'known' | 'unknown';
 export interface StudyState {
   startDate: string;
   dayIndex: number; // 1..30
-  checks: Record<number, number[]>;
-  toggleTask: (day: number, taskIdx: number, total: number) => void;
+  checks: Record<number, string[]>;
+  toggleTask: (day: number, taskId: string, total: number) => void;
   checkins: string[];
   streak: number;
   marks: Record<string, CardMark>;

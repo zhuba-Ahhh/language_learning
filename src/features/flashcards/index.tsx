@@ -7,7 +7,13 @@ import { DECKS } from '@/content/words';
 import LanguageFilter from '@/components/LanguageFilter';
 import { REVIEW_ID, useFlashcardQueue } from './useFlashcardQueue';
 
-export default function FlashcardsSection() {
+export { REVIEW_ID } from './useFlashcardQueue';
+
+export default function FlashcardsSection({
+  initialDeckId,
+}: {
+  initialDeckId?: string;
+} = {}) {
   const {
     deckId,
     setDeckId,
@@ -25,7 +31,7 @@ export default function FlashcardsSection() {
     restart,
     progress,
     deckTitle,
-  } = useFlashcardQueue();
+  } = useFlashcardQueue(initialDeckId);
   const [langFilter, setLangFilter] = useState<'all' | 'en' | 'ja'>('all');
   const visibleDecks = DECKS.filter(
     (d) => langFilter === 'all' || d.lang === langFilter,

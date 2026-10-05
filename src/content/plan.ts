@@ -1,9 +1,18 @@
-/** 固定 30 天课程，任务次序与本地完成记录下标保持对应。 */
+/** 固定 30 天课程；任务使用稳定 ID 保存完成状态。 */
 export type Focus = 'EN' | 'JP' | 'RV';
 
+export type ActivityType = 'flashcards' | 'speaking' | 'reading' | 'kana';
+
+export interface ActivityRef {
+  type: ActivityType;
+  mode?: 'learn' | 'practice' | 'review';
+}
+
 export interface PlanTask {
+  id: string;
   text: string;
   minutes: number;
+  activity: ActivityRef;
 }
 
 export interface PlanDay {
@@ -22,8 +31,35 @@ const d = (
   day,
   focus,
   title,
-  tasks: tasks.map(([text, minutes]) => ({ text, minutes })),
+  tasks: tasks.map(([text, minutes], index) => ({
+    id: `day-${day}-task-${index + 1}`,
+    text,
+    minutes,
+    activity: inferActivity(text),
+  })),
 });
+
+/** 将现有计划文案接到可执行练习；新增任务应继续使用明确的动作词。 */
+function inferActivity(text: string): ActivityRef {
+  if (/五十音|平假名|片假名|假名|默写/.test(text)) {
+    return {
+      type: 'kana',
+      mode: /测试|自测|默写/.test(text) ? 'practice' : 'learn',
+    };
+  }
+  if (
+    /录音|口语|自由说|造句|自我介绍|Shadowing|跟读|复述|讲解|解释/.test(text)
+  ) {
+    return { type: 'speaking', mode: 'practice' };
+  }
+  if (/^(读|重读)|阅读|文章|文档|Stack Overflow|视频/.test(text)) {
+    return { type: 'reading', mode: 'learn' };
+  }
+  if (/生词|闪卡|词汇|查词|整理.*词/.test(text)) {
+    return { type: 'flashcards', mode: 'review' };
+  }
+  return { type: 'reading', mode: 'learn' };
+}
 
 export const PLAN: PlanDay[] = [
   // 第 1 周：启动期 —— 五十音 + 英语习惯

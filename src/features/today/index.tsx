@@ -1,6 +1,6 @@
 /** 聚合今日计划、任务进度、统计与每日一句。 */
 import styles from './index.module.less';
-import { FOCUS_LABEL, PLAN } from '@/content/plan';
+import { FOCUS_LABEL, PLAN, type PlanTask } from '@/content/plan';
 import { SCENARIOS } from '@/content/speaking';
 import { TOTAL_WORDS } from '@/content/words';
 import { useStudy } from '@/study/useStudy';
@@ -42,7 +42,11 @@ const FOCUS_STYLE: Record<string, string> = {
   RV: styles.review,
 };
 
-export default function TodaySection() {
+export default function TodaySection({
+  onStartTask,
+}: {
+  onStartTask: (task: PlanTask) => void;
+}) {
   const { dayIndex, checks, toggleTask, streak, knownCount, startDate } =
     useStudy();
   const plan = PLAN[dayIndex - 1];
@@ -141,7 +145,8 @@ export default function TodaySection() {
         <TaskList
           tasks={plan.tasks}
           done={checks[plan.day] ?? []}
-          onToggle={(i) => toggleTask(plan.day, i, plan.tasks.length)}
+          onToggle={(taskId) => toggleTask(plan.day, taskId, plan.tasks.length)}
+          onStart={onStartTask}
           variant="today"
         />
 

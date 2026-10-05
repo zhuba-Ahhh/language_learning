@@ -4,8 +4,9 @@ import type { PlanTask } from '@/content/plan';
 
 interface Props {
   tasks: PlanTask[];
-  done: readonly number[];
-  onToggle: (index: number) => void;
+  done: readonly string[];
+  onToggle: (taskId: string) => void;
+  onStart?: (task: PlanTask) => void;
   variant: 'today' | 'plan';
   dark?: boolean;
 }
@@ -14,6 +15,7 @@ export default function TaskList({
   tasks,
   done,
   onToggle,
+  onStart,
   variant,
   dark = false,
 }: Props) {
@@ -27,13 +29,13 @@ export default function TaskList({
           : `${styles.plan} ${dark ? styles.darkBorder : styles.lightBorder}`
       }
     >
-      {tasks.map((task, i) => {
-        const checked = done.includes(i);
+      {tasks.map((task) => {
+        const checked = done.includes(task.id);
         return (
-          <li key={i}>
+          <li key={task.id} className={styles.taskRow}>
             <button
               type="button"
-              onClick={() => onToggle(i)}
+              onClick={() => onToggle(task.id)}
               className={today ? styles.todayButton : styles.planButton}
             >
               <span
@@ -93,6 +95,16 @@ export default function TaskList({
                 {task.minutes}min
               </span>
             </button>
+            {onStart && (
+              <button
+                type="button"
+                onClick={() => onStart(task)}
+                className={styles.start}
+                aria-label={`开始：${task.text}`}
+              >
+                开始
+              </button>
+            )}
           </li>
         );
       })}
