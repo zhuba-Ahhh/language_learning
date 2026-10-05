@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 50 33% 97%; /* #fbfaf5 warm paper */
+    --foreground: 60 4% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 4% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 4% 7%;
+    --primary: 215 100% 28%; /* #003b8f deep blue */
+    --primary-foreground: 50 33% 97%;
+    --secondary: 197 46% 88%; /* powder tint */
+    --secondary-foreground: 215 100% 28%;
+    --muted: 48 20% 92%;
+    --muted-foreground: 45 6% 42%;
+    --accent: 177 99% 31%; /* #019e96 teal */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 4 72% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 48 14% 86%;
+    --input: 48 14% 86%;
+    --ring: 177 99% 31%;
+    --radius: 1.25rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    letter-spacing: 0.01em;
+  }
+  ::selection {
+    background: rgba(2, 199, 189, 0.3);
+  }
+  /* Japanese typography: proportional metrics + JP font + airy leading */
+  [lang='ja'] {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Noto Sans SC', sans-serif;
+    font-feature-settings: 'palt';
+    letter-spacing: 0.04em;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d8d2c4;
+    border-radius: 8px;
+    border: 2px solid #fbfaf5;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Inter', 'Noto Sans SC', 'PingFang SC', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .font-mono2 {
+    font-family: 'Roboto Mono', ui-monospace, monospace;
+  }
+}
+
+/* ---------- scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- hide-on-scroll header ---------- */
+.site-header {
+  transition: transform 0.4s cubic-bezier(0.23, 0.01, 0.08, 95%),
+    background-color 0.2s linear;
+}
+.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* soft shadow language */
+.soft-shadow {
+  box-shadow: 0 0.4rem 2rem rgba(28, 48, 76, 0.07);
+}
+.soft-shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(28, 48, 76, 0.12);
+}
+
+/* mobile safe-area */
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px));
+}
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.pop-in {
+  animation: pop-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes slide-card-in {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.slide-card-in {
+  animation: slide-card-in 0.35s ease-out both;
+}
