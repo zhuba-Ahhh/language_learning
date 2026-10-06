@@ -2,7 +2,12 @@
 import daily from './data/ja/daily.json';
 import greeting from './data/ja/greeting.json';
 import katakana from './data/ja/katakana.json';
+import reading from './data/ja/reading.json';
+import speaking from './data/ja/speaking.json';
 import work from './data/ja/work.json';
 import { defineDecks } from './schema';
 
-export const JA_DECKS = defineDecks([katakana, work, daily, greeting], 'ja');
+export const JA_DECKS = defineDecks(
+  [katakana, work, daily, greeting, speaking, reading],
+  'ja',
+);

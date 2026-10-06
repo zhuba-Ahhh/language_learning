@@ -6,7 +6,7 @@ import {
   SKILL_LABELS,
   type LearningGoal,
 } from '@/content/goals';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { useStudy } from '@/study/useStudy';
 
 function GoalContent({ goal, status }: { goal: LearningGoal; status: string }) {
   return (
@@ -42,10 +42,7 @@ function GoalContent({ goal, status }: { goal: LearningGoal; status: string }) {
 }
 
 export default function GoalsSection() {
-  const [selectedGoal, setSelectedGoal] = useLocalStorage(
-    'lingua.goal',
-    'english-communication',
-  );
+  const { goalId, setGoal } = useStudy();
   const availableGoals = LEARNING_GOALS.filter((goal) => goal.available);
   const upcomingGoals = LEARNING_GOALS.filter((goal) => !goal.available);
 
@@ -57,13 +54,13 @@ export default function GoalsSection() {
         <h2>现在可用</h2>
         <div className={styles.goals}>
           {availableGoals.map((goal) => {
-            const selected = selectedGoal === goal.id;
+            const selected = goalId === goal.id;
             return (
               <button
                 key={goal.id}
                 type="button"
                 aria-pressed={selected}
-                onClick={() => setSelectedGoal(goal.id)}
+                onClick={() => setGoal(goal.id)}
                 className={`${styles.goal} ${styles.selectable} ${selected ? styles.selected : ''}`}
               >
                 <GoalContent

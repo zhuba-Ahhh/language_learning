@@ -6,12 +6,15 @@ export type ActivityType = 'flashcards' | 'speaking' | 'reading' | 'kana';
 export interface ActivityRef {
   type: ActivityType;
   mode?: 'learn' | 'practice' | 'review';
+  resourceGroupIds?: string[];
+  resourceNames?: string[];
 }
 
 export interface PlanTask {
   id: string;
   text: string;
   minutes: number;
+  language: 'en' | 'ja' | 'all';
   activity: ActivityRef;
 }
 
@@ -35,9 +38,18 @@ const d = (
     id: `day-${day}-task-${index + 1}`,
     text,
     minutes,
+    language: inferLanguage(focus, text),
     activity: inferActivity(text),
   })),
 });
+
+function inferLanguage(focus: Focus, text: string): PlanTask['language'] {
+  if (focus === 'EN') return 'en';
+  if (focus === 'JP') return 'ja';
+  if (/平假名|片假名|五十音|日语|句型|第 1~3 课/.test(text)) return 'ja';
+  if (/英语|文章|生词|录音|官方文档/.test(text)) return 'en';
+  return 'all';
+}
 
 /** 将现有计划文案接到可执行练习；新增任务应继续使用明确的动作词。 */
 function inferActivity(text: string): ActivityRef {
@@ -53,12 +65,41 @@ function inferActivity(text: string): ActivityRef {
     return { type: 'speaking', mode: 'practice' };
   }
   if (/^(读|重读)|阅读|文章|文档|Stack Overflow|视频/.test(text)) {
-    return { type: 'reading', mode: 'learn' };
+    return inferReadingActivity(text);
   }
   if (/生词|闪卡|词汇|查词|整理.*词/.test(text)) {
     return { type: 'flashcards', mode: 'review' };
   }
-  return { type: 'reading', mode: 'learn' };
+  return inferReadingActivity(text);
+}
+
+function inferReadingActivity(text: string): ActivityRef {
+  const activity: ActivityRef = { type: 'reading', mode: 'learn' };
+  if (/freeCodeCamp|dev\.to/i.test(text)) {
+    return {
+      ...activity,
+      resourceGroupIds: ['en-tech-easy'],
+      resourceNames: ['freeCodeCamp News', 'DEV Community'],
+    };
+  }
+  if (/官方/.test(text)) {
+    return {
+      ...activity,
+      resourceGroupIds: ['en-tech-mid'],
+      resourceNames: ['你所用语言的官方文档'],
+    };
+  }
+  if (/Stack Overflow/i.test(text)) {
+    return {
+      ...activity,
+      resourceGroupIds: ['en-tech-mid'],
+      resourceNames: ['Stack Overflow'],
+    };
+  }
+  if (/日语.*视频/.test(text)) {
+    return { ...activity, resourceGroupIds: ['podcast-ja'] };
+  }
+  return { ...activity, resourceGroupIds: ['en-tech-easy'] };
 }
 
 export const PLAN: PlanDay[] = [
@@ -215,3 +256,12 @@ export const FOCUS_LABEL: Record<Focus, string> = {
   JP: '日语日',
   RV: '复盘日',
 };
+
+export function getPlanForLanguage(language: 'en' | 'ja'): PlanDay[] {
+  return PLAN.map((day) => ({
+    ...day,
+    tasks: day.tasks.filter(
+      (task) => task.language === language || task.language === 'all',
+    ),
+  })).filter((day) => day.tasks.length > 0);
+}

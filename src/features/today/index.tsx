@@ -1,16 +1,15 @@
 /** 只保留今天真正需要完成的任务。 */
 import styles from './index.module.less';
-import { FOCUS_LABEL, PLAN, type PlanTask } from '@/content/plan';
+import { FOCUS_LABEL, type PlanTask } from '@/content/plan';
 import { useStudy } from '@/study/useStudy';
 import TaskList from '@/study/components/TaskList';
 
 export default function TodaySection({
   onStartTask,
 }: {
-  onStartTask: (task: PlanTask) => void;
+  onStartTask: (task: PlanTask, day: number, total: number) => void;
 }) {
-  const { dayIndex, checks, toggleTask } = useStudy();
-  const plan = PLAN[dayIndex - 1];
+  const { currentPlanDay: plan, checks, toggleTask } = useStudy();
   const done = new Set(checks[plan.day] ?? []);
   const percent = plan.tasks.length ? done.size / plan.tasks.length : 0;
   const totalMinutes = plan.tasks.reduce((sum, task) => sum + task.minutes, 0);
@@ -43,7 +42,7 @@ export default function TodaySection({
           tasks={plan.tasks}
           done={checks[plan.day] ?? []}
           onToggle={(taskId) => toggleTask(plan.day, taskId, plan.tasks.length)}
-          onStart={onStartTask}
+          onStart={(task) => onStartTask(task, plan.day, plan.tasks.length)}
           variant="today"
         />
 

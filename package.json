@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "words:candidates": "node scripts/generate-word-candidates.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -27,9 +28,11 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "japanese-easy": "1.2.5",
     "less": "^4.2.2",
     "postcss": "^8.5.6",
     "prettier": "^3.9.9",
+    "subtlex-word-frequencies": "2.0.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"

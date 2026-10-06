@@ -10,8 +10,15 @@ import PracticeSection, {
 import GoalsSection from './components/GoalsSection';
 import PlanSection from '@/features/plan';
 import type { PlanTask } from '@/content/plan';
+import { useStudy } from '@/study/useStudy';
 
 type Tab = 'today' | 'practice' | 'goals' | 'progress';
+
+interface ActiveTask {
+  task: PlanTask;
+  day: number;
+  total: number;
+}
 
 function Icon({ children }: { children: ReactNode }) {
   return (
@@ -76,8 +83,10 @@ const TABS: { id: Tab; label: string; icon: ReactNode }[] = [
 ];
 
 function Shell() {
+  const { completeTask } = useStudy();
   const [tab, setTab] = useState<Tab>('today');
   const [practiceView, setPracticeView] = useState<PracticeView>('overview');
+  const [activeTask, setActiveTask] = useState<ActiveTask | null>(null);
   const headerRef = useHideOnScroll();
   const revealRef = useReveal<HTMLDivElement>([tab, practiceView]);
 
@@ -88,12 +97,14 @@ function Shell() {
   };
 
   const selectTab = (nextTab: Tab) => {
+    setActiveTask(null);
     if (nextTab === 'practice') setPracticeView('overview');
     setTab(nextTab);
     window.scrollTo({ top: 0 });
   };
 
-  const startTask = (task: PlanTask) => {
+  const startTask = (task: PlanTask, day: number, total: number) => {
+    setActiveTask({ task, day, total });
     if (
       task.activity.type === 'flashcards' &&
       task.activity.mode === 'review'
@@ -108,6 +119,11 @@ function Shell() {
       kana: 'kana',
     };
     openPractice(view[task.activity.type]);
+  };
+
+  const completeActiveTask = () => {
+    if (!activeTask) return;
+    completeTask(activeTask.day, activeTask.task.id, activeTask.total);
   };
 
   return (
@@ -149,7 +165,12 @@ function Shell() {
         <div key={`${tab}-${tab === 'practice' ? practiceView : ''}`}>
           {tab === 'today' && <TodaySection onStartTask={startTask} />}
           {tab === 'practice' && (
-            <PracticeSection view={practiceView} onChange={openPractice} />
+            <PracticeSection
+              view={practiceView}
+              onChange={openPractice}
+              task={activeTask?.task}
+              onActivityComplete={activeTask ? completeActiveTask : undefined}
+            />
           )}
           {tab === 'goals' && <GoalsSection />}
           {tab === 'progress' && <PlanSection />}

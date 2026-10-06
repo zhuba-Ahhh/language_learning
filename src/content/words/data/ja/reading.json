@@ -1,0 +1,88 @@
+{
+  "id": "ja-reading",
+  "lang": "ja",
+  "title": "阅读高频",
+  "subtitle": "日本語 · 読解",
+  "words": [
+    {
+      "id": "ja-reading-0",
+      "term": "理由",
+      "reading": "りゆう",
+      "meaning": "理由；原因",
+      "example": "遅れた理由を説明してください。",
+      "exampleZh": "请说明迟到的原因。"
+    },
+    {
+      "id": "ja-reading-1",
+      "term": "結果",
+      "reading": "けっか",
+      "meaning": "结果",
+      "example": "努力した結果、試験に合格しました。",
+      "exampleZh": "努力之后，我通过了考试。"
+    },
+    {
+      "id": "ja-reading-2",
+      "term": "場合",
+      "reading": "ばあい",
+      "meaning": "情况；场合",
+      "example": "雨の場合、試合は中止です。",
+      "exampleZh": "下雨的话，比赛将取消。"
+    },
+    {
+      "id": "ja-reading-3",
+      "term": "必要",
+      "reading": "ひつよう",
+      "meaning": "必要；需要",
+      "example": "この仕事には経験が必要です。",
+      "exampleZh": "这项工作需要经验。"
+    },
+    {
+      "id": "ja-reading-4",
+      "term": "特に",
+      "reading": "とくに",
+      "meaning": "特别；尤其",
+      "example": "私は果物、特にりんごが好きです。",
+      "exampleZh": "我喜欢水果，尤其喜欢苹果。"
+    },
+    {
+      "id": "ja-reading-5",
+      "term": "しかし",
+      "reading": "しかし",
+      "meaning": "但是；然而",
+      "example": "この方法は簡単です。しかし、時間がかかります。",
+      "exampleZh": "这个方法很简单，但是很花时间。"
+    },
+    {
+      "id": "ja-reading-6",
+      "term": "つまり",
+      "reading": "つまり",
+      "meaning": "也就是说；换言之",
+      "example": "つまり、この計画は変更する必要があります。",
+      "exampleZh": "也就是说，这个计划需要修改。"
+    },
+    {
+      "id": "ja-reading-7",
+      "term": "一方",
+      "reading": "いっぽう",
+      "meaning": "另一方面",
+      "example": "この町は便利です。一方、家賃が高いです。",
+      "exampleZh": "这座城市很方便，另一方面房租很高。"
+    },
+    {
+      "id": "ja-reading-8",
+      "term": "変化",
+      "reading": "へんか",
+      "meaning": "变化",
+      "example": "十年で生活は大きく変化しました。",
+      "exampleZh": "十年间生活发生了很大变化。"
+    },
+    {
+      "id": "ja-reading-9",
+      "term": "目的",
+      "reading": "もくてき",
+      "meaning": "目的",
+      "example": "この調査の目的は原因を知ることです。",
+      "exampleZh": "这项调查的目的是了解原因。"
+    }
+  ]
+}

@@ -1,20 +1,33 @@
 /** 搜索内置词库，展示共享学习状态中的掌握标记。 */
 import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
-import { useMemo, useState } from 'react';
-import { DECKS } from '@/content/words';
+import { useMemo, useState, type FormEvent } from 'react';
 import { useStudy } from '@/study/useStudy';
 import SpeakButton from '@/components/SpeakButton';
 import LanguageFilter from '@/components/LanguageFilter';
 
 export default function VocabSection() {
-  const { marks } = useStudy();
+  const { decks, customWords, addCustomWord, removeCustomWord, marks } =
+    useStudy();
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<'all' | 'en' | 'ja'>('all');
+  const [adding, setAdding] = useState(false);
+  const [notice, setNotice] = useState('');
+  const [draft, setDraft] = useState({
+    lang: 'en' as 'en' | 'ja',
+    term: '',
+    meaning: '',
+    reading: '',
+  });
+  const customIds = useMemo(
+    () => new Set(customWords.map((word) => word.id)),
+    [customWords],
+  );
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return DECKS.filter((d) => filter === 'all' || d.lang === filter)
+    return decks
+      .filter((d) => filter === 'all' || d.lang === filter)
       .map((d) => ({
         deck: d,
         words: d.words.filter(
@@ -26,7 +39,21 @@ export default function VocabSection() {
         ),
       }))
       .filter((g) => g.words.length > 0);
-  }, [query, filter]);
+  }, [decks, query, filter]);
+
+  const submitWord = (event: FormEvent) => {
+    event.preventDefault();
+    const added = addCustomWord(draft);
+    setNotice(added ? '已加入' : '这个词已经有了');
+    if (added) {
+      setDraft((current) => ({
+        ...current,
+        term: '',
+        meaning: '',
+        reading: '',
+      }));
+    }
+  };
 
   return (
     <div className={styles.section}>
@@ -51,7 +78,67 @@ export default function VocabSection() {
           onChange={setFilter}
           variant="chips"
         />
+        <button
+          type="button"
+          onClick={() => {
+            setAdding((value) => !value);
+            setNotice('');
+          }}
+          className={styles.addToggle}
+        >
+          {adding ? '收起' : '加词'}
+        </button>
       </div>
+
+      {adding && (
+        <form className={`reveal ${styles.addForm}`} onSubmit={submitWord}>
+          <LanguageFilter
+            options={
+              [
+                ['en', '英语'],
+                ['ja', '日语'],
+              ] as const
+            }
+            value={draft.lang}
+            onChange={(lang) => setDraft((current) => ({ ...current, lang }))}
+            variant="chips"
+          />
+          <input
+            required
+            aria-label="词"
+            placeholder="词"
+            value={draft.term}
+            onChange={(event) =>
+              setDraft((current) => ({ ...current, term: event.target.value }))
+            }
+          />
+          <input
+            required
+            aria-label="释义"
+            placeholder="释义"
+            value={draft.meaning}
+            onChange={(event) =>
+              setDraft((current) => ({
+                ...current,
+                meaning: event.target.value,
+              }))
+            }
+          />
+          <input
+            aria-label="读音"
+            placeholder="读音（可选）"
+            value={draft.reading}
+            onChange={(event) =>
+              setDraft((current) => ({
+                ...current,
+                reading: event.target.value,
+              }))
+            }
+          />
+          <button type="submit">加入</button>
+          {notice && <span className={styles.notice}>{notice}</span>}
+        </form>
+      )}
 
       {rows.length === 0 && (
         <p className={`reveal ${styles.empty}`}>没有结果</p>
@@ -94,6 +181,19 @@ export default function VocabSection() {
                   tone="muted"
                   size={32}
                 />
+                {customIds.has(w.id) && (
+                  <button
+                    type="button"
+                    className={styles.remove}
+                    onClick={() => {
+                      if (window.confirm(`移除“${w.term}”？`)) {
+                        removeCustomWord(w.id);
+                      }
+                    }}
+                  >
+                    移除
+                  </button>
+                )}
               </li>
             ))}
           </ul>

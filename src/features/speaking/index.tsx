@@ -5,7 +5,11 @@ import FeatureHeader from '@/components/FeatureHeader';
 import SpeakButton from '@/components/SpeakButton';
 import { SCENARIOS } from '@/content/speaking';
 
-export default function SpeakingSection() {
+export default function SpeakingSection({
+  onComplete,
+}: {
+  onComplete?: () => void;
+}) {
   const [scenarioId, setScenarioId] = useState(SCENARIOS[0].id);
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const [recording, setRecording] = useState(false);
@@ -56,6 +60,7 @@ export default function SpeakingSection() {
         urlRef.current = url;
         setRecordingUrl(url);
         setRecording(false);
+        onComplete?.();
         stream.getTracks().forEach((track) => track.stop());
         streamRef.current = null;
       };

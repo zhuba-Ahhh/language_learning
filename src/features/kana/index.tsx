@@ -19,7 +19,11 @@ function randomQuiz(pool: KanaCell[]) {
   return { answer, options: [...options].sort(() => Math.random() - 0.5) };
 }
 
-export default function KanaSection() {
+export default function KanaSection({
+  onComplete,
+}: {
+  onComplete?: () => void;
+}) {
   const [mode, setMode] = useState<Mode>('hira');
   const [tab, setTab] = useState<'chart' | 'quiz'>('chart');
 
@@ -50,6 +54,7 @@ export default function KanaSection() {
       total: score.total + 1,
     };
     setScore(next);
+    if (next.total === 10) onComplete?.();
     // 每答满 10 题且刷新纪录时保存历史最佳
     if (next.total >= 10) {
       const acc = Math.round((next.right / next.total) * 100);

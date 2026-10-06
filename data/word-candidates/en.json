@@ -1,0 +1,507 @@
+{
+  "language": "en",
+  "source": "subtlex-word-frequencies@2.0.0",
+  "note": "候选词进入正式词库前，必须补充中文释义与双语例句。",
+  "candidates": [
+    {
+      "term": "know",
+      "frequency": 291780,
+      "sourceRank": 30
+    },
+    {
+      "term": "get",
+      "frequency": 233772,
+      "sourceRank": 38
+    },
+    {
+      "term": "right",
+      "frequency": 204428,
+      "sourceRank": 45
+    },
+    {
+      "term": "like",
+      "frequency": 203947,
+      "sourceRank": 46
+    },
+    {
+      "term": "got",
+      "frequency": 168631,
+      "sourceRank": 54
+    },
+    {
+      "term": "come",
+      "frequency": 160190,
+      "sourceRank": 58
+    },
+    {
+      "term": "one",
+      "frequency": 156684,
+      "sourceRank": 59
+    },
+    {
+      "term": "well",
+      "frequency": 152523,
+      "sourceRank": 61
+    },
+    {
+      "term": "yeah",
+      "frequency": 152262,
+      "sourceRank": 62
+    },
+    {
+      "term": "want",
+      "frequency": 140718,
+      "sourceRank": 64
+    },
+    {
+      "term": "think",
+      "frequency": 137261,
+      "sourceRank": 65
+    },
+    {
+      "term": "good",
+      "frequency": 133117,
+      "sourceRank": 66
+    },
+    {
+      "term": "see",
+      "frequency": 130393,
+      "sourceRank": 67
+    },
+    {
+      "term": "let",
+      "frequency": 123381,
+      "sourceRank": 68
+    },
+    {
+      "term": "going",
+      "frequency": 108288,
+      "sourceRank": 75
+    },
+    {
+      "term": "back",
+      "frequency": 102467,
+      "sourceRank": 78
+    },
+    {
+      "term": "okay",
+      "frequency": 102320,
+      "sourceRank": 79
+    },
+    {
+      "term": "yes",
+      "frequency": 101835,
+      "sourceRank": 80
+    },
+    {
+      "term": "gonna",
+      "frequency": 101804,
+      "sourceRank": 81
+    },
+    {
+      "term": "time",
+      "frequency": 99890,
+      "sourceRank": 83
+    },
+    {
+      "term": "look",
+      "frequency": 99311,
+      "sourceRank": 84
+    },
+    {
+      "term": "take",
+      "frequency": 96443,
+      "sourceRank": 85
+    },
+    {
+      "term": "man",
+      "frequency": 94133,
+      "sourceRank": 87
+    },
+    {
+      "term": "hey",
+      "frequency": 88079,
+      "sourceRank": 93
+    },
+    {
+      "term": "tell",
+      "frequency": 87949,
+      "sourceRank": 94
+    },
+    {
+      "term": "say",
+      "frequency": 83629,
+      "sourceRank": 99
+    },
+    {
+      "term": "something",
+      "frequency": 76508,
+      "sourceRank": 102
+    },
+    {
+      "term": "really",
+      "frequency": 76508,
+      "sourceRank": 103
+    },
+    {
+      "term": "little",
+      "frequency": 73766,
+      "sourceRank": 106
+    },
+    {
+      "term": "way",
+      "frequency": 72661,
+      "sourceRank": 107
+    },
+    {
+      "term": "make",
+      "frequency": 70775,
+      "sourceRank": 109
+    },
+    {
+      "term": "never",
+      "frequency": 69490,
+      "sourceRank": 111
+    },
+    {
+      "term": "need",
+      "frequency": 66040,
+      "sourceRank": 115
+    },
+    {
+      "term": "mean",
+      "frequency": 63443,
+      "sourceRank": 116
+    },
+    {
+      "term": "sorry",
+      "frequency": 59566,
+      "sourceRank": 120
+    },
+    {
+      "term": "give",
+      "frequency": 59559,
+      "sourceRank": 121
+    },
+    {
+      "term": "thank",
+      "frequency": 56877,
+      "sourceRank": 123
+    },
+    {
+      "term": "love",
+      "frequency": 56864,
+      "sourceRank": 124
+    },
+    {
+      "term": "said",
+      "frequency": 56531,
+      "sourceRank": 125
+    },
+    {
+      "term": "people",
+      "frequency": 56252,
+      "sourceRank": 127
+    },
+    {
+      "term": "please",
+      "frequency": 56149,
+      "sourceRank": 128
+    },
+    {
+      "term": "sure",
+      "frequency": 56091,
+      "sourceRank": 129
+    },
+    {
+      "term": "thing",
+      "frequency": 55522,
+      "sourceRank": 131
+    },
+    {
+      "term": "two",
+      "frequency": 54384,
+      "sourceRank": 134
+    },
+    {
+      "term": "much",
+      "frequency": 49636,
+      "sourceRank": 137
+    },
+    {
+      "term": "sir",
+      "frequency": 49188,
+      "sourceRank": 138
+    },
+    {
+      "term": "maybe",
+      "frequency": 47249,
+      "sourceRank": 139
+    },
+    {
+      "term": "help",
+      "frequency": 46977,
+      "sourceRank": 140
+    },
+    {
+      "term": "anything",
+      "frequency": 46270,
+      "sourceRank": 141
+    },
+    {
+      "term": "god",
+      "frequency": 46061,
+      "sourceRank": 143
+    },
+    {
+      "term": "even",
+      "frequency": 44672,
+      "sourceRank": 144
+    },
+    {
+      "term": "night",
+      "frequency": 44168,
+      "sourceRank": 145
+    },
+    {
+      "term": "call",
+      "frequency": 43931,
+      "sourceRank": 146
+    },
+    {
+      "term": "talk",
+      "frequency": 43605,
+      "sourceRank": 147
+    },
+    {
+      "term": "nothing",
+      "frequency": 43534,
+      "sourceRank": 148
+    },
+    {
+      "term": "first",
+      "frequency": 42869,
+      "sourceRank": 150
+    },
+    {
+      "term": "find",
+      "frequency": 42379,
+      "sourceRank": 151
+    },
+    {
+      "term": "wait",
+      "frequency": 42343,
+      "sourceRank": 152
+    },
+    {
+      "term": "put",
+      "frequency": 42251,
+      "sourceRank": 153
+    },
+    {
+      "term": "great",
+      "frequency": 41864,
+      "sourceRank": 154
+    },
+    {
+      "term": "thought",
+      "frequency": 41232,
+      "sourceRank": 155
+    },
+    {
+      "term": "day",
+      "frequency": 40893,
+      "sourceRank": 156
+    },
+    {
+      "term": "work",
+      "frequency": 40699,
+      "sourceRank": 157
+    },
+    {
+      "term": "life",
+      "frequency": 40629,
+      "sourceRank": 158
+    },
+    {
+      "term": "better",
+      "frequency": 40494,
+      "sourceRank": 160
+    },
+    {
+      "term": "still",
+      "frequency": 40225,
+      "sourceRank": 162
+    },
+    {
+      "term": "home",
+      "frequency": 39491,
+      "sourceRank": 163
+    },
+    {
+      "term": "guy",
+      "frequency": 38893,
+      "sourceRank": 164
+    },
+    {
+      "term": "around",
+      "frequency": 37573,
+      "sourceRank": 168
+    },
+    {
+      "term": "away",
+      "frequency": 37276,
+      "sourceRank": 170
+    },
+    {
+      "term": "new",
+      "frequency": 36913,
+      "sourceRank": 171
+    },
+    {
+      "term": "last",
+      "frequency": 36878,
+      "sourceRank": 172
+    },
+    {
+      "term": "ever",
+      "frequency": 36170,
+      "sourceRank": 174
+    },
+    {
+      "term": "stop",
+      "frequency": 36071,
+      "sourceRank": 175
+    },
+    {
+      "term": "keep",
+      "frequency": 35846,
+      "sourceRank": 176
+    },
+    {
+      "term": "told",
+      "frequency": 35679,
+      "sourceRank": 177
+    },
+    {
+      "term": "things",
+      "frequency": 35337,
+      "sourceRank": 179
+    },
+    {
+      "term": "big",
+      "frequency": 34824,
+      "sourceRank": 180
+    },
+    {
+      "term": "long",
+      "frequency": 34433,
+      "sourceRank": 182
+    },
+    {
+      "term": "always",
+      "frequency": 33418,
+      "sourceRank": 184
+    },
+    {
+      "term": "everything",
+      "frequency": 33399,
+      "sourceRank": 186
+    },
+    {
+      "term": "nice",
+      "frequency": 33125,
+      "sourceRank": 187
+    },
+    {
+      "term": "name",
+      "frequency": 32735,
+      "sourceRank": 188
+    },
+    {
+      "term": "money",
+      "frequency": 32679,
+      "sourceRank": 189
+    },
+    {
+      "term": "guys",
+      "frequency": 32198,
+      "sourceRank": 191
+    },
+    {
+      "term": "feel",
+      "frequency": 31989,
+      "sourceRank": 192
+    },
+    {
+      "term": "believe",
+      "frequency": 31882,
+      "sourceRank": 193
+    },
+    {
+      "term": "thanks",
+      "frequency": 31789,
+      "sourceRank": 194
+    },
+    {
+      "term": "old",
+      "frequency": 31056,
+      "sourceRank": 195
+    },
+    {
+      "term": "place",
+      "frequency": 30736,
+      "sourceRank": 196
+    },
+    {
+      "term": "fine",
+      "frequency": 30502,
+      "sourceRank": 197
+    },
+    {
+      "term": "kind",
+      "frequency": 30125,
+      "sourceRank": 198
+    },
+    {
+      "term": "hello",
+      "frequency": 29857,
+      "sourceRank": 200
+    },
+    {
+      "term": "lot",
+      "frequency": 29066,
+      "sourceRank": 201
+    },
+    {
+      "term": "years",
+      "frequency": 29003,
+      "sourceRank": 202
+    },
+    {
+      "term": "made",
+      "frequency": 28626,
+      "sourceRank": 203
+    },
+    {
+      "term": "leave",
+      "frequency": 28596,
+      "sourceRank": 204
+    },
+    {
+      "term": "girl",
+      "frequency": 28413,
+      "sourceRank": 206
+    },
+    {
+      "term": "hear",
+      "frequency": 28323,
+      "sourceRank": 207
+    },
+    {
+      "term": "father",
+      "frequency": 28279,
+      "sourceRank": 208
+    }
+  ]
+}

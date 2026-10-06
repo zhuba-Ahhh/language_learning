@@ -1,0 +1,78 @@
+{
+  "id": "en-reading",
+  "lang": "en",
+  "title": "阅读高频",
+  "subtitle": "English · Reading",
+  "words": [
+    {
+      "id": "en-reading-0",
+      "term": "evidence",
+      "meaning": "n. 证据",
+      "example": "The evidence suggests that exercise improves sleep.",
+      "exampleZh": "证据表明运动可以改善睡眠。"
+    },
+    {
+      "id": "en-reading-1",
+      "term": "significant",
+      "meaning": "adj. 显著的；重要的",
+      "example": "The study found a significant difference between the two groups.",
+      "exampleZh": "研究发现两组之间存在显著差异。"
+    },
+    {
+      "id": "en-reading-2",
+      "term": "indicate",
+      "meaning": "v. 表明；指出",
+      "example": "The results indicate a change in consumer behavior.",
+      "exampleZh": "结果表明消费者行为发生了变化。"
+    },
+    {
+      "id": "en-reading-3",
+      "term": "factor",
+      "meaning": "n. 因素",
+      "example": "Cost is a major factor in the decision.",
+      "exampleZh": "成本是这项决定中的一个主要因素。"
+    },
+    {
+      "id": "en-reading-4",
+      "term": "impact",
+      "meaning": "n./v. 影响",
+      "example": "The policy had little impact on employment.",
+      "exampleZh": "这项政策对就业影响不大。"
+    },
+    {
+      "id": "en-reading-5",
+      "term": "approach",
+      "meaning": "n. 方法；途径",
+      "example": "The researchers used a different approach to the problem.",
+      "exampleZh": "研究人员采用了不同的方法处理这个问题。"
+    },
+    {
+      "id": "en-reading-6",
+      "term": "whereas",
+      "meaning": "conj. 然而；相比之下",
+      "example": "City populations grew, whereas rural populations declined.",
+      "exampleZh": "城市人口增长了，而农村人口有所下降。"
+    },
+    {
+      "id": "en-reading-7",
+      "term": "despite",
+      "meaning": "prep. 尽管",
+      "example": "Despite the rain, the event continued as planned.",
+      "exampleZh": "尽管下雨，活动仍按计划继续。"
+    },
+    {
+      "id": "en-reading-8",
+      "term": "imply",
+      "meaning": "v. 暗示",
+      "example": "His words imply that further changes are likely.",
+      "exampleZh": "他的话暗示可能还会有进一步变化。"
+    },
+    {
+      "id": "en-reading-9",
+      "term": "perspective",
+      "meaning": "n. 视角；观点",
+      "example": "The article presents a historical perspective on the issue.",
+      "exampleZh": "这篇文章从历史角度讨论了这个问题。"
+    }
+  ]
+}

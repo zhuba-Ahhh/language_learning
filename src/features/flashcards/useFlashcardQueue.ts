@@ -1,6 +1,6 @@
 /** 管理卡组、复习队列与轮次，保持原有标记和重开规则。 */
 import { useEffect, useMemo, useState } from 'react';
-import { DECKS, type Word } from '@/content/words';
+import type { Word } from '@/content/words';
 import { useStudy } from '@/study/useStudy';
 
 interface CardItem {
@@ -10,23 +10,23 @@ interface CardItem {
 
 export const REVIEW_ID = '__review';
 
-export function useFlashcardQueue(initialDeckId = DECKS[0].id) {
-  const { marks, markWord, resetDeckMarks } = useStudy();
-  const [deckId, setDeckId] = useState(initialDeckId);
+export function useFlashcardQueue(initialDeckId?: string) {
+  const { decks, marks, markWord, resetDeckMarks } = useStudy();
+  const [deckId, setDeckId] = useState(initialDeckId ?? decks[0].id);
 
   // 跨卡组「不熟的词」复习集
   const unknownCards = useMemo<CardItem[]>(
     () =>
-      DECKS.flatMap((d) =>
+      decks.flatMap((d) =>
         d.words
           .filter((w) => marks[w.id] === 'unknown')
           .map((w) => ({ word: w, lang: d.lang })),
       ),
-    [marks],
+    [decks, marks],
   );
 
   const isReview = deckId === REVIEW_ID;
-  const deck = isReview ? null : DECKS.find((d) => d.id === deckId)!;
+  const deck = isReview ? null : decks.find((d) => d.id === deckId)!;
   const cards: CardItem[] = isReview
     ? unknownCards
     : deck!.words.map((w) => ({ word: w, lang: deck!.lang }));
@@ -106,5 +106,6 @@ export function useFlashcardQueue(initialDeckId = DECKS[0].id) {
     restart,
     progress,
     deckTitle,
+    decks,
   };
 }

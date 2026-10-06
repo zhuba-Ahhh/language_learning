@@ -1,6 +1,7 @@
 /** 以口语和阅读为核心，聚合可复用练习能力与基础工具。 */
 import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
+import type { PlanTask } from '@/content/plan';
 import FlashcardsSection from '@/features/flashcards';
 import KanaSection from '@/features/kana';
 import ReadingSection from '@/features/reading';
@@ -27,17 +28,31 @@ const tools = [
 export default function PracticeSection({
   view,
   onChange,
+  task,
+  onActivityComplete,
 }: {
   view: PracticeView;
   onChange: (view: PracticeView) => void;
+  task?: PlanTask;
+  onActivityComplete?: () => void;
 }) {
-  if (view === 'speak') return <SpeakingSection />;
-  if (view === 'read') return <ReadingSection />;
-  if (view === 'cards') return <FlashcardsSection />;
+  if (view === 'speak') {
+    return <SpeakingSection onComplete={onActivityComplete} />;
+  }
+  if (view === 'read')
+    return <ReadingSection task={task} onComplete={onActivityComplete} />;
+  if (view === 'cards') {
+    return <FlashcardsSection onComplete={onActivityComplete} />;
+  }
   if (view === 'vocab') return <VocabSection />;
-  if (view === 'kana') return <KanaSection />;
+  if (view === 'kana') return <KanaSection onComplete={onActivityComplete} />;
   if (view === 'review') {
-    return <ReviewSection onBrowse={() => onChange('cards')} />;
+    return (
+      <ReviewSection
+        onBrowse={() => onChange('cards')}
+        onComplete={onActivityComplete}
+      />
+    );
   }
 
   return (

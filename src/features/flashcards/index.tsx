@@ -3,7 +3,6 @@ import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
 import { useState } from 'react';
 import FlipCard from './components/FlipCard';
-import { DECKS } from '@/content/words';
 import LanguageFilter from '@/components/LanguageFilter';
 import { REVIEW_ID, useFlashcardQueue } from './useFlashcardQueue';
 
@@ -11,8 +10,10 @@ export { REVIEW_ID } from './useFlashcardQueue';
 
 export default function FlashcardsSection({
   initialDeckId,
+  onComplete,
 }: {
   initialDeckId?: string;
+  onComplete?: () => void;
 } = {}) {
   const {
     deckId,
@@ -31,11 +32,18 @@ export default function FlashcardsSection({
     restart,
     progress,
     deckTitle,
+    decks,
   } = useFlashcardQueue(initialDeckId);
   const [langFilter, setLangFilter] = useState<'all' | 'en' | 'ja'>('all');
-  const visibleDecks = DECKS.filter(
+  const visibleDecks = decks.filter(
     (d) => langFilter === 'all' || d.lang === langFilter,
   );
+
+  const handleAnswer = (mark: 'known' | 'unknown') => {
+    const completesDeck = mark === 'known' && queue.length === 1;
+    answer(mark);
+    if (completesDeck) onComplete?.();
+  };
 
   return (
     <div className={styles.section}>
@@ -54,7 +62,7 @@ export default function FlashcardsSection({
         variant="segmented"
         onChange={(v) => {
           setLangFilter(v);
-          const first = DECKS.find((d) => v === 'all' || d.lang === v)!;
+          const first = decks.find((d) => v === 'all' || d.lang === v)!;
           if (v !== 'all' && !isReview && deck!.lang !== v) setDeckId(first.id);
         }}
       />
@@ -131,12 +139,15 @@ export default function FlashcardsSection({
             />
             <div className={styles.answers}>
               <button
-                onClick={() => answer('unknown')}
+                onClick={() => handleAnswer('unknown')}
                 className={styles.unknown}
               >
                 还不熟
               </button>
-              <button onClick={() => answer('known')} className={styles.known}>
+              <button
+                onClick={() => handleAnswer('known')}
+                className={styles.known}
+              >
                 认识了
               </button>
             </div>

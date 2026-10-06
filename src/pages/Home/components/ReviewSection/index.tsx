@@ -4,14 +4,22 @@ import FeatureHeader from '@/components/FeatureHeader';
 import FlashcardsSection, { REVIEW_ID } from '@/features/flashcards';
 import { useStudy } from '@/study/useStudy';
 
-export default function ReviewSection({ onBrowse }: { onBrowse: () => void }) {
+export default function ReviewSection({
+  onBrowse,
+  onComplete,
+}: {
+  onBrowse: () => void;
+  onComplete?: () => void;
+}) {
   const { marks } = useStudy();
   const unknownCount = Object.values(marks).filter(
     (mark) => mark === 'unknown',
   ).length;
 
   if (unknownCount > 0) {
-    return <FlashcardsSection initialDeckId={REVIEW_ID} />;
+    return (
+      <FlashcardsSection initialDeckId={REVIEW_ID} onComplete={onComplete} />
+    );
   }
 
   return (

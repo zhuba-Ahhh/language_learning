@@ -1,6 +1,7 @@
 /** 按语言与难度展示内置阅读资源。 */
 import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
+import type { PlanTask } from '@/content/plan';
 import { READING_GROUPS } from '@/content/reading';
 
 const LEVEL_STYLE: Record<number, { label: string; cls: string }> = {
@@ -9,12 +10,31 @@ const LEVEL_STYLE: Record<number, { label: string; cls: string }> = {
   3: { label: '高级', cls: styles.advanced },
 };
 
-export default function ReadingSection() {
+export default function ReadingSection({
+  task,
+  onComplete,
+}: {
+  task?: PlanTask;
+  onComplete?: () => void;
+}) {
+  const groupIds = task?.activity.resourceGroupIds;
+  const resourceNames = task?.activity.resourceNames;
+  const groups = READING_GROUPS.filter(
+    (group) => !groupIds || groupIds.includes(group.id),
+  )
+    .map((group) => ({
+      ...group,
+      resources: group.resources.filter(
+        (resource) => !resourceNames || resourceNames.includes(resource.name),
+      ),
+    }))
+    .filter((group) => group.resources.length > 0);
+
   return (
     <div className={styles.section}>
       <FeatureHeader title="慢慢读懂"></FeatureHeader>
 
-      {READING_GROUPS.map((g) => (
+      {groups.map((g) => (
         <section key={g.id} className="reveal">
           <div className={styles.groupHeading}>
             <h2 className={styles.groupTitle}>{g.title}</h2>
@@ -29,6 +49,7 @@ export default function ReadingSection() {
                   href={r.url}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={onComplete}
                   className={styles.resource}
                 >
                   <div className={styles.content}>

@@ -1,0 +1,78 @@
+{
+  "id": "en-speaking",
+  "lang": "en",
+  "title": "口语应答",
+  "subtitle": "English · Speaking",
+  "words": [
+    {
+      "id": "en-speaking-0",
+      "term": "Could you say that again?",
+      "meaning": "可以再说一遍吗？",
+      "example": "Sorry, could you say that again?",
+      "exampleZh": "不好意思，可以再说一遍吗？"
+    },
+    {
+      "id": "en-speaking-1",
+      "term": "Could you speak more slowly?",
+      "meaning": "可以说慢一点吗？",
+      "example": "Could you speak more slowly, please?",
+      "exampleZh": "请问可以说慢一点吗？"
+    },
+    {
+      "id": "en-speaking-2",
+      "term": "Let me think for a moment.",
+      "meaning": "让我想一下。",
+      "example": "Let me think for a moment before I answer.",
+      "exampleZh": "回答之前让我想一下。"
+    },
+    {
+      "id": "en-speaking-3",
+      "term": "What do you mean by that?",
+      "meaning": "你那是什么意思？",
+      "example": "What do you mean by a flexible schedule?",
+      "exampleZh": "你说的弹性日程是什么意思？"
+    },
+    {
+      "id": "en-speaking-4",
+      "term": "From my point of view,",
+      "meaning": "在我看来，",
+      "example": "From my point of view, public transport should be cheaper.",
+      "exampleZh": "在我看来，公共交通应该更便宜。"
+    },
+    {
+      "id": "en-speaking-5",
+      "term": "I agree to some extent.",
+      "meaning": "我在一定程度上同意。",
+      "example": "I agree to some extent, but cost is still a concern.",
+      "exampleZh": "我在一定程度上同意，但成本仍然是个问题。"
+    },
+    {
+      "id": "en-speaking-6",
+      "term": "I'm not sure about that.",
+      "meaning": "我不太确定。",
+      "example": "I'm not sure about that because the data is limited.",
+      "exampleZh": "我不太确定，因为数据有限。"
+    },
+    {
+      "id": "en-speaking-7",
+      "term": "Could you give me an example?",
+      "meaning": "可以举个例子吗？",
+      "example": "Could you give me an example of what you mean?",
+      "exampleZh": "你能举个例子说明你的意思吗？"
+    },
+    {
+      "id": "en-speaking-8",
+      "term": "That's a good question.",
+      "meaning": "这是个好问题。",
+      "example": "That's a good question. I haven't considered it before.",
+      "exampleZh": "这是个好问题，我以前没有考虑过。"
+    },
+    {
+      "id": "en-speaking-9",
+      "term": "Let me put it another way.",
+      "meaning": "让我换一种说法。",
+      "example": "Let me put it another way so the idea is clearer.",
+      "exampleZh": "让我换一种说法，把这个想法讲得更清楚。"
+    }
+  ]
+}

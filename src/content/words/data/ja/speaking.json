@@ -1,0 +1,88 @@
+{
+  "id": "ja-speaking",
+  "lang": "ja",
+  "title": "会话应答",
+  "subtitle": "日本語 · 会話",
+  "words": [
+    {
+      "id": "ja-speaking-0",
+      "term": "もう一度お願いします",
+      "reading": "もういちどおねがいします",
+      "meaning": "请再说一次",
+      "example": "すみません、もう一度お願いします。",
+      "exampleZh": "不好意思，请再说一次。"
+    },
+    {
+      "id": "ja-speaking-1",
+      "term": "ゆっくり話してください",
+      "reading": "ゆっくりはなしてください",
+      "meaning": "请说慢一些",
+      "example": "日本語をゆっくり話してください。",
+      "exampleZh": "请把日语说慢一些。"
+    },
+    {
+      "id": "ja-speaking-2",
+      "term": "どういう意味ですか",
+      "reading": "どういういみですか",
+      "meaning": "是什么意思？",
+      "example": "この言葉はどういう意味ですか。",
+      "exampleZh": "这个词是什么意思？"
+    },
+    {
+      "id": "ja-speaking-3",
+      "term": "ちょっと考えさせてください",
+      "reading": "ちょっとかんがえさせてください",
+      "meaning": "请让我想一下",
+      "example": "難しい質問ですね。ちょっと考えさせてください。",
+      "exampleZh": "这个问题很难，请让我想一下。"
+    },
+    {
+      "id": "ja-speaking-4",
+      "term": "私もそう思います",
+      "reading": "わたしもそうおもいます",
+      "meaning": "我也这么认为",
+      "example": "ええ、私もそう思います。",
+      "exampleZh": "嗯，我也这么认为。"
+    },
+    {
+      "id": "ja-speaking-5",
+      "term": "そうは思いません",
+      "reading": "そうはおもいません",
+      "meaning": "我不这么认为",
+      "example": "申し訳ありませんが、私はそうは思いません。",
+      "exampleZh": "不好意思，我不这么认为。"
+    },
+    {
+      "id": "ja-speaking-6",
+      "term": "例えば",
+      "reading": "たとえば",
+      "meaning": "比如；例如",
+      "example": "例えば、毎日十分だけ練習します。",
+      "exampleZh": "比如，每天只练习十分钟。"
+    },
+    {
+      "id": "ja-speaking-7",
+      "term": "なるほど",
+      "reading": "なるほど",
+      "meaning": "原来如此；明白了",
+      "example": "なるほど、よく分かりました。",
+      "exampleZh": "原来如此，我明白了。"
+    },
+    {
+      "id": "ja-speaking-8",
+      "term": "分かりました",
+      "reading": "わかりました",
+      "meaning": "明白了",
+      "example": "はい、分かりました。すぐに対応します。",
+      "exampleZh": "好的，明白了，我马上处理。"
+    },
+    {
+      "id": "ja-speaking-9",
+      "term": "どう思いますか",
+      "reading": "どうおもいますか",
+      "meaning": "你怎么看？",
+      "example": "この計画についてどう思いますか。",
+      "exampleZh": "你对这个计划怎么看？"
+    }
+  ]
+}

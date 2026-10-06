@@ -1,0 +1,707 @@
+{
+  "language": "ja",
+  "source": "japanese-easy@1.2.5 / JLPT Vocabulary API",
+  "note": "候选词进入正式词库前，必须补充中文释义与双语例句，并人工核对读音。",
+  "candidates": [
+    {
+      "term": "毎朝",
+      "reading": "まいあさ",
+      "romaji": "maiasa",
+      "meaningEn": "every morning",
+      "level": "N5"
+    },
+    {
+      "term": "問題",
+      "reading": "もんだい",
+      "romaji": "mondai",
+      "meaningEn": "problem",
+      "level": "N5"
+    },
+    {
+      "term": "お茶",
+      "reading": "おちゃ",
+      "romaji": "ocha",
+      "meaningEn": "green tea",
+      "level": "N5"
+    },
+    {
+      "term": "黒",
+      "reading": "くろ",
+      "romaji": "kuro",
+      "meaningEn": "black",
+      "level": "N5"
+    },
+    {
+      "term": "台所",
+      "reading": "だいどころ",
+      "romaji": "daidokoro",
+      "meaningEn": "kitchen",
+      "level": "N5"
+    },
+    {
+      "term": "葉書",
+      "reading": "はがき",
+      "romaji": "hagaki",
+      "meaningEn": "postcard",
+      "level": "N5"
+    },
+    {
+      "term": "ペン",
+      "reading": "ペン",
+      "romaji": "pen",
+      "meaningEn": "pen",
+      "level": "N5"
+    },
+    {
+      "term": "ニュース",
+      "reading": "ニュース",
+      "romaji": "nyūsu",
+      "meaningEn": "news",
+      "level": "N5"
+    },
+    {
+      "term": "花瓶",
+      "reading": "かびん",
+      "romaji": "kabin",
+      "meaningEn": "a vase",
+      "level": "N5"
+    },
+    {
+      "term": "フォーク",
+      "reading": "フォーク",
+      "romaji": "fōku",
+      "meaningEn": "fork",
+      "level": "N5"
+    },
+    {
+      "term": "引く",
+      "reading": "ひく",
+      "romaji": "hiku",
+      "meaningEn": "to pull",
+      "level": "N5"
+    },
+    {
+      "term": "フィルム",
+      "reading": "フィルム",
+      "romaji": "firumu",
+      "meaningEn": "roll of film",
+      "level": "N5"
+    },
+    {
+      "term": "磨く",
+      "reading": "みがく",
+      "romaji": "migaku",
+      "meaningEn": "to brush teeth, to polish",
+      "level": "N5"
+    },
+    {
+      "term": "押す",
+      "reading": "おす",
+      "romaji": "osu",
+      "meaningEn": "to push, to stamp something",
+      "level": "N5"
+    },
+    {
+      "term": "売る",
+      "reading": "うる",
+      "romaji": "uru",
+      "meaningEn": "to sell",
+      "level": "N5"
+    },
+    {
+      "term": "電気",
+      "reading": "でんき",
+      "romaji": "denki",
+      "meaningEn": "electricity, electric light",
+      "level": "N5"
+    },
+    {
+      "term": "並ぶ",
+      "reading": "ならぶ",
+      "romaji": "narabu",
+      "meaningEn": "to line up, to stand in a line",
+      "level": "N5"
+    },
+    {
+      "term": "病気",
+      "reading": "びょうき",
+      "romaji": "byōki",
+      "meaningEn": "illness",
+      "level": "N5"
+    },
+    {
+      "term": "ポケット",
+      "reading": "ポケット",
+      "romaji": "poketto",
+      "meaningEn": "pocket",
+      "level": "N5"
+    },
+    {
+      "term": "頭",
+      "reading": "あたま",
+      "romaji": "atama",
+      "meaningEn": "head",
+      "level": "N5"
+    },
+    {
+      "term": "はし",
+      "reading": "はし",
+      "romaji": "hashi",
+      "meaningEn": "chopsticks",
+      "level": "N5"
+    },
+    {
+      "term": "英語",
+      "reading": "えいご",
+      "romaji": "eigo",
+      "meaningEn": "English language",
+      "level": "N5"
+    },
+    {
+      "term": "家",
+      "reading": "いえ",
+      "romaji": "ie",
+      "meaningEn": "house",
+      "level": "N5"
+    },
+    {
+      "term": "一月",
+      "reading": "ひとつき",
+      "romaji": "hitotsuki",
+      "meaningEn": "one month",
+      "level": "N5"
+    },
+    {
+      "term": "暑い",
+      "reading": "あつい",
+      "romaji": "atsui",
+      "meaningEn": "hot",
+      "level": "N5"
+    },
+    {
+      "term": "遊ぶ",
+      "reading": "あそぶ",
+      "romaji": "asobu",
+      "meaningEn": "to play, to make a visit",
+      "level": "N5"
+    },
+    {
+      "term": "取る",
+      "reading": "とる",
+      "romaji": "toru",
+      "meaningEn": "to take something",
+      "level": "N5"
+    },
+    {
+      "term": "九",
+      "reading": "きゅう / く",
+      "romaji": "kyū / ku",
+      "meaningEn": "nine",
+      "level": "N5"
+    },
+    {
+      "term": "閉める",
+      "reading": "しめる",
+      "romaji": "shimeru",
+      "meaningEn": "to close something",
+      "level": "N5"
+    },
+    {
+      "term": "たいへん",
+      "reading": "たいへん",
+      "romaji": "taihen",
+      "meaningEn": "very",
+      "level": "N5"
+    },
+    {
+      "term": "奥さん",
+      "reading": "おくさん",
+      "romaji": "okusan",
+      "meaningEn": "(honorable) wife",
+      "level": "N5"
+    },
+    {
+      "term": "作文",
+      "reading": "さくぶん",
+      "romaji": "sakubun",
+      "meaningEn": "composition, writing",
+      "level": "N5"
+    },
+    {
+      "term": "便利",
+      "reading": "べんり",
+      "romaji": "benri",
+      "meaningEn": "useful, convenient",
+      "level": "N5"
+    },
+    {
+      "term": "右",
+      "reading": "みぎ",
+      "romaji": "migi",
+      "meaningEn": "right side",
+      "level": "N5"
+    },
+    {
+      "term": "寒い",
+      "reading": "さむい",
+      "romaji": "samui",
+      "meaningEn": "cold",
+      "level": "N5"
+    },
+    {
+      "term": "あびる",
+      "reading": "あびる",
+      "romaji": "abiru",
+      "meaningEn": "to bathe, to shower",
+      "level": "N5"
+    },
+    {
+      "term": "十",
+      "reading": "じゅう  とお",
+      "romaji": "jū  tō",
+      "meaningEn": "ten",
+      "level": "N5"
+    },
+    {
+      "term": "中",
+      "reading": "なか",
+      "romaji": "naka",
+      "meaningEn": "middle",
+      "level": "N5"
+    },
+    {
+      "term": "消す",
+      "reading": "けす",
+      "romaji": "kesu",
+      "meaningEn": "to erase, to turn off power",
+      "level": "N5"
+    },
+    {
+      "term": "近く",
+      "reading": "ちかく",
+      "romaji": "chikaku",
+      "meaningEn": "near",
+      "level": "N5"
+    },
+    {
+      "term": "七つ",
+      "reading": "ななつ",
+      "romaji": "nanatsu",
+      "meaningEn": "seven",
+      "level": "N5"
+    },
+    {
+      "term": "テープレコーダー",
+      "reading": "テープレコーダー",
+      "romaji": "tēpurekōdā",
+      "meaningEn": "tape recorder",
+      "level": "N5"
+    },
+    {
+      "term": "目",
+      "reading": "め",
+      "romaji": "me",
+      "meaningEn": "eye",
+      "level": "N5"
+    },
+    {
+      "term": "空",
+      "reading": "そら",
+      "romaji": "sora",
+      "meaningEn": "sky",
+      "level": "N5"
+    },
+    {
+      "term": "六日",
+      "reading": "むいか",
+      "romaji": "muika",
+      "meaningEn": "six days, sixth day of the month",
+      "level": "N5"
+    },
+    {
+      "term": "座る",
+      "reading": "すわる",
+      "romaji": "suwaru",
+      "meaningEn": "to sit",
+      "level": "N5"
+    },
+    {
+      "term": "年",
+      "reading": "とし",
+      "romaji": "toshi",
+      "meaningEn": "year",
+      "level": "N5"
+    },
+    {
+      "term": "男の子",
+      "reading": "おとこのこ",
+      "romaji": "otokonoko",
+      "meaningEn": "boy",
+      "level": "N5"
+    },
+    {
+      "term": "狭い",
+      "reading": "せまい",
+      "romaji": "semai",
+      "meaningEn": "narrow",
+      "level": "N5"
+    },
+    {
+      "term": "冷蔵庫",
+      "reading": "れいぞうこ",
+      "romaji": "reizōko",
+      "meaningEn": "refrigerator",
+      "level": "N5"
+    },
+    {
+      "term": "雲",
+      "reading": "くも",
+      "romaji": "kumo",
+      "meaningEn": "cloud",
+      "level": "N4"
+    },
+    {
+      "term": "サンドイッチ",
+      "reading": "サンドイッチ",
+      "romaji": "sandoitchi",
+      "meaningEn": "sandwich",
+      "level": "N4"
+    },
+    {
+      "term": "故障",
+      "reading": "こしょう・する",
+      "romaji": "koshō-suru",
+      "meaningEn": "to break-down",
+      "level": "N4"
+    },
+    {
+      "term": "怖い",
+      "reading": "こわい",
+      "romaji": "kowai",
+      "meaningEn": "frightening",
+      "level": "N4"
+    },
+    {
+      "term": "エスカレーター",
+      "reading": "エスカレーター",
+      "romaji": "esukarētā",
+      "meaningEn": "escalator",
+      "level": "N4"
+    },
+    {
+      "term": "運ぶ",
+      "reading": "はこぶ",
+      "romaji": "hakobu",
+      "meaningEn": "to transport",
+      "level": "N4"
+    },
+    {
+      "term": "受ける",
+      "reading": "うける",
+      "romaji": "ukeru",
+      "meaningEn": "to take a lesson or test",
+      "level": "N4"
+    },
+    {
+      "term": "お嬢さん",
+      "reading": "おじょうさん",
+      "romaji": "ojōsan",
+      "meaningEn": "young lady",
+      "level": "N4"
+    },
+    {
+      "term": "首",
+      "reading": "くび",
+      "romaji": "kubi",
+      "meaningEn": "neck",
+      "level": "N4"
+    },
+    {
+      "term": "市民",
+      "reading": "しみん",
+      "romaji": "shimin",
+      "meaningEn": "citizen",
+      "level": "N4"
+    },
+    {
+      "term": "付く",
+      "reading": "つく",
+      "romaji": "tsuku",
+      "meaningEn": "to be attached",
+      "level": "N4"
+    },
+    {
+      "term": "すく",
+      "reading": "すく",
+      "romaji": "suku",
+      "meaningEn": "to become empty",
+      "level": "N4"
+    },
+    {
+      "term": "こと",
+      "reading": "こと",
+      "romaji": "koto",
+      "meaningEn": "thing, matter",
+      "level": "N4"
+    },
+    {
+      "term": "訪ねる",
+      "reading": "たずねる",
+      "romaji": "tazuneru",
+      "meaningEn": "to visit",
+      "level": "N4"
+    },
+    {
+      "term": "お祝い",
+      "reading": "おいわい",
+      "romaji": "oiwai",
+      "meaningEn": "congratulation",
+      "level": "N4"
+    },
+    {
+      "term": "一生懸命",
+      "reading": "いっしょうけんめい",
+      "romaji": "isshōkenmei",
+      "meaningEn": "with utmost effort",
+      "level": "N4"
+    },
+    {
+      "term": "済む",
+      "reading": "すむ",
+      "romaji": "sumu",
+      "meaningEn": "to finish",
+      "level": "N4"
+    },
+    {
+      "term": "アメリカ",
+      "reading": "アメリカ",
+      "romaji": "amerika",
+      "meaningEn": "America",
+      "level": "N4"
+    },
+    {
+      "term": "復習",
+      "reading": "ふくしゅう",
+      "romaji": "fukushū",
+      "meaningEn": "revision",
+      "level": "N4"
+    },
+    {
+      "term": "急",
+      "reading": "きゅう",
+      "romaji": "kyū",
+      "meaningEn": "urgent, steep",
+      "level": "N4"
+    },
+    {
+      "term": "これから",
+      "reading": "これから",
+      "romaji": "korekara",
+      "meaningEn": "after this",
+      "level": "N4"
+    },
+    {
+      "term": "指輪",
+      "reading": "ゆびわ",
+      "romaji": "yubiwa",
+      "meaningEn": "finger ring",
+      "level": "N4"
+    },
+    {
+      "term": "美しい",
+      "reading": "うつくしい",
+      "romaji": "utsukushii",
+      "meaningEn": "beautiful",
+      "level": "N4"
+    },
+    {
+      "term": "直る",
+      "reading": "なおる",
+      "romaji": "naoru",
+      "meaningEn": "to be fixed, to be repaired",
+      "level": "N4"
+    },
+    {
+      "term": "水泳",
+      "reading": "すいえい",
+      "romaji": "suiei",
+      "meaningEn": "swimming",
+      "level": "N4"
+    },
+    {
+      "term": "真中",
+      "reading": "まんなか",
+      "romaji": "mannaka",
+      "meaningEn": "middle",
+      "level": "N4"
+    },
+    {
+      "term": "発音",
+      "reading": "はつおん",
+      "romaji": "hatsuon",
+      "meaningEn": "pronunciation",
+      "level": "N4"
+    },
+    {
+      "term": "手伝う",
+      "reading": "てつだう",
+      "romaji": "tetsudau",
+      "meaningEn": "to assist",
+      "level": "N4"
+    },
+    {
+      "term": "折れる",
+      "reading": "おれる",
+      "romaji": "oreru",
+      "meaningEn": "to break or be folded",
+      "level": "N4"
+    },
+    {
+      "term": "一度",
+      "reading": "いちど",
+      "romaji": "ichido",
+      "meaningEn": "once",
+      "level": "N4"
+    },
+    {
+      "term": "高等学校",
+      "reading": "こうとうがっこう",
+      "romaji": "kōtōgakkō",
+      "meaningEn": "high school",
+      "level": "N4"
+    },
+    {
+      "term": "アルコール",
+      "reading": "アルコール",
+      "romaji": "arukōru",
+      "meaningEn": "alcohol",
+      "level": "N4"
+    },
+    {
+      "term": "アナウンサー",
+      "reading": "アナウンサー",
+      "romaji": "anaunsā",
+      "meaningEn": "announcer",
+      "level": "N4"
+    },
+    {
+      "term": "最初",
+      "reading": "さいしょ",
+      "romaji": "saisho",
+      "meaningEn": "beginning, first",
+      "level": "N4"
+    },
+    {
+      "term": "投げる",
+      "reading": "なげる",
+      "romaji": "nageru",
+      "meaningEn": "to throw or cast away",
+      "level": "N4"
+    },
+    {
+      "term": "変える",
+      "reading": "かえる",
+      "romaji": "kaeru",
+      "meaningEn": "to change",
+      "level": "N4"
+    },
+    {
+      "term": "昼間",
+      "reading": "ひるま",
+      "romaji": "hiruma",
+      "meaningEn": "daytime, during the day",
+      "level": "N4"
+    },
+    {
+      "term": "神社",
+      "reading": "じんじゃ",
+      "romaji": "jinja",
+      "meaningEn": "Shinto shrine",
+      "level": "N4"
+    },
+    {
+      "term": "食料品",
+      "reading": "しょくりょうひん",
+      "romaji": "shokuryōhin",
+      "meaningEn": "groceries",
+      "level": "N4"
+    },
+    {
+      "term": "丁寧",
+      "reading": "ていねい",
+      "romaji": "teinei",
+      "meaningEn": "polite",
+      "level": "N4"
+    },
+    {
+      "term": "規則",
+      "reading": "きそく",
+      "romaji": "kisoku",
+      "meaningEn": "regulations",
+      "level": "N4"
+    },
+    {
+      "term": "もうすぐ",
+      "reading": "もうすぐ",
+      "romaji": "mōsugu",
+      "meaningEn": "soon",
+      "level": "N4"
+    },
+    {
+      "term": "絹",
+      "reading": "きぬ",
+      "romaji": "kinu",
+      "meaningEn": "silk",
+      "level": "N4"
+    },
+    {
+      "term": "怒る",
+      "reading": "おこる",
+      "romaji": "okoru",
+      "meaningEn": "to get angry, to be angry",
+      "level": "N4"
+    },
+    {
+      "term": "用",
+      "reading": "よう",
+      "romaji": "yō",
+      "meaningEn": "use",
+      "level": "N4"
+    },
+    {
+      "term": "致す",
+      "reading": "いたす",
+      "romaji": "itasu",
+      "meaningEn": "(humble) to do",
+      "level": "N4"
+    },
+    {
+      "term": "海岸",
+      "reading": "かいがん",
+      "romaji": "kaigan",
+      "meaningEn": "coast",
+      "level": "N4"
+    },
+    {
+      "term": "経済",
+      "reading": "けいざい",
+      "romaji": "keizai",
+      "meaningEn": "finance, economy",
+      "level": "N4"
+    },
+    {
+      "term": "以上",
+      "reading": "いじょう",
+      "romaji": "ijō",
+      "meaningEn": "more than, this is all",
+      "level": "N4"
+    },
+    {
+      "term": "掛ける",
+      "reading": "かける",
+      "romaji": "kakeru",
+      "meaningEn": "to hang something",
+      "level": "N4"
+    }
+  ]
+}
