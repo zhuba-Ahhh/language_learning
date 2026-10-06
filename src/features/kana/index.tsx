@@ -66,16 +66,7 @@ export default function KanaSection() {
 
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="Kana"
-        title="五十音图"
-        description={
-          <>
-            点击假名听发音；切换到「小测验」检验掌握程度。片假名是 IT
-            外来语的关键。
-          </>
-        }
-      ></FeatureHeader>
+      <FeatureHeader title="认读假名"></FeatureHeader>
 
       {/* controls */}
       <div className={`reveal ${styles.controls}`}>

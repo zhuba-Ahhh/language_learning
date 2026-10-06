@@ -10,13 +10,14 @@
 }
 .switchGroup {
   display: flex;
-  border-radius: 9999px;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.3rem;
+  background-color: rgb(var(--paper));
   padding: 0.25rem;
   box-shadow: var(--shadow-soft);
 }
 .switchOption {
-  border-radius: 9999px;
+  border-radius: 0.2rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.5rem;
@@ -29,13 +30,13 @@
   transition-duration: 150ms;
 }
 .selected {
-  background-color: rgb(var(--deepblue));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--sage));
+  color: rgb(var(--ink));
 }
 .idle {
   color: rgb(var(--ink) / 0.6);
 }
 .modeSelected {
-  background-color: rgb(var(--aqua));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--lilac));
+  color: rgb(var(--ink));
 }

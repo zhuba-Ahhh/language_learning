@@ -6,17 +6,10 @@ import KanaSection from '@/features/kana';
 import ReadingSection from '@/features/reading';
 import SpeakingSection from '@/features/speaking';
 import VocabSection from '@/features/vocabulary';
-import { READING_GROUPS } from '@/content/reading';
-import { SCENARIOS } from '@/content/speaking';
 import ReviewSection from '../ReviewSection';
 
 export type PracticeView =
   'overview' | 'speak' | 'read' | 'cards' | 'vocab' | 'kana' | 'review';
-
-const READING_COUNT = READING_GROUPS.reduce(
-  (count, group) => count + group.resources.length,
-  0,
-);
 
 export default function PracticeSection({
   view,
@@ -36,52 +29,35 @@ export default function PracticeSection({
 
   return (
     <section className={styles.section}>
-      <FeatureHeader
-        eyebrow="Practice"
-        title="练习"
-        description={<>先练表达与理解，再用基础工具补齐词汇和文字。</>}
-      />
+      <FeatureHeader title="选一种方式开始" />
 
       <div className={styles.focusGrid}>
-        <article className={styles.speaking}>
-          <p className={styles.sequence}>表达</p>
+        <button
+          type="button"
+          onClick={() => onChange('speak')}
+          className={`${styles.focusCard} ${styles.speaking}`}
+        >
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="22" y="8" width="20" height="34" rx="10" />
+            <path d="M14 31v2a18 18 0 0 0 36 0v-2M32 51v7M23 58h18" />
+          </svg>
           <h2 className={styles.focusTitle}>口语</h2>
-          <p className={styles.focusDescription}>
-            场景跟读、复述和自由表达。后续 IELTS 口语也复用这套录音与反馈能力。
-          </p>
-          <p className={styles.meta}>{SCENARIOS.length} 个现有场景</p>
-          <button
-            type="button"
-            onClick={() => onChange('speak')}
-            className={styles.lightAction}
-          >
-            开始口语练习
-          </button>
-        </article>
+        </button>
 
-        <article className={styles.reading}>
-          <p className={styles.sequence}>理解</p>
+        <button
+          type="button"
+          onClick={() => onChange('read')}
+          className={`${styles.focusCard} ${styles.reading}`}
+        >
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M8 13h17a7 7 0 0 1 7 7v33a9 9 0 0 0-8-5H8V13Z" />
+            <path d="M56 13H39a7 7 0 0 0-7 7v33a9 9 0 0 1 8-5h16V13Z" />
+          </svg>
           <h2 className={styles.focusTitle}>阅读</h2>
-          <p className={styles.focusDescription}>
-            从分级资源进入精读、查词和题目训练，为 IELTS 阅读和 JLPT
-            读解提供共同基础。
-          </p>
-          <p className={styles.meta}>{READING_COUNT} 个现有资源</p>
-          <button
-            type="button"
-            onClick={() => onChange('read')}
-            className={styles.darkAction}
-          >
-            浏览阅读材料
-          </button>
-        </article>
+        </button>
       </div>
 
       <div className={styles.tools}>
-        <div>
-          <h2 className={styles.toolsTitle}>基础工具</h2>
-          <p className={styles.toolsDescription}>需要时使用，不打断主练习。</p>
-        </div>
         <div className={styles.toolActions}>
           {(
             [

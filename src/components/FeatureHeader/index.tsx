@@ -3,23 +3,14 @@ import type { ReactNode } from 'react';
 import styles from './index.module.less';
 
 interface Props {
-  eyebrow: string;
   title: string;
-  description: ReactNode;
   children?: ReactNode;
 }
 
-export default function FeatureHeader({
-  eyebrow,
-  title,
-  description,
-  children,
-}: Props) {
+export default function FeatureHeader({ title, children }: Props) {
   return (
     <header className="reveal">
-      <p className={styles.eyebrow}>{eyebrow}</p>
       <h1 className={styles.title}>{title}</h1>
-      <p className={styles.description}>{description}</p>
       {children}
     </header>
   );

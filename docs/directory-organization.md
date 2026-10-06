@@ -422,7 +422,6 @@ src/
     ├── utilities.less
     └── patterns.less
 
-scripts/check-boundaries.mjs
 eslint.config.js
 postcss.config.js
 vite.config.ts
@@ -432,4 +431,4 @@ pnpm-lock.yaml
 `components/ui`、`use-mobile.ts`、`lib/utils.ts`、`App.css`、旧全局 CSS 和 Tailwind 配置均已删除。Context 与日期函数不再从组件文件混合导出。
 新共享 `FeatureHeader` 统一六个功能的标题；朗读按钮通过 `tone` 选择既有配色。`patterns.less` 只提供已有布局的少量 mixin，其他视觉规则共置在组件目录中。
 
-依赖方向由现有 ESLint 执行检查，同时覆盖别名和相对路径。验证包括标准构建、12 个边界样例和 36 个浏览器状态前后对照；内容与持久化保持兼容。Lint 由 14 项降为 2 项既有闪卡问题，详细结果和报告见[实施记录](./architecture-less-plan.md#7-实施与验证记录)。
+依赖方向由现有 ESLint 执行检查，同时覆盖别名和相对路径。验证包括标准构建和 36 个浏览器状态前后对照；内容与持久化保持兼容。Lint 由 14 项降为 2 项既有闪卡问题，详细结果和报告见[实施记录](./architecture-less-plan.md#7-实施与验证记录)。

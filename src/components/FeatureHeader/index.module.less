@@ -1,24 +1,24 @@
 /* 统一功能页的标题层级与断点。 */
-.eyebrow {
-  font: 11px var(--font-mono);
-  line-height: inherit;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  color: rgb(var(--aqua));
-}
 .title {
-  margin-top: 0.5rem;
-  font: 800 1.875rem / 2.25rem var(--font-display);
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  font: 600 2rem / 1.25 var(--font-display);
   color: rgb(var(--ink));
-  letter-spacing: -0.03em;
-  @media (min-width: 640px) {
-    font-size: 3rem;
-    line-height: 1;
+  letter-spacing: -0.02em;
+
+  &::after {
+    position: absolute;
+    right: 45%;
+    bottom: -0.55rem;
+    left: 0;
+    height: 0.2rem;
+    border-radius: 99px;
+    background: rgb(var(--sage));
+    content: '';
   }
-}
-.description {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: hsl(var(--muted-foreground));
+
+  @media (min-width: 640px) {
+    font-size: 3.25rem;
+  }
 }

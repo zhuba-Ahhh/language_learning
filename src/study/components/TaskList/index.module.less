@@ -1,167 +1,154 @@
-/* 组件语义样式；主题与字体统一引用全局 token。 */
 .today {
-  margin-top: 1.5rem;
-  & > :not([hidden]) ~ :not([hidden]) {
-    border-top-width: 1px;
-    border-bottom-width: 0;
-    border-color: hsl(var(--border));
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
+  .taskRow {
+    overflow: hidden;
+    border: 1px solid hsl(var(--border));
+    border-left: 0.5rem solid rgb(var(--sage));
+    border-radius: 0.3rem;
+    background: rgb(var(--paper) / 0.94);
+    padding-right: 0.75rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .taskRow:nth-child(2) {
+    border-left-color: rgb(var(--lilac));
+  }
+
+  .taskRow:nth-child(3) {
+    border-left-color: rgb(var(--powder));
   }
 }
+
 .plan {
-  & > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.25rem;
-    margin-bottom: 0;
-  }
-  border-top-width: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 0.25rem;
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+  border-top: 1px solid hsl(var(--border));
+  padding: 0.35rem 1rem 0.85rem;
 }
-.darkBorder {
-  border-color: rgb(255 255 255 / 0.15);
-}
+
+.darkBorder,
 .lightBorder {
   border-color: hsl(var(--border));
 }
+
 .taskRow {
   display: flex;
   align-items: center;
 }
-.todayButton {
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  gap: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-align: left;
-}
-.start {
-  flex-shrink: 0;
-  border-radius: 9999px;
-  border: 1px solid rgb(var(--deepblue) / 0.2);
-  padding: 0.4rem 0.75rem;
-  color: rgb(var(--deepblue));
-  font-size: 0.75rem;
-  font-weight: 600;
-  &:hover {
-    background-color: rgb(var(--powder) / 0.25);
-  }
-  &:focus-visible {
-    outline: 2px solid rgb(var(--aqua));
-    outline-offset: 2px;
-  }
-}
+
+.todayButton,
 .planButton {
   display: flex;
   width: 100%;
   align-items: flex-start;
-  gap: 0.75rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
   text-align: left;
 }
-.checkbox {
-  margin-top: 0.125rem;
-  display: flex;
+
+.todayButton {
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.planButton {
+  gap: 0.65rem;
+  padding: 0.6rem 0;
+}
+
+.start {
   flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  border-width: 2px;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  border-radius: 0.25rem;
+  background: rgb(var(--vermilion));
+  padding: 0.45rem 0.8rem;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  &:hover {
+    filter: brightness(0.96);
+  }
 }
+
+.checkbox {
+  display: grid;
+  flex-shrink: 0;
+  place-content: center;
+  border: 1.5px solid hsl(var(--border));
+  border-radius: 50%;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
 .todayCheckbox {
-  height: 1.5rem;
-  width: 1.5rem;
-  transition-duration: 300ms;
-  animation-duration: 300ms;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.1rem;
 }
+
 .planCheckbox {
-  height: 1.25rem;
-  width: 1.25rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.1rem;
 }
+
 .checked {
   border-color: rgb(var(--aqua));
-  background-color: rgb(var(--aqua));
-  animation-duration: 0.35s;
+  background: rgb(var(--aqua));
 }
-.todayUnchecked {
-  border-color: hsl(var(--muted-foreground) / 0.4);
-  .todayButton:hover & {
-    border-color: rgb(var(--aqua));
-  }
-}
-.darkUnchecked {
-  border-color: rgb(255 255 255 / 0.4);
-}
+
+.todayUnchecked,
+.darkUnchecked,
 .lightUnchecked {
-  border-color: hsl(var(--muted-foreground) / 0.4);
+  border-color: rgb(var(--ink) / 0.24);
 }
+
 .text {
-  flex: 1 1 0%;
-  line-height: 1.625;
+  flex: 1;
+  line-height: 1.55;
 }
+
 .todayText {
-  font-size: 0.875rem;
-  line-height: 1.625;
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  color: rgb(var(--ink));
+  font-size: 0.82rem;
+
   @media (min-width: 640px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.92rem;
   }
 }
+
 .planText {
-  font-size: 0.75rem;
-  line-height: 1.625;
-  @media (min-width: 640px) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
+  color: rgb(var(--ink) / 0.82);
+  font-size: 0.76rem;
 }
-.todayDone {
-  color: hsl(var(--muted-foreground));
-  text-decoration-line: line-through;
-}
+
+.todayDone,
 .planDone {
-  text-decoration-line: line-through;
-  opacity: 0.5;
+  color: hsl(var(--muted-foreground));
+  text-decoration: line-through;
 }
-.todayPending {
+
+.todayPending,
+.darkPending,
+.lightPending {
   color: rgb(var(--ink));
 }
-.darkPending {
-  color: rgb(255 255 255 / 0.9);
-}
-.lightPending {
-  color: rgb(var(--ink) / 0.8);
-}
+
 .duration {
   flex-shrink: 0;
-  font-family: var(--font-mono);
-}
-.todayDuration {
-  padding-top: 0.25rem;
-  font-size: 11px;
   color: hsl(var(--muted-foreground));
+  font: 0.65rem var(--font-mono);
 }
+
+.todayDuration {
+  padding-top: 0.22rem;
+}
+
 .planDuration {
-  padding-top: 0.125rem;
-  font-size: 10px;
+  padding-top: 0.16rem;
 }
-.darkDuration {
-  color: rgb(255 255 255 / 0.5);
-}
+
+.darkDuration,
 .lightDuration {
   color: hsl(var(--muted-foreground));
 }

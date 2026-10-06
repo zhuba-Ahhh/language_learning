@@ -12,21 +12,15 @@ const LEVEL_STYLE: Record<number, { label: string; cls: string }> = {
 export default function ReadingSection() {
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="Reading"
-        title="阅读资源"
-        description={
-          <>按难度分级。每天一篇，从「入门」栏开始，生词收进闪卡。</>
-        }
-      ></FeatureHeader>
+      <FeatureHeader title="慢慢读懂"></FeatureHeader>
 
       {READING_GROUPS.map((g) => (
         <section key={g.id} className="reveal">
           <div className={styles.groupHeading}>
-            <h2 className={styles.groupTitle}>
-              {g.lang === 'ja' ? '日语' : '英语'} · {g.title}
-            </h2>
-            <span className={styles.subtitle}>{g.subtitle}</span>
+            <h2 className={styles.groupTitle}>{g.title}</h2>
+            <span className={styles.subtitle}>
+              {g.lang === 'ja' ? '日语' : '英语'}
+            </span>
           </div>
           <ul className={styles.resources}>
             {g.resources.map((r) => (
@@ -46,7 +40,6 @@ export default function ReadingSection() {
                         {LEVEL_STYLE[r.level].label}
                       </span>
                     </div>
-                    <p className={styles.descriptionText}>{r.desc}</p>
                   </div>
                   <svg
                     width="16"
@@ -69,8 +62,6 @@ export default function ReadingSection() {
           </ul>
         </section>
       ))}
-
-      <p className={`reveal ${styles.footer}`}>外部资源将在新标签页打开</p>
     </div>
   );
 }

@@ -1,129 +1,120 @@
-@import (reference) '../../styles/patterns.less';
-/* 组件语义样式；主题与字体统一引用全局 token。 */
 .beginner {
-  background-color: rgb(var(--aqua) / 0.15);
-  color: rgb(var(--aqua));
-}
-.intermediate {
-  background-color: rgb(var(--deepblue) / 0.1);
+  background: rgb(var(--sage) / 0.5);
   color: rgb(var(--deepblue));
 }
+
+.intermediate {
+  background: rgb(var(--powder) / 0.72);
+  color: rgb(var(--ink));
+}
+
 .advanced {
-  background-color: rgb(var(--navy) / 0.1);
-  color: rgb(var(--navy));
+  background: rgb(var(--lilac) / 0.8);
+  color: rgb(var(--ink));
 }
+
 .section {
-  .section-spacing();
+  max-width: 66rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+  > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.75rem;
+  }
 }
+
 .groupHeading {
-  margin-bottom: 0.625rem;
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   gap: 0.5rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  margin-bottom: 0.65rem;
+  padding: 0 0.15rem;
 }
+
 .groupTitle {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
   color: rgb(var(--ink));
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font: 600 1.05rem / 1.6 var(--font-display);
 }
+
 .subtitle {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
+  font-size: 0.6875rem;
 }
+
 .resources {
-  & > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.625rem;
-    margin-bottom: 0;
+  display: grid;
+  gap: 0.65rem;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 .resource {
+  position: relative;
   display: flex;
+  min-height: 5.25rem;
   align-items: center;
   gap: 1rem;
-  border-radius: 1.4rem;
-  background-color: rgb(255 255 255);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  border-left: 0.45rem solid rgb(var(--sage));
+  border-radius: 0.3rem;
+  background: rgb(var(--paper) / 0.9);
+  padding: 1rem 1.15rem;
   box-shadow: var(--shadow-soft);
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.35rem;
+    height: 1.35rem;
+    background: linear-gradient(135deg, transparent 49%, rgb(var(--sand)) 50%);
+    content: '';
+  }
+
+  &:hover {
+    transform: translateX(3px);
+    border-left-color: rgb(var(--vermilion));
   }
 }
+
 .content {
-  min-width: 0px;
-  flex: 1 1 0%;
+  min-width: 0;
+  flex: 1;
 }
+
 .resourceHeading {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
 }
+
 .name {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
   color: rgb(var(--ink));
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  .resource:hover & {
-    color: rgb(var(--deepblue));
-  }
-  @media (min-width: 640px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+  font-size: 0.875rem;
+  font-weight: 600;
 }
+
 .level {
-  border-radius: 9999px;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.625rem;
+  font-weight: 650;
 }
-.descriptionText {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1.625;
-  color: hsl(var(--muted-foreground));
-  @media (min-width: 640px) {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
+
 .arrow {
   flex-shrink: 0;
-  color: hsl(var(--muted-foreground));
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  animation-duration: 300ms;
+  color: rgb(var(--vermilion));
+  transition: transform 160ms ease;
+
   .resource:hover & {
-    transform: translate(0.25rem, 0);
-    color: rgb(var(--aqua));
+    transform: translateX(0.2rem);
   }
-}
-.footer {
-  text-align: center;
-  font-size: 11px;
-  color: hsl(var(--muted-foreground));
 }

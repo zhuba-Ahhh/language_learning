@@ -1,7 +1,8 @@
 /* 组件语义样式；主题与字体统一引用全局 token。 */
 .heatmap {
-  border-radius: 1.4rem;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.35rem;
+  background-color: rgb(var(--paper) / 0.9);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
@@ -22,8 +23,8 @@
   line-height: 1.75rem;
   color: rgb(var(--ink));
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 .period {
   font-size: 11px;
@@ -52,7 +53,7 @@
   transition-duration: 150ms;
 }
 .active {
-  background-color: rgb(var(--aqua));
+  background-color: rgb(var(--sage));
 }
 .inactive {
   background-color: rgb(var(--sand));
@@ -60,7 +61,7 @@
 .today {
   box-shadow:
     0 0 0 1px #fff,
-    0 0 0 calc(2px + 1px) rgb(var(--deepblue)),
+    0 0 0 calc(2px + 1px) rgb(var(--vermilion)),
     0 0 #0000;
 }
 .spacer {
@@ -86,5 +87,5 @@
   height: 0.75rem;
   width: 0.75rem;
   border-radius: 3px;
-  background-color: rgb(var(--aqua));
+  background-color: rgb(var(--sage));
 }

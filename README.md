@@ -16,12 +16,11 @@ pnpm build              # TypeScript 检查与生产打包
 pnpm lint               # ESLint，包括模块依赖边界
 pnpm format             # 使用 Prettier 格式化代码、Less 与文档
 pnpm format:check       # 只检查格式，不写入文件
-pnpm check:boundaries   # 验证边界规则的正反例
 pnpm dev               # 开发服务，仅按需手动运行
 pnpm preview           # 预览已构建的 dist
 ```
 
-当前 `build` 与边界样例通过。`lint` 仍报告闪卡中两处既有的 `react-hooks/set-state-in-effect` 问题，详见[实施记录](./docs/architecture-less-plan.md#7-实施与验证记录)。
+当前 `build` 通过。`lint` 仍报告闪卡中两处既有的 `react-hooks/set-state-in-effect` 问题，详见[实施记录](./docs/architecture-less-plan.md#7-实施与验证记录)。
 
 格式化使用单引号、两空格缩进，配置见 `.prettierrc.json`；`.prettierignore` 排除依赖目录、构建产物、覆盖率目录和 pnpm 锁文件。首次运行 `format:check` 可能报告既有文件的格式差异，可运行 `pnpm format` 统一格式。
 

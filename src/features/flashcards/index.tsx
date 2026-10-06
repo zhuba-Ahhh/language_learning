@@ -39,15 +39,7 @@ export default function FlashcardsSection({
 
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="Flashcards"
-        title="单词闪卡"
-        description={
-          <>
-            点卡片翻面看释义和例句。认识 → 下一张；不认识 → 自动排到队尾再复习。
-          </>
-        }
-      ></FeatureHeader>
+      <FeatureHeader title="翻一张卡"></FeatureHeader>
 
       {/* language filter */}
       <LanguageFilter
@@ -142,19 +134,15 @@ export default function FlashcardsSection({
                 onClick={() => answer('unknown')}
                 className={styles.unknown}
               >
-                还不熟 · 晚点再看
+                还不熟
               </button>
               <button onClick={() => answer('known')} className={styles.known}>
-                认识了 · 下一张
+                认识了
               </button>
             </div>
           </div>
         )
       )}
-
-      <p className={`reveal ${styles.footer}`}>
-        词汇来自计算机高频场景与日常交流 · 掌握状态自动保存
-      </p>
     </div>
   );
 }

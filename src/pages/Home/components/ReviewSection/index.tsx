@@ -16,18 +16,11 @@ export default function ReviewSection({ onBrowse }: { onBrowse: () => void }) {
 
   return (
     <section className={styles.section}>
-      <FeatureHeader
-        eyebrow="Review"
-        title="复习"
-        description={<>需要再练的词和错题会集中出现在这里。</>}
-      />
+      <FeatureHeader title="今天到这里。" />
       <div className={styles.empty}>
-        <p className={styles.title}>目前没有待复习内容</p>
-        <p className={styles.description}>
-          在闪卡中标记“还不熟”的单词后，就会自动加入复习。
-        </p>
+        <p className={styles.title}>没有待复习内容</p>
         <button type="button" onClick={onBrowse} className={styles.action}>
-          去学习闪卡
+          看闪卡
         </button>
       </div>
     </section>

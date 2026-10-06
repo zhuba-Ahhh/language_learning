@@ -1,115 +1,136 @@
-/** 展示场景句子、朗读操作与跟读提示。 */
+/** 口语练习保持一个动作流：听一句，再录一句。 */
+import { useEffect, useRef, useState } from 'react';
 import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
-import { useState } from 'react';
 import SpeakButton from '@/components/SpeakButton';
 import { SCENARIOS } from '@/content/speaking';
 
 export default function SpeakingSection() {
   const [scenarioId, setScenarioId] = useState(SCENARIOS[0].id);
-  const scenario = SCENARIOS.find((s) => s.id === scenarioId)!;
+  const [sentenceIndex, setSentenceIndex] = useState(0);
+  const [recording, setRecording] = useState(false);
+  const [recordingUrl, setRecordingUrl] = useState<string | null>(null);
+  const [error, setError] = useState('');
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const urlRef = useRef<string | null>(null);
+
+  const scenario = SCENARIOS.find((item) => item.id === scenarioId)!;
+  const sentence = scenario.sentences[sentenceIndex];
+
+  useEffect(
+    () => () => {
+      streamRef.current?.getTracks().forEach((track) => track.stop());
+      if (urlRef.current) URL.revokeObjectURL(urlRef.current);
+    },
+    [],
+  );
+
+  const stopRecording = () => recorderRef.current?.stop();
+
+  const startRecording = async () => {
+    setError('');
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+      setError('当前浏览器不支持录音');
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      streamRef.current = stream;
+      recorderRef.current = recorder;
+      chunksRef.current = [];
+      recorder.ondataavailable = (event) => {
+        if (event.data.size) chunksRef.current.push(event.data);
+      };
+      recorder.onstop = () => {
+        const url = URL.createObjectURL(new Blob(chunksRef.current));
+        if (urlRef.current) URL.revokeObjectURL(urlRef.current);
+        urlRef.current = url;
+        setRecordingUrl(url);
+        setRecording(false);
+        stream.getTracks().forEach((track) => track.stop());
+        streamRef.current = null;
+      };
+      recorder.start();
+      setRecording(true);
+    } catch {
+      setError('请允许麦克风权限');
+    }
+  };
+
+  const selectScenario = (id: string) => {
+    setScenarioId(id);
+    setSentenceIndex(0);
+  };
+
+  const nextSentence = () => {
+    setSentenceIndex((index) => (index + 1) % scenario.sentences.length);
+  };
 
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="Speaking"
-        title="口语练习"
-        description={
-          <>
-            点喇叭听发音 → 跟读 3 遍 → 不看中文复述。每天一个场景，录下来回听。
-          </>
-        }
-      ></FeatureHeader>
+      <FeatureHeader title="先说出来" />
 
-      {/* scenario chips */}
       <div className={`reveal ${styles.scenarioScroller}`}>
         <div className={styles.scenarioList}>
-          {SCENARIOS.map((s) => (
+          {SCENARIOS.map((item) => (
             <button
-              key={s.id}
-              onClick={() => setScenarioId(s.id)}
+              type="button"
+              key={item.id}
+              onClick={() => selectScenario(item.id)}
               className={`${styles.scenarioChip} ${
-                s.id === scenarioId ? styles.selected : styles.idle
+                item.id === scenarioId ? styles.selected : styles.idle
               }`}
             >
-              {s.lang === 'ja' ? '日语' : '英语'} · {s.title}
+              {item.title}
             </button>
           ))}
         </div>
       </div>
 
-      {/* tip */}
-      <div className={`reveal ${styles.tip}`}>
-        <p className={styles.tipLabel}>{scenario.subtitle} · 练习提示</p>
-        <p className={styles.tipText}>{scenario.tip}</p>
-      </div>
-
-      {/* sentences */}
-      <ul className={`reveal ${styles.sentences}`}>
-        {scenario.sentences.map((s, i) => (
-          <li key={i} className={styles.sentence}>
-            <span className={styles.number}>
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <div className={styles.content}>
-              <p
-                lang={scenario.lang === 'ja' ? 'ja' : undefined}
-                className={styles.sentenceText}
-              >
-                {s.text}
-              </p>
-              <p className={styles.translation}>{s.zh}</p>
-            </div>
-            <SpeakButton text={s.text} lang={scenario.lang} size={38} />
-          </li>
-        ))}
-      </ul>
-
-      {/* shadowing guide */}
-      <section className={`reveal ${styles.shadowing}`}>
-        <h2 className={styles.guideTitle}>Shadowing 三步法</h2>
-        <ol className={styles.steps}>
-          <li className={styles.step}>
-            <span className={styles.stepNumber}>1</span>
-            先看着文本听一遍，理解每个词
-          </li>
-          <li className={styles.step}>
-            <span className={styles.stepNumber}>2</span>
-            不看文本跟读，落后音频半拍，模仿语调节奏
-          </li>
-          <li className={styles.step}>
-            <span className={styles.stepNumber}>3</span>
-            换成你自己的内容复述一遍（站会就换成你真实的任务）
-          </li>
-        </ol>
-      </section>
-      {/* pronunciation tips */}
-      <section className={`reveal ${styles.pronunciation}`}>
-        <h2 className={styles.guideTitle}>发音要点</h2>
-        <div className={styles.languages}>
-          <div>
-            <p className={styles.english}>English</p>
-            <ul className={styles.points}>
-              <li>· 弱读：to / for / of 在句中读得又轻又快（tə、fə、əv）</li>
-              <li>· 连读：an hour → "a-nour"，worked on → "work-ton"</li>
-              <li>· 失爆：blocked by 的 /t/ 不爆破，只做口型</li>
-              <li>
-                · 重音：名词双音节通常重音在前（RE-cord），动词在后（re-CORD）
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p lang="ja" className={styles.japanese}>
-              日本語
-            </p>
-            <ul className={styles.points}>
-              <li>· 日语是「拍」语言：每个假名时长均等，不要拖长某些音</li>
-              <li>· 长音要读满一拍：エンジニア（en-ji-ni-a，ニ要拖长）</li>
-              <li>· 促音停一拍：チケット（ticket）里小「ッ」处停顿一拍</li>
-              <li>· 句尾语调：疑问句尾上扬（ですか↗），陈述句平缓下降</li>
-            </ul>
-          </div>
+      <section className={`reveal ${styles.sheet}`}>
+        <span className={styles.tape} aria-hidden="true" />
+        <div className={styles.counter}>
+          {sentenceIndex + 1} / {scenario.sentences.length}
         </div>
+        <p
+          lang={scenario.lang === 'ja' ? 'ja' : undefined}
+          className={styles.prompt}
+        >
+          {sentence.text}
+        </p>
+        <p className={styles.translation}>{sentence.zh}</p>
+
+        <div className={styles.controls}>
+          <div className={styles.listen}>
+            <SpeakButton text={sentence.text} lang={scenario.lang} size={44} />
+            <span>听一遍</span>
+          </div>
+          <button
+            type="button"
+            onClick={recording ? stopRecording : startRecording}
+            className={`${styles.record} ${recording ? styles.recording : ''}`}
+            aria-pressed={recording}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="3" width="8" height="12" rx="4" />
+              <path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8" />
+            </svg>
+            <span>{recording ? '停止' : '录音'}</span>
+          </button>
+        </div>
+
+        {recordingUrl && !recording && (
+          <audio className={styles.audio} controls src={recordingUrl} />
+        )}
+        {error && <p className={styles.error}>{error}</p>}
+
+        <button type="button" onClick={nextSentence} className={styles.next}>
+          下一句
+        </button>
       </section>
     </div>
   );

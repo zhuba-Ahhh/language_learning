@@ -30,17 +30,13 @@ export default function VocabSection() {
 
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="Vocabulary"
-        title="词库总览"
-        description={<>圆点亮起 = 已在闪卡中标记为「认识」。</>}
-      ></FeatureHeader>
+      <FeatureHeader title="查一个词"></FeatureHeader>
 
       <div className={`reveal ${styles.controls}`}>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="搜索单词 / 释义 / 读音…"
+          placeholder="搜索"
           className={styles.search}
         />
         <LanguageFilter
@@ -58,7 +54,7 @@ export default function VocabSection() {
       </div>
 
       {rows.length === 0 && (
-        <p className={`reveal ${styles.empty}`}>没有匹配的单词</p>
+        <p className={`reveal ${styles.empty}`}>没有结果</p>
       )}
 
       {rows.map(({ deck, words }) => (

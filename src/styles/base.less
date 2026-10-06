@@ -21,7 +21,23 @@ html {
 body {
   margin: 0;
   line-height: inherit;
-  background: hsl(var(--background));
+  background-color: rgb(var(--paper));
+  background-image:
+    linear-gradient(rgb(var(--ink) / 0.018) 1px, transparent 1px),
+    radial-gradient(
+      circle at 18% 12%,
+      rgb(var(--sage) / 0.2),
+      transparent 22rem
+    ),
+    radial-gradient(
+      circle at 84% 80%,
+      rgb(var(--lilac) / 0.16),
+      transparent 24rem
+    );
+  background-size:
+    100% 28px,
+    auto,
+    auto;
   color: hsl(var(--foreground));
   font-family: var(--font-body);
   letter-spacing: 0.01em;
@@ -182,6 +198,10 @@ button,
 [role='button'] {
   cursor: pointer;
 }
+:focus-visible {
+  outline: 2px solid rgb(var(--vermilion));
+  outline-offset: 3px;
+}
 :disabled {
   cursor: default;
 }
@@ -204,7 +224,7 @@ video {
   display: none;
 }
 ::selection {
-  background: rgba(2, 199, 189, 0.3);
+  background: rgb(var(--sage) / 0.72);
 }
 [lang='ja'] {
   font-family: var(--font-japanese);

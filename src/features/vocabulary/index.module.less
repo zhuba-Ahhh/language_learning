@@ -15,10 +15,10 @@
 .search {
   height: 2.75rem;
   flex: 1 1 0%;
-  border-radius: 9999px;
+  border-radius: 0.3rem;
   border-width: 1px;
   border-color: hsl(var(--border));
-  background-color: rgb(255 255 255);
+  background-color: rgb(var(--paper));
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   font-size: 0.875rem;
@@ -39,8 +39,9 @@
   }
 }
 .empty {
-  border-radius: 1.4rem;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.35rem;
+  background-color: rgb(var(--paper));
   padding: 2rem;
   text-align: center;
   font-size: 0.875rem;
@@ -50,8 +51,9 @@
 }
 .deck {
   overflow: hidden;
-  border-radius: 1.4rem;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.35rem;
+  background-color: rgb(var(--paper));
   box-shadow: var(--shadow-soft);
 }
 .deckHeading {

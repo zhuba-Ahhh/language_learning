@@ -21,8 +21,8 @@ export default function Heatmap({ checkins }: { checkins: string[] }) {
   return (
     <div className={styles.heatmap}>
       <div className={styles.heading}>
-        <h2 className={styles.title}>打卡热力图</h2>
-        <span className={styles.period}>近 15 周</span>
+        <h2 className={styles.title}>最近练习</h2>
+        <span className={styles.period}>15 周</span>
       </div>
       <div className={styles.grid}>
         {weeks.map((week, wi) => (

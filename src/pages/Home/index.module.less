@@ -1,7 +1,6 @@
 /* 组件语义样式；主题与字体统一引用全局 token。 */
 .shell {
   min-height: 100vh;
-  background-color: rgb(var(--paper));
 }
 .header {
   position: fixed;
@@ -10,54 +9,59 @@
   top: 0px;
   z-index: 40;
   border-bottom-width: 1px;
-  border-color: hsl(var(--border) / 0.6);
-  background-color: rgb(var(--paper) / 0.85);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  border-color: hsl(var(--border) / 0.8);
+  background-color: rgb(var(--paper) / 0.94);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
 }
 .headerContent {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 3.5rem;
-  max-width: 48rem;
+  height: 4rem;
+  max-width: 72rem;
   align-items: center;
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
   @media (min-width: 640px) {
-    height: 4rem;
+    height: 4.75rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.65rem;
+}
+.brandMark {
+  width: 1.55rem;
+  height: 2rem;
+  overflow: visible;
+  fill: rgb(var(--aqua));
 }
 .logo {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   line-height: 1.75rem;
   color: rgb(var(--ink));
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.025em;
   @media (min-width: 640px) {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
-.logoAccent {
-  color: rgb(var(--aqua));
-}
 .tagline {
   display: none;
-  font-size: 10px;
-  letter-spacing: 0.25em;
+  margin-left: 0.25rem;
+  border-left: 1px solid hsl(var(--border));
+  padding-left: 0.9rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
   color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
-  @media (min-width: 640px) {
+  @media (min-width: 840px) {
     display: inline;
   }
 }
@@ -70,35 +74,49 @@
   }
 }
 .navButton {
-  border-radius: 9999px;
+  position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 550;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
   animation-duration: 300ms;
 }
 .selected {
-  background-color: rgb(var(--deepblue));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--sage) / 0.42);
+  color: rgb(var(--ink));
+  &::after {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.15rem;
+    left: 1rem;
+    height: 2px;
+    background: rgb(var(--aqua));
+    content: '';
+  }
 }
 .idle {
   color: rgb(var(--ink) / 0.6);
   &:hover {
-    background-color: rgb(var(--powder) / 0.3);
+    background-color: rgb(var(--sage) / 0.24);
     color: rgb(var(--ink));
   }
 }
 .mobileTagline {
-  font-size: 10px;
-  letter-spacing: 0.25em;
-  color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
+  width: 1.35rem;
+  height: 1.35rem;
+  background:
+    radial-gradient(
+      ellipse at 30% 70%,
+      rgb(var(--aqua)) 0 27%,
+      transparent 29%
+    ),
+    radial-gradient(ellipse at 72% 30%, rgb(var(--aqua)) 0 27%, transparent 29%);
   @media (min-width: 640px) {
     display: none;
   }
@@ -106,7 +124,7 @@
 .main {
   margin-left: auto;
   margin-right: auto;
-  max-width: 48rem;
+  max-width: 72rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 5rem;
@@ -114,24 +132,20 @@
   @media (min-width: 640px) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: 6rem;
+    padding-top: 6.5rem;
     padding-bottom: 4rem;
   }
 }
 .footer {
-  margin-top: 3.5rem;
-  border-top-width: 1px;
-  border-color: hsl(var(--border));
+  margin-top: 2.5rem;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
 }
 .signature {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
 }
 .mobileNav {
   position: fixed;
@@ -141,7 +155,7 @@
   z-index: 40;
   border-top-width: 1px;
   border-color: hsl(var(--border));
-  background-color: rgb(255 255 255 / 0.95);
+  background-color: rgb(var(--paper) / 0.96);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   padding-bottom: calc(env(safe-area-inset-bottom, 0px));
@@ -187,7 +201,7 @@
   transition-duration: 150ms;
 }
 .indicatorSelected {
-  background-color: rgb(var(--aqua));
+  background-color: rgb(var(--vermilion));
 }
 .indicatorIdle {
   background-color: transparent;

@@ -115,12 +115,16 @@ function Shell() {
       <header ref={headerRef} className={`site-header ${styles.header}`}>
         <div className={styles.headerContent}>
           <div className={styles.brand}>
-            <span className={styles.logo}>
-              Lingua<span className={styles.logoAccent}>Desk</span>
-            </span>
-            <span lang="ja" className={styles.tagline}>
-              英日・双语学习台
-            </span>
+            <svg
+              className={styles.brandMark}
+              viewBox="0 0 32 42"
+              aria-hidden="true"
+            >
+              <path d="M6 13h15v25l-7.5-5L6 38V13Z" />
+              <path d="M13 13C12 7 8 4 3 4c0 6 4 9 10 9Zm2 0c1-7 5-11 12-11 0 7-5 11-12 11Z" />
+            </svg>
+            <span className={styles.logo}>LinguaDesk</span>
+            <span className={styles.tagline}>每天，靠近一种语言。</span>
           </div>
           <nav className={styles.desktopNav} aria-label="主要导航">
             {TABS.map((item) => (
@@ -137,7 +141,7 @@ function Shell() {
               </button>
             ))}
           </nav>
-          <span className={styles.mobileTagline}>EN × JP</span>
+          <span className={styles.mobileTagline} aria-hidden="true" />
         </div>
       </header>
 
@@ -152,9 +156,7 @@ function Shell() {
         </div>
 
         <footer className={styles.footer}>
-          <p className={styles.signature}>
-            LinguaDesk — read it, say it, ship it.
-          </p>
+          <p className={styles.signature}>明天再见。</p>
         </footer>
       </main>
 

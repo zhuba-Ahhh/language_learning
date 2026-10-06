@@ -1,5 +1,9 @@
 /* 只复用已出现多次的布局模式；无全局 CSS 输出。 */
 .section-spacing() {
+  max-width: 62rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2rem;
   > :not([hidden]) ~ :not([hidden]) {
     margin-top: 1.5rem;
     margin-bottom: 0;
@@ -21,7 +25,8 @@
 }
 .choice-chip() {
   white-space: nowrap;
-  border-radius: 9999px;
+  border-radius: 0.25rem;
+  border: 1px solid hsl(var(--border));
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   line-height: 1rem;

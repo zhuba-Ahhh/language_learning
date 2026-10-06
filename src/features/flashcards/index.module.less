@@ -20,8 +20,8 @@
   font-weight: 700;
 }
 .reviewSelected {
-  background-color: rgb(var(--aqua));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--sage));
+  color: rgb(var(--ink));
   box-shadow: var(--shadow-soft);
 }
 .reviewIdle {
@@ -35,8 +35,8 @@
   .choice-chip();
 }
 .deckSelected {
-  background-color: rgb(var(--deepblue));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--sage));
+  color: rgb(var(--ink));
   box-shadow: var(--shadow-soft);
 }
 .deckIdle {
@@ -74,8 +74,9 @@
   font-family: var(--font-mono);
 }
 .completion {
-  border-radius: 2rem;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background-color: rgb(var(--paper));
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 4rem;
@@ -105,8 +106,8 @@
 }
 .restart {
   margin-top: 1.5rem;
-  border-radius: 9999px;
-  background-color: rgb(var(--deepblue));
+  border-radius: 0.25rem;
+  background-color: rgb(var(--vermilion));
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0.75rem;
@@ -138,10 +139,10 @@
   }
 }
 .unknown {
-  border-radius: 9999px;
-  border-width: 2px;
-  border-color: rgb(var(--navy) / 0.2);
-  background-color: rgb(255 255 255);
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: hsl(var(--border));
+  background-color: rgb(var(--paper));
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   font-size: 0.875rem;
@@ -159,8 +160,8 @@
   }
 }
 .known {
-  border-radius: 9999px;
-  background-color: rgb(var(--aqua));
+  border-radius: 0.25rem;
+  background-color: rgb(var(--vermilion));
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   font-size: 0.875rem;
@@ -176,11 +177,6 @@
   &:active {
     transform: scale(0.97);
   }
-}
-.footer {
-  text-align: center;
-  font-size: 11px;
-  color: hsl(var(--muted-foreground));
 }
 @keyframes slide-card-in {
   from {

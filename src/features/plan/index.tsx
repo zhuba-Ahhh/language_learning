@@ -24,13 +24,7 @@ export default function PlanSection() {
 
   return (
     <div className={styles.section}>
-      <FeatureHeader
-        eyebrow="30-Day Roadmap"
-        title="30 天计划"
-        description={
-          <>单日英语、双日日语，周日复盘。已完成 {completedDays} / 30 天。</>
-        }
-      >
+      <FeatureHeader title="正在变得熟悉">
         <button
           onClick={() => {
             if (
@@ -43,15 +37,21 @@ export default function PlanSection() {
           }}
           className={styles.reset}
         >
-          重置全部进度
+          重新开始
         </button>
       </FeatureHeader>
 
       <div className={`reveal ${styles.stats}`}>
         <Heatmap checkins={checkins} />
-        <div className={styles.streak}>
-          <span className={styles.streakValue}>{streak}</span>
-          <span className={styles.streakLabel}>连续打卡（天）</span>
+        <div className={styles.summary}>
+          <div className={styles.metric}>
+            <span>{streak}</span>
+            <small>连续</small>
+          </div>
+          <div className={styles.metric}>
+            <span>{completedDays}</span>
+            <small>完成</small>
+          </div>
         </div>
       </div>
 

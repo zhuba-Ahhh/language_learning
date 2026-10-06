@@ -2,8 +2,9 @@
 .segmented {
   display: flex;
   width: max-content;
-  border-radius: 9999px;
-  background-color: rgb(255 255 255);
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.3rem;
+  background-color: rgb(var(--paper));
   padding: 0.25rem;
   box-shadow: var(--shadow-soft);
 }
@@ -12,7 +13,7 @@
   gap: 0.5rem;
 }
 .option {
-  border-radius: 9999px;
+  border-radius: 0.2rem;
   font-weight: 500;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -35,8 +36,8 @@
   line-height: 1rem;
 }
 .selected {
-  background-color: rgb(var(--deepblue));
-  color: rgb(255 255 255);
+  background-color: rgb(var(--sage));
+  color: rgb(var(--ink));
 }
 .segmentIdle {
   color: rgb(var(--ink) / 0.6);
