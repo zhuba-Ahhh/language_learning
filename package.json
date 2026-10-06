@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "preview": "vite preview",
+    "audio:generate": "node scripts/generate-audio-cdn.mjs",
     "words:candidates": "node scripts/generate-word-candidates.mjs"
   },
   "dependencies": {

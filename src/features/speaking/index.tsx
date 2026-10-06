@@ -4,13 +4,20 @@ import styles from './index.module.less';
 import FeatureHeader from '@/components/FeatureHeader';
 import SpeakButton from '@/components/SpeakButton';
 import { SCENARIOS } from '@/content/speaking';
+import type { PlanTask } from '@/content/plan';
 
 export default function SpeakingSection({
+  task,
   onComplete,
 }: {
+  task?: PlanTask;
   onComplete?: () => void;
 }) {
-  const [scenarioId, setScenarioId] = useState(SCENARIOS[0].id);
+  const scenarioIds = task?.activity.scenarioIds;
+  const scenarios = SCENARIOS.filter((scenario) =>
+    scenarioIds ? scenarioIds.includes(scenario.id) : !scenario.courseOnly,
+  );
+  const [scenarioId, setScenarioId] = useState(scenarios[0].id);
   const [sentenceIndex, setSentenceIndex] = useState(0);
   const [recording, setRecording] = useState(false);
   const [recordingUrl, setRecordingUrl] = useState<string | null>(null);
@@ -20,7 +27,8 @@ export default function SpeakingSection({
   const chunksRef = useRef<Blob[]>([]);
   const urlRef = useRef<string | null>(null);
 
-  const scenario = SCENARIOS.find((item) => item.id === scenarioId)!;
+  const scenario =
+    scenarios.find((item) => item.id === scenarioId) ?? scenarios[0];
   const sentence = scenario.sentences[sentenceIndex];
 
   useEffect(
@@ -88,7 +96,7 @@ export default function SpeakingSection({
 
       <div className={`reveal ${styles.scenarioScroller}`}>
         <div className={styles.scenarioList}>
-          {SCENARIOS.map((item) => (
+          {scenarios.map((item) => (
             <button
               type="button"
               key={item.id}

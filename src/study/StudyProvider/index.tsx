@@ -1,7 +1,7 @@
 /** 共享任务、打卡与词汇状态，保持既有存储键和写入语义。 */
 import { useEffect, useMemo, type ReactNode } from 'react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { getPlanForLanguage, PLAN } from '@/content/plan';
+import { getCourseForGoal, getCoursesForGoal, PLAN } from '@/content/plan';
 import { LEARNING_GOALS } from '@/content/goals';
 import { DECKS, type Deck } from '@/content/words';
 import { todayStr } from '@/lib/date';
@@ -35,6 +35,9 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     'lingua.goal',
     'english-communication',
   );
+  const [courseSelections, setCourseSelections] = useLocalStorage<
+    Record<string, string>
+  >('lingua.courses', {});
   const [goalStarts, setGoalStarts] = useLocalStorage<Record<string, string>>(
     'lingua.goalStarts',
     {},
@@ -90,68 +93,100 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     return [...DECKS, ...customDecks];
   }, [customWords]);
 
-  const availableGoals = LEARNING_GOALS.filter((goal) => goal.available);
+  const availableGoals = LEARNING_GOALS.filter(
+    (goal) => goal.available && getCourseForGoal(goal.id),
+  );
   const activeGoal =
     availableGoals.find((goal) => goal.id === storedGoalId) ??
     availableGoals[0];
+  if (!activeGoal) throw new Error('没有可用的学习目标');
   const goalId = activeGoal.id;
-  const plan = useMemo(
-    () => getPlanForLanguage(activeGoal.language),
-    [activeGoal.language],
-  );
+  const courses = getCoursesForGoal(goalId);
+  const course =
+    courses.find((item) => item.id === courseSelections[goalId]) ?? courses[0];
+  if (!course) throw new Error(`目标 ${goalId} 缺少课程数据`);
+  const plan = course.days;
 
   useEffect(() => {
     if (storedGoalId !== goalId) setStoredGoalId(goalId);
   }, [goalId, setStoredGoalId, storedGoalId]);
 
   useEffect(() => {
-    if (goalStarts[goalId]) return;
-    const start = legacyStartDate || todayStr();
-    setGoalStarts((current) => ({ ...current, [goalId]: start }));
+    if (courseSelections[goalId] !== course.id) {
+      setCourseSelections((current) => ({
+        ...current,
+        [goalId]: course.id,
+      }));
+    }
+  }, [course.id, courseSelections, goalId, setCourseSelections]);
+
+  useEffect(() => {
+    if (goalStarts[course.id]) return;
+    const start = goalStarts[goalId] || legacyStartDate || todayStr();
+    setGoalStarts((current) => ({ ...current, [course.id]: start }));
     if (!legacyStartDate) setLegacyStartDate(start);
-  }, [goalId, goalStarts, legacyStartDate, setGoalStarts, setLegacyStartDate]);
+  }, [
+    course.id,
+    goalId,
+    goalStarts,
+    legacyStartDate,
+    setGoalStarts,
+    setLegacyStartDate,
+  ]);
 
   useEffect(() => {
     const legacyEntries = Object.entries(storedChecks).filter(
-      ([key]) => !key.includes(':'),
+      ([key]) => !key.includes(':') || key.startsWith(`${goalId}:`),
     );
     if (legacyEntries.length === 0) return;
     setChecks((current) => {
       const next = { ...current };
-      legacyEntries.forEach(([day, values]) => {
-        delete next[day];
-        next[`${goalId}:${day}`] = values;
+      legacyEntries.forEach(([storageKey, values]) => {
+        const day = storageKey.includes(':')
+          ? storageKey.split(':').at(-1)
+          : storageKey;
+        if (!day) return;
+        delete next[storageKey];
+        const courseKey = `${course.id}:${day}`;
+        next[courseKey] = next[courseKey] ?? values;
       });
       return next;
     });
-  }, [goalId, setChecks, storedChecks]);
+  }, [course.id, goalId, setChecks, storedChecks]);
 
   useEffect(() => {
-    if (checkinsByGoal[goalId]) return;
+    if (checkinsByGoal[course.id]) return;
     setCheckinsByGoal((current) => ({
       ...current,
-      [goalId]: legacyCheckins,
+      [course.id]: current[goalId] ?? legacyCheckins,
     }));
-  }, [checkinsByGoal, goalId, legacyCheckins, setCheckinsByGoal]);
+  }, [checkinsByGoal, course.id, goalId, legacyCheckins, setCheckinsByGoal]);
 
-  const effectiveStart = goalStarts[goalId] || legacyStartDate || todayStr();
+  const effectiveStart =
+    goalStarts[course.id] ||
+    goalStarts[goalId] ||
+    legacyStartDate ||
+    todayStr();
 
   const checks = useMemo<Record<number, string[]>>(
     () =>
       Object.fromEntries(
         Object.entries(storedChecks).flatMap(([storageKey, values]) => {
-          const [storedGoalId, dayKey] = storageKey.includes(':')
+          const [storedCourseId, dayKey] = storageKey.includes(':')
             ? storageKey.split(':')
-            : [goalId, storageKey];
-          if (storedGoalId !== goalId) return [];
+            : [course.id, storageKey];
+          if (storedCourseId !== course.id && storedCourseId !== goalId) {
+            return [];
+          }
           const day = Number(dayKey);
           return [[day, normalizeTaskIds(day, values)]];
         }),
       ),
-    [goalId, storedChecks],
+    [course.id, goalId, storedChecks],
   );
 
-  const checkins = checkinsByGoal[goalId] ?? legacyCheckins;
+  const checkins =
+    checkinsByGoal[course.id] ?? checkinsByGoal[goalId] ?? legacyCheckins;
 
   const planIndex = useMemo(() => {
     const ms =
@@ -180,7 +215,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     forceComplete: boolean,
   ) => {
     setChecks((prev) => {
-      const storageKey = `${goalId}:${day}`;
+      const storageKey = `${course.id}:${day}`;
       const cur = new Set(normalizeTaskIds(day, prev[storageKey] ?? []));
       if (forceComplete) cur.add(taskId);
       else if (cur.has(taskId)) cur.delete(taskId);
@@ -190,9 +225,9 @@ export function StudyProvider({ children }: { children: ReactNode }) {
       if (cur.size === total && total > 0) {
         const today = todayStr();
         setCheckinsByGoal((current) => {
-          const goalCheckins = current[goalId] ?? [];
-          if (goalCheckins.includes(today)) return current;
-          return { ...current, [goalId]: [...goalCheckins, today] };
+          const courseCheckins = current[course.id] ?? [];
+          if (courseCheckins.includes(today)) return current;
+          return { ...current, [course.id]: [...courseCheckins, today] };
         });
       }
       return next;
@@ -204,22 +239,27 @@ export function StudyProvider({ children }: { children: ReactNode }) {
 
   const completeTask = (day: number, taskId: string, total: number) => {
     updateTask(day, taskId, total, true);
-    const task = PLAN.find((item) => item.day === day)?.tasks.find(
-      (item) => item.id === taskId,
-    );
+    const task = plan
+      .find((item) => item.day === day)
+      ?.tasks.find((item) => item.id === taskId);
     if (!task) return;
     setSessions((current) => {
       if (
         current.some(
-          (session) => session.goalId === goalId && session.taskId === taskId,
+          (session) =>
+            (session.courseId
+              ? session.courseId === course.id
+              : session.goalId === goalId && course.level === 'foundation') &&
+            session.taskId === taskId,
         )
       ) {
         return current;
       }
       return [
         {
-          id: `${goalId}-${taskId}-${Date.now()}`,
+          id: `${course.id}-${taskId}-${Date.now()}`,
           goalId,
+          courseId: course.id,
           taskId,
           title: task.text,
           completedAt: new Date().toISOString(),
@@ -233,11 +273,14 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     const nextGoal = availableGoals.find((goal) => goal.id === nextGoalId);
     if (!nextGoal) return;
     setStoredGoalId(nextGoal.id);
-    setGoalStarts((current) =>
-      current[nextGoal.id]
-        ? current
-        : { ...current, [nextGoal.id]: todayStr() },
-    );
+  };
+
+  const setCourse = (nextCourseId: string) => {
+    if (!courses.some((item) => item.id === nextCourseId)) return;
+    setCourseSelections((current) => ({
+      ...current,
+      [goalId]: nextCourseId,
+    }));
   };
 
   const markWord = (wordId: string, mark: CardMark) =>
@@ -293,17 +336,18 @@ export function StudyProvider({ children }: { children: ReactNode }) {
   const resetAll = () => {
     setChecks({});
     setLegacyCheckins([]);
-    setCheckinsByGoal({ [goalId]: [] });
+    setCheckinsByGoal({ [course.id]: [] });
     setMarks({});
     setSessions([]);
     setLegacyStartDate(todayStr());
-    setGoalStarts({ [goalId]: todayStr() });
+    setGoalStarts({ [course.id]: todayStr() });
   };
 
   const exportData = () => ({
     version: 1,
     exportedAt: new Date().toISOString(),
     goalId,
+    courseSelections,
     goalStarts,
     checks: storedChecks,
     checkinsByGoal,
@@ -326,6 +370,20 @@ export function StudyProvider({ children }: { children: ReactNode }) {
       !Array.isArray(value.sessions)
     ) {
       return false;
+    }
+
+    const nextCourseSelections: Record<string, string> = {};
+    if (value.courseSelections !== undefined) {
+      if (!isRecord(value.courseSelections)) return false;
+      for (const [key, item] of Object.entries(value.courseSelections)) {
+        if (
+          typeof item !== 'string' ||
+          !getCoursesForGoal(key).some((course) => course.id === item)
+        ) {
+          return false;
+        }
+        nextCourseSelections[key] = item;
+      }
     }
 
     const nextStarts: Record<string, string> = {};
@@ -396,6 +454,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
         !isRecord(item) ||
         typeof item.id !== 'string' ||
         typeof item.goalId !== 'string' ||
+        (item.courseId !== undefined && typeof item.courseId !== 'string') ||
         typeof item.taskId !== 'string' ||
         typeof item.title !== 'string' ||
         typeof item.completedAt !== 'string'
@@ -406,6 +465,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     }
 
     setStoredGoalId(nextGoalId);
+    setCourseSelections(nextCourseSelections);
     setGoalStarts(nextStarts);
     setLegacyStartDate(nextStarts[nextGoalId] || todayStr());
     setChecks(nextChecks);
@@ -425,7 +485,9 @@ export function StudyProvider({ children }: { children: ReactNode }) {
   const value: StudyState = {
     goalId,
     setGoal,
+    setCourse,
     startDate: effectiveStart,
+    course,
     plan,
     currentPlanDay,
     checks,

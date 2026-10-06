@@ -37,7 +37,7 @@ export default function PracticeSection({
   onActivityComplete?: () => void;
 }) {
   if (view === 'speak') {
-    return <SpeakingSection onComplete={onActivityComplete} />;
+    return <SpeakingSection task={task} onComplete={onActivityComplete} />;
   }
   if (view === 'read')
     return <ReadingSection task={task} onComplete={onActivityComplete} />;

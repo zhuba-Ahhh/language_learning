@@ -172,7 +172,9 @@ function Shell() {
               onActivityComplete={activeTask ? completeActiveTask : undefined}
             />
           )}
-          {tab === 'goals' && <GoalsSection />}
+          {tab === 'goals' && (
+            <GoalsSection onConfirm={() => selectTab('today')} />
+          )}
           {tab === 'progress' && <PlanSection />}
         </div>
 

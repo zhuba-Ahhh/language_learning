@@ -1,6 +1,6 @@
 /** 学习状态类型与共享 Context，不挂载组件。 */
 import { createContext } from 'react';
-import type { PlanDay } from '@/content/plan';
+import type { CourseDefinition, PlanDay } from '@/content/plan';
 import type { Deck, Word } from '@/content/words';
 
 export type CardMark = 'known' | 'unknown';
@@ -12,6 +12,7 @@ export interface CustomWord extends Word {
 export interface StudySession {
   id: string;
   goalId: string;
+  courseId?: string;
   taskId: string;
   title: string;
   completedAt: string;
@@ -20,7 +21,9 @@ export interface StudySession {
 export interface StudyState {
   goalId: string;
   setGoal: (goalId: string) => void;
+  setCourse: (courseId: string) => void;
   startDate: string;
+  course: CourseDefinition;
   plan: PlanDay[];
   currentPlanDay: PlanDay;
   checks: Record<number, string[]>;

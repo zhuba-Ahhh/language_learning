@@ -1,4 +1,6 @@
-/** 优先播放本地音频，缺失时请求 PPE TTS，失败再回退系统朗读。 */
+/** 优先播放预生成 CDN 音频，缺失时请求 PPE TTS，失败再回退系统朗读。 */
+
+import generatedAudioUrls from './audio.generated.json';
 
 type SpeechLanguage = 'en' | 'ja';
 
@@ -6,6 +8,7 @@ const TTS_ENDPOINT =
   'https://douyin-game-ai.bytedance.net/webcast/game/role_agents/generate_avg_text_to_speech_audio';
 const TTS_SPEAKER = 'S_olwRWVfN1';
 const TTS_CACHE_PREFIX = 'linguadesk-tts:';
+const staticAudioUrls: Readonly<Record<string, string>> = generatedAudioUrls;
 
 interface TtsResponse {
   base_resp?: { status_code?: number; status_message?: string };
@@ -154,7 +157,9 @@ export async function speak(
 
   try {
     const audioUrl =
-      localAudioUrl || (await generateAudioUrl(normalizedText, lang));
+      localAudioUrl ||
+      staticAudioUrls[`${lang}:${normalizedText}`] ||
+      (await generateAudioUrl(normalizedText, lang));
     const audio = new Audio(audioUrl);
     activeAudio = audio;
     await audio.play();

@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "english-communication-foundation",
+    "goalId": "english-communication",
+    "language": "en",
+    "level": "foundation",
+    "levelTitle": "基础",
+    "title": "英语交流 · 基础",
+    "skills": ["reading", "speaking", "vocabulary"],
+    "days": [
+      {
+        "day": 1,
+        "focus": "EN",
+        "title": "技术阅读入门",
+        "tasks": [
+          {
+            "id": "day-1-task-1",
+            "text": "读站内技术入门短文 1 篇，划出生词与功能动词",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-1-task-2",
+            "text": "Shadowing：选一段口语跟读 5 遍",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-1-task-3",
+            "text": "自由说：口头总结今天的文章，录音 1 分钟",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "focus": "EN",
+        "title": "阅读 + 开口",
+        "tasks": [
+          {
+            "id": "day-3-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-3-task-2",
+            "text": "Shadowing 跟读",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-3-task-3",
+            "text": "自由说：What is an API?（录音）",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "focus": "EN",
+        "title": "阅读 + 开口",
+        "tasks": [
+          {
+            "id": "day-5-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-5-task-2",
+            "text": "Shadowing 跟读",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-5-task-3",
+            "text": "自由说：Explain what Git does（录音）",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "focus": "RV",
+        "title": "第一周复盘",
+        "tasks": [
+          {
+            "id": "day-7-task-1",
+            "text": "重读本周 3 篇文章，生词全部录入闪卡",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-7-task-3",
+            "text": "回听 Day 1 录音，对比进步",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "focus": "EN",
+        "title": "进入官方文档",
+        "tasks": [
+          {
+            "id": "day-8-task-1",
+            "text": "读站内进阶技术短文 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-8-task-2",
+            "text": "Shadowing 跟读",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-8-task-3",
+            "text": "自由说：Describe your final year project",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 10,
+        "focus": "EN",
+        "title": "文档阅读",
+        "tasks": [
+          {
+            "id": "day-10-task-1",
+            "text": "读站内进阶技术短文 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-10-task-2",
+            "text": "Shadowing 跟读",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-10-task-3",
+            "text": "自由说：What happens when you visit a website?",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 12,
+        "focus": "EN",
+        "title": "文档阅读",
+        "tasks": [
+          {
+            "id": "day-12-task-1",
+            "text": "读站内进阶技术短文 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-12-task-2",
+            "text": "Shadowing 跟读",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-12-task-3",
+            "text": "自由说：List vs Tuple 的区别",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "focus": "RV",
+        "title": "第二周复盘",
+        "tasks": [
+          {
+            "id": "day-14-task-2",
+            "text": "整理官方文档生词，全部录入闪卡",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 15,
+        "focus": "EN",
+        "title": "口语模拟 · 站会",
+        "tasks": [
+          {
+            "id": "day-15-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-15-task-2",
+            "text": "模拟站会汇报 2 分钟：Yesterday I… today I'll… blocked by…（录音）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-15-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 17,
+        "focus": "EN",
+        "title": "口语模拟 · 面试",
+        "tasks": [
+          {
+            "id": "day-17-task-1",
+            "text": "读站内 Bug Report 短文（学如何描述 bug）",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-17-task-2",
+            "text": "面试自我介绍 1~2 分钟（录音并修改）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-17-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "focus": "EN",
+        "title": "口语模拟 · Code Review",
+        "tasks": [
+          {
+            "id": "day-19-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-19-task-2",
+            "text": "练习句式：I suggest we refactor this because…（录音）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-19-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 21,
+        "focus": "RV",
+        "title": "第三周复盘",
+        "tasks": [
+          {
+            "id": "day-21-task-1",
+            "text": "回听本周 3 段场景录音，记录卡顿点并查词",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 22,
+        "focus": "EN",
+        "title": "项目讲解",
+        "tasks": [
+          {
+            "id": "day-22-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-22-task-2",
+            "text": "自由说：讲解你最近写的一个项目 / 功能（3 分钟录音）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-22-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "focus": "EN",
+        "title": "口语模拟 · 科普表达",
+        "tasks": [
+          {
+            "id": "day-24-task-1",
+            "text": "读站内进阶技术短文 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-mid"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-24-task-2",
+            "text": "练习向非技术人员解释技术问题（如「什么是数据库」）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-24-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 26,
+        "focus": "EN",
+        "title": "整理与复述",
+        "tasks": [
+          {
+            "id": "day-26-task-1",
+            "text": "读文章 1 篇 + 整理本月所有生词",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-26-task-2",
+            "text": "自由说：复述本周读过最好的一篇文章",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-26-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 28,
+        "focus": "EN",
+        "title": "月末口语自测",
+        "tasks": [
+          {
+            "id": "day-28-task-1",
+            "text": "读技术文章 1 篇",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-28-task-2",
+            "text": "录一段 3 分钟英语自我介绍（专业背景 + 项目经验）",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-28-task-3",
+            "text": "Shadowing 跟读",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 30,
+        "focus": "RV",
+        "title": "月末总复盘",
+        "tasks": [
+          {
+            "id": "day-30-task-1",
+            "text": "英语：新读一篇文章，统计不查词典能读懂的比例（目标 70%+）",
+            "minutes": 30,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-30-task-3",
+            "text": "写下第二个月的调整计划",
+            "minutes": 10,
+            "language": "all",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "japanese-communication-foundation",
+    "goalId": "japanese-communication",
+    "language": "ja",
+    "level": "foundation",
+    "levelTitle": "基础",
+    "title": "日语交流 · 基础",
+    "skills": ["reading", "speaking", "vocabulary", "kana"],
+    "days": [
+      {
+        "day": 2,
+        "focus": "JP",
+        "title": "五十音 · 平假名上",
+        "tasks": [
+          {
+            "id": "day-2-task-1",
+            "text": "学习 あ行〜た行 平假名：读写 + 听音辨认",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "learn"
+            },
+            "skill": "kana"
+          },
+          {
+            "id": "day-2-task-2",
+            "text": "跟读五十音发音教程音频",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "learn"
+            },
+            "skill": "kana"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "focus": "JP",
+        "title": "五十音 · 平假名下",
+        "tasks": [
+          {
+            "id": "day-4-task-1",
+            "text": "学习 な行〜わ行 + 复习前三行",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-4-task-2",
+            "text": "发音跟读练习",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "focus": "JP",
+        "title": "五十音 · 拗音",
+        "tasks": [
+          {
+            "id": "day-6-task-1",
+            "text": "复习全部平假名 + 拗音（きゃ、しゅ、ちょ…）",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "learn"
+            },
+            "skill": "kana"
+          },
+          {
+            "id": "day-6-task-2",
+            "text": "随机抽卡片认读自测",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "focus": "RV",
+        "title": "第一周复盘",
+        "tasks": [
+          {
+            "id": "day-7-task-2",
+            "text": "平假名默写测试（目标 90%+）",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "practice"
+            },
+            "skill": "kana"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "focus": "JP",
+        "title": "片假名上",
+        "tasks": [
+          {
+            "id": "day-9-task-1",
+            "text": "学习 ア行〜タ行 片假名",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "learn"
+            },
+            "skill": "kana"
+          },
+          {
+            "id": "day-9-task-2",
+            "text": "认读：サーバー・データ・バグ・プログラム",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 11,
+        "focus": "JP",
+        "title": "片假名下",
+        "tasks": [
+          {
+            "id": "day-11-task-1",
+            "text": "学习 ナ行〜ワ行 + 复习",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-11-task-2",
+            "text": "认读：デプロイ・フレームワーク・エンジニア",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 13,
+        "focus": "JP",
+        "title": "五十音总复习",
+        "tasks": [
+          {
+            "id": "day-13-task-1",
+            "text": "平假名 + 片假名混合测试",
+            "minutes": 40,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "practice"
+            },
+            "skill": "kana"
+          },
+          {
+            "id": "day-13-task-2",
+            "text": "读 1 段日语编程短文，只抓大意",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["ja-tech"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "focus": "RV",
+        "title": "第二周复盘",
+        "tasks": [
+          {
+            "id": "day-14-task-1",
+            "text": "五十音全面默写测试（目标 95%+）",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "practice"
+            },
+            "skill": "kana"
+          }
+        ]
+      },
+      {
+        "day": 16,
+        "focus": "JP",
+        "title": "大家的日语 第 1 课",
+        "tasks": [
+          {
+            "id": "day-16-task-1",
+            "text": "句型：〜は〜です、〜ですか",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-16-task-2",
+            "text": "用今天句型造 5 句并大声朗读",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-16-task-3",
+            "text": "跟读课文音频",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 18,
+        "focus": "JP",
+        "title": "大家的日语 第 2 课",
+        "tasks": [
+          {
+            "id": "day-18-task-1",
+            "text": "句型：これ / それ / あれ",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-18-task-2",
+            "text": "造句朗读 5 句",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-18-task-3",
+            "text": "复习第 1 课",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 20,
+        "focus": "JP",
+        "title": "大家的日语 第 3 课",
+        "tasks": [
+          {
+            "id": "day-20-task-1",
+            "text": "句型：ここ / そこ / あそこ、〜は〜にあります",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-20-task-2",
+            "text": "造句朗读 5 句",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-20-task-3",
+            "text": "复习第 1~2 课语法",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 21,
+        "focus": "RV",
+        "title": "第三周复盘",
+        "tasks": [
+          {
+            "id": "day-21-task-2",
+            "text": "用第 1~3 课句型做 3 分钟日语自我介绍（录音）",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 23,
+        "focus": "JP",
+        "title": "大家的日语 第 4 课",
+        "tasks": [
+          {
+            "id": "day-23-task-1",
+            "text": "时间表达、〜ます / 〜ません",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-23-task-2",
+            "text": "造句朗读 5 句",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-23-task-3",
+            "text": "跟读课文",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "focus": "JP",
+        "title": "大家的日语 第 5 课",
+        "tasks": [
+          {
+            "id": "day-25-task-1",
+            "text": "移动动词：行きます、来ます",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-25-task-2",
+            "text": "造句朗读 5 句",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-25-task-3",
+            "text": "复习五十音易错字符",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "learn"
+            },
+            "skill": "kana"
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "focus": "JP",
+        "title": "教材复习",
+        "tasks": [
+          {
+            "id": "day-27-task-1",
+            "text": "复习第 1~5 课全部语法",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-27-task-2",
+            "text": "用所学句型写 10 句话并朗读",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-27-task-3",
+            "text": "跟读课文音频",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "focus": "JP",
+        "title": "查漏补缺",
+        "tasks": [
+          {
+            "id": "day-29-task-1",
+            "text": "补薄弱语法点",
+            "minutes": 30,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "day-29-task-2",
+            "text": "日语日常对话跟读",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice"
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "day-29-task-3",
+            "text": "默写五十音",
+            "minutes": 10,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "practice"
+            },
+            "skill": "kana"
+          }
+        ]
+      },
+      {
+        "day": 30,
+        "focus": "RV",
+        "title": "月末总复盘",
+        "tasks": [
+          {
+            "id": "day-30-task-2",
+            "text": "日语：五十音测试 + 1 分钟自我介绍（目标流利）",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "kana",
+              "mode": "practice"
+            },
+            "skill": "kana"
+          },
+          {
+            "id": "day-30-task-3",
+            "text": "写下第二个月的调整计划",
+            "minutes": 10,
+            "language": "all",
+            "activity": {
+              "type": "reading",
+              "mode": "learn",
+              "resourceGroupIds": ["en-tech-easy"]
+            },
+            "skill": "reading"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ielts-academic-band-5-5",
+    "goalId": "ielts-academic",
+    "language": "en",
+    "level": "band-5-5",
+    "levelTitle": "5.5 起步",
+    "title": "IELTS Academic · 5.5 起步",
+    "skills": ["reading", "speaking"],
+    "days": [
+      {
+        "day": 1,
+        "focus": "EN",
+        "title": "Speaking · Part 1",
+        "tasks": [
+          {
+            "id": "ielts-5-5-day-1-task-1",
+            "text": "听示范，回答 4 个日常问题",
+            "minutes": 15,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice",
+              "scenarioIds": ["en-ielts-part1"]
+            },
+            "skill": "speaking"
+          },
+          {
+            "id": "ielts-5-5-day-1-task-2",
+            "text": "录一段 30 秒回答",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice",
+              "scenarioIds": ["en-ielts-part1"]
+            },
+            "skill": "speaking"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "focus": "EN",
+        "title": "Academic Reading",
+        "tasks": [
+          {
+            "id": "ielts-5-5-day-2-task-1",
+            "text": "读短文，定位主旨与因果",
+            "minutes": 25,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "practice",
+              "resourceGroupIds": ["en-ielts-starter"]
+            },
+            "skill": "reading"
+          },
+          {
+            "id": "ielts-5-5-day-2-task-2",
+            "text": "完成 2 道理解题",
+            "minutes": 10,
+            "language": "en",
+            "activity": {
+              "type": "reading",
+              "mode": "practice",
+              "resourceGroupIds": ["en-ielts-starter"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "focus": "EN",
+        "title": "Speaking · Part 2",
+        "tasks": [
+          {
+            "id": "ielts-5-5-day-3-task-1",
+            "text": "按提示组织 1 分钟回答",
+            "minutes": 20,
+            "language": "en",
+            "activity": {
+              "type": "speaking",
+              "mode": "practice",
+              "scenarioIds": ["en-ielts-part2"]
+            },
+            "skill": "speaking"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jlpt-n5-starter",
+    "goalId": "jlpt",
+    "language": "ja",
+    "level": "n5",
+    "levelTitle": "N5 起步",
+    "title": "JLPT · N5 起步",
+    "skills": ["reading", "vocabulary"],
+    "days": [
+      {
+        "day": 1,
+        "focus": "JP",
+        "title": "N5 · 短文读解",
+        "tasks": [
+          {
+            "id": "jlpt-n5-day-1-task-1",
+            "text": "读日程短文，判断行动顺序",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "practice",
+              "resourceGroupIds": ["ja-jlpt-n5"],
+              "resourceNames": ["今日の予定"]
+            },
+            "skill": "reading"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "focus": "JP",
+        "title": "N5 · 信息检索",
+        "tasks": [
+          {
+            "id": "jlpt-n5-day-2-task-1",
+            "text": "读通知，找到日期与时间",
+            "minutes": 20,
+            "language": "ja",
+            "activity": {
+              "type": "reading",
+              "mode": "practice",
+              "resourceGroupIds": ["ja-jlpt-n5"],
+              "resourceNames": ["図書館のお知らせ"]
+            },
+            "skill": "reading"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,91 +1,132 @@
-/* 组件语义样式；主题与字体统一引用全局 token。 */
-.heatmap {
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.35rem;
-  background-color: rgb(var(--paper) / 0.9);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  box-shadow: var(--shadow-soft);
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.calendar {
+  position: relative;
+  padding: 2.55rem 1.45rem 1.45rem;
+  border: 1px solid rgb(var(--ink) / 0.11);
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(rgb(255 254 250 / 0.92), rgb(255 254 250 / 0.92)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 1.75rem,
+      rgb(var(--ink) / 0.035) 1.75rem calc(1.75rem + 1px)
+    );
+  box-shadow: 0 1.15rem 2.6rem rgb(var(--ink) / 0.08);
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, transparent 49%, #eee9df 50%);
+    content: '';
+    filter: drop-shadow(-0.2rem -0.2rem 0.35rem rgb(var(--ink) / 0.05));
+  }
+
+  h2 {
+    margin-bottom: 0.9rem;
+    color: #1b2a3a;
+    font: 500 1.7rem / 1 var(--font-display);
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th {
+    height: 2.15rem;
+    color: rgb(var(--ink) / 0.58);
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  td {
+    height: 3.1rem;
+    border: 1px solid rgb(var(--ink) / 0.075);
+    color: #31404c;
+    text-align: center;
   }
 }
-.heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-.title {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: rgb(var(--ink));
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-.period {
-  font-size: 11px;
-  color: hsl(var(--muted-foreground));
-  font-family: var(--font-mono);
-}
-.grid {
-  margin-top: 1rem;
-  display: flex;
-  gap: 3px;
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
-}
-.week {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.cell {
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 3px;
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.active {
-  background-color: rgb(var(--sage));
-}
-.inactive {
-  background-color: rgb(var(--sand));
-}
-.today {
+
+.ring {
+  position: absolute;
+  top: -1.15rem;
+  z-index: 2;
+  width: 0.72rem;
+  height: 2.85rem;
+  border: 1px solid #7a673d;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #756238, #d8c28c 48%, #6f5c34);
   box-shadow:
-    0 0 0 1px #fff,
-    0 0 0 calc(2px + 1px) rgb(var(--vermilion)),
-    0 0 #0000;
+    inset 0 0 0 1px rgb(255 255 255 / 0.28),
+    0 0.22rem 0.25rem rgb(var(--ink) / 0.2);
 }
-.spacer {
-  height: 0.75rem;
-  width: 0.75rem;
+
+.ringLeft {
+  left: 15%;
 }
-.legend {
-  margin-top: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.375rem;
-  font-size: 10px;
-  color: hsl(var(--muted-foreground));
+
+.ringRight {
+  right: 15%;
 }
-.emptySample {
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 3px;
-  background-color: rgb(var(--sand));
+
+.day {
+  display: inline-grid;
+  width: 1.85rem;
+  height: 1.85rem;
+  place-items: center;
+  border-radius: 50%;
+  font: 0.88rem / 1 var(--font-display);
+
+  svg {
+    width: 1rem;
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+  }
 }
-.activeSample {
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 3px;
-  background-color: rgb(var(--sage));
+
+.active {
+  background: rgb(var(--aqua) / 0.68);
+  color: white;
+}
+
+.today {
+  box-shadow: 0 0 0 1.5px rgb(var(--vermilion) / 0.75);
+}
+
+@media (max-width: 639px) {
+  .calendar {
+    padding: 2.2rem 0.75rem 1rem;
+
+    h2 {
+      margin-bottom: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    th {
+      height: 1.8rem;
+      font-size: 0.66rem;
+    }
+
+    td {
+      height: 2.35rem;
+    }
+  }
+
+  .ring {
+    top: -0.8rem;
+    width: 0.55rem;
+    height: 2rem;
+  }
+
+  .day {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.76rem;
+  }
 }

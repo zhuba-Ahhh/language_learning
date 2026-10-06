@@ -5,6 +5,7 @@ export interface Scenario {
   title: string;
   subtitle: string;
   tip: string;
+  courseOnly?: boolean;
   sentences: { text: string; zh: string }[];
 }
 
@@ -36,6 +37,62 @@ export const SCENARIOS: Scenario[] = [
       {
         text: "I'll follow up on that offline.",
         zh: '这个问题我会后单独跟进。',
+      },
+    ],
+  },
+  {
+    id: 'en-ielts-part1',
+    lang: 'en',
+    title: 'IELTS Part 1',
+    subtitle: 'Short answers',
+    tip: '先直接回答，再补一个原因或例子。每题说两到三句即可。',
+    courseOnly: true,
+    sentences: [
+      {
+        text: 'I live in a busy neighbourhood, but there is a quiet park near my home.',
+        zh: '我住在一个热闹的社区，不过家附近有一座安静的公园。',
+      },
+      {
+        text: 'I usually read in the evening because it helps me slow down after work.',
+        zh: '我通常晚上阅读，因为这能让我在工作后慢下来。',
+      },
+      {
+        text: 'I prefer studying alone when I need to focus on a difficult topic.',
+        zh: '遇到难题需要专注时，我更喜欢独自学习。',
+      },
+      {
+        text: 'On weekends, I often meet friends for coffee or take a long walk.',
+        zh: '周末我经常和朋友喝咖啡，或者散步很久。',
+      },
+    ],
+  },
+  {
+    id: 'en-ielts-part2',
+    lang: 'en',
+    title: 'IELTS Part 2',
+    subtitle: 'Long turn',
+    tip: '按“是什么、什么时候、为什么重要”组织一分钟回答，不必追求复杂词汇。',
+    courseOnly: true,
+    sentences: [
+      {
+        text: 'I would like to describe a book that changed the way I manage my time.',
+        zh: '我想介绍一本改变了我时间管理方式的书。',
+      },
+      {
+        text: 'I first read it during my final year at university.',
+        zh: '我在大学最后一年第一次读到它。',
+      },
+      {
+        text: 'The author explains how small routines can lead to meaningful results.',
+        zh: '作者解释了小习惯如何带来有意义的结果。',
+      },
+      {
+        text: 'The most useful idea was to make good habits easy to start.',
+        zh: '最有用的观点是让好习惯容易开始。',
+      },
+      {
+        text: 'It was important to me because I became more consistent and less stressed.',
+        zh: '它对我很重要，因为我变得更自律，也没有那么焦虑。',
       },
     ],
   },
