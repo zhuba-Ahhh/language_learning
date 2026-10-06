@@ -1,0 +1,85 @@
+{
+  "id": "en-code",
+  "lang": "en",
+  "title": "代码与协作",
+  "subtitle": "English · Code & Git",
+  "words": [
+    {
+      "id": "en-code-0",
+      "term": "refactor",
+      "meaning": "v. 重构",
+      "example": "We should refactor this function to improve readability.",
+      "exampleZh": "我们应该重构这个函数以提高可读性。"
+    },
+    {
+      "id": "en-code-1",
+      "term": "deprecated",
+      "meaning": "adj. 已废弃的",
+      "example": "This API is deprecated and will be removed soon.",
+      "exampleZh": "这个接口已废弃，很快会被移除。"
+    },
+    {
+      "id": "en-code-2",
+      "term": "legacy code",
+      "meaning": "遗留代码",
+      "example": "The system contains a lot of legacy code.",
+      "exampleZh": "这个系统里有大量遗留代码。"
+    },
+    {
+      "id": "en-code-3",
+      "term": "boilerplate",
+      "meaning": "n. 样板代码",
+      "example": "The framework reduces boilerplate significantly.",
+      "exampleZh": "这个框架大幅减少了样板代码。"
+    },
+    {
+      "id": "en-code-4",
+      "term": "syntax",
+      "meaning": "n. 语法",
+      "example": "There's a syntax error on line 42.",
+      "exampleZh": "第 42 行有一个语法错误。"
+    },
+    {
+      "id": "en-code-5",
+      "term": "compile",
+      "meaning": "v. 编译",
+      "example": "The code compiles without any warnings.",
+      "exampleZh": "代码编译没有任何警告。"
+    },
+    {
+      "id": "en-code-6",
+      "term": "runtime",
+      "meaning": "n. 运行时",
+      "example": "This error only occurs at runtime.",
+      "exampleZh": "这个错误只在运行时出现。"
+    },
+    {
+      "id": "en-code-7",
+      "term": "repository",
+      "meaning": "n. 代码仓库",
+      "example": "Clone the repository to your local machine.",
+      "exampleZh": "把仓库克隆到你的本地机器。"
+    },
+    {
+      "id": "en-code-8",
+      "term": "commit",
+      "meaning": "v./n. 提交",
+      "example": "Please commit your changes before leaving.",
+      "exampleZh": "离开前请提交你的更改。"
+    },
+    {
+      "id": "en-code-9",
+      "term": "merge",
+      "meaning": "v./n. 合并",
+      "example": "There is a merge conflict in this branch.",
+      "exampleZh": "这个分支有合并冲突。"
+    },
+    {
+      "id": "en-code-10",
+      "term": "pull request",
+      "meaning": "拉取请求",
+      "example": "I've opened a pull request for this fix.",
+      "exampleZh": "我为这个修复开了一个 PR。"
+    }
+  ]
+}

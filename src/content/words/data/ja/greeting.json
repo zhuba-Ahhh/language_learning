@@ -1,0 +1,91 @@
+{
+  "id": "ja-greeting",
+  "lang": "ja",
+  "title": "寒暄表达",
+  "subtitle": "日本語 · 挨拶",
+  "words": [
+    {
+      "id": "ja-greeting-0",
+      "term": "おはようございます",
+      "reading": "ohayō gozaimasu",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/305e2001-3a73-493e-a405-c4a31d1dfdd6.mp3",
+      "meaning": "早上好（礼貌）",
+      "example": "おはようございます、田中さん。",
+      "exampleZh": "早上好，田中。"
+    },
+    {
+      "id": "ja-greeting-1",
+      "term": "こんにちは",
+      "reading": "konnichiwa",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5eff1fb7-a4a2-4e4e-a3e1-45f9815b80c3.mp3",
+      "meaning": "你好（白天用）",
+      "example": "こんにちは、お元気ですか。",
+      "exampleZh": "你好，最近好吗？"
+    },
+    {
+      "id": "ja-greeting-2",
+      "term": "こんばんは",
+      "reading": "konbanwa",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3ac9da5e-2e03-4bd8-b0fd-d8a4a09b9733.mp3",
+      "meaning": "晚上好",
+      "example": "こんばんは、お疲れさまです。",
+      "exampleZh": "晚上好，辛苦了。"
+    },
+    {
+      "id": "ja-greeting-3",
+      "term": "ありがとうございます",
+      "reading": "arigatō gozaimasu",
+      "meaning": "谢谢（礼貌）",
+      "example": "ご飯をごちそうしてくれて、ありがとうございます。",
+      "exampleZh": "谢谢你请我吃饭。"
+    },
+    {
+      "id": "ja-greeting-4",
+      "term": "すみません",
+      "reading": "sumimasen",
+      "meaning": "对不起 / 劳驾",
+      "example": "すみません、駅はどこですか。",
+      "exampleZh": "劳驾，车站在哪里？"
+    },
+    {
+      "id": "ja-greeting-5",
+      "term": "お疲れさまです",
+      "reading": "otsukaresama desu",
+      "meaning": "辛苦了",
+      "example": "先輩、お疲れさまです。",
+      "exampleZh": "前辈，辛苦了。"
+    },
+    {
+      "id": "ja-greeting-6",
+      "term": "いただきます",
+      "reading": "itadakimasu",
+      "meaning": "我开动了",
+      "example": "では、いただきます。",
+      "exampleZh": "那我开动了。"
+    },
+    {
+      "id": "ja-greeting-7",
+      "term": "ごちそうさまでした",
+      "reading": "gochisōsama deshita",
+      "meaning": "多谢款待",
+      "example": "ごちそうさまでした。おいしかったです。",
+      "exampleZh": "多谢款待，很好吃。"
+    },
+    {
+      "id": "ja-greeting-8",
+      "term": "また明日",
+      "reading": "mata ashita",
+      "meaning": "明天见",
+      "example": "じゃあ、また明日。",
+      "exampleZh": "那明天见。"
+    },
+    {
+      "id": "ja-greeting-9",
+      "term": "大丈夫です",
+      "reading": "daijōbu desu",
+      "meaning": "没关系 / 没问题",
+      "example": "大丈夫ですか。手伝いましょうか。",
+      "exampleZh": "没事吧？需要帮忙吗？"
+    }
+  ]
+}

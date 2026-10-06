@@ -55,7 +55,12 @@ export default function FlipCard({
             <span className={styles.reading}>{word.reading}</span>
           )}
           <span className={styles.speakWrap}>
-            <SpeakButton text={word.term} lang={lang} size={44} />
+            <SpeakButton
+              text={word.term}
+              lang={lang}
+              audioUrl={word.audioUrl}
+              size={44}
+            />
           </span>
           <span className={styles.hint}>轻点卡片翻面</span>
           <span className={styles.frontOrb} />

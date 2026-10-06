@@ -90,6 +90,7 @@ export default function VocabSection() {
                 <SpeakButton
                   text={w.term}
                   lang={deck.lang}
+                  audioUrl={w.audioUrl}
                   tone="muted"
                   size={32}
                 />

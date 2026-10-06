@@ -39,6 +39,9 @@ export default function SpeakingSection() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const recorder = new MediaRecorder(stream);
+      if (urlRef.current) URL.revokeObjectURL(urlRef.current);
+      urlRef.current = null;
+      setRecordingUrl(null);
       streamRef.current = stream;
       recorderRef.current = recorder;
       chunksRef.current = [];
@@ -46,7 +49,9 @@ export default function SpeakingSection() {
         if (event.data.size) chunksRef.current.push(event.data);
       };
       recorder.onstop = () => {
-        const url = URL.createObjectURL(new Blob(chunksRef.current));
+        const url = URL.createObjectURL(
+          new Blob(chunksRef.current, { type: recorder.mimeType }),
+        );
         if (urlRef.current) URL.revokeObjectURL(urlRef.current);
         urlRef.current = url;
         setRecordingUrl(url);
@@ -57,6 +62,8 @@ export default function SpeakingSection() {
       recorder.start();
       setRecording(true);
     } catch {
+      streamRef.current?.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
       setError('请允许麦克风权限');
     }
   };

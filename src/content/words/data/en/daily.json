@@ -1,0 +1,113 @@
+{
+  "id": "en-daily",
+  "lang": "en",
+  "title": "日常生活",
+  "subtitle": "English · Daily Life",
+  "words": [
+    {
+      "id": "en-daily-0",
+      "term": "appointment",
+      "meaning": "n. 预约",
+      "example": "I have a dentist appointment at three.",
+      "exampleZh": "我三点有牙医预约。"
+    },
+    {
+      "id": "en-daily-1",
+      "term": "errand",
+      "meaning": "n. 差事、跑腿",
+      "example": "I need to run some errands after work.",
+      "exampleZh": "下班后我得去办点事。"
+    },
+    {
+      "id": "en-daily-2",
+      "term": "commute",
+      "meaning": "n./v. 通勤",
+      "example": "My commute takes about forty minutes.",
+      "exampleZh": "我通勤大约四十分钟。"
+    },
+    {
+      "id": "en-daily-3",
+      "term": "grocery",
+      "meaning": "n. 食品杂货",
+      "example": "We do grocery shopping on weekends.",
+      "exampleZh": "我们周末去买菜。"
+    },
+    {
+      "id": "en-daily-4",
+      "term": "reservation",
+      "meaning": "n. 预订",
+      "example": "I made a reservation for two tonight.",
+      "exampleZh": "我订了今晚两个人的位子。"
+    },
+    {
+      "id": "en-daily-5",
+      "term": "receipt",
+      "meaning": "n. 收据",
+      "example": "Could I have the receipt, please?",
+      "exampleZh": "请给我收据好吗？"
+    },
+    {
+      "id": "en-daily-6",
+      "term": "takeaway",
+      "meaning": "n. 外卖",
+      "example": "Let's get takeaway tonight.",
+      "exampleZh": "今晚点外卖吧。"
+    },
+    {
+      "id": "en-daily-7",
+      "term": "parcel",
+      "meaning": "n. 包裹",
+      "example": "Your parcel arrived this morning.",
+      "exampleZh": "你的包裹今天早上到了。"
+    },
+    {
+      "id": "en-daily-8",
+      "term": "pharmacy",
+      "meaning": "n. 药店",
+      "example": "Is there a pharmacy nearby?",
+      "exampleZh": "附近有药店吗？"
+    },
+    {
+      "id": "en-daily-9",
+      "term": "landlord",
+      "meaning": "n. 房东",
+      "example": "The landlord raised the rent.",
+      "exampleZh": "房东涨了房租。"
+    },
+    {
+      "id": "en-daily-10",
+      "term": "deposit",
+      "meaning": "n. 押金",
+      "example": "I paid a one-month deposit.",
+      "exampleZh": "我付了一个月押金。"
+    },
+    {
+      "id": "en-daily-11",
+      "term": "refund",
+      "meaning": "n./v. 退款",
+      "example": "They gave me a full refund.",
+      "exampleZh": "他们给我全额退款了。"
+    },
+    {
+      "id": "en-daily-12",
+      "term": "queue",
+      "meaning": "n./v. 排队",
+      "example": "There's a long queue at the bank.",
+      "exampleZh": "银行排着长队。"
+    },
+    {
+      "id": "en-daily-13",
+      "term": "directions",
+      "meaning": "n. 路线指引",
+      "example": "Could you give me directions to the station?",
+      "exampleZh": "能告诉我去车站怎么走吗？"
+    },
+    {
+      "id": "en-daily-14",
+      "term": "schedule",
+      "meaning": "n. 日程",
+      "example": "My schedule is fully booked this week.",
+      "exampleZh": "我这周日程全满了。"
+    }
+  ]
+}

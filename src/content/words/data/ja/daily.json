@@ -1,0 +1,128 @@
+{
+  "id": "ja-daily",
+  "lang": "ja",
+  "title": "日常生活",
+  "subtitle": "日本語 · 日常",
+  "words": [
+    {
+      "id": "ja-daily-0",
+      "term": "駅",
+      "reading": "えき",
+      "meaning": "车站",
+      "example": "駅はどこですか。",
+      "exampleZh": "车站在哪里？"
+    },
+    {
+      "id": "ja-daily-1",
+      "term": "買い物",
+      "reading": "かいもの",
+      "meaning": "购物",
+      "example": "週末に買い物に行きます。",
+      "exampleZh": "周末去购物。"
+    },
+    {
+      "id": "ja-daily-2",
+      "term": "予約",
+      "reading": "よやく",
+      "meaning": "预约",
+      "example": "レストランを予約しました。",
+      "exampleZh": "订好了餐厅。"
+    },
+    {
+      "id": "ja-daily-3",
+      "term": "荷物",
+      "reading": "にもつ",
+      "meaning": "行李",
+      "example": "荷物が多いですね。",
+      "exampleZh": "行李真多啊。"
+    },
+    {
+      "id": "ja-daily-4",
+      "term": "薬局",
+      "reading": "やっきょく",
+      "meaning": "药店",
+      "example": "薬局で薬を買う。",
+      "exampleZh": "在药店买药。"
+    },
+    {
+      "id": "ja-daily-5",
+      "term": "病院",
+      "reading": "びょういん",
+      "meaning": "医院",
+      "example": "明日病院に行きます。",
+      "exampleZh": "明天去医院。"
+    },
+    {
+      "id": "ja-daily-6",
+      "term": "銀行",
+      "reading": "ぎんこう",
+      "meaning": "银行",
+      "example": "銀行は三時までです。",
+      "exampleZh": "银行营业到三点。"
+    },
+    {
+      "id": "ja-daily-7",
+      "term": "郵便局",
+      "reading": "ゆうびんきょく",
+      "meaning": "邮局",
+      "example": "郵便局で荷物を送る。",
+      "exampleZh": "在邮局寄包裹。"
+    },
+    {
+      "id": "ja-daily-8",
+      "term": "会計",
+      "reading": "かいけい",
+      "meaning": "结账",
+      "example": "お会計をお願いします。",
+      "exampleZh": "麻烦结账。"
+    },
+    {
+      "id": "ja-daily-9",
+      "term": "切符",
+      "reading": "きっぷ",
+      "meaning": "车票",
+      "example": "切符を二枚ください。",
+      "exampleZh": "请给我两张票。"
+    },
+    {
+      "id": "ja-daily-10",
+      "term": "住所",
+      "reading": "じゅうしょ",
+      "meaning": "地址",
+      "example": "住所を教えてください。",
+      "exampleZh": "请告诉我地址。"
+    },
+    {
+      "id": "ja-daily-11",
+      "term": "趣味",
+      "reading": "しゅみ",
+      "meaning": "爱好",
+      "example": "趣味は写真撮影です。",
+      "exampleZh": "爱好是摄影。"
+    },
+    {
+      "id": "ja-daily-12",
+      "term": "天気",
+      "reading": "てんき",
+      "meaning": "天气",
+      "example": "今日はいい天気ですね。",
+      "exampleZh": "今天天气真好啊。"
+    },
+    {
+      "id": "ja-daily-13",
+      "term": "約束",
+      "reading": "やくそく",
+      "meaning": "约定",
+      "example": "友達と約束がある。",
+      "exampleZh": "和朋友有约。"
+    },
+    {
+      "id": "ja-daily-14",
+      "term": "道",
+      "reading": "みち",
+      "meaning": "道路",
+      "example": "道に迷いました。",
+      "exampleZh": "迷路了。"
+    }
+  ]
+}

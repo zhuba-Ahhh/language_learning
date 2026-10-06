@@ -1,0 +1,60 @@
+{
+  "id": "en-flow",
+  "lang": "en",
+  "title": "开发流程",
+  "subtitle": "English · Workflow",
+  "words": [
+    {
+      "id": "en-flow-0",
+      "term": "deployment",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bfbd1169-cd2b-49e6-a418-2e51703f0d43.mp3",
+      "meaning": "n. 部署",
+      "example": "The deployment to production is scheduled for Friday.",
+      "exampleZh": "定于周五部署到生产环境。"
+    },
+    {
+      "id": "en-flow-1",
+      "term": "release",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e11877e4-055e-4533-9271-aa6c569e0670.mp3",
+      "meaning": "n./v. 发布",
+      "example": "This release fixes several critical bugs.",
+      "exampleZh": "这个版本修复了几个严重缺陷。"
+    },
+    {
+      "id": "en-flow-2",
+      "term": "rollback",
+      "audioUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/61dfa481-bb8e-4988-a857-b4b1c615aa53.mp3",
+      "meaning": "n. 回滚",
+      "example": "We had to perform a rollback after the failed deployment.",
+      "exampleZh": "部署失败后我们不得不执行回滚。"
+    },
+    {
+      "id": "en-flow-3",
+      "term": "hotfix",
+      "meaning": "n. 热修复",
+      "example": "A hotfix was pushed to resolve the urgent issue.",
+      "exampleZh": "推送了一个热修复来解决紧急问题。"
+    },
+    {
+      "id": "en-flow-4",
+      "term": "milestone",
+      "meaning": "n. 里程碑",
+      "example": "We reached our first milestone ahead of schedule.",
+      "exampleZh": "我们提前完成了第一个里程碑。"
+    },
+    {
+      "id": "en-flow-5",
+      "term": "backlog",
+      "meaning": "n. 待办列表",
+      "example": "That feature request is still in the backlog.",
+      "exampleZh": "那个功能需求还在待办列表里。"
+    },
+    {
+      "id": "en-flow-6",
+      "term": "sprint",
+      "meaning": "n. 冲刺迭代",
+      "example": "We plan to finish this task in the next sprint.",
+      "exampleZh": "我们计划在下个迭代完成这个任务。"
+    }
+  ]
+}

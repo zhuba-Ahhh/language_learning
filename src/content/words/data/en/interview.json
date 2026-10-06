@@ -1,0 +1,64 @@
+{
+  "id": "en-interview",
+  "lang": "en",
+  "title": "面试高频",
+  "subtitle": "English · Interview",
+  "words": [
+    {
+      "id": "en-interview-0",
+      "term": "trade-off",
+      "meaning": "n. 权衡",
+      "example": "There's a trade-off between performance and readability.",
+      "exampleZh": "性能和可读性之间需要权衡。"
+    },
+    {
+      "id": "en-interview-1",
+      "term": "bottleneck",
+      "meaning": "n. 瓶颈",
+      "example": "The database query is the main bottleneck.",
+      "exampleZh": "数据库查询是主要瓶颈。"
+    },
+    {
+      "id": "en-interview-2",
+      "term": "optimize",
+      "meaning": "v. 优化",
+      "example": "We optimized the algorithm to run twice as fast.",
+      "exampleZh": "我们优化了算法，速度提升了一倍。"
+    },
+    {
+      "id": "en-interview-3",
+      "term": "idempotent",
+      "meaning": "adj. 幂等的",
+      "example": "This API is idempotent, so retries are safe.",
+      "exampleZh": "这个接口是幂等的，重试是安全的。"
+    },
+    {
+      "id": "en-interview-4",
+      "term": "eventual consistency",
+      "meaning": "最终一致性",
+      "example": "The system guarantees eventual consistency.",
+      "exampleZh": "该系统保证最终一致性。"
+    },
+    {
+      "id": "en-interview-5",
+      "term": "time complexity",
+      "meaning": "时间复杂度",
+      "example": "The time complexity is O(n log n).",
+      "exampleZh": "时间复杂度是 O(n log n)。"
+    },
+    {
+      "id": "en-interview-6",
+      "term": "concurrency",
+      "meaning": "n. 并发",
+      "example": "The language has built-in support for concurrency.",
+      "exampleZh": "这门语言内置支持并发。"
+    },
+    {
+      "id": "en-interview-7",
+      "term": "asynchronous",
+      "meaning": "adj. 异步的",
+      "example": "We use asynchronous calls to avoid blocking.",
+      "exampleZh": "我们用异步调用避免阻塞。"
+    }
+  ]
+}

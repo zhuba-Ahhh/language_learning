@@ -1,0 +1,71 @@
+{
+  "id": "en-debug",
+  "lang": "en",
+  "title": "调试排错",
+  "subtitle": "English · Debugging",
+  "words": [
+    {
+      "id": "en-debug-0",
+      "term": "reproduce",
+      "meaning": "v. 复现",
+      "example": "I can't reproduce this bug on my machine.",
+      "exampleZh": "我在自己机器上复现不了这个 bug。"
+    },
+    {
+      "id": "en-debug-1",
+      "term": "breakpoint",
+      "meaning": "n. 断点",
+      "example": "Set a breakpoint at the beginning of the function.",
+      "exampleZh": "在函数开头设一个断点。"
+    },
+    {
+      "id": "en-debug-2",
+      "term": "stack trace",
+      "meaning": "堆栈跟踪",
+      "example": "The stack trace shows where the error occurred.",
+      "exampleZh": "堆栈跟踪显示了错误发生的位置。"
+    },
+    {
+      "id": "en-debug-3",
+      "term": "memory leak",
+      "meaning": "内存泄漏",
+      "example": "The app crashes due to a memory leak.",
+      "exampleZh": "应用因为内存泄漏崩溃了。"
+    },
+    {
+      "id": "en-debug-4",
+      "term": "race condition",
+      "meaning": "竞态条件",
+      "example": "This bug is caused by a race condition.",
+      "exampleZh": "这个 bug 是由竞态条件引起的。"
+    },
+    {
+      "id": "en-debug-5",
+      "term": "edge case",
+      "meaning": "边界情况",
+      "example": "We need to handle this edge case carefully.",
+      "exampleZh": "我们需要仔细处理这个边界情况。"
+    },
+    {
+      "id": "en-debug-6",
+      "term": "debug",
+      "meaning": "v. 调试",
+      "example": "I spent the whole afternoon debugging this issue.",
+      "exampleZh": "我花了整个下午调试这个问题。"
+    },
+    {
+      "id": "en-debug-7",
+      "term": "log",
+      "meaning": "n./v. 日志",
+      "example": "Check the logs to find the root cause.",
+      "exampleZh": "查看日志找出根本原因。"
+    },
+    {
+      "id": "en-debug-8",
+      "term": "root cause",
+      "meaning": "根本原因",
+      "example": "We identified the root cause of the outage.",
+      "exampleZh": "我们找到了故障的根本原因。"
+    }
+  ]
+}

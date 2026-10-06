@@ -1,0 +1,78 @@
+{
+  "id": "en-arch",
+  "lang": "en",
+  "title": "架构性能",
+  "subtitle": "English · Architecture",
+  "words": [
+    {
+      "id": "en-arch-0",
+      "term": "scalability",
+      "meaning": "n. 可扩展性",
+      "example": "Scalability is a key concern for this system.",
+      "exampleZh": "可扩展性是这个系统的关键考量。"
+    },
+    {
+      "id": "en-arch-1",
+      "term": "latency",
+      "meaning": "n. 延迟",
+      "example": "We reduced the latency by adding a cache layer.",
+      "exampleZh": "我们通过增加缓存层降低了延迟。"
+    },
+    {
+      "id": "en-arch-2",
+      "term": "throughput",
+      "meaning": "n. 吞吐量",
+      "example": "The server can handle 10,000 requests per second.",
+      "exampleZh": "服务器每秒可处理一万个请求。"
+    },
+    {
+      "id": "en-arch-3",
+      "term": "load balancer",
+      "meaning": "负载均衡器",
+      "example": "The load balancer distributes traffic across servers.",
+      "exampleZh": "负载均衡器把流量分发到各台服务器。"
+    },
+    {
+      "id": "en-arch-4",
+      "term": "microservice",
+      "meaning": "n. 微服务",
+      "example": "We split the monolith into microservices.",
+      "exampleZh": "我们把单体应用拆成了微服务。"
+    },
+    {
+      "id": "en-arch-5",
+      "term": "cache",
+      "meaning": "n./v. 缓存",
+      "example": "The response is cached for ten minutes.",
+      "exampleZh": "响应被缓存十分钟。"
+    },
+    {
+      "id": "en-arch-6",
+      "term": "database schema",
+      "meaning": "数据库模式",
+      "example": "We need to update the database schema.",
+      "exampleZh": "我们需要更新数据库模式。"
+    },
+    {
+      "id": "en-arch-7",
+      "term": "container",
+      "meaning": "n. 容器",
+      "example": "The application runs in a Docker container.",
+      "exampleZh": "应用运行在 Docker 容器里。"
+    },
+    {
+      "id": "en-arch-8",
+      "term": "API endpoint",
+      "meaning": "接口端点",
+      "example": "This API endpoint returns user information.",
+      "exampleZh": "这个接口端点返回用户信息。"
+    },
+    {
+      "id": "en-arch-9",
+      "term": "middleware",
+      "meaning": "n. 中间件",
+      "example": "Authentication is handled by middleware.",
+      "exampleZh": "认证由中间件处理。"
+    }
+  ]
+}

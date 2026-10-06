@@ -1,0 +1,168 @@
+{
+  "id": "ja-katakana",
+  "lang": "ja",
+  "title": "IT 外来语",
+  "subtitle": "日本語 · カタカナ",
+  "words": [
+    {
+      "id": "ja-kata-0",
+      "term": "サーバー",
+      "reading": "sābā",
+      "meaning": "服务器（server）",
+      "example": "サーバーが落ちました。",
+      "exampleZh": "服务器宕机了。"
+    },
+    {
+      "id": "ja-kata-1",
+      "term": "データベース",
+      "reading": "dētabēsu",
+      "meaning": "数据库（database）",
+      "example": "データベースに接続する。",
+      "exampleZh": "连接数据库。"
+    },
+    {
+      "id": "ja-kata-2",
+      "term": "デプロイ",
+      "reading": "depuroi",
+      "meaning": "部署（deploy）",
+      "example": "本番環境にデプロイしました。",
+      "exampleZh": "已部署到生产环境。"
+    },
+    {
+      "id": "ja-kata-3",
+      "term": "バグ",
+      "reading": "bagu",
+      "meaning": "缺陷（bug）",
+      "example": "バグを修正しました。",
+      "exampleZh": "修复了 bug。"
+    },
+    {
+      "id": "ja-kata-4",
+      "term": "リファクタリング",
+      "reading": "rifakutaringu",
+      "meaning": "重构（refactoring）",
+      "example": "このコードはリファクタリングが必要です。",
+      "exampleZh": "这段代码需要重构。"
+    },
+    {
+      "id": "ja-kata-5",
+      "term": "フレームワーク",
+      "reading": "furēmuwāku",
+      "meaning": "框架（framework）",
+      "example": "新しいフレームワークを導入した。",
+      "exampleZh": "引入了新框架。"
+    },
+    {
+      "id": "ja-kata-6",
+      "term": "ライブラリ",
+      "reading": "raiburari",
+      "meaning": "库（library）",
+      "example": "便利なライブラリを見つけた。",
+      "exampleZh": "找到了一个好用的库。"
+    },
+    {
+      "id": "ja-kata-7",
+      "term": "エンジニア",
+      "reading": "enjinia",
+      "meaning": "工程师（engineer）",
+      "example": "私はソフトウェアエンジニアです。",
+      "exampleZh": "我是软件工程师。"
+    },
+    {
+      "id": "ja-kata-8",
+      "term": "ソースコード",
+      "reading": "sōsukōdo",
+      "meaning": "源代码（source code）",
+      "example": "ソースコードをレビューする。",
+      "exampleZh": "审查源代码。"
+    },
+    {
+      "id": "ja-kata-9",
+      "term": "リリース",
+      "reading": "rirīsu",
+      "meaning": "发布（release）",
+      "example": "来週リリース予定です。",
+      "exampleZh": "预计下周发布。"
+    },
+    {
+      "id": "ja-kata-10",
+      "term": "キャッシュ",
+      "reading": "kyasshu",
+      "meaning": "缓存（cache）",
+      "example": "キャッシュをクリアしてください。",
+      "exampleZh": "请清除缓存。"
+    },
+    {
+      "id": "ja-kata-11",
+      "term": "アルゴリズム",
+      "reading": "arugorizumu",
+      "meaning": "算法（algorithm）",
+      "example": "このアルゴリズムは効率的だ。",
+      "exampleZh": "这个算法很高效。"
+    },
+    {
+      "id": "ja-kata-12",
+      "term": "セキュリティ",
+      "reading": "sekyuriti",
+      "meaning": "安全（security）",
+      "example": "セキュリティ対策を強化する。",
+      "exampleZh": "加强安全对策。"
+    },
+    {
+      "id": "ja-kata-13",
+      "term": "ネットワーク",
+      "reading": "nettowāku",
+      "meaning": "网络（network）",
+      "example": "ネットワークエラーが発生した。",
+      "exampleZh": "发生了网络错误。"
+    },
+    {
+      "id": "ja-kata-14",
+      "term": "ブラウザ",
+      "reading": "burauza",
+      "meaning": "浏览器（browser）",
+      "example": "ブラウザの互換性を確認する。",
+      "exampleZh": "确认浏览器兼容性。"
+    },
+    {
+      "id": "ja-kata-15",
+      "term": "コンテナ",
+      "reading": "kotena",
+      "meaning": "容器（container）",
+      "example": "コンテナを起動する。",
+      "exampleZh": "启动容器。"
+    },
+    {
+      "id": "ja-kata-16",
+      "term": "コンパイル",
+      "reading": "konpairu",
+      "meaning": "编译（compile）",
+      "example": "コンパイルエラーを直した。",
+      "exampleZh": "修复了编译错误。"
+    },
+    {
+      "id": "ja-kata-17",
+      "term": "デバッグ",
+      "reading": "debaggu",
+      "meaning": "调试（debug）",
+      "example": "デバッグに時間がかかった。",
+      "exampleZh": "调试花了很长时间。"
+    },
+    {
+      "id": "ja-kata-18",
+      "term": "ミドルウェア",
+      "reading": "midorūea",
+      "meaning": "中间件（middleware）",
+      "example": "ミドルウェアで認証を処理する。",
+      "exampleZh": "用中间件处理认证。"
+    },
+    {
+      "id": "ja-kata-19",
+      "term": "メモリ",
+      "reading": "memori",
+      "meaning": "内存（memory）",
+      "example": "メモリリークを検出した。",
+      "exampleZh": "检测到了内存泄漏。"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "en-comm",
+  "lang": "en",
+  "title": "职场沟通",
+  "subtitle": "English · Workplace",
+  "words": [
+    {
+      "id": "en-comm-0",
+      "term": "blocker",
+      "meaning": "n. 阻塞项",
+      "example": "This dependency issue is a blocker for the release.",
+      "exampleZh": "这个依赖问题是发布的阻塞项。"
+    },
+    {
+      "id": "en-comm-1",
+      "term": "code review",
+      "meaning": "代码审查",
+      "example": "Your code review comments were very helpful.",
+      "exampleZh": "你的代码审查意见很有帮助。"
+    },
+    {
+      "id": "en-comm-2",
+      "term": "nitpick",
+      "meaning": "n. 小意见",
+      "example": "Sorry for the nitpick, but could you rename this variable?",
+      "exampleZh": "抱歉挑个小毛病，能把这个变量改个名吗？"
+    },
+    {
+      "id": "en-comm-3",
+      "term": "scope creep",
+      "meaning": "需求蔓延",
+      "example": "We must avoid scope creep to meet the deadline.",
+      "exampleZh": "为了赶上截止日期必须避免需求蔓延。"
+    },
+    {
+      "id": "en-comm-4",
+      "term": "stakeholder",
+      "meaning": "n. 干系人",
+      "example": "We need approval from all stakeholders.",
+      "exampleZh": "我们需要所有干系人的批准。"
+    },
+    {
+      "id": "en-comm-5",
+      "term": "deadline",
+      "meaning": "n. 截止日期",
+      "example": "The deadline for this feature is next Monday.",
+      "exampleZh": "这个功能的截止日期是下周一。"
+    },
+    {
+      "id": "en-comm-6",
+      "term": "estimate",
+      "meaning": "v./n. 估算",
+      "example": "Can you estimate how long this task will take?",
+      "exampleZh": "你能估算一下这个任务要多久吗？"
+    },
+    {
+      "id": "en-comm-7",
+      "term": "follow up",
+      "meaning": "跟进",
+      "example": "I'll follow up on this issue tomorrow.",
+      "exampleZh": "我明天会跟进这个问题。"
+    }
+  ]
+}

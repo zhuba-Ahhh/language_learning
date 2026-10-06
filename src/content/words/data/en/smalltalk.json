@@ -1,0 +1,92 @@
+{
+  "id": "en-smalltalk",
+  "lang": "en",
+  "title": "社交闲聊",
+  "subtitle": "English · Small Talk",
+  "words": [
+    {
+      "id": "en-smalltalk-0",
+      "term": "How's it going?",
+      "meaning": "最近怎么样？",
+      "example": "Hey Mike, how's it going?",
+      "exampleZh": "嗨 Mike，最近怎么样？"
+    },
+    {
+      "id": "en-smalltalk-1",
+      "term": "What are you up to?",
+      "meaning": "在忙什么呢？",
+      "example": "What are you up to this weekend?",
+      "exampleZh": "这周末打算干嘛？"
+    },
+    {
+      "id": "en-smalltalk-2",
+      "term": "Long time no see",
+      "meaning": "好久不见",
+      "example": "Long time no see! How have you been?",
+      "exampleZh": "好久不见！过得好吗？"
+    },
+    {
+      "id": "en-smalltalk-3",
+      "term": "That sounds like fun",
+      "meaning": "听起来不错",
+      "example": "That sounds like fun. Count me in.",
+      "exampleZh": "听起来不错，算我一个。"
+    },
+    {
+      "id": "en-smalltalk-4",
+      "term": "No worries",
+      "meaning": "没关系 / 别担心",
+      "example": "No worries, it happens to everyone.",
+      "exampleZh": "没关系，谁都会遇到。"
+    },
+    {
+      "id": "en-smalltalk-5",
+      "term": "I'm just browsing",
+      "meaning": "我随便看看",
+      "example": "Thanks, I'm just browsing for now.",
+      "exampleZh": "谢谢，我先随便看看。"
+    },
+    {
+      "id": "en-smalltalk-6",
+      "term": "It's on me",
+      "meaning": "我请客",
+      "example": "It's on me today.",
+      "exampleZh": "今天我请客。"
+    },
+    {
+      "id": "en-smalltalk-7",
+      "term": "Let's grab a coffee",
+      "meaning": "去喝杯咖啡吧",
+      "example": "Let's grab a coffee sometime this week.",
+      "exampleZh": "这周找时间喝杯咖啡吧。"
+    },
+    {
+      "id": "en-smalltalk-8",
+      "term": "I can't make it",
+      "meaning": "我去不了了",
+      "example": "Sorry, I can't make it tomorrow.",
+      "exampleZh": "抱歉，明天我去不了了。"
+    },
+    {
+      "id": "en-smalltalk-9",
+      "term": "Keep in touch",
+      "meaning": "保持联系",
+      "example": "It was great seeing you. Keep in touch!",
+      "exampleZh": "见到你真高兴，保持联系！"
+    },
+    {
+      "id": "en-smalltalk-10",
+      "term": "What do you do?",
+      "meaning": "你做什么工作？",
+      "example": "So, what do you do for a living?",
+      "exampleZh": "你是做什么工作的？"
+    },
+    {
+      "id": "en-smalltalk-11",
+      "term": "That makes sense",
+      "meaning": "有道理 / 明白了",
+      "example": "Ah, that makes sense now.",
+      "exampleZh": "啊，这样我就明白了。"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "ja-work",
+  "lang": "ja",
+  "title": "职场高频词",
+  "subtitle": "日本語 · 職場",
+  "words": [
+    {
+      "id": "ja-work-0",
+      "term": "開発",
+      "reading": "かいはつ",
+      "meaning": "开发",
+      "example": "新機能の開発を進めています。",
+      "exampleZh": "正在推进新功能的开发。"
+    },
+    {
+      "id": "ja-work-1",
+      "term": "環境",
+      "reading": "かんきょう",
+      "meaning": "环境",
+      "example": "開発環境を構築する。",
+      "exampleZh": "搭建开发环境。"
+    },
+    {
+      "id": "ja-work-2",
+      "term": "設定",
+      "reading": "せってい",
+      "meaning": "配置",
+      "example": "設定ファイルを変更した。",
+      "exampleZh": "修改了配置文件。"
+    },
+    {
+      "id": "ja-work-3",
+      "term": "確認",
+      "reading": "かくにん",
+      "meaning": "确认",
+      "example": "仕様を確認しておきます。",
+      "exampleZh": "我提前确认一下规格。"
+    },
+    {
+      "id": "ja-work-4",
+      "term": "修正",
+      "reading": "しゅうせい",
+      "meaning": "修复",
+      "example": "不具合を修正しました。",
+      "exampleZh": "修复了故障。"
+    },
+    {
+      "id": "ja-work-5",
+      "term": "仕様",
+      "reading": "しよう",
+      "meaning": "规格",
+      "example": "仕様変更がありました。",
+      "exampleZh": "有规格变更。"
+    },
+    {
+      "id": "ja-work-6",
+      "term": "納期",
+      "reading": "のうき",
+      "meaning": "交付期限",
+      "example": "納期に間に合わせる。",
+      "exampleZh": "赶上交付期限。"
+    },
+    {
+      "id": "ja-work-7",
+      "term": "打ち合わせ",
+      "reading": "うちあわせ",
+      "meaning": "碰头会",
+      "example": "午後2時から打ち合わせです。",
+      "exampleZh": "下午两点开碰头会。"
+    },
+    {
+      "id": "ja-work-8",
+      "term": "進捗",
+      "reading": "しんちょく",
+      "meaning": "进度",
+      "example": "進捗を報告します。",
+      "exampleZh": "汇报进度。"
+    },
+    {
+      "id": "ja-work-9",
+      "term": "課題",
+      "reading": "かだい",
+      "meaning": "课题 / 问题",
+      "example": "課題が残っている。",
+      "exampleZh": "还有遗留问题。"
+    },
+    {
+      "id": "ja-work-10",
+      "term": "対応",
+      "reading": "たいおう",
+      "meaning": "处理 / 应对",
+      "example": "この件は私が対応します。",
+      "exampleZh": "这件事由我来处理。"
+    },
+    {
+      "id": "ja-work-11",
+      "term": "報告",
+      "reading": "ほうこく",
+      "meaning": "汇报",
+      "example": "結果を報告してください。",
+      "exampleZh": "请汇报结果。"
+    },
+    {
+      "id": "ja-work-12",
+      "term": "遅延",
+      "reading": "ちえん",
+      "meaning": "延迟",
+      "example": "リリースが遅延している。",
+      "exampleZh": "发布延迟了。"
+    },
+    {
+      "id": "ja-work-13",
+      "term": "品質",
+      "reading": "ひんしつ",
+      "meaning": "质量",
+      "example": "品質を担保する。",
+      "exampleZh": "保证质量。"
+    },
+    {
+      "id": "ja-work-14",
+      "term": "見積もり",
+      "reading": "みつもり",
+      "meaning": "估算",
+      "example": "工数の見積もりを出す。",
+      "exampleZh": "给出工时估算。"
+    }
+  ]
+}

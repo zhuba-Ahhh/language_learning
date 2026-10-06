@@ -1,11 +1,12 @@
 /** 跨功能共享朗读按钮，阻止点击冒泡到外层卡片。 */
 import styles from './index.module.less';
 import { useState } from 'react';
-import { speak, ttsSupported } from '@/lib/speech';
+import { speak } from '@/lib/speech';
 
 interface Props {
   text: string;
   lang: 'en' | 'ja';
+  audioUrl?: string;
   tone?: 'sand' | 'muted' | 'dark';
   size?: number;
 }
@@ -14,26 +15,32 @@ interface Props {
 export default function SpeakButton({
   text,
   lang,
+  audioUrl,
   tone = 'sand',
   size = 36,
 }: Props) {
-  const [active, setActive] = useState(false);
-  if (!ttsSupported) return null;
+  const [status, setStatus] = useState<'idle' | 'loading' | 'active'>('idle');
 
   return (
     <button
       type="button"
-      aria-label="朗读"
-      onClick={(e) => {
+      aria-label={status === 'loading' ? '正在生成配音' : '朗读'}
+      disabled={status === 'loading'}
+      onClick={async (e) => {
         e.stopPropagation();
-        speak(text, lang);
-        setActive(true);
-        window.setTimeout(
-          () => setActive(false),
-          Math.max(900, text.length * 120),
-        );
+        setStatus('loading');
+        try {
+          await speak(text, lang, audioUrl);
+          setStatus('active');
+          window.setTimeout(
+            () => setStatus('idle'),
+            Math.max(900, text.length * 120),
+          );
+        } catch {
+          setStatus('idle');
+        }
       }}
-      className={`${styles.button} ${styles[tone]} ${active ? styles.active : ''}`}
+      className={`${styles.button} ${styles[tone]} ${status === 'idle' ? '' : styles[status]}`}
       style={{ width: size, height: size }}
     >
       <svg

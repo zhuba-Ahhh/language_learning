@@ -32,3 +32,16 @@
   background-color: rgb(var(--vermilion));
   color: white;
 }
+.loading {
+  cursor: progress;
+  opacity: 0.72;
+  svg {
+    animation: pulse 800ms ease-in-out infinite alternate;
+  }
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(0.82);
+  }
+}
