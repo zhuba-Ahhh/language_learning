@@ -1,5 +1,5 @@
 /** 闪卡正反面及朗读入口，样式与组件共置。 */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import type { Word } from '@/content/words';
 import SpeakButton from '@/components/SpeakButton';
 import styles from './index.module.less';
@@ -21,10 +21,6 @@ export default function FlipCard({
   total,
 }: Props) {
   const [flipped, setFlipped] = useState(false);
-
-  useEffect(() => {
-    setFlipped(false);
-  }, [word.id]);
 
   return (
     <div className={styles.scene}>

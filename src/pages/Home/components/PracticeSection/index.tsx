@@ -42,14 +42,19 @@ export default function PracticeSection({
   if (view === 'read')
     return <ReadingSection task={task} onComplete={onActivityComplete} />;
   if (view === 'cards') {
-    return <FlashcardsSection onComplete={onActivityComplete} />;
+    return (
+      <FlashcardsSection taskId={task?.id} onComplete={onActivityComplete} />
+    );
   }
   if (view === 'vocab') return <VocabSection />;
-  if (view === 'kana') return <KanaSection onComplete={onActivityComplete} />;
+  if (view === 'kana') {
+    return <KanaSection taskId={task?.id} onComplete={onActivityComplete} />;
+  }
   if (view === 'review') {
     return (
       <ReviewSection
         onBrowse={() => onChange('cards')}
+        taskId={task?.id}
         onComplete={onActivityComplete}
       />
     );

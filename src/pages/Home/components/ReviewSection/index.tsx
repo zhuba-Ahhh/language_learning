@@ -6,9 +6,11 @@ import { useStudy } from '@/study/useStudy';
 
 export default function ReviewSection({
   onBrowse,
+  taskId,
   onComplete,
 }: {
   onBrowse: () => void;
+  taskId?: string;
   onComplete?: () => void;
 }) {
   const { marks } = useStudy();
@@ -18,7 +20,11 @@ export default function ReviewSection({
 
   if (unknownCount > 0) {
     return (
-      <FlashcardsSection initialDeckId={REVIEW_ID} onComplete={onComplete} />
+      <FlashcardsSection
+        initialDeckId={REVIEW_ID}
+        taskId={taskId}
+        onComplete={onComplete}
+      />
     );
   }
 

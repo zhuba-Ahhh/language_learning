@@ -9,9 +9,18 @@ import {
   StudyContext,
   type CardMark,
   type CustomWord,
+  type StudyAttempt,
   type StudySession,
   type StudyState,
 } from '../context';
+
+const ATTEMPT_ACTIVITIES = new Set([
+  'flashcards',
+  'speaking',
+  'reading',
+  'kana',
+]);
+const ATTEMPT_OUTCOMES = new Set(['known', 'unknown', 'recorded', 'completed']);
 
 function normalizeTaskIds(day: number, values: (string | number)[]) {
   const tasks = PLAN.find((item) => item.day === day)?.tasks ?? [];
@@ -62,6 +71,10 @@ export function StudyProvider({ children }: { children: ReactNode }) {
   );
   const [sessions, setSessions] = useLocalStorage<StudySession[]>(
     'lingua.sessions',
+    [],
+  );
+  const [attempts, setAttempts] = useLocalStorage<StudyAttempt[]>(
+    'lingua.attempts',
     [],
   );
 
@@ -286,6 +299,22 @@ export function StudyProvider({ children }: { children: ReactNode }) {
   const markWord = (wordId: string, mark: CardMark) =>
     setMarks((prev) => ({ ...prev, [wordId]: mark }));
 
+  const recordAttempt: StudyState['recordAttempt'] = (attempt) => {
+    const completedAt = new Date().toISOString();
+    setAttempts((current) =>
+      [
+        {
+          ...attempt,
+          id: crypto.randomUUID(),
+          goalId,
+          courseId: course.id,
+          completedAt,
+        },
+        ...current,
+      ].slice(0, 2000),
+    );
+  };
+
   const addCustomWord: StudyState['addCustomWord'] = (word) => {
     const term = word.term.trim();
     const meaning = word.meaning.trim();
@@ -339,12 +368,13 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     setCheckinsByGoal({ [course.id]: [] });
     setMarks({});
     setSessions([]);
+    setAttempts([]);
     setLegacyStartDate(todayStr());
     setGoalStarts({ [course.id]: todayStr() });
   };
 
   const exportData = () => ({
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
     goalId,
     courseSelections,
@@ -354,10 +384,14 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     marks,
     customWords,
     sessions,
+    attempts,
   });
 
   const importData = (value: unknown) => {
-    if (!isRecord(value) || value.version !== 1) return false;
+    if (!isRecord(value) || (value.version !== 1 && value.version !== 2)) {
+      return false;
+    }
+    const version = value.version;
     const nextGoalId = value.goalId;
     if (
       typeof nextGoalId !== 'string' ||
@@ -367,7 +401,8 @@ export function StudyProvider({ children }: { children: ReactNode }) {
       !isRecord(value.marks) ||
       !isRecord(value.checkinsByGoal) ||
       !Array.isArray(value.customWords) ||
-      !Array.isArray(value.sessions)
+      !Array.isArray(value.sessions) ||
+      (version === 2 && !Array.isArray(value.attempts))
     ) {
       return false;
     }
@@ -464,6 +499,43 @@ export function StudyProvider({ children }: { children: ReactNode }) {
       nextSessions.push(item as unknown as StudySession);
     }
 
+    const nextAttempts: StudyAttempt[] = [];
+    const attemptValues = version === 2 ? value.attempts : [];
+    if (!Array.isArray(attemptValues)) return false;
+    for (const item of attemptValues) {
+      if (
+        !isRecord(item) ||
+        typeof item.id !== 'string' ||
+        typeof item.goalId !== 'string' ||
+        typeof item.courseId !== 'string' ||
+        (item.taskId !== undefined && typeof item.taskId !== 'string') ||
+        typeof item.activity !== 'string' ||
+        !ATTEMPT_ACTIVITIES.has(item.activity) ||
+        typeof item.contentId !== 'string' ||
+        typeof item.completedAt !== 'string' ||
+        Number.isNaN(Date.parse(item.completedAt)) ||
+        (item.outcome !== undefined &&
+          (typeof item.outcome !== 'string' ||
+            !ATTEMPT_OUTCOMES.has(item.outcome))) ||
+        (item.correct !== undefined &&
+          (typeof item.correct !== 'number' ||
+            !Number.isInteger(item.correct) ||
+            item.correct < 0)) ||
+        (item.total !== undefined &&
+          (typeof item.total !== 'number' ||
+            !Number.isInteger(item.total) ||
+            item.total < 0)) ||
+        (typeof item.correct === 'number' &&
+          typeof item.total === 'number' &&
+          item.correct > item.total) ||
+        (item.durationMs !== undefined &&
+          (typeof item.durationMs !== 'number' || item.durationMs < 0))
+      ) {
+        return false;
+      }
+      nextAttempts.push(item as unknown as StudyAttempt);
+    }
+
     setStoredGoalId(nextGoalId);
     setCourseSelections(nextCourseSelections);
     setGoalStarts(nextStarts);
@@ -474,6 +546,7 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     setMarks(nextMarks);
     setCustomWords(nextCustomWords);
     setSessions(nextSessions);
+    setAttempts(nextAttempts);
     return true;
   };
 
@@ -505,6 +578,8 @@ export function StudyProvider({ children }: { children: ReactNode }) {
     resetAll,
     knownCount,
     sessions,
+    attempts,
+    recordAttempt,
     exportData,
     importData,
   };

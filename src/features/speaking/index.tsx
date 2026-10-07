@@ -5,6 +5,7 @@ import FeatureHeader from '@/components/FeatureHeader';
 import SpeakButton from '@/components/SpeakButton';
 import { SCENARIOS } from '@/content/speaking';
 import type { PlanTask } from '@/content/plan';
+import { useStudy } from '@/study/useStudy';
 
 export default function SpeakingSection({
   task,
@@ -13,6 +14,7 @@ export default function SpeakingSection({
   task?: PlanTask;
   onComplete?: () => void;
 }) {
+  const { recordAttempt } = useStudy();
   const scenarioIds = task?.activity.scenarioIds;
   const scenarios = SCENARIOS.filter((scenario) =>
     scenarioIds ? scenarioIds.includes(scenario.id) : !scenario.courseOnly,
@@ -26,6 +28,8 @@ export default function SpeakingSection({
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const urlRef = useRef<string | null>(null);
+  const startedAtRef = useRef(0);
+  const recordingContentRef = useRef('');
 
   const scenario =
     scenarios.find((item) => item.id === scenarioId) ?? scenarios[0];
@@ -68,11 +72,20 @@ export default function SpeakingSection({
         urlRef.current = url;
         setRecordingUrl(url);
         setRecording(false);
+        recordAttempt({
+          taskId: task?.id,
+          activity: 'speaking',
+          contentId: recordingContentRef.current,
+          outcome: 'recorded',
+          durationMs: Date.now() - startedAtRef.current,
+        });
         onComplete?.();
         stream.getTracks().forEach((track) => track.stop());
         streamRef.current = null;
       };
+      recordingContentRef.current = `${scenario.id}:${sentenceIndex + 1}`;
       recorder.start();
+      startedAtRef.current = Date.now();
       setRecording(true);
     } catch {
       streamRef.current?.getTracks().forEach((track) => track.stop());

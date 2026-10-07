@@ -1,5 +1,5 @@
 /** 管理卡组、复习队列与轮次，保持原有标记和重开规则。 */
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { Word } from '@/content/words';
 import { useStudy } from '@/study/useStudy';
 
@@ -10,9 +10,9 @@ interface CardItem {
 
 export const REVIEW_ID = '__review';
 
-export function useFlashcardQueue(initialDeckId?: string) {
-  const { decks, marks, markWord, resetDeckMarks } = useStudy();
-  const [deckId, setDeckId] = useState(initialDeckId ?? decks[0].id);
+export function useFlashcardQueue(initialDeckId?: string, taskId?: string) {
+  const { decks, marks, markWord, resetDeckMarks, recordAttempt } = useStudy();
+  const [deckId, setActiveDeckId] = useState(initialDeckId ?? decks[0].id);
 
   // 跨卡组「不熟的词」复习集
   const unknownCards = useMemo<CardItem[]>(
@@ -31,23 +31,31 @@ export function useFlashcardQueue(initialDeckId?: string) {
     ? unknownCards
     : deck!.words.map((w) => ({ word: w, lang: deck!.lang }));
 
-  const [queue, setQueue] = useState<string[]>(() =>
-    cards.map((c) => c.word.id),
-  );
+  const [queue, setQueue] = useState<string[]>(() => {
+    if (isReview) return unknownCards.map((card) => card.word.id);
+    const remaining = deck!.words
+      .filter((word) => marks[word.id] !== 'known')
+      .map((word) => word.id);
+    return remaining.length ? remaining : deck!.words.map((word) => word.id);
+  });
   const [round, setRound] = useState(1);
 
-  useEffect(() => {
-    if (isReview) {
-      setQueue(unknownCards.map((c) => c.word.id));
-    } else {
-      const remaining = deck!.words
-        .filter((w) => marks[w.id] !== 'known')
-        .map((w) => w.id);
-      setQueue(remaining.length ? remaining : deck!.words.map((w) => w.id));
-    }
-    setRound((r) => r + 1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [deckId]);
+  const setDeckId = (nextDeckId: string) => {
+    const nextDeck = decks.find((item) => item.id === nextDeckId);
+    const nextQueue =
+      nextDeckId === REVIEW_ID
+        ? unknownCards.map((card) => card.word.id)
+        : (
+            nextDeck?.words.filter((word) => marks[word.id] !== 'known') ?? []
+          ).map((word) => word.id);
+    setActiveDeckId(nextDeckId);
+    setQueue(
+      nextQueue.length
+        ? nextQueue
+        : (nextDeck?.words.map((word) => word.id) ?? []),
+    );
+    setRound((value) => value + 1);
+  };
 
   const cardMap = useMemo(
     () => new Map(cards.map((c) => [c.word.id, c])),
@@ -65,6 +73,12 @@ export function useFlashcardQueue(initialDeckId?: string) {
   const answer = (mark: 'known' | 'unknown') => {
     if (!current) return;
     markWord(current.word.id, mark);
+    recordAttempt({
+      taskId,
+      activity: 'flashcards',
+      contentId: current.word.id,
+      outcome: mark,
+    });
     setQueue((q) =>
       mark === 'known' ? q.slice(1) : [...q.slice(1), current.word.id],
     );

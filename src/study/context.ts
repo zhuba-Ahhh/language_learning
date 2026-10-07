@@ -18,6 +18,27 @@ export interface StudySession {
   completedAt: string;
 }
 
+export type AttemptOutcome = 'known' | 'unknown' | 'recorded' | 'completed';
+
+export interface StudyAttempt {
+  id: string;
+  goalId: string;
+  courseId: string;
+  taskId?: string;
+  activity: PlanDay['tasks'][number]['activity']['type'];
+  contentId: string;
+  completedAt: string;
+  outcome?: AttemptOutcome;
+  correct?: number;
+  total?: number;
+  durationMs?: number;
+}
+
+export type NewStudyAttempt = Omit<
+  StudyAttempt,
+  'id' | 'goalId' | 'courseId' | 'completedAt'
+>;
+
 export interface StudyState {
   goalId: string;
   setGoal: (goalId: string) => void;
@@ -43,6 +64,8 @@ export interface StudyState {
   resetAll: () => void;
   knownCount: number;
   sessions: StudySession[];
+  attempts: StudyAttempt[];
+  recordAttempt: (attempt: NewStudyAttempt) => void;
   exportData: () => object;
   importData: (value: unknown) => boolean;
 }

@@ -7,6 +7,7 @@ import { speak, ttsSupported } from '@/lib/speech';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import KanaChart from './components/KanaChart';
 import KanaQuiz from './components/KanaQuiz';
+import { useStudy } from '@/study/useStudy';
 
 type Mode = 'hira' | 'kata';
 
@@ -20,10 +21,13 @@ function randomQuiz(pool: KanaCell[]) {
 }
 
 export default function KanaSection({
+  taskId,
   onComplete,
 }: {
+  taskId?: string;
   onComplete?: () => void;
 }) {
+  const { recordAttempt } = useStudy();
   const [mode, setMode] = useState<Mode>('hira');
   const [tab, setTab] = useState<'chart' | 'quiz'>('chart');
 
@@ -54,7 +58,17 @@ export default function KanaSection({
       total: score.total + 1,
     };
     setScore(next);
-    if (next.total === 10) onComplete?.();
+    if (next.total === 10) {
+      recordAttempt({
+        taskId,
+        activity: 'kana',
+        contentId: `kana-${mode}`,
+        outcome: 'completed',
+        correct: next.right,
+        total: next.total,
+      });
+      onComplete?.();
+    }
     // 每答满 10 题且刷新纪录时保存历史最佳
     if (next.total >= 10) {
       const acc = Math.round((next.right / next.total) * 100);

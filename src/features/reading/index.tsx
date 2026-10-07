@@ -16,15 +16,17 @@ const LEVEL_STYLE: Record<number, { label: string; cls: string }> = {
 function ArticleReader({
   resource,
   lang,
+  taskId,
   onBack,
   onComplete,
 }: {
   resource: ReadingResource;
   lang: 'en' | 'ja';
+  taskId?: string;
   onBack: () => void;
   onComplete?: () => void;
 }) {
-  const { customWords, addCustomWord } = useStudy();
+  const { customWords, addCustomWord, recordAttempt } = useStudy();
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const answered = Object.keys(answers).length;
@@ -159,6 +161,14 @@ function ArticleReader({
           disabled={answered !== resource.questions.length || submitted}
           onClick={() => {
             setSubmitted(true);
+            recordAttempt({
+              taskId,
+              activity: 'reading',
+              contentId: resource.id,
+              outcome: 'completed',
+              correct,
+              total: resource.questions.length,
+            });
             onComplete?.();
           }}
         >
@@ -208,6 +218,7 @@ export default function ReadingSection({
         key={selected.resource.id}
         resource={selected.resource}
         lang={selected.lang}
+        taskId={task?.id}
         onBack={() => setSelectedId(null)}
         onComplete={onComplete}
       />

@@ -10,9 +10,11 @@ export { REVIEW_ID } from './useFlashcardQueue';
 
 export default function FlashcardsSection({
   initialDeckId,
+  taskId,
   onComplete,
 }: {
   initialDeckId?: string;
+  taskId?: string;
   onComplete?: () => void;
 } = {}) {
   const {
@@ -33,7 +35,7 @@ export default function FlashcardsSection({
     progress,
     deckTitle,
     decks,
-  } = useFlashcardQueue(initialDeckId);
+  } = useFlashcardQueue(initialDeckId, taskId);
   const [langFilter, setLangFilter] = useState<'all' | 'en' | 'ja'>('all');
   const visibleDecks = decks.filter(
     (d) => langFilter === 'all' || d.lang === langFilter,
@@ -129,7 +131,10 @@ export default function FlashcardsSection({
         </div>
       ) : (
         current && (
-          <div key={`${deckId}-${round}`} className={styles.cardEntrance}>
+          <div
+            key={`${deckId}-${round}-${current.word.id}`}
+            className={styles.cardEntrance}
+          >
             <FlipCard
               word={current.word}
               lang={current.lang}
