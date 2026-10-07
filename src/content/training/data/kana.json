@@ -1,0 +1,433 @@
+[
+  {
+    "title": "清音",
+    "cells": [
+      {
+        "kana": ["あ", "ア"],
+        "romaji": "a"
+      },
+      {
+        "kana": ["い", "イ"],
+        "romaji": "i"
+      },
+      {
+        "kana": ["う", "ウ"],
+        "romaji": "u"
+      },
+      {
+        "kana": ["え", "エ"],
+        "romaji": "e"
+      },
+      {
+        "kana": ["お", "オ"],
+        "romaji": "o"
+      },
+      {
+        "kana": ["か", "カ"],
+        "romaji": "ka"
+      },
+      {
+        "kana": ["き", "キ"],
+        "romaji": "ki"
+      },
+      {
+        "kana": ["く", "ク"],
+        "romaji": "ku"
+      },
+      {
+        "kana": ["け", "ケ"],
+        "romaji": "ke"
+      },
+      {
+        "kana": ["こ", "コ"],
+        "romaji": "ko"
+      },
+      {
+        "kana": ["さ", "サ"],
+        "romaji": "sa"
+      },
+      {
+        "kana": ["し", "シ"],
+        "romaji": "shi"
+      },
+      {
+        "kana": ["す", "ス"],
+        "romaji": "su"
+      },
+      {
+        "kana": ["せ", "セ"],
+        "romaji": "se"
+      },
+      {
+        "kana": ["そ", "ソ"],
+        "romaji": "so"
+      },
+      {
+        "kana": ["た", "タ"],
+        "romaji": "ta"
+      },
+      {
+        "kana": ["ち", "チ"],
+        "romaji": "chi"
+      },
+      {
+        "kana": ["つ", "ツ"],
+        "romaji": "tsu"
+      },
+      {
+        "kana": ["て", "テ"],
+        "romaji": "te"
+      },
+      {
+        "kana": ["と", "ト"],
+        "romaji": "to"
+      },
+      {
+        "kana": ["な", "ナ"],
+        "romaji": "na"
+      },
+      {
+        "kana": ["に", "ニ"],
+        "romaji": "ni"
+      },
+      {
+        "kana": ["ぬ", "ヌ"],
+        "romaji": "nu"
+      },
+      {
+        "kana": ["ね", "ネ"],
+        "romaji": "ne"
+      },
+      {
+        "kana": ["の", "ノ"],
+        "romaji": "no"
+      },
+      {
+        "kana": ["は", "ハ"],
+        "romaji": "ha"
+      },
+      {
+        "kana": ["ひ", "ヒ"],
+        "romaji": "hi"
+      },
+      {
+        "kana": ["ふ", "フ"],
+        "romaji": "fu"
+      },
+      {
+        "kana": ["へ", "ヘ"],
+        "romaji": "he"
+      },
+      {
+        "kana": ["ほ", "ホ"],
+        "romaji": "ho"
+      },
+      {
+        "kana": ["ま", "マ"],
+        "romaji": "ma"
+      },
+      {
+        "kana": ["み", "ミ"],
+        "romaji": "mi"
+      },
+      {
+        "kana": ["む", "ム"],
+        "romaji": "mu"
+      },
+      {
+        "kana": ["め", "メ"],
+        "romaji": "me"
+      },
+      {
+        "kana": ["も", "モ"],
+        "romaji": "mo"
+      },
+      {
+        "kana": ["や", "ヤ"],
+        "romaji": "ya"
+      },
+      {
+        "kana": ["ゆ", "ユ"],
+        "romaji": "yu"
+      },
+      {
+        "kana": ["よ", "ヨ"],
+        "romaji": "yo"
+      },
+      {
+        "kana": ["ら", "ラ"],
+        "romaji": "ra"
+      },
+      {
+        "kana": ["り", "リ"],
+        "romaji": "ri"
+      },
+      {
+        "kana": ["る", "ル"],
+        "romaji": "ru"
+      },
+      {
+        "kana": ["れ", "レ"],
+        "romaji": "re"
+      },
+      {
+        "kana": ["ろ", "ロ"],
+        "romaji": "ro"
+      },
+      {
+        "kana": ["わ", "ワ"],
+        "romaji": "wa"
+      },
+      {
+        "kana": ["を", "ヲ"],
+        "romaji": "wo"
+      },
+      {
+        "kana": ["ん", "ン"],
+        "romaji": "n"
+      }
+    ]
+  },
+  {
+    "title": "浊音 / 半浊音",
+    "cells": [
+      {
+        "kana": ["が", "ガ"],
+        "romaji": "ga"
+      },
+      {
+        "kana": ["ぎ", "ギ"],
+        "romaji": "gi"
+      },
+      {
+        "kana": ["ぐ", "グ"],
+        "romaji": "gu"
+      },
+      {
+        "kana": ["げ", "ゲ"],
+        "romaji": "ge"
+      },
+      {
+        "kana": ["ご", "ゴ"],
+        "romaji": "go"
+      },
+      {
+        "kana": ["ざ", "ザ"],
+        "romaji": "za"
+      },
+      {
+        "kana": ["じ", "ジ"],
+        "romaji": "ji"
+      },
+      {
+        "kana": ["ず", "ズ"],
+        "romaji": "zu"
+      },
+      {
+        "kana": ["ぜ", "ゼ"],
+        "romaji": "ze"
+      },
+      {
+        "kana": ["ぞ", "ゾ"],
+        "romaji": "zo"
+      },
+      {
+        "kana": ["だ", "ダ"],
+        "romaji": "da"
+      },
+      {
+        "kana": ["ぢ", "ヂ"],
+        "romaji": "ji"
+      },
+      {
+        "kana": ["づ", "ヅ"],
+        "romaji": "zu"
+      },
+      {
+        "kana": ["で", "デ"],
+        "romaji": "de"
+      },
+      {
+        "kana": ["ど", "ド"],
+        "romaji": "do"
+      },
+      {
+        "kana": ["ば", "バ"],
+        "romaji": "ba"
+      },
+      {
+        "kana": ["び", "ビ"],
+        "romaji": "bi"
+      },
+      {
+        "kana": ["ぶ", "ブ"],
+        "romaji": "bu"
+      },
+      {
+        "kana": ["べ", "ベ"],
+        "romaji": "be"
+      },
+      {
+        "kana": ["ぼ", "ボ"],
+        "romaji": "bo"
+      },
+      {
+        "kana": ["ぱ", "パ"],
+        "romaji": "pa"
+      },
+      {
+        "kana": ["ぴ", "ピ"],
+        "romaji": "pi"
+      },
+      {
+        "kana": ["ぷ", "プ"],
+        "romaji": "pu"
+      },
+      {
+        "kana": ["ぺ", "ペ"],
+        "romaji": "pe"
+      },
+      {
+        "kana": ["ぽ", "ポ"],
+        "romaji": "po"
+      }
+    ]
+  },
+  {
+    "title": "拗音",
+    "cells": [
+      {
+        "kana": ["きゃ", "キャ"],
+        "romaji": "kya"
+      },
+      {
+        "kana": ["きゅ", "キュ"],
+        "romaji": "kyu"
+      },
+      {
+        "kana": ["きょ", "キョ"],
+        "romaji": "kyo"
+      },
+      {
+        "kana": ["しゃ", "シャ"],
+        "romaji": "sha"
+      },
+      {
+        "kana": ["しゅ", "シュ"],
+        "romaji": "shu"
+      },
+      {
+        "kana": ["しょ", "ショ"],
+        "romaji": "sho"
+      },
+      {
+        "kana": ["ちゃ", "チャ"],
+        "romaji": "cha"
+      },
+      {
+        "kana": ["ちゅ", "チュ"],
+        "romaji": "chu"
+      },
+      {
+        "kana": ["ちょ", "チョ"],
+        "romaji": "cho"
+      },
+      {
+        "kana": ["にゃ", "ニャ"],
+        "romaji": "nya"
+      },
+      {
+        "kana": ["にゅ", "ニュ"],
+        "romaji": "nyu"
+      },
+      {
+        "kana": ["にょ", "ニョ"],
+        "romaji": "nyo"
+      },
+      {
+        "kana": ["ひゃ", "ヒャ"],
+        "romaji": "hya"
+      },
+      {
+        "kana": ["ひゅ", "ヒュ"],
+        "romaji": "hyu"
+      },
+      {
+        "kana": ["ひょ", "ヒョ"],
+        "romaji": "hyo"
+      },
+      {
+        "kana": ["みゃ", "ミャ"],
+        "romaji": "mya"
+      },
+      {
+        "kana": ["みゅ", "ミュ"],
+        "romaji": "myu"
+      },
+      {
+        "kana": ["みょ", "ミョ"],
+        "romaji": "myo"
+      },
+      {
+        "kana": ["りゃ", "リャ"],
+        "romaji": "rya"
+      },
+      {
+        "kana": ["りゅ", "リュ"],
+        "romaji": "ryu"
+      },
+      {
+        "kana": ["りょ", "リョ"],
+        "romaji": "ryo"
+      },
+      {
+        "kana": ["ぎゃ", "ギャ"],
+        "romaji": "gya"
+      },
+      {
+        "kana": ["ぎゅ", "ギュ"],
+        "romaji": "gyu"
+      },
+      {
+        "kana": ["ぎょ", "ギョ"],
+        "romaji": "gyo"
+      },
+      {
+        "kana": ["じゃ", "ジャ"],
+        "romaji": "ja"
+      },
+      {
+        "kana": ["じゅ", "ジュ"],
+        "romaji": "ju"
+      },
+      {
+        "kana": ["じょ", "ジョ"],
+        "romaji": "jo"
+      },
+      {
+        "kana": ["びゃ", "ビャ"],
+        "romaji": "bya"
+      },
+      {
+        "kana": ["びゅ", "ビュ"],
+        "romaji": "byu"
+      },
+      {
+        "kana": ["びょ", "ビョ"],
+        "romaji": "byo"
+      },
+      {
+        "kana": ["ぴゃ", "ピャ"],
+        "romaji": "pya"
+      },
+      {
+        "kana": ["ぴゅ", "ピュ"],
+        "romaji": "pyu"
+      },
+      {
+        "kana": ["ぴょ", "ピョ"],
+        "romaji": "pyo"
+      }
+    ]
+  }
+]

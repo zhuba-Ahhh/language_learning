@@ -21,23 +21,7 @@ html {
 body {
   margin: 0;
   line-height: inherit;
-  background-color: rgb(var(--paper));
-  background-image:
-    linear-gradient(rgb(var(--ink) / 0.018) 1px, transparent 1px),
-    radial-gradient(
-      circle at 18% 12%,
-      rgb(var(--sage) / 0.2),
-      transparent 22rem
-    ),
-    radial-gradient(
-      circle at 84% 80%,
-      rgb(var(--lilac) / 0.16),
-      transparent 24rem
-    );
-  background-size:
-    100% 28px,
-    auto,
-    auto;
+  background-color: #f6f8fc;
   color: hsl(var(--foreground));
   font-family: var(--font-body);
   letter-spacing: 0.01em;
@@ -199,7 +183,7 @@ button,
   cursor: pointer;
 }
 :focus-visible {
-  outline: 2px solid rgb(var(--vermilion));
+  outline: 2px solid #4562d5;
   outline-offset: 3px;
 }
 :disabled {

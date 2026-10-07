@@ -1,0 +1,26 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:駅はどこですか。"
+  ],
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac6291215931150d6c162c6",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4efdd2d2-c0b8-43f2-9b5c-6c2a8a15509b.mp3",
+        "duration": 2.185,
+        "index": 0,
+        "item_id": "linguadesk-ja-1xijdj1",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"駅はどこですか。\"},{\"text\":\"駅はどこですか。\",\"words\":[{\"word\":\"駅\",\"startTime\":0.305,\"endTime\":0.405,\"confidence\":0.6163494},{\"word\":\"は\",\"startTime\":0.635,\"endTime\":0.665,\"confidence\":0.34428748},{\"word\":\"ど\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.40184212},{\"word\":\"こ\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.41374007},{\"word\":\"で\",\"startTime\":0.815,\"endTime\":0.845,\"confidence\":0.41607708},{\"word\":\"す\",\"startTime\":0.875,\"endTime\":0.905,\"confidence\":0.42764732},{\"word\":\"か。\",\"startTime\":2.155,\"endTime\":2.185,\"confidence\":0.39005432}]}]",
+        "text": "駅はどこですか。"
+      }
+    ]
+  }
+}

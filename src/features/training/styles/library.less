@@ -1,0 +1,88 @@
+.libraryToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 23px;
+  input {
+    width: 200px;
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    background: #fff;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+}
+.libraryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.lessonTile {
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e4e9f2;
+  border-radius: 13px;
+  padding: 22px;
+  transition: border-color 0.15s;
+  &:hover {
+    border-color: #a8b7e3;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 24px;
+  }
+  > p {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 7px;
+  }
+}
+.tileTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  > span:last-child {
+    font-size: 10px;
+    color: #64748b;
+  }
+}
+.tileIcon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 12px;
+  background: #edf1fd;
+}
+.foundation {
+  background: #edf1fd;
+}
+.ielts,
+.jlpt {
+  background: #f0edf9;
+}
+.life {
+  background: #e8f3ef;
+}
+.tech {
+  background: #edf2f7;
+}
+.tileMeta {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 10px;
+  color: #64748b;
+  > span:last-child {
+    color: #64748b;
+  }
+}
+.metaDivider {
+  margin: 0 7px;
+}

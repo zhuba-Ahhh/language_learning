@@ -1,0 +1,79 @@
+@media (max-width: 1150px) {
+  .libraryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .readingLayout {
+    grid-template-columns: minmax(0, 1.3fr) minmax(270px, 1fr);
+    gap: 15px;
+  }
+  .readingPaper {
+    padding: 22px;
+  }
+  .questionPaper {
+    padding: 18px;
+  }
+  .speakingLayout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .todayGrid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+  }
+  .mainLesson {
+    padding: 24px;
+  }
+  .heroText h2 {
+    font-size: 25px;
+  }
+  .sheetMark {
+    font-size: 115px;
+    bottom: 75px;
+    right: 15px;
+  }
+  .reviewSummary,
+  .pathSummary {
+    padding: 20px;
+  }
+  .readingLayout {
+    grid-template-columns: 1fr;
+  }
+  .speakingLayout {
+    grid-template-columns: 1fr;
+  }
+  .speakingGuide {
+    padding: 0;
+    > h2,
+    > p,
+    .guideNote {
+      display: none;
+    }
+  }
+  .speakingTasks {
+    display: flex;
+    margin-top: 0;
+    button {
+      flex: 1;
+    }
+  }
+  .metricGrid {
+    gap: 12px;
+    section {
+      padding: 18px;
+    }
+  }
+  .kanaGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@import './mobile-layout.less';
+@import './mobile-training.less';
+@import './mobile-records.less';
+
+@media (prefers-reduced-motion: reduce) {
+  .waveActive {
+    animation: none;
+  }
+}

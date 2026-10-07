@@ -1,0 +1,231 @@
+.readingLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(295px, 1fr);
+  gap: 23px;
+  align-items: start;
+}
+.readingPaper,
+.questionPaper,
+.speakingPaper {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+  padding: 27px;
+}
+.readingPaper {
+  > h2 {
+    font-family: Georgia, 'Songti SC', serif;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+}
+.readingTools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #64748b;
+  > div {
+    display: flex;
+    gap: 6px;
+  }
+  button {
+    border: 1px solid #e2e7f0;
+    padding: 5px 9px;
+    border-radius: 6px;
+    color: #64748b;
+    &[aria-pressed='true'] {
+      background: #edf1fc;
+      color: #4562d5;
+      border-color: #dbe3f6;
+    }
+  }
+}
+.readingHint {
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 10px;
+}
+.readingParagraph {
+  scroll-margin-top: 110px;
+  padding-top: 23px;
+  > p {
+    font-size: 16px;
+    line-height: 1.95;
+    max-width: 72ch;
+    letter-spacing: 0;
+    word-break: normal;
+    overflow-wrap: break-word;
+    &[lang='en'] {
+      font-family: Georgia, serif;
+    }
+    ruby {
+      ruby-position: over;
+    }
+    rt {
+      font-size: 10px;
+      color: #64748b;
+    }
+  }
+  > .translation {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #64748b;
+    background: #f7f9fc;
+    padding: 13px 15px;
+    border-radius: 8px;
+    margin-top: 13px;
+  }
+}
+.paragraphLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 10px;
+  color: #64748b;
+}
+.wordSection {
+  margin-top: 27px;
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+.wordChips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 13px;
+  button {
+    text-align: left;
+    border: 1px solid #e7ebf3;
+    padding: 11px 12px;
+    border-radius: 8px;
+    strong {
+      display: block;
+      font-size: 12px;
+    }
+    small {
+      display: block;
+      font-size: 10px;
+      color: #64748b;
+    }
+    span {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      color: #64748b;
+    }
+    &:hover {
+      border-color: #becbed;
+    }
+  }
+}
+.source {
+  display: block;
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 23px;
+}
+.questionPaper {
+  padding: 23px;
+  > button {
+    width: 100%;
+  }
+}
+.questionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid #edf0f5;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  span {
+    font-size: 11px;
+    color: #64748b;
+  }
+}
+.question {
+  margin-bottom: 24px;
+  legend {
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 550;
+  }
+}
+.options {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+  label {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    font-size: 11px;
+    padding: 10px 11px;
+    border: 1px solid #e6eaf2;
+    border-radius: 7px;
+    color: #63748e;
+    cursor: pointer;
+    input {
+      margin-top: 3px;
+      accent-color: #4562d5;
+    }
+  }
+}
+.optionSelected {
+  background: #f0f3fc;
+  border-color: #b8c5ed !important;
+}
+.optionCorrect {
+  background: #eff7f3 !important;
+  border-color: #bcdcca !important;
+}
+.gapInput {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid #dae2ee;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+.explanation {
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 11px;
+  border-radius: 7px;
+  margin-top: 10px;
+  p {
+    margin-top: 5px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: underline;
+  }
+}
+.correct {
+  background: #edf6f1;
+  color: #47775d;
+}
+.incorrect {
+  background: #fff6e9;
+  color: #856733;
+}
+.resultBlock {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #64748b;
+  button {
+    width: 100%;
+    margin-top: 13px;
+  }
+}

@@ -1,0 +1,250 @@
+.todayTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  > p {
+    font-size: 12px;
+    color: #64748b;
+  }
+}
+.mobileBreak {
+  display: none;
+}
+.startKana {
+  font-size: 11px;
+  color: #4562d5;
+  margin-top: 11px;
+}
+@media (max-width: 760px) {
+  .mobileBreak {
+    display: block;
+  }
+}
+.budget {
+  display: flex;
+  gap: 5px;
+  button {
+    font-size: 11px;
+    color: #64748b;
+    padding: 6px 10px;
+    border-radius: 6px;
+    &[aria-pressed='true'] {
+      background: #e8edfa;
+      color: #4562d5;
+    }
+  }
+}
+.welcome {
+  margin: 25px 0 31px;
+  h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+    line-height: 1.45;
+    font-weight: 650;
+  }
+  p {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+.todayGrid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
+}
+.mainLesson {
+  position: relative;
+  min-height: 336px;
+  background: #e9eefb;
+  border-radius: 17px;
+  padding: 27px 30px 28px;
+  overflow: hidden;
+}
+.lessonKicker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+  span:last-child {
+    font-size: 10px;
+    background: #ffffff73;
+    padding: 4px 9px;
+    border-radius: 5px;
+  }
+}
+.heroText {
+  position: relative;
+  z-index: 1;
+  margin-top: 34px;
+  h2 {
+    font-size: 29px;
+    font-weight: 650;
+    letter-spacing: -0.6px;
+  }
+  p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #64748b;
+    margin-top: 6px;
+  }
+}
+.heroGoal {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: #64748b;
+  max-width: 330px;
+  margin-top: 19px;
+  line-height: 1.8;
+}
+.lessonSteps {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #64748b;
+  }
+  i {
+    width: 25px;
+    height: 1px;
+    background: #c2cdea;
+  }
+}
+.heroBottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  small {
+    font-size: 11px;
+    color: #64748b;
+  }
+}
+.sheetMark {
+  position: absolute;
+  font-size: 150px;
+  letter-spacing: -14px;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #d7dff6;
+  bottom: 56px;
+  right: 24px;
+  transform: rotate(-9deg);
+  user-select: none;
+}
+.todayAside {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+.reviewSummary {
+  background: #fff;
+  border: 1px solid #e7eaf2;
+  border-radius: 13px;
+  padding: 24px;
+  > img {
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 11px;
+    color: #64748b;
+    margin: 9px 0 17px;
+    line-height: 1.8;
+  }
+  .secondary {
+    font-size: 11px;
+    min-height: 34px;
+    padding: 7px 14px;
+  }
+}
+.pathSummary {
+  padding: 19px 24px;
+  border-radius: 13px;
+  background: #f0edf9;
+  > p {
+    font-size: 10px;
+    color: #64748b;
+    margin-bottom: 8px;
+  }
+  strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  span {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 5px;
+  }
+  small {
+    font-size: 10px;
+    color: #64748b;
+  }
+}
+.progressTrack {
+  height: 4px;
+  border-radius: 4px;
+  background: #ded8ef;
+  overflow: hidden;
+  margin: 13px 0 7px;
+  i {
+    display: block;
+    height: 100%;
+    background: #a397c8;
+  }
+}
+.quickSection {
+  margin-top: 31px;
+}
+.quickActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #e6eaf2;
+    border-radius: 12px;
+    padding: 23px;
+    text-align: left;
+    span:nth-child(2) {
+      flex: 1;
+    }
+    strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    small {
+      display: block;
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 5px;
+    }
+    span:last-child {
+      color: #64748b;
+      font-size: 19px;
+    }
+  }
+}

@@ -1,0 +1,785 @@
+[
+  {
+    "id": "en-my-major",
+    "marks": [
+      {
+        "text": "solving problems",
+        "kind": "phrase",
+        "note": "solve a problem 的 -ing / 复数形式：解决问题。",
+        "wordId": "solve"
+      },
+      {
+        "text": "a focus on web development",
+        "kind": "phrase",
+        "note": "专注于 Web 开发。focus on 后接名词或 -ing。"
+      },
+      {
+        "text": "I chose this subject because",
+        "kind": "pattern",
+        "note": "I chose … because …：说明选择与原因。"
+      },
+      {
+        "text": "I chose it because",
+        "kind": "pattern",
+        "note": "I chose … because …：说明选择与原因。"
+      },
+      {
+        "text": "I chose computer science because",
+        "kind": "pattern",
+        "note": "I chose … because …：说明选择与原因。"
+      }
+    ],
+    "lang": "en",
+    "title": "介绍我的专业",
+    "subtitle": "A little about me",
+    "stage": "英语起步",
+    "track": "foundation",
+    "minutes": 15,
+    "goal": "读懂一段介绍，再用自己的信息说三句话。",
+    "paragraphs": [
+      {
+        "text": "My name is Lin, and I am a computer science student. I chose this subject because I enjoy solving problems. At university, I study programming, databases, and computer networks. Some courses are difficult, so I often discuss them with my classmates. Explaining an idea to someone else helps me understand it better.",
+        "translation": "我叫林，是一名计算机专业学生。我选择这个专业，因为我喜欢解决问题。在大学里，我学习编程、数据库和计算机网络。有些课程很难，所以我经常和同学讨论。向别人解释一个想法能帮助我更好地理解它。"
+      },
+      {
+        "text": "This semester, I am building a small website with two friends. It helps students find a quiet place to study. I work on the pages that users see, and my friends work on the data. The website is not finished yet. Our next step is to ask five students to try it and tell us what is confusing.",
+        "translation": "这学期，我正和两个朋友制作一个小网站，帮助学生找到安静的学习场所。我负责用户看到的页面，朋友们负责数据。网站还没有完成。下一步是请五名学生试用，告诉我们哪些地方不容易理解。"
+      }
+    ],
+    "words": [
+      {
+        "id": "subject",
+        "term": "subject",
+        "meaning": "学科；科目"
+      },
+      {
+        "id": "solve",
+        "term": "solve a problem",
+        "meaning": "解决问题"
+      },
+      {
+        "id": "semester",
+        "term": "semester",
+        "meaning": "学期"
+      },
+      {
+        "id": "confusing",
+        "term": "confusing",
+        "meaning": "令人困惑的"
+      }
+    ],
+    "pattern": {
+      "form": "I chose … because …",
+      "meaning": "用一个具体原因介绍自己的选择。",
+      "example": "I chose computer science because I like building useful things."
+    },
+    "questions": [
+      {
+        "id": "reason",
+        "kind": "choice",
+        "prompt": "Why did Lin choose computer science?",
+        "options": [
+          "To solve problems",
+          "To find a quiet room",
+          "To work alone"
+        ],
+        "answer": "To solve problems",
+        "evidence": 0,
+        "explanation": "第一段的 because 直接说明选择专业的原因。"
+      },
+      {
+        "id": "project",
+        "kind": "choice",
+        "prompt": "What does the website help students do?",
+        "options": [
+          "Choose courses",
+          "Find a place to study",
+          "Learn computer networks"
+        ],
+        "answer": "Find a place to study",
+        "evidence": 1,
+        "explanation": "第二段说明网站帮助学生寻找安静的学习场所。"
+      },
+      {
+        "id": "next",
+        "kind": "gap",
+        "prompt": "The team will ask _____ students to try the website.（填一个词）",
+        "answer": "five",
+        "evidence": 1,
+        "explanation": "下一步是 ask five students to try it。",
+        "maxWords": 1
+      }
+    ],
+    "speaking": [
+      {
+        "id": "intro-shadow",
+        "mode": "shadow",
+        "title": "先跟读一句",
+        "prompt": "听清停顿，再模仿这句介绍。",
+        "sample": "I'm a computer science graduate with a focus on web development.",
+        "translation": "我是一名计算机专业毕业生，主攻 Web 开发。练习时可把 graduate 换成 student。",
+        "hints": ["在 graduate 后稍停顿", "把 focus on 连起来读"],
+        "seconds": 20
+      },
+      {
+        "id": "intro-answer",
+        "mode": "answer",
+        "title": "换成你的介绍",
+        "prompt": "What do you study, and why did you choose it?",
+        "sample": "I study computer science. I chose it because I enjoy solving problems. This semester, I am building a small website with my classmates.",
+        "translation": "我学计算机科学，因为我喜欢解决问题。这学期，我正在和同学制作一个小网站。",
+        "hints": ["我学什么", "一个原因", "正在做的事"],
+        "seconds": 60
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创训练材料"
+  },
+  {
+    "id": "en-study-day",
+    "marks": [
+      {
+        "text": "On weekdays",
+        "kind": "phrase",
+        "note": "在工作日；weekday 的复数形式。",
+        "wordId": "weekday"
+      },
+      {
+        "text": "instead of looking at her phone",
+        "kind": "phrase",
+        "note": "instead of + -ing：代替看手机。"
+      },
+      {
+        "text": "First, she reads a short text. Then",
+        "kind": "pattern",
+        "note": "First … Then …：按顺序描述步骤。"
+      },
+      {
+        "text": "First, I read a short text. Then",
+        "kind": "pattern",
+        "note": "First … Then …：按顺序描述步骤。"
+      }
+    ],
+    "lang": "en",
+    "title": "我的一天",
+    "subtitle": "Finding time to learn",
+    "stage": "英语起步",
+    "track": "foundation",
+    "minutes": 15,
+    "goal": "读懂时间安排，介绍自己的学习习惯。",
+    "paragraphs": [
+      {
+        "text": "On weekdays, Maya has classes in the morning. After lunch, she spends an hour in the library. She does not always finish every task, but she writes down the most important one before she starts. This small habit helps her focus. When she gets stuck, she takes a short walk instead of looking at her phone.",
+        "translation": "工作日，Maya 上午上课。午饭后，她在图书馆学习一小时。她并不总能完成所有任务，但开始前会写下最重要的一件事。这个小习惯帮助她专注。遇到困难时，她会短暂散步，而不是看手机。"
+      },
+      {
+        "text": "In the evening, Maya practises English for fifteen minutes. First, she reads a short text. Then she closes it and explains the main idea aloud. She records her answer and listens once. She chooses just one thing to improve the next day. On Saturdays, she meets a friend to study. Sunday is her day off.",
+        "translation": "晚上，Maya 练十五分钟英语。她先读一篇短文，再合上它，大声解释主旨。她录下回答并回听一次，只选一件事情在第二天改进。周六，她和朋友一起学习。周日休息。"
+      }
+    ],
+    "words": [
+      {
+        "id": "weekday",
+        "term": "weekday",
+        "meaning": "工作日"
+      },
+      {
+        "id": "focus",
+        "term": "focus",
+        "meaning": "专注"
+      },
+      {
+        "id": "aloud",
+        "term": "aloud",
+        "meaning": "出声地"
+      },
+      {
+        "id": "day-off",
+        "term": "day off",
+        "meaning": "休息日"
+      }
+    ],
+    "pattern": {
+      "form": "First … Then …",
+      "meaning": "按顺序解释习惯或操作。",
+      "example": "First, I read a short text. Then I explain it in my own words."
+    },
+    "questions": [
+      {
+        "id": "focus",
+        "kind": "choice",
+        "prompt": "What helps Maya focus?",
+        "options": [
+          "Writing down the main task",
+          "Checking her phone",
+          "Finishing every task"
+        ],
+        "answer": "Writing down the main task",
+        "evidence": 0,
+        "explanation": "This small habit 指开始前写下最重要的一件事。"
+      },
+      {
+        "id": "sunday",
+        "kind": "truth",
+        "prompt": "Maya studies with a friend every Sunday.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "一起学习在 Saturdays；Sunday 是休息日。"
+      },
+      {
+        "id": "minutes",
+        "kind": "gap",
+        "prompt": "She practises English for _____ minutes.（一个词）",
+        "answer": "fifteen",
+        "evidence": 1,
+        "explanation": "第二段第一句给出 fifteen minutes。",
+        "maxWords": 1
+      }
+    ],
+    "speaking": [
+      {
+        "id": "habit-shadow",
+        "mode": "shadow",
+        "title": "练习解释原因",
+        "prompt": "听示范，再读出自己的节奏。",
+        "sample": "I usually read in the evening because it helps me slow down after work.",
+        "translation": "我通常晚上阅读，因为这能让我在工作后慢下来。",
+        "hints": ["usually 表示经常", "because 后说明原因"],
+        "seconds": 25
+      },
+      {
+        "id": "habit-retell",
+        "mode": "retell",
+        "title": "说说你的安排",
+        "prompt": "Describe your daily routine. When do you make time for English?",
+        "sample": "I have classes in the morning. After lunch, I study in the library. In the evening, I read a short English text and explain it aloud.",
+        "translation": "我上午上课，午饭后去图书馆学习。晚上读一篇英语短文，再出声复述。",
+        "hints": ["上午的安排", "什么时候学英语", "先做什么，再做什么"],
+        "seconds": 60
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创训练材料"
+  },
+  {
+    "id": "en-readme",
+    "marks": [
+      {
+        "text": "Before copying a command, check the requirements",
+        "kind": "pattern",
+        "note": "Before + -ing, check …：操作前先确认条件。"
+      },
+      {
+        "text": "Before starting the server, check your Node.js version",
+        "kind": "pattern",
+        "note": "Before + -ing, check …：操作前先确认条件。"
+      },
+      {
+        "text": "start the development server",
+        "kind": "phrase",
+        "note": "启动开发服务器。"
+      },
+      {
+        "text": "permission to write",
+        "kind": "phrase",
+        "note": "permission to + 动词原形：执行某操作的权限。"
+      }
+    ],
+    "lang": "en",
+    "title": "读懂一个 README",
+    "subtitle": "Before you run the project",
+    "stage": "基础进阶",
+    "track": "tech",
+    "minutes": 20,
+    "goal": "识别要求、操作顺序和限制，练习解释运行步骤。",
+    "paragraphs": [
+      {
+        "text": "A README is usually the first document you see in a software project. It explains what the project does and how to start it. Before copying a command, check the requirements. A project may need a particular version of Node.js or a package manager. If your version is different, the same command may produce a different result.",
+        "translation": "README 通常是软件项目中最先看到的文档，说明项目用途和启动方式。复制命令前，先检查环境要求。项目可能需要特定版本的 Node.js 或包管理器。版本不同，同样的命令可能得到不同结果。"
+      },
+      {
+        "text": "Imagine a README that says: install the dependencies, start the development server, and open the local address printed in the terminal. These steps must be completed in order. The document also says that the sample data is stored in the project. You do not need an account to use it. However, saving your changes requires permission to write to the project folder.",
+        "translation": "假设文档写道：安装依赖、启动开发服务器、打开终端输出的本地地址。这些步骤必须按顺序完成。文档还说明示例数据保存在项目内，使用时不需要账号。不过，保存更改需要项目文件夹的写入权限。"
+      }
+    ],
+    "words": [
+      {
+        "id": "requirements",
+        "term": "requirements",
+        "meaning": "要求；前提条件"
+      },
+      {
+        "id": "dependencies",
+        "term": "dependencies",
+        "meaning": "依赖项"
+      },
+      {
+        "id": "in-order",
+        "term": "in order",
+        "meaning": "按顺序"
+      },
+      {
+        "id": "permission",
+        "term": "permission",
+        "meaning": "权限；许可"
+      }
+    ],
+    "pattern": {
+      "form": "Before …, check …",
+      "meaning": "说明操作前要确认的条件。",
+      "example": "Before starting the server, check your Node.js version."
+    },
+    "questions": [
+      {
+        "id": "version",
+        "kind": "choice",
+        "prompt": "Why should you check the requirements?",
+        "options": [
+          "Versions can affect the result",
+          "Every project needs an account",
+          "Commands never change"
+        ],
+        "answer": "Versions can affect the result",
+        "evidence": 0,
+        "explanation": "第一段末句说明版本不同可能导致结果不同。"
+      },
+      {
+        "id": "account",
+        "kind": "truth",
+        "prompt": "An account is required to use the sample data.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "原文明确写了 You do not need an account。"
+      },
+      {
+        "id": "first",
+        "kind": "choice",
+        "prompt": "Which step comes first?",
+        "options": [
+          "Open the local address",
+          "Install the dependencies",
+          "Start the server"
+        ],
+        "answer": "Install the dependencies",
+        "evidence": 1,
+        "explanation": "文档依次列出安装、启动、打开地址。"
+      }
+    ],
+    "speaking": [
+      {
+        "id": "docs-shadow",
+        "mode": "shadow",
+        "title": "练习技术表达",
+        "prompt": "模仿示范中的重音。",
+        "sample": "I'm comfortable reading English documentation and technical articles.",
+        "translation": "我可以自如地阅读英文文档和技术文章。",
+        "hints": ["reading 后不急着停", "documentation 的重音在 ta"],
+        "seconds": 25
+      },
+      {
+        "id": "docs-retell",
+        "mode": "retell",
+        "title": "给同学解释步骤",
+        "prompt": "Explain how to start this project to a classmate. Include one thing they should check first.",
+        "sample": "First, check your Node.js version. Then install the dependencies and start the development server. Finally, open the local address in your browser.",
+        "translation": "先检查 Node.js 版本，再安装依赖并启动开发服务器，最后在浏览器打开本地地址。",
+        "hints": ["先检查什么", "三个步骤", "使用 First / Then / Finally"],
+        "seconds": 60
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创训练材料"
+  },
+  {
+    "id": "en-bug-report",
+    "marks": [
+      {
+        "text": "I expected the search results to update",
+        "kind": "pattern",
+        "note": "I expected … to …：表达预期结果。"
+      },
+      {
+        "text": "Instead,",
+        "kind": "pattern",
+        "note": "转而说明实际结果，常与预期构成对照。"
+      },
+      {
+        "text": "reproduce the problem",
+        "kind": "phrase",
+        "note": "复现问题：提供可以重复执行的步骤。"
+      },
+      {
+        "text": "without evidence",
+        "kind": "phrase",
+        "note": "在没有证据的情况下。"
+      }
+    ],
+    "lang": "en",
+    "title": "把问题说清楚",
+    "subtitle": "A useful bug report",
+    "stage": "基础进阶",
+    "track": "tech",
+    "minutes": 20,
+    "goal": "区分预期与实际，练习清楚地描述问题。",
+    "paragraphs": [
+      {
+        "text": "A useful bug report describes what you expected and what actually happened. For example: I expected the search results to update after I changed the filter. Instead, the page showed the old results. A clear comparison helps another developer understand the problem before they open the code.",
+        "translation": "一份有用的问题报告说明预期结果和实际结果。例如：我希望修改筛选条件后搜索结果更新，但页面仍显示旧结果。清晰的对比让其他开发者在打开代码前就能理解问题。"
+      },
+      {
+        "text": "Next, give the shortest steps that reproduce the problem. Include the browser version and the exact error message, if there is one. Do not guess the cause without evidence. A teammate might find a cause you did not expect. After a fix, repeat the same steps to check the result. A screenshot can help, but it does not replace a clear description.",
+        "translation": "接着给出复现问题的最短步骤，附上浏览器版本和具体错误信息。没有证据时，不要猜测原因。同事可能发现你没有想到的原因。修复后重复同样步骤，检查结果。截图有帮助，但不能替代清楚的描述。"
+      }
+    ],
+    "words": [
+      {
+        "id": "expected",
+        "term": "expected",
+        "meaning": "预期的"
+      },
+      {
+        "id": "actually",
+        "term": "actually",
+        "meaning": "实际上"
+      },
+      {
+        "id": "reproduce",
+        "term": "reproduce",
+        "meaning": "复现"
+      },
+      {
+        "id": "evidence",
+        "term": "evidence",
+        "meaning": "证据"
+      }
+    ],
+    "pattern": {
+      "form": "I expected … Instead, …",
+      "meaning": "先说预期，再说明实际发生的事。",
+      "example": "I expected the page to update. Instead, it showed the old data."
+    },
+    "questions": [
+      {
+        "id": "comparison",
+        "kind": "choice",
+        "prompt": "What comparison should a report include?",
+        "options": [
+          "Expected and actual behaviour",
+          "Two developers’ opinions",
+          "Old and new team members"
+        ],
+        "answer": "Expected and actual behaviour",
+        "evidence": 0,
+        "explanation": "开头给出的核心结构是 expected 与 actually happened。"
+      },
+      {
+        "id": "photo",
+        "kind": "truth",
+        "prompt": "A screenshot removes the need for a written description.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "末句说截图不能替代清楚的描述。"
+      },
+      {
+        "id": "cause",
+        "kind": "truth",
+        "prompt": "The bug was caused by a slow network.",
+        "answer": "Not Given",
+        "evidence": 0,
+        "explanation": "文章没有说明问题的根因，不能用自己的猜测补充。"
+      }
+    ],
+    "speaking": [
+      {
+        "id": "bug-shadow",
+        "mode": "shadow",
+        "title": "请求同事帮忙",
+        "prompt": "注意 Could someone 的自然连接。",
+        "sample": "Could someone help me review this pull request?",
+        "translation": "有人能帮我看一下这个 PR 吗？",
+        "hints": ["语调表达请求", "pull request 是一个词组"],
+        "seconds": 20
+      },
+      {
+        "id": "bug-answer",
+        "mode": "answer",
+        "title": "描述你遇到的问题",
+        "prompt": "Describe a bug you have seen. What did you expect, and what happened instead?",
+        "sample": "I expected the search results to update when I changed the filter. Instead, I still saw the old results. I can reproduce it by changing the filter twice.",
+        "translation": "我希望改变筛选条件后结果更新，实际仍看到旧结果。修改两次筛选条件就能复现。",
+        "hints": ["预期", "实际", "复现步骤"],
+        "seconds": 90
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创训练材料"
+  },
+  {
+    "id": "en-ielts-learning",
+    "marks": [
+      {
+        "text": "For example,",
+        "kind": "pattern",
+        "note": "For example, …：用具体例子支撑观点。"
+      },
+      {
+        "text": "because I can turn an idea into something useful",
+        "kind": "pattern",
+        "note": "because 从句：说明原因。"
+      },
+      {
+        "text": "point out a mistake",
+        "kind": "phrase",
+        "note": "指出一个错误。"
+      },
+      {
+        "text": "while practice shows us how to use it",
+        "kind": "pattern",
+        "note": "while：对比两者不同的作用。"
+      }
+    ],
+    "lang": "en",
+    "title": "雅思：学习与兴趣",
+    "subtitle": "Study, interests & a useful skill",
+    "stage": "雅思专项",
+    "track": "ielts",
+    "minutes": 20,
+    "goal": "用原因和例子扩展回答，练习 Part 1、2、3。",
+    "paragraphs": [
+      {
+        "text": "Learning a skill is different from memorising a list of facts. When you learn to cook, for example, you need to understand instructions and then try them. The first attempt may fail, but it shows you which part needs attention. Small, regular practice sessions can be easier to maintain than an ambitious schedule that you soon abandon.",
+        "translation": "学技能和记住一串事实不一样。比如学做饭，需要先理解步骤，再尝试。第一次可能失败，但会告诉你哪部分需要关注。小而规律的练习比一个很快放弃的宏大计划更容易坚持。"
+      },
+      {
+        "text": "Feedback also matters. A teacher can point out a mistake, but the learner still has to practise the new approach. Recording yourself can be useful because you notice things you miss while speaking. You might hear a long pause or find that an example is unclear. The aim is not to remove every mistake at once. It is to choose one useful change and test it in your next attempt.",
+        "translation": "反馈也很重要。老师可以指出错误，但学习者仍需练习新方法。录音有帮助，因为你会注意到说话时忽略的地方，比如长停顿或不清楚的例子。目标不是一次消除全部错误，而是选择一项有用的改变，在下一次尝试中检验。"
+      }
+    ],
+    "words": [
+      {
+        "id": "maintain",
+        "term": "maintain",
+        "meaning": "保持；持续"
+      },
+      {
+        "id": "abandon",
+        "term": "abandon",
+        "meaning": "放弃"
+      },
+      {
+        "id": "approach",
+        "term": "approach",
+        "meaning": "方法"
+      },
+      {
+        "id": "attempt",
+        "term": "attempt",
+        "meaning": "尝试"
+      }
+    ],
+    "pattern": {
+      "form": "For example, …",
+      "meaning": "用真实例子支撑观点。",
+      "example": "I enjoy practical courses. For example, I built a website in a programming class."
+    },
+    "questions": [
+      {
+        "id": "regular",
+        "kind": "choice",
+        "prompt": "What advantage of small sessions is mentioned?",
+        "options": [
+          "They can be easier to maintain",
+          "They remove every mistake",
+          "They require no feedback"
+        ],
+        "answer": "They can be easier to maintain",
+        "evidence": 0,
+        "explanation": "比较的是练习安排能否持续。"
+      },
+      {
+        "id": "teacher",
+        "kind": "truth",
+        "prompt": "A teacher’s feedback means learners no longer need practice.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "still has to practise 明确否定这个观点。"
+      },
+      {
+        "id": "notice",
+        "kind": "choice",
+        "prompt": "Why can recording yourself help?",
+        "options": [
+          "You can notice missed details",
+          "It guarantees a high score",
+          "It replaces all teaching"
+        ],
+        "answer": "You can notice missed details",
+        "evidence": 1,
+        "explanation": "回听能发现说话时没有察觉的停顿和表达问题。"
+      }
+    ],
+    "speaking": [
+      {
+        "id": "ielts-p1",
+        "mode": "answer",
+        "title": "Part 1 · 你的专业",
+        "prompt": "What do you study? What do you enjoy most about your subject?",
+        "sample": "I study computer science. I enjoy practical courses because I can turn an idea into something useful. For example, I recently built a website with two classmates.",
+        "translation": "我学计算机科学，喜欢实践课程，因为能把想法变成有用的东西。比如最近我和两名同学制作了一个网站。",
+        "hints": ["直接回答", "说明原因", "一个具体例子"],
+        "seconds": 60
+      },
+      {
+        "id": "ielts-p2",
+        "mode": "answer",
+        "title": "Part 2 · 学过的技能",
+        "prompt": "Describe a useful skill you learned. Say what it was, how you learned it, and why it was useful.",
+        "sample": "I learned to build simple websites at university. At first, I followed short tutorials. Later, I made a website for my classmates. It was useful because I learned how to solve real problems and explain my ideas to a team.",
+        "translation": "我在大学学会制作简单网站。开始跟着短教程，后来为同学做了网站。这让我学会解决真实问题，并向团队解释想法。",
+        "hints": ["什么技能", "如何学会", "有什么实际用途"],
+        "seconds": 120,
+        "prepareSeconds": 60
+      },
+      {
+        "id": "ielts-p3",
+        "mode": "answer",
+        "title": "Part 3 · 学习方式",
+        "prompt": "Do you think practical experience is more important than learning theory?",
+        "sample": "Both are important. Theory helps us understand why something works, while practice shows us how to use it. In programming, I need both to build reliable software.",
+        "translation": "两者都重要。理论帮助理解原理，实践展示如何使用。在编程中，我需要两者才能做出可靠的软件。",
+        "hints": ["先表达立场", "比较两种方式", "用专业经验举例"],
+        "seconds": 90
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创专项练习，非官方真题"
+  },
+  {
+    "id": "en-ielts-city",
+    "marks": [
+      {
+        "text": "Families may want a safe place for children, while office workers may visit",
+        "kind": "pattern",
+        "note": "… may …, while … may …：比较不同群体的需求。"
+      },
+      {
+        "text": "Families may need a play area, while older residents may need shade",
+        "kind": "pattern",
+        "note": "… may …, while … may …：比较不同群体的需求。"
+      },
+      {
+        "text": "long-term care",
+        "kind": "phrase",
+        "note": "长期照料或维护。"
+      },
+      {
+        "text": "local people’s needs",
+        "kind": "phrase",
+        "note": "当地人的需求。"
+      }
+    ],
+    "lang": "en",
+    "title": "雅思：城市里的绿地",
+    "subtitle": "Small parks, different needs",
+    "stage": "雅思专项",
+    "track": "ielts",
+    "minutes": 20,
+    "goal": "练习判断、信息定位与限词填空。",
+    "paragraphs": [
+      {
+        "text": "As cities become more crowded, planners look for ways to provide green space close to where people live. Large parks offer room for sport and long walks, but land in city centres can be expensive. Some communities therefore create small parks on unused plots. These spaces may contain just a few trees, benches, and a short path. Their size limits the activities they can support, but a nearby place to sit outside can still be valuable to local residents.",
+        "translation": "城市越来越拥挤，规划者寻找办法，在居民住处附近提供绿地。大公园可供运动和长距离散步，但市中心土地可能昂贵。因此，一些社区在闲置地块建设小公园，只有少量树木、长椅和短步道。大小限制了可进行的活动，但附近能坐着休息的户外场所仍对居民有价值。"
+      },
+      {
+        "text": "Good design starts by asking how the space will be used. Older residents may need comfortable seating and shade. Families may want a safe place for children, while office workers may visit only during a lunch break. A design that meets one group’s needs may not meet another’s. Planners should also consider maintenance. Trees and paths require care, and this work continues after the opening day. A park that looks attractive in a drawing will not remain useful if nobody maintains it. There is no single design that works in every neighbourhood. The purpose of a small park should guide the decisions about its layout and long-term care.",
+        "translation": "好的设计先询问空间用途。老年居民可能需要舒适座位和遮阴，家庭需要儿童安全活动场所，上班族可能只在午休时来。满足一组人的设计不一定满足另一组。还应考虑维护，树木和步道在开放后仍需照料。图纸上漂亮的公园如果无人维护，也无法持续发挥作用。不存在适用于所有社区的设计，布局和长期维护应由用途决定。"
+      }
+    ],
+    "words": [
+      {
+        "id": "residents",
+        "term": "residents",
+        "meaning": "居民"
+      },
+      {
+        "id": "shade",
+        "term": "shade",
+        "meaning": "阴凉；遮阴"
+      },
+      {
+        "id": "maintenance",
+        "term": "maintenance",
+        "meaning": "维护"
+      },
+      {
+        "id": "layout",
+        "term": "layout",
+        "meaning": "布局"
+      }
+    ],
+    "pattern": {
+      "form": "… may …, while … may …",
+      "meaning": "比较不同群体的需求。",
+      "example": "Families may need a play area, while older residents may need shade."
+    },
+    "questions": [
+      {
+        "id": "land",
+        "kind": "truth",
+        "prompt": "Land in city centres can be costly.",
+        "answer": "True",
+        "evidence": 0,
+        "explanation": "costly 对应 expensive，是同义替换。"
+      },
+      {
+        "id": "survey",
+        "kind": "truth",
+        "prompt": "All residents in the study preferred small parks.",
+        "answer": "Not Given",
+        "evidence": 0,
+        "explanation": "文章没有提供调查结果，也没有说所有人更喜欢小公园。"
+      },
+      {
+        "id": "design",
+        "kind": "truth",
+        "prompt": "The same park design suits every neighbourhood.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "There is no single design that works in every neighbourhood 与题干相反。"
+      },
+      {
+        "id": "care",
+        "kind": "gap",
+        "prompt": "Planners must consider long-term _____ as well as layout.（一个词）",
+        "answer": "care",
+        "evidence": 1,
+        "explanation": "末句明确并列 layout 和 long-term care。",
+        "maxWords": 1
+      }
+    ],
+    "speaking": [
+      {
+        "id": "city-answer",
+        "mode": "answer",
+        "title": "描述你住的地方",
+        "prompt": "Is there a park near your home? How do you use it?",
+        "sample": "I live in a busy neighbourhood, but there is a quiet park near my home.",
+        "translation": "我住在热闹的社区，但家附近有一座安静的公园。",
+        "hints": ["有没有公园", "你会做什么", "喜欢它的一个原因"],
+        "seconds": 60
+      },
+      {
+        "id": "city-retell",
+        "mode": "retell",
+        "title": "复述文章观点",
+        "prompt": "Explain why a small park needs more than an attractive design.",
+        "sample": "A small park should meet local people’s needs. It also needs long-term care. Trees and paths must be maintained after the park opens.",
+        "translation": "小公园要满足当地人的需求，也需要长期照料。公园开放后，树木和步道仍须维护。",
+        "hints": ["不同人有不同需求", "长期维护", "举一个例子"],
+        "seconds": 90
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创专项练习，非官方真题"
+  }
+]

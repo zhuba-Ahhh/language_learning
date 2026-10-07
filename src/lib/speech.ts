@@ -1,181 +1,113 @@
-/** 优先播放预生成 CDN 音频，缺失时请求 PPE TTS，失败再回退系统朗读。 */
-
+/** 播放只读取预生成 CDN 资产，不调用生成接口或系统朗读。 */
 import generatedAudioUrls from './audio.generated.json';
+import generatedTimings from './audio.timings.json';
+import type { AlignedAudio } from './audioAlignment';
 
-type SpeechLanguage = 'en' | 'ja';
-
-const TTS_ENDPOINT =
-  'https://douyin-game-ai.bytedance.net/webcast/game/role_agents/generate_avg_text_to_speech_audio';
-const TTS_SPEAKER = 'S_olwRWVfN1';
-const TTS_CACHE_PREFIX = 'linguadesk-tts:';
-const staticAudioUrls: Readonly<Record<string, string>> = generatedAudioUrls;
-
-interface TtsResponse {
-  base_resp?: { status_code?: number; status_message?: string };
-  items?: Array<{
-    audio_url?: string;
-    status_code?: number;
-    status_text?: string;
-  }>;
+export type PlaybackState = 'idle' | 'loading' | 'playing' | 'error';
+interface PlaybackOptions {
+  from?: number;
+  to?: number;
+  rate?: number;
+  onState?: (state: PlaybackState) => void;
+  onTime?: (time: number) => void;
 }
+const urls: Readonly<Record<string, string>> = generatedAudioUrls;
+const timings = generatedTimings as unknown as Readonly<
+  Record<string, AlignedAudio>
+>;
+let active: { audio: HTMLAudioElement; dispose: () => void } | null = null;
 
-const audioUrlCache = new Map<string, string>();
-const pendingRequests = new Map<string, Promise<string>>();
-let voicesCache: SpeechSynthesisVoice[] = [];
-let activeAudio: HTMLAudioElement | null = null;
-
-function loadVoices() {
-  if (!('speechSynthesis' in window)) return;
-  voicesCache = window.speechSynthesis.getVoices();
-  if (voicesCache.length === 0) {
-    window.speechSynthesis.onvoiceschanged = () => {
-      voicesCache = window.speechSynthesis.getVoices();
-    };
-  }
-}
-
-function cacheKey(text: string, lang: SpeechLanguage) {
-  return `${TTS_CACHE_PREFIX}${TTS_SPEAKER}:${lang}:${text}`;
-}
-
-function readCachedUrl(key: string) {
-  const memoryValue = audioUrlCache.get(key);
-  if (memoryValue) return memoryValue;
-  try {
-    const storedValue = window.sessionStorage.getItem(key);
-    if (storedValue) audioUrlCache.set(key, storedValue);
-    return storedValue;
-  } catch {
-    return null;
-  }
-}
-
-function saveCachedUrl(key: string, url: string) {
-  audioUrlCache.set(key, url);
-  try {
-    window.sessionStorage.setItem(key, url);
-  } catch {
-    // 无痕模式等场景可能禁用 sessionStorage，内存缓存仍可用。
-  }
-}
-
-function textHash(text: string) {
-  let hash = 0;
-  for (const character of text) {
-    hash = Math.imul(hash, 31) + character.codePointAt(0)!;
-  }
-  return (hash >>> 0).toString(36);
-}
-
-async function generateAudioUrl(text: string, lang: SpeechLanguage) {
-  const key = cacheKey(text, lang);
-  const cachedUrl = readCachedUrl(key);
-  if (cachedUrl) return cachedUrl;
-
-  const pending = pendingRequests.get(key);
-  if (pending) return pending;
-
-  const request = (async () => {
-    const response = await fetch(TTS_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        accept: 'application/json, text/plain, */*',
-        'content-type': 'application/json',
-        'x-tt-env': 'ppe_voice',
-        'x-use-ppe': '1',
-      },
-      body: JSON.stringify({
-        items: [
-          {
-            item_id: `linguadesk-${lang}-${textHash(text)}`,
-            text,
-          },
-        ],
-        common_request: {
-          speaker: TTS_SPEAKER,
-          audio_config: {
-            format: 'mp3',
-            sample_rate: 24000,
-            speech_rate: 0,
-            pitch: 0,
-            enable_subtitle: true,
-          },
-        },
-      }),
-    });
-
-    if (!response.ok) throw new Error(`TTS HTTP ${response.status}`);
-
-    const result = (await response.json()) as TtsResponse;
-    const item = result.items?.[0];
-    if (
-      (result.base_resp?.status_code ?? 0) !== 0 ||
-      (item?.status_code ?? -1) !== 0 ||
-      !item?.audio_url
-    ) {
-      throw new Error(
-        item?.status_text || result.base_resp?.status_message || '配音生成失败',
-      );
-    }
-
-    saveCachedUrl(key, item.audio_url);
-    return item.audio_url;
-  })();
-
-  pendingRequests.set(key, request);
-  try {
-    return await request;
-  } finally {
-    pendingRequests.delete(key);
-  }
-}
-
-function speakWithSystem(text: string, lang: SpeechLanguage) {
-  if (!('speechSynthesis' in window)) return false;
-  if (voicesCache.length === 0) loadVoices();
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  const target = lang === 'ja' ? 'ja-JP' : 'en-US';
-  utterance.lang = target;
-  const voice =
-    voicesCache.find((item) => item.lang === target) ??
-    voicesCache.find((item) => item.lang.startsWith(lang));
-  if (voice) utterance.voice = voice;
-  utterance.rate = lang === 'ja' ? 0.95 : 0.92;
-  window.speechSynthesis.speak(utterance);
-  return true;
-}
-
-export async function speak(
+export function audioUrlFor(
   text: string,
-  lang: SpeechLanguage,
-  localAudioUrl?: string,
+  lang: 'en' | 'ja',
+  override?: string,
 ) {
-  const normalizedText = text.trim();
-  if (!normalizedText) return;
-  stopSpeak();
+  const url = override || urls[`${lang}:${text.trim()}`];
+  return url?.startsWith('https://') ? url : undefined;
+}
+export function alignmentFor(text: string, lang: 'en' | 'ja') {
+  const entry = timings[`${lang}:${text.trim()}`];
+  return entry?.url === audioUrlFor(text, lang) ? entry : undefined;
+}
 
+/** 所有控件共享播放互斥；切页、点另一个词会取消之前的播放。 */
+export async function playAudio(
+  audio: HTMLAudioElement,
+  options: PlaybackOptions = {},
+) {
+  stopSpeak();
+  const { from = 0, to, rate = 1, onState, onTime } = options;
+  let frame = 0;
+  const seek = () => {
+    audio.currentTime = from;
+  };
+  const finish = () => stopAudio(audio);
+  const fail = () => {
+    finish();
+    onState?.('error');
+  };
+  const checkBoundary = () => {
+    if (active?.audio === audio && to !== undefined && audio.currentTime >= to)
+      finish();
+  };
+  const tick = () => {
+    if (active?.audio !== audio) return;
+    onTime?.(audio.currentTime);
+    if (to !== undefined && audio.currentTime >= to) finish();
+    else frame = requestAnimationFrame(tick);
+  };
+  const playing = () => {
+    onState?.('playing');
+    cancelAnimationFrame(frame);
+    tick();
+  };
+  active = {
+    audio,
+    dispose: () => {
+      cancelAnimationFrame(frame);
+      audio.removeEventListener('loadedmetadata', seek);
+      audio.removeEventListener('ended', finish);
+      audio.removeEventListener('error', fail);
+      audio.removeEventListener('playing', playing);
+      audio.removeEventListener('timeupdate', checkBoundary);
+      onState?.('idle');
+    },
+  };
+  audio.addEventListener('loadedmetadata', seek, { once: true });
+  audio.addEventListener('ended', finish);
+  audio.addEventListener('error', fail);
+  audio.addEventListener('playing', playing);
+  audio.addEventListener('timeupdate', checkBoundary);
+  audio.playbackRate = rate;
+  if (audio.readyState >= 1) seek();
+  onState?.('loading');
   try {
-    const audioUrl =
-      localAudioUrl ||
-      staticAudioUrls[`${lang}:${normalizedText}`] ||
-      (await generateAudioUrl(normalizedText, lang));
-    const audio = new Audio(audioUrl);
-    activeAudio = audio;
     await audio.play();
   } catch (error) {
-    if (!speakWithSystem(normalizedText, lang)) throw error;
+    if (active?.audio !== audio) return;
+    fail();
+    throw error;
   }
 }
 
+export function stopAudio(audio: HTMLAudioElement) {
+  if (active?.audio === audio) stopSpeak();
+}
 export function stopSpeak() {
-  if (activeAudio) {
-    activeAudio.pause();
-    activeAudio.currentTime = 0;
-    activeAudio = null;
-  }
-  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  if (!active) return;
+  const previous = active;
+  active = null;
+  previous.audio.pause();
+  previous.dispose();
 }
-
-export const ttsSupported =
-  typeof window !== 'undefined' && 'speechSynthesis' in window;
+export async function speak(
+  text: string,
+  lang: 'en' | 'ja',
+  override?: string,
+) {
+  const url = audioUrlFor(text, lang, override);
+  if (!url) throw new Error('这段内容尚未配音');
+  await playAudio(new Audio(url));
+}
+// 兼容旧版假名控件；不再依赖 SpeechSynthesis。
+export const ttsSupported = typeof Audio !== 'undefined';

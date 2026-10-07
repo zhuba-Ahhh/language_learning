@@ -1,0 +1,151 @@
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 11px 23px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+  color: #fff;
+  background: #4562d5;
+  &:hover {
+    background: #354fbe;
+  }
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+}
+.secondary {
+  background: #fff;
+  color: #536581;
+  border: 1px solid #dce2ee;
+  &:hover {
+    background: #f3f6fb;
+  }
+}
+.pageHeading {
+  margin: 4px 0 29px;
+  h1 {
+    font-size: 29px;
+    line-height: 1.4;
+    letter-spacing: -1px;
+    font-weight: 650;
+  }
+  p {
+    margin-top: 10px;
+    color: #64748b;
+    font-size: 13px;
+  }
+}
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  button,
+  span {
+    font-size: 11px;
+    color: #64748b;
+  }
+}
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  button {
+    padding: 7px 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #64748b;
+    &[aria-pressed='true'] {
+      background: #e9eefa;
+      color: #4562d5;
+    }
+  }
+}
+.empty {
+  padding: 35px 15px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.9;
+  .primary {
+    margin-top: 17px;
+  }
+}
+.back {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0 0 22px;
+}
+.trainingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  h1 {
+    font-size: 28px;
+    font-weight: 650;
+    margin-top: 5px;
+    letter-spacing: -0.6px;
+  }
+  p,
+  > span {
+    font-size: 11px;
+    color: #64748b;
+  }
+}
+.exerciseMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  gap: 10px;
+}
+.libraryNote {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.error {
+  font-size: 12px;
+  color: #aa4f5b;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+.pattern {
+  border: 1px solid #e7ebf2;
+  border-radius: 9px;
+  padding: 14px 16px;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #64748b;
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  strong {
+    display: block;
+    font-size: 15px;
+    color: #435779;
+    margin-top: 15px;
+  }
+  p {
+    line-height: 1.9;
+    margin-top: 11px;
+  }
+  button {
+    margin-top: 10px;
+  }
+}

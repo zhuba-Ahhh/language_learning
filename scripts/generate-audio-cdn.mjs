@@ -6,6 +6,7 @@ const ENDPOINT =
   'https://douyin-game-ai.bytedance.net/webcast/game/role_agents/generate_avg_text_to_speech_audio';
 const SPEAKER = 'S_olwRWVfN1';
 const OUTPUT = 'src/lib/audio.generated.json';
+const TIMING_OUTPUT = 'src/lib/audio.timings.json';
 const BATCH_SIZE = 10;
 
 function walk(directory) {
@@ -45,11 +46,20 @@ function save(urls) {
   fs.writeFileSync(OUTPUT, `${JSON.stringify(sorted, null, 2)}\n`);
 }
 
+function saveTimings(timings) {
+  fs.writeFileSync(TIMING_OUTPUT, `${JSON.stringify(timings, null, 2)}\n`);
+}
+
 async function collectTexts(urls) {
   const texts = new Map();
-  const add = (lang, text, audioUrl) => {
+  const add = (lang, text, audioUrl, aligned = false) => {
     const key = `${lang}:${text}`;
-    texts.set(key, { key, lang, text });
+    texts.set(key, {
+      key,
+      lang,
+      text,
+      aligned: aligned || texts.get(key)?.aligned,
+    });
     if (audioUrl) urls[key] = audioUrl;
   };
 
@@ -83,10 +93,37 @@ async function collectTexts(urls) {
   const { ALL_KANA } = await loadDataModule('src/content/kana.ts');
   for (const cell of ALL_KANA) add('ja', cell.kana[0]);
 
+  for (const language of ['en', 'ja']) {
+    const lessons = JSON.parse(
+      fs.readFileSync(`src/content/training/data/${language}.json`, 'utf8'),
+    );
+    for (const lesson of lessons) {
+      for (const paragraph of lesson.paragraphs)
+        add(language, paragraph.text, undefined, true);
+      for (const word of lesson.words) add(language, word.term);
+      for (const task of lesson.speaking)
+        add(language, task.sample, undefined, true);
+      add(language, lesson.pattern.example, undefined, true);
+    }
+  }
+  const kanaGroups = JSON.parse(
+    fs.readFileSync('src/content/training/data/kana.json', 'utf8'),
+  );
+  for (const group of kanaGroups)
+    for (const cell of group.cells) add('ja', cell.kana[0]);
+
   return [...texts.values()];
 }
 
 async function generate(batch) {
+  const receipt = `docs/audio/receipts/${new Date().toISOString().replaceAll(':', '-')}.json`;
+  fs.mkdirSync(path.dirname(receipt), { recursive: true });
+  const requestRecord = {
+    speaker: SPEAKER,
+    keys: batch.map(({ key }) => key),
+    status: 'submitted',
+  };
+  fs.writeFileSync(receipt, `${JSON.stringify(requestRecord, null, 2)}\n`);
   const response = await fetch(ENDPOINT, {
     method: 'POST',
     headers: {
@@ -117,6 +154,10 @@ async function generate(batch) {
 
   if (!response.ok) throw new Error(`TTS HTTP ${response.status}`);
   const result = await response.json();
+  fs.writeFileSync(
+    receipt,
+    `${JSON.stringify({ ...requestRecord, status: 'received', result }, null, 2)}\n`,
+  );
   if (result.base_resp?.status_code !== 0) {
     throw new Error(result.base_resp?.status_message || 'TTS request failed');
   }
@@ -127,7 +168,7 @@ async function generate(batch) {
     if (item?.status_code !== 0 || !item.audio_url) {
       throw new Error(item?.status_text || `Missing audio URL for ${key}`);
     }
-    return [key, item.audio_url];
+    return [key, item];
   });
 }
 
@@ -140,8 +181,46 @@ const limit = limitArgument
 const urls = fs.existsSync(OUTPUT)
   ? JSON.parse(fs.readFileSync(OUTPUT, 'utf8'))
   : {};
+const timings = JSON.parse(fs.readFileSync(TIMING_OUTPUT, 'utf8'));
+const { alignSubtitles } = await loadDataModule('src/lib/audioAlignment.ts');
+if (process.argv.includes('--refresh-timings')) {
+  for (const file of walk('docs/audio/receipts').filter((file) =>
+    file.endsWith('.json'),
+  )) {
+    const receipt = JSON.parse(fs.readFileSync(file, 'utf8'));
+    for (const item of receipt.result?.items ?? []) {
+      const key = receipt.keys.find(
+        (key) => itemId(key.slice(0, 2), key.slice(3)) === item.item_id,
+      );
+      if (key && item.audio_url === urls[key] && item.subtitle_json)
+        timings[key] = {
+          url: item.audio_url,
+          duration: item.duration,
+          words: alignSubtitles(key.slice(3), JSON.parse(item.subtitle_json)),
+        };
+    }
+  }
+}
+for (const [key, entry] of Object.entries(timings)) {
+  if (entry.subtitles) {
+    entry.words = alignSubtitles(key.slice(3), entry.subtitles);
+    delete entry.subtitles;
+  }
+}
+const align = process.argv.includes('--align');
 const texts = await collectTexts(urls);
-const pending = texts.filter(({ key }) => !urls[key]).slice(0, limit);
+const targetKey = process.argv
+  .find((argument) => argument.startsWith('--key='))
+  ?.slice(6);
+if (targetKey && !texts.some(({ key }) => key === targetKey))
+  throw new Error('Unknown audio key');
+const pending = texts
+  .filter(({ key, aligned }) =>
+    targetKey
+      ? key === targetKey
+      : !urls[key] || (align && aligned && timings[key]?.url !== urls[key]),
+  )
+  .slice(0, limit);
 
 save(urls);
 console.log(`Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
@@ -149,11 +228,21 @@ console.log(`Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
 for (let index = 0; index < pending.length; index += BATCH_SIZE) {
   const batch = pending.slice(index, index + BATCH_SIZE);
   const generated = await generate(batch);
-  for (const [key, url] of generated) urls[key] = url;
+  for (const [key, item] of generated) {
+    urls[key] = item.audio_url;
+    if (item.subtitle_json)
+      timings[key] = {
+        url: item.audio_url,
+        duration: item.duration,
+        words: alignSubtitles(key.slice(3), JSON.parse(item.subtitle_json)),
+      };
+  }
   save(urls);
+  saveTimings(timings);
   console.log(
     `Generated ${Math.min(index + batch.length, pending.length)}/${pending.length}`,
   );
 }
 
 console.log(`Done. Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
+saveTimings(timings);

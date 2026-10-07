@@ -1,0 +1,125 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:今日はいい天気ですね。",
+    "ja:すみません、駅はどこですか。",
+    "en:Could someone help me review this pull request?",
+    "en:I live in a busy neighbourhood, but there is a quiet park near my home.",
+    "en:I usually read in the evening because it helps me slow down after work.",
+    "en:I'm a computer science graduate with a focus on web development.",
+    "en:I'm comfortable reading English documentation and technical articles.",
+    "ja:修正が完了しましたので、ご確認お願いいたします。",
+    "ja:おはようございます。",
+    "ja:写真を撮ってもいいですか。"
+  ],
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac6295c15931150d6c162c8",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e7227e88-be2a-4c22-812d-fa17aeeb567e.mp3",
+        "duration": 1.725,
+        "index": 0,
+        "item_id": "linguadesk-ja-44sqx",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"今日はいい天気ですね。\"},{\"text\":\"今日はいい天気ですね。\",\"words\":[{\"word\":\"今\",\"startTime\":0.285,\"endTime\":0.505,\"confidence\":0.89776367},{\"word\":\"日\",\"startTime\":0.505,\"endTime\":0.675,\"confidence\":0.75757235},{\"word\":\"は\",\"startTime\":0.675,\"endTime\":0.705,\"confidence\":0.21901509},{\"word\":\"い\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.22030723},{\"word\":\"い\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.17580774},{\"word\":\"天\",\"startTime\":0.945,\"endTime\":1.155,\"confidence\":0.8476798},{\"word\":\"気\",\"startTime\":1.155,\"endTime\":1.325,\"confidence\":0.8163428},{\"word\":\"で\",\"startTime\":1.325,\"endTime\":1.355,\"confidence\":0.20405826},{\"word\":\"す\",\"startTime\":1.635,\"endTime\":1.665,\"confidence\":0.35426918},{\"word\":\"ね。\",\"startTime\":1.695,\"endTime\":1.725,\"confidence\":0.38590592}]}]",
+        "text": "今日はいい天気ですね。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c1548dd1-f844-4ac1-b80b-210a4f61d85e.mp3",
+        "duration": 2.955,
+        "index": 1,
+        "item_id": "linguadesk-ja-nyuoq6",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"すみません、駅はどこですか。\"},{\"text\":\"すみません、駅はどこですか。\",\"words\":[{\"word\":\"す\",\"endTime\":0.045,\"confidence\":0.48004022},{\"word\":\"み\",\"startTime\":0.375,\"endTime\":0.405,\"confidence\":0.15703724},{\"word\":\"ま\",\"startTime\":0.405,\"endTime\":0.435,\"confidence\":0.19083677},{\"word\":\"せ\",\"startTime\":0.435,\"endTime\":0.465,\"confidence\":0.13138542},{\"word\":\"ん、\",\"startTime\":0.465,\"endTime\":0.495,\"confidence\":0.1612526},{\"word\":\"駅\",\"startTime\":0.495,\"endTime\":0.565,\"confidence\":0.46558216},{\"word\":\"は\",\"startTime\":0.565,\"endTime\":0.595,\"confidence\":0.23440291},{\"word\":\"ど\",\"startTime\":0.625,\"endTime\":0.655,\"confidence\":0.27812433},{\"word\":\"こ\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.3739261},{\"word\":\"で\",\"startTime\":2.495,\"endTime\":2.525,\"confidence\":0.35972717},{\"word\":\"す\",\"startTime\":2.555,\"endTime\":2.585,\"confidence\":0.3803799},{\"word\":\"か。\",\"startTime\":2.925,\"endTime\":2.955,\"confidence\":0.3443079}]}]",
+        "text": "すみません、駅はどこですか。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aa85f4f0-9f2b-4fca-8fd8-b73957c26a2a.mp3",
+        "duration": 2.955,
+        "index": 2,
+        "item_id": "linguadesk-en-1mlcoyj",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"Could someone help me review this pull request?\"},{\"text\":\"Could someone help me review this pull request?\",\"words\":[{\"word\":\"Could\",\"startTime\":0.195,\"endTime\":0.365,\"confidence\":0.91006315},{\"word\":\"someone\",\"startTime\":0.365,\"endTime\":0.785,\"confidence\":0.926496},{\"word\":\"help\",\"startTime\":0.785,\"endTime\":1.065,\"confidence\":0.9763628},{\"word\":\"me\",\"startTime\":1.065,\"endTime\":1.245,\"confidence\":0.9822184},{\"word\":\"review\",\"startTime\":1.245,\"endTime\":1.605,\"confidence\":0.9475751},{\"word\":\"this\",\"startTime\":1.605,\"endTime\":1.845,\"confidence\":0.95211035},{\"word\":\"pull\",\"startTime\":1.845,\"endTime\":2.125,\"confidence\":0.7496286},{\"word\":\"request?\",\"startTime\":2.125,\"endTime\":2.955,\"confidence\":0.9338857}]}]",
+        "text": "Could someone help me review this pull request?"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/85f3f316-0416-4548-bf9a-5e6b5c09faaf.mp3",
+        "duration": 4.655,
+        "index": 3,
+        "item_id": "linguadesk-en-xt9znk",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I live in a busy neighbourhood, but there is a quiet park near my home.\"},{\"text\":\"I live in a busy neighbourhood, but there is a quiet park near my home.\",\"words\":[{\"word\":\"I\",\"startTime\":0.215,\"endTime\":0.335,\"confidence\":0.90821034},{\"word\":\"live\",\"startTime\":0.335,\"endTime\":0.605,\"confidence\":0.9340587},{\"word\":\"in\",\"startTime\":0.645,\"endTime\":0.785,\"confidence\":0.94213855},{\"word\":\"a\",\"startTime\":0.785,\"endTime\":0.865,\"confidence\":0.8150338},{\"word\":\"busy\",\"startTime\":0.865,\"endTime\":1.165,\"confidence\":0.9314257},{\"word\":\"neighbourhood,\",\"startTime\":1.165,\"endTime\":1.725,\"confidence\":0.8964132},{\"word\":\"but\",\"startTime\":2.205,\"endTime\":2.385,\"confidence\":0.9754038},{\"word\":\"there\",\"startTime\":2.385,\"endTime\":2.585,\"confidence\":0.95578337},{\"word\":\"is\",\"startTime\":2.585,\"endTime\":2.765,\"confidence\":0.93193513},{\"word\":\"a\",\"startTime\":2.765,\"endTime\":2.815,\"confidence\":0.8931608},{\"word\":\"quiet\",\"startTime\":2.815,\"endTime\":3.215,\"confidence\":0.9203774},{\"word\":\"park\",\"startTime\":3.215,\"endTime\":3.785,\"confidence\":0.93786657},{\"word\":\"near\",\"startTime\":3.825,\"endTime\":4.065,\"confidence\":0.81215054},{\"word\":\"my\",\"startTime\":4.065,\"endTime\":4.215,\"confidence\":0.9218993},{\"word\":\"home.\",\"startTime\":4.215,\"endTime\":4.655,\"confidence\":0.9635215}]}]",
+        "text": "I live in a busy neighbourhood, but there is a quiet park near my home."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2a9b0971-88ed-4ce5-9e6c-0d02a13c8c13.mp3",
+        "duration": 5.185,
+        "index": 4,
+        "item_id": "linguadesk-en-16j30bf",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I usually read in the evening because it helps me slow down after work.\"},{\"text\":\"I usually read in the evening because it helps me slow down after work.\",\"words\":[{\"word\":\"I\",\"startTime\":0.265,\"endTime\":0.405,\"confidence\":0.8716293},{\"word\":\"usually\",\"startTime\":0.405,\"endTime\":0.885,\"confidence\":0.9093962},{\"word\":\"read\",\"startTime\":0.885,\"endTime\":1.145,\"confidence\":0.9461107},{\"word\":\"in\",\"startTime\":1.145,\"endTime\":1.255,\"confidence\":0.9384208},{\"word\":\"the\",\"startTime\":1.255,\"endTime\":1.355,\"confidence\":0.928194},{\"word\":\"evening\",\"startTime\":1.355,\"endTime\":1.835,\"confidence\":0.900807},{\"word\":\"because\",\"startTime\":2.455,\"endTime\":2.815,\"confidence\":0.94832957},{\"word\":\"it\",\"startTime\":2.815,\"endTime\":2.905,\"confidence\":0.965801},{\"word\":\"helps\",\"startTime\":2.905,\"endTime\":3.275,\"confidence\":0.9617877},{\"word\":\"me\",\"startTime\":3.275,\"endTime\":3.395,\"confidence\":0.9627323},{\"word\":\"slow\",\"startTime\":3.395,\"endTime\":3.715,\"confidence\":0.95026505},{\"word\":\"down\",\"startTime\":3.715,\"endTime\":4.135,\"confidence\":0.95447785},{\"word\":\"after\",\"startTime\":4.325,\"endTime\":4.685,\"confidence\":0.9518844},{\"word\":\"work.\",\"startTime\":4.685,\"endTime\":5.185,\"confidence\":0.96140945}]}]",
+        "text": "I usually read in the evening because it helps me slow down after work."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fa7772d5-58c3-4596-9642-1333434b5590.mp3",
+        "duration": 5.115,
+        "index": 5,
+        "item_id": "linguadesk-en-1jefjnn",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I'm a computer science graduate with a focus on web development.\"},{\"text\":\"I'm a computer science graduate with a focus on web development.\",\"words\":[{\"word\":\"I'm\",\"startTime\":0.245,\"endTime\":0.465,\"confidence\":0.85502},{\"word\":\"a\",\"startTime\":0.465,\"endTime\":0.585,\"confidence\":0.7511688},{\"word\":\"computer\",\"startTime\":0.615,\"endTime\":1.145,\"confidence\":0.9435088},{\"word\":\"science\",\"startTime\":1.145,\"endTime\":1.615,\"confidence\":0.8253759},{\"word\":\"graduate\",\"startTime\":1.615,\"endTime\":2.335,\"confidence\":0.93179953},{\"word\":\"with\",\"startTime\":2.745,\"endTime\":2.975,\"confidence\":0.9678869},{\"word\":\"a\",\"startTime\":2.975,\"endTime\":3.025,\"confidence\":0.9553857},{\"word\":\"focus\",\"startTime\":3.025,\"endTime\":3.655,\"confidence\":0.9389474},{\"word\":\"on\",\"startTime\":3.685,\"endTime\":3.925,\"confidence\":0.94357586},{\"word\":\"web\",\"startTime\":3.925,\"endTime\":4.205,\"confidence\":0.88966364},{\"word\":\"development.\",\"startTime\":4.205,\"endTime\":5.115,\"confidence\":0.91612256}]}]",
+        "text": "I'm a computer science graduate with a focus on web development."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c58852a8-5155-4211-8ea1-8d292edcb0d7.mp3",
+        "duration": 4.825,
+        "index": 6,
+        "item_id": "linguadesk-en-16mxlg0",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I'm comfortable reading English documentation and technical articles.\"},{\"text\":\"I'm comfortable reading English documentation and technical articles.\",\"words\":[{\"word\":\"I'm\",\"startTime\":0.305,\"endTime\":0.505,\"confidence\":0.89763117},{\"word\":\"comfortable\",\"startTime\":0.505,\"endTime\":1.205,\"confidence\":0.89658004},{\"word\":\"reading\",\"startTime\":1.205,\"endTime\":1.615,\"confidence\":0.91620135},{\"word\":\"English\",\"startTime\":1.645,\"endTime\":2.125,\"confidence\":0.93944},{\"word\":\"documentation\",\"startTime\":2.125,\"endTime\":3.135,\"confidence\":0.8962697},{\"word\":\"and\",\"startTime\":3.165,\"endTime\":3.415,\"confidence\":0.9731892},{\"word\":\"technical\",\"startTime\":3.415,\"endTime\":3.985,\"confidence\":0.9644437},{\"word\":\"articles.\",\"startTime\":4.015,\"endTime\":4.825,\"confidence\":0.878074}]}]",
+        "text": "I'm comfortable reading English documentation and technical articles."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1bb53744-c9d8-47ed-be4a-f03a2efd55f0.mp3",
+        "duration": 4.285,
+        "index": 7,
+        "item_id": "linguadesk-ja-1j2n7ky",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"修正が完了しましたので、ご確認お願いいたします。\"},{\"text\":\"修正が完了しましたので、ご確認お願いいたします。\",\"words\":[{\"word\":\"修\",\"startTime\":0.195,\"endTime\":0.455,\"confidence\":0.9337749},{\"word\":\"正\",\"startTime\":0.455,\"endTime\":0.685,\"confidence\":0.72454745},{\"word\":\"が\",\"startTime\":0.685,\"endTime\":0.715,\"confidence\":0.20160662},{\"word\":\"完\",\"startTime\":0.715,\"endTime\":0.925,\"confidence\":0.8140821},{\"word\":\"了\",\"startTime\":0.925,\"endTime\":1.035,\"confidence\":0.71544576},{\"word\":\"し\",\"startTime\":1.195,\"endTime\":1.225,\"confidence\":0.15024544},{\"word\":\"ま\",\"startTime\":1.225,\"endTime\":1.255,\"confidence\":0.16695158},{\"word\":\"し\",\"startTime\":1.255,\"endTime\":1.285,\"confidence\":0.17422327},{\"word\":\"た\",\"startTime\":1.285,\"endTime\":1.315,\"confidence\":0.14358488},{\"word\":\"の\",\"startTime\":1.475,\"endTime\":1.505,\"confidence\":0.20357996},{\"word\":\"で、\",\"startTime\":1.695,\"endTime\":1.725,\"confidence\":0.30068105},{\"word\":\"ご\",\"startTime\":2.575,\"endTime\":2.605,\"confidence\":0.14190367},{\"word\":\"確\",\"startTime\":2.605,\"endTime\":2.785,\"confidence\":0.7195968},{\"word\":\"認\",\"startTime\":2.785,\"endTime\":3.125,\"confidence\":0.8753837},{\"word\":\"お\",\"startTime\":3.695,\"endTime\":3.725,\"confidence\":0.2458893},{\"word\":\"願\",\"startTime\":3.725,\"endTime\":3.755,\"confidence\":0.29393736},{\"word\":\"い\",\"startTime\":3.755,\"endTime\":3.785,\"confidence\":0.16326658},{\"word\":\"い\",\"startTime\":3.785,\"endTime\":3.815,\"confidence\":0.18036368},{\"word\":\"た\",\"startTime\":4.165,\"endTime\":4.195,\"confidence\":0.14438567},{\"word\":\"し\",\"startTime\":4.195,\"endTime\":4.225,\"confidence\":0.17883107},{\"word\":\"ま\",\"startTime\":4.225,\"endTime\":4.255,\"confidence\":0.20851551},{\"word\":\"す。\",\"startTime\":4.255,\"endTime\":4.285,\"confidence\":0.1992203}]}]",
+        "text": "修正が完了しましたので、ご確認お願いいたします。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a1b691d1-8778-4d3c-884c-d217d581c68b.mp3",
+        "duration": 1.235,
+        "index": 8,
+        "item_id": "linguadesk-ja-1i1soq0",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"おはようございます。\"},{\"text\":\"おはようございます。\",\"words\":[{\"word\":\"お\",\"endTime\":0.045,\"confidence\":0.47513646},{\"word\":\"は\",\"startTime\":0.995,\"endTime\":1.025,\"confidence\":0.2644607},{\"word\":\"よ\",\"startTime\":1.025,\"endTime\":1.055,\"confidence\":0.2370401},{\"word\":\"う\",\"startTime\":1.055,\"endTime\":1.085,\"confidence\":0.1391174},{\"word\":\"ご\",\"startTime\":1.085,\"endTime\":1.115,\"confidence\":0.13559604},{\"word\":\"ざ\",\"startTime\":1.115,\"endTime\":1.145,\"confidence\":0.18267177},{\"word\":\"い\",\"startTime\":1.145,\"endTime\":1.175,\"confidence\":0.20772731},{\"word\":\"ま\",\"startTime\":1.175,\"endTime\":1.205,\"confidence\":0.24402572},{\"word\":\"す。\",\"startTime\":1.205,\"endTime\":1.235,\"confidence\":0.29579383}]}]",
+        "text": "おはようございます。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8801bb42-cf6b-437a-a2c8-323be1bbe9b7.mp3",
+        "duration": 1.785,
+        "index": 9,
+        "item_id": "linguadesk-ja-1vwz46e",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"写真を撮ってもいいですか。\"},{\"text\":\"写真を撮ってもいいですか。\",\"words\":[{\"word\":\"写\",\"startTime\":0.175,\"endTime\":0.475,\"confidence\":0.84494853},{\"word\":\"真\",\"startTime\":0.475,\"endTime\":0.735,\"confidence\":0.8557653},{\"word\":\"を\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.26202506},{\"word\":\"撮\",\"startTime\":0.765,\"endTime\":0.965,\"confidence\":0.48086235},{\"word\":\"っ\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.22219057},{\"word\":\"て\",\"startTime\":1.265,\"endTime\":1.295,\"confidence\":0.14328314},{\"word\":\"も\",\"startTime\":1.295,\"endTime\":1.325,\"confidence\":0.14223143},{\"word\":\"い\",\"startTime\":1.325,\"endTime\":1.355,\"confidence\":0.13588949},{\"word\":\"い\",\"startTime\":1.355,\"endTime\":1.385,\"confidence\":0.13872686},{\"word\":\"で\",\"startTime\":1.385,\"endTime\":1.415,\"confidence\":0.16318177},{\"word\":\"す\",\"startTime\":1.485,\"endTime\":1.515,\"confidence\":0.18460673},{\"word\":\"か。\",\"startTime\":1.755,\"endTime\":1.785,\"confidence\":0.33467555}]}]",
+        "text": "写真を撮ってもいいですか。"
+      }
+    ]
+  }
+}

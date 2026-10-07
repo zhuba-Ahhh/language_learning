@@ -1,0 +1,154 @@
+.reviewPaper {
+  max-width: 700px;
+  background: #fff;
+  border: 1px solid #e4e9f2;
+  border-radius: 14px;
+  margin: 0 auto;
+  padding: 28px;
+  text-align: center;
+  > h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 30px auto 20px;
+    max-width: 580px;
+    line-height: 1.7;
+  }
+  > p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.9;
+    margin: 15px 0;
+  }
+  > button {
+    margin-top: 22px;
+  }
+  > button[aria-label='朗读'] {
+    margin: 15px auto;
+  }
+  .exerciseMeta {
+    text-align: left;
+  }
+}
+.reviewOrigin {
+  font-size: 11px !important;
+}
+.reviewAnswer {
+  padding: 22px;
+  background: #f5f8fc;
+  border-radius: 9px;
+  line-height: 1.9;
+  font-size: 13px;
+  color: #64748b;
+  small {
+    font-size: 12px;
+  }
+  blockquote {
+    text-align: left;
+    margin-top: 15px;
+    font-family: Georgia, 'PingFang SC', serif;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+}
+.reviewActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+.reviewEmpty {
+  text-align: center;
+  padding: 35px 20px 40px;
+  background: #fff;
+  border: 1px solid #e6eaf3;
+  border-radius: 14px;
+  > div {
+    display: grid;
+    place-items: center;
+    background: #e9f3ee;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #64748b;
+    font-size: 25px;
+    margin: 0 auto 18px;
+  }
+  h2 {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 13px 0 23px;
+  }
+}
+.toolRow {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  button {
+    flex: 1;
+    padding: 18px;
+    text-align: left;
+    background: #edf1fc;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #63779c;
+    span {
+      display: block;
+      font-size: 10px;
+      margin-top: 5px;
+      color: #64748b;
+    }
+  }
+}
+.wordBank {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 10px;
+    strong {
+      font-size: 15px;
+    }
+    small {
+      font-size: 10px;
+      color: #64748b;
+      display: block;
+      margin-top: 4px;
+    }
+    p {
+      font-size: 12px;
+      color: #637791;
+      margin-top: 6px;
+    }
+  }
+}
+.kanaGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  button {
+    background: #fff;
+    border: 1px solid #e2e8f2;
+    border-radius: 9px;
+    text-align: center;
+    padding: 17px 4px;
+    strong {
+      font-size: 23px;
+      font-weight: 500;
+    }
+    small {
+      display: block;
+      font-size: 11px;
+      color: #64748b;
+    }
+  }
+}

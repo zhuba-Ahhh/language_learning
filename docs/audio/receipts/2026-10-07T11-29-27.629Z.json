@@ -1,0 +1,26 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:すみません、駅はどこですか。もう一度ゆっくり言ってください。ありがとうございます。"
+  ],
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac62d1715931150d6c1630a",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fd6004b4-fdb0-4ece-a7e9-f85d8db663fc.mp3",
+        "duration": 7.655083,
+        "index": 0,
+        "item_id": "linguadesk-ja-goeaew",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"すみません、駅はどこですか。もう一度ゆっくり言ってください。ありがとうございます。\"},{\"text\":\"すみません、駅はどこですか。\",\"words\":[{\"word\":\"す\",\"endTime\":0.045,\"confidence\":0.47051474},{\"word\":\"み\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.12043531},{\"word\":\"ま\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.16418767},{\"word\":\"せ\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.17526212},{\"word\":\"ん、\",\"startTime\":0.785,\"endTime\":0.815,\"confidence\":0.17989588},{\"word\":\"駅\",\"startTime\":0.815,\"endTime\":0.845,\"confidence\":0.18177563},{\"word\":\"は\",\"startTime\":0.845,\"endTime\":0.875,\"confidence\":0.31338787},{\"word\":\"ど\",\"startTime\":0.875,\"endTime\":0.905,\"confidence\":0.23642914},{\"word\":\"こ\",\"startTime\":0.905,\"endTime\":0.935,\"confidence\":0.2077466},{\"word\":\"で\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.24096483},{\"word\":\"す\",\"startTime\":3.005,\"endTime\":3.035,\"confidence\":0.34850997},{\"word\":\"か。\",\"startTime\":3.325,\"endTime\":3.355,\"confidence\":0.33971703}]},{\"text\":\"もう一度ゆっくり言ってください。\",\"words\":[{\"word\":\"も\",\"startTime\":4.245042,\"endTime\":4.2750416,\"confidence\":0.22418228},{\"word\":\"う\",\"startTime\":4.2750416,\"endTime\":4.305042,\"confidence\":0.18010205},{\"word\":\"一\",\"startTime\":4.305042,\"endTime\":4.3550415,\"confidence\":0.4771328},{\"word\":\"度\",\"startTime\":4.3550415,\"endTime\":4.555042,\"confidence\":0.77843827},{\"word\":\"ゆ\",\"startTime\":4.555042,\"endTime\":4.5850415,\"confidence\":0.28185734},{\"word\":\"っ\",\"startTime\":4.5850415,\"endTime\":4.6150417,\"confidence\":0.20913413},{\"word\":\"く\",\"startTime\":4.6150417,\"endTime\":4.6450415,\"confidence\":0.1859305},{\"word\":\"り\",\"startTime\":4.6450415,\"endTime\":4.6750417,\"confidence\":0.20987795},{\"word\":\"言\",\"startTime\":4.6750417,\"endTime\":4.705042,\"confidence\":0.27410302},{\"word\":\"っ\",\"startTime\":4.705042,\"endTime\":4.7350416,\"confidence\":0.17427617},{\"word\":\"て\",\"startTime\":4.9750414,\"endTime\":5.0050416,\"confidence\":0.19338024},{\"word\":\"く\",\"startTime\":5.0050416,\"endTime\":5.035042,\"confidence\":0.22925638},{\"word\":\"だ\",\"startTime\":5.035042,\"endTime\":5.0650415,\"confidence\":0.20188938},{\"word\":\"さ\",\"startTime\":5.0650415,\"endTime\":5.0950418,\"confidence\":0.23461214},{\"word\":\"い。\",\"startTime\":7.1050415,\"endTime\":7.1350417,\"confidence\":0.28843594}]},{\"text\":\"ありがとうございます。\",\"words\":[{\"word\":\"あ\",\"startTime\":7.1400833,\"endTime\":7.1850834,\"confidence\":0.638782},{\"word\":\"り\",\"startTime\":7.1850834,\"endTime\":7.215083,\"confidence\":0.2663261},{\"word\":\"が\",\"startTime\":7.4150834,\"endTime\":7.445083,\"confidence\":0.23989232},{\"word\":\"と\",\"startTime\":7.445083,\"endTime\":7.4750834,\"confidence\":0.23625904},{\"word\":\"う\",\"startTime\":7.4750834,\"endTime\":7.505083,\"confidence\":0.25969258},{\"word\":\"ご\",\"startTime\":7.505083,\"endTime\":7.5350833,\"confidence\":0.25810233},{\"word\":\"ざ\",\"startTime\":7.5350833,\"endTime\":7.5650835,\"confidence\":0.26739103},{\"word\":\"い\",\"startTime\":7.5650835,\"endTime\":7.595083,\"confidence\":0.28943455},{\"word\":\"ま\",\"startTime\":7.595083,\"endTime\":7.6250834,\"confidence\":0.30297017},{\"word\":\"す。\",\"startTime\":7.6250834,\"endTime\":7.655083,\"confidence\":0.34895855}]}]",
+        "text": "すみません、駅はどこですか。もう一度ゆっくり言ってください。ありがとうございます。"
+      }
+    ]
+  }
+}
