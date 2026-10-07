@@ -3,12 +3,23 @@ import { DECKS } from '@/content/words';
 import { LESSONS } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
 import SpeakButton from '@/components/SpeakButton';
+import TrainingIcon from '@/components/TrainingIcon';
+import PageHeading from '../components/PageHeading';
+import InteractiveReader from '../components/InteractiveReader';
+import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
 
-export default function WordBank({ onBack }: { onBack: () => void }) {
-  const { data } = useTraining();
+export default function WordBank({
+  onBack,
+  onOpen,
+}: {
+  onBack: () => void;
+  onOpen: (selection: TrainingSelection) => void;
+}) {
+  const { data, addWord } = useTraining();
   const [query, setQuery] = useState('');
   const [onlySaved, setOnlySaved] = useState(true);
+  const [selected, setSelected] = useState('');
   const builtIn = [
     ...DECKS.filter((deck) => deck.lang === data.language).flatMap((deck) =>
       deck.words.map((word) => ({ ...word, origin: deck.title })),
@@ -38,15 +49,37 @@ export default function WordBank({ onBack }: { onBack: () => void }) {
       .toLocaleLowerCase()
       .includes(query.toLocaleLowerCase()),
   );
+  const word = filtered.find((word) => word.term === selected) ?? filtered[0];
+  const lesson =
+    word &&
+    LESSONS.find(
+      (lesson) =>
+        lesson.lang === data.language &&
+        lesson.title === word.origin &&
+        lesson.words.some((item) => item.term === word.term),
+    );
+  const entry = lesson?.words.find((item) => item.term === word?.term);
+  const context = lesson?.paragraphs.find((paragraph) =>
+    [
+      word!.term,
+      ...(lesson.marks ?? [])
+        .filter((mark) => mark.wordId === entry?.id)
+        .map((mark) => mark.text),
+    ].some((term) =>
+      paragraph.text.toLocaleLowerCase().includes(term.toLocaleLowerCase()),
+    ),
+  );
+  const saved =
+    word &&
+    data.savedWords.some(
+      (item) => item.key === `${data.language}:${word.term}`,
+    );
   return (
     <div>
       <button type="button" className={styles.back} onClick={onBack}>
         ‹ 复习
       </button>
-      <div className={styles.pageHeading}>
-        <h1>查一个词，带走一句。</h1>
-        <p>阅读里收藏的词会保留来源，并安排复习。</p>
-      </div>
+      <PageHeading title="词库" />
       <div className={styles.libraryToolbar}>
         <div className={styles.filters}>
           <button
@@ -67,35 +100,87 @@ export default function WordBank({ onBack }: { onBack: () => void }) {
         <input
           type="search"
           aria-label="搜索词汇"
-          placeholder="词、读音或释义"
+          placeholder="搜词、读音或释义"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
       </div>
-      <div className={styles.wordBank}>
-        {filtered.map((word) => (
-          <div key={word.id + word.origin}>
-            <div>
-              <strong lang={data.language}>{word.term}</strong>
-              {word.reading && <small>{word.reading}</small>}
-              <p>{word.meaning}</p>
-              <small>{word.origin}</small>
-            </div>
-            <SpeakButton
-              text={word.term}
-              lang={data.language}
-              size={34}
-              tone="muted"
-            />
+      {word ? (
+        <div className={styles.wordBankLayout}>
+          <div className={styles.wordList} aria-label="词汇列表">
+            {filtered.map((item) => (
+              <div
+                key={item.id + item.origin}
+                aria-current={word.term === item.term ? 'true' : undefined}
+              >
+                <button
+                  type="button"
+                  aria-pressed={word.term === item.term}
+                  onClick={() => setSelected(item.term)}
+                >
+                  <strong lang={data.language}>{item.term}</strong>
+                  <small>{item.meaning}</small>
+                </button>
+                <SpeakButton
+                  text={item.term}
+                  lang={data.language}
+                  size={34}
+                  tone="muted"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      {!filtered.length && (
-        <p className={styles.empty}>
-          {onlySaved
-            ? '还没有收藏的词。阅读时点一下生词，就能带到这里。'
-            : '没有匹配的词。'}
-        </p>
+          <section className={styles.wordDetail} aria-label="词汇详情">
+            <div className={styles.exerciseMeta}>
+              <span>{word.origin}</span>
+              <span>
+                {saved ? '已收藏' : data.language === 'en' ? 'EN' : 'JP'}
+              </span>
+            </div>
+            <h2 lang={data.language}>{word.term}</h2>
+            {word.reading && <small>{word.reading}</small>}
+            <SpeakButton text={word.term} lang={data.language} size={40} />
+            <p>{word.meaning}</p>
+            {context && lesson && (
+              <div className={styles.wordContext}>
+                <small>原文</small>
+                <InteractiveReader text={context.text} lesson={lesson} />
+                <button
+                  type="button"
+                  onClick={() =>
+                    onOpen({ lessonId: lesson.id, skill: 'reading' })
+                  }
+                >
+                  查看原文 →
+                </button>
+              </div>
+            )}
+            {entry && lesson && (
+              <button
+                type="button"
+                className={styles.primary}
+                disabled={!!saved}
+                onClick={() => addWord(lesson, entry)}
+              >
+                <TrainingIcon name="bookmark" size={17} />
+                {saved ? '已加入复习' : '加入复习'}
+              </button>
+            )}
+          </section>
+        </div>
+      ) : (
+        <div className={styles.empty}>
+          <p>{onlySaved ? '暂无收藏词' : '没有匹配的词'}</p>
+          {onlySaved && (
+            <button
+              type="button"
+              className={styles.primary}
+              onClick={() => setOnlySaved(false)}
+            >
+              查看内置词库
+            </button>
+          )}
+        </div>
       )}
     </div>
   );

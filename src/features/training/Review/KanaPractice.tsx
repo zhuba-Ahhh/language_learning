@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { KANA_GROUPS } from '@/content/training/kana';
 import { speak } from '@/lib/speech';
 import { useTraining } from '@/study/trainingContext';
+import SpeakButton from '@/components/SpeakButton';
 import styles from '../index.module.less';
 
 function chooseRound(size: number) {
@@ -27,6 +28,8 @@ export default function KanaPractice({
   const [position, setPosition] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [picked, setPicked] = useState('');
+  const [selected, setSelected] = useState(0);
+  const [audioError, setAudioError] = useState('');
   const [round, setRound] = useState(() =>
     chooseRound(KANA_GROUPS[0].cells.length),
   );
@@ -44,6 +47,8 @@ export default function KanaPractice({
     setPosition(0);
     setCorrect(0);
     setPicked('');
+    setSelected(0);
+    setAudioError('');
   };
   return (
     <div>
@@ -51,8 +56,7 @@ export default function KanaPractice({
         ‹ {backLabel}
       </button>
       <div className={styles.pageHeading}>
-        <h1>先把声音和字连起来。</h1>
-        <p>点假名听发音，再用五题检查记忆。</p>
+        <h1>假名</h1>
       </div>
       <div className={styles.libraryToolbar}>
         <div className={styles.filters}>
@@ -99,12 +103,12 @@ export default function KanaPractice({
               reset();
             }}
           >
-            {quiz ? '回字表' : '练五题'}
+            {quiz ? '字表' : '小测'}
           </button>
         </div>
       </div>
       {quiz ? (
-        <section className={styles.reviewPaper}>
+        <section className={`${styles.reviewPaper} ${styles.kanaQuiz}`}>
           {position >= 5 ? (
             <>
               <h2>这一轮答对 {correct} / 5</h2>
@@ -167,21 +171,61 @@ export default function KanaPractice({
           )}
         </section>
       ) : (
-        <div className={styles.kanaGrid}>
-          {cells.map((item, index) => (
+        <div className={styles.kanaLayout}>
+          <section className={styles.kanaBoard}>
+            <div className={styles.kanaGrid}>
+              {cells.map((item, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  style={{
+                    gridColumn: 'aiueo'.indexOf(item.romaji.slice(-1)) + 1 || 1,
+                  }}
+                  aria-pressed={selected === index}
+                  onClick={() => {
+                    setSelected(index);
+                    setAudioError('');
+                    void speak(item.kana[0], 'ja').catch(() =>
+                      setAudioError('发音加载失败，请重试。'),
+                    );
+                  }}
+                >
+                  <strong lang="ja">{item.kana[script]}</strong>
+                  <small>{item.romaji}</small>
+                </button>
+              ))}
+            </div>
+          </section>
+          <aside className={styles.kanaDetail}>
+            <h2 lang="ja">{cells[selected].kana[script]}</h2>
+            <p>{cells[selected].romaji}</p>
+            <SpeakButton text={cells[selected].kana[0]} lang="ja" size={44} />
+            <small>
+              {script === 0 ? '片假名' : '平假名'} ·{' '}
+              <span lang="ja">
+                {cells[selected].kana[script === 0 ? 1 : 0]}
+              </span>
+            </small>
             <button
               type="button"
-              key={index}
-              onClick={() => void speak(item.kana[0], 'ja')}
+              className={styles.primary}
+              onClick={() => {
+                setQuiz(true);
+                reset();
+              }}
             >
-              <strong lang="ja">{item.kana[script]}</strong>
-              <small>{item.romaji}</small>
+              练 5 题
             </button>
-          ))}
+          </aside>
         </div>
       )}
+      {audioError && (
+        <p role="alert" className={styles.error}>
+          {audioError}
+        </p>
+      )}
       <details className={styles.pattern}>
-        <summary>长音与促音怎么读？</summary>
+        <summary>长音与促音</summary>
         <p>
           长音把元音延长一拍，例如「おばさん」与「おばあさん」不同。促音「っ」先停一拍，再读后面的辅音，例如「きて」与「きって」。
         </p>

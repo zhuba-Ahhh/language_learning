@@ -4,7 +4,7 @@ import { useTraining } from '@/study/trainingContext';
 import { saveRecording } from '@/lib/recordings';
 import { stopSpeak } from '@/lib/speech';
 import SpeakingSample from './SpeakingSample';
-import AudioHistory from '../components/AudioHistory';
+import StudyArt from '../components/StudyArt';
 import { formatClock, useRecorder } from './useRecorder';
 import RecordingControls from './RecordingControls';
 import styles from '../index.module.less';
@@ -16,7 +16,7 @@ export default function SpeakingExercise({
   lesson: Lesson;
   task: SpeakingTask;
 }) {
-  const { data, addResult, setDraftActive } = useTraining();
+  const { addResult, setDraftActive } = useTraining();
   const recorder = useRecorder(task.seconds);
   const [assessment, setAssessment] = useState<'again' | 'ready'>('again');
   const [saving, setSaving] = useState(false);
@@ -24,12 +24,6 @@ export default function SpeakingExercise({
   const [saveError, setSaveError] = useState('');
   const [prepareUntil, setPrepareUntil] = useState(0);
   const [preparation, setPreparation] = useState(0);
-  const last = data.results.find(
-    (result) =>
-      result.lessonId === lesson.id &&
-      result.taskId === task.id &&
-      result.recordingId,
-  );
 
   useEffect(() => {
     if (!prepareUntil) return;
@@ -87,6 +81,7 @@ export default function SpeakingExercise({
 
   return (
     <section className={styles.speakingPaper}>
+      <StudyArt name="microphone" className={styles.speakingArt} />
       <div className={styles.exerciseMeta}>
         <span>
           {task.mode === 'shadow'
@@ -95,7 +90,7 @@ export default function SpeakingExercise({
               ? '复述'
               : '自由回答'}
         </span>
-        <span>建议 {task.seconds} 秒</span>
+        <span>{task.seconds} 秒</span>
       </div>
       <h2>{task.title}</h2>
       <p className={styles.speakingPrompt} lang={lesson.lang}>
@@ -112,7 +107,7 @@ export default function SpeakingExercise({
           <p>
             {preparation
               ? `准备时间 ${formatClock(preparation)}`
-              : `先准备 ${task.prepareSeconds} 秒，再开始回答。`}
+              : `准备 ${task.prepareSeconds} 秒`}
           </p>
           <button
             type="button"
@@ -145,7 +140,7 @@ export default function SpeakingExercise({
       )}
       {recorder.url && (
         <div className={styles.recordFeedback}>
-          <h3>回听一次，再决定。</h3>
+          <h3>回听与自评</h3>
           <audio controls src={recorder.url} aria-label="本次练习录音" />
           <div className={styles.selfAssessment}>
             <button
@@ -154,7 +149,7 @@ export default function SpeakingExercise({
               disabled={saved}
               onClick={() => setAssessment('again')}
             >
-              还需要练习
+              再练
             </button>
             <button
               type="button"
@@ -162,7 +157,7 @@ export default function SpeakingExercise({
               disabled={saved}
               onClick={() => setAssessment('ready')}
             >
-              能独立表达
+              熟悉
             </button>
           </div>
           <button
@@ -171,22 +166,16 @@ export default function SpeakingExercise({
             disabled={saved || saving}
             onClick={() => void save()}
           >
-            {saved ? '已保存练习' : saving ? '保存中…' : '保存练习'}
+            {saved ? '已保存' : saving ? '保存中…' : '保存'}
           </button>
           {saved && (
             <p role="status">
               {assessment === 'again'
-                ? '已加入复习，录音也已保存。'
-                : '练习已记录，刷新后仍可回听。'}
+                ? '已保存并加入复习。'
+                : '已保存，可随时回听。'}
             </p>
           )}
         </div>
-      )}
-      {last && !recorder.url && (
-        <details className={styles.historyDetails}>
-          <summary>回听上次练习</summary>
-          <AudioHistory id={last.recordingId!} />
-        </details>
       )}
     </section>
   );

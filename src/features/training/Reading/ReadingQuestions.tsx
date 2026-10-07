@@ -9,10 +9,12 @@ export default function ReadingQuestions({
   lesson,
   startedAt,
   onOpen,
+  onShowText,
 }: {
   lesson: Lesson;
   startedAt: number;
   onOpen: (selection: TrainingSelection) => void;
+  onShowText: () => void;
 }) {
   const { addResult } = useTraining();
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -38,7 +40,7 @@ export default function ReadingQuestions({
   return (
     <aside className={styles.questionPaper}>
       <div className={styles.questionHeading}>
-        <h2>{submitted ? '看看理解得怎样' : '读后，试着回答'}</h2>
+        <h2>{submitted ? '结果' : '理解'}</h2>
         <span>
           {submitted
             ? `${correct}/${lesson.questions.length}`
@@ -106,7 +108,10 @@ export default function ReadingQuestions({
                   {isCorrect ? '答对了' : `答案：${question.answer}`}
                 </strong>
                 <p>{question.explanation}</p>
-                <a href={`#paragraph-${question.evidence + 1}`}>
+                <a
+                  href={`#paragraph-${question.evidence + 1}`}
+                  onClick={onShowText}
+                >
                   看段落 {question.evidence + 1} 的依据
                 </a>
               </div>
@@ -118,8 +123,8 @@ export default function ReadingQuestions({
         <div className={styles.resultBlock}>
           <p>
             {correct === lesson.questions.length
-              ? '理解题全部答对，试着用自己的话说一遍。'
-              : '错题已加入复习，回到原文看看依据。'}
+              ? '全部答对，试试复述。'
+              : '错题已加入复习。'}
           </p>
           <button
             type="button"
@@ -132,7 +137,7 @@ export default function ReadingQuestions({
               })
             }
           >
-            继续口语表达
+            练口语
           </button>
         </div>
       ) : (
@@ -142,7 +147,7 @@ export default function ReadingQuestions({
           disabled={answered !== lesson.questions.length}
           onClick={submit}
         >
-          查看结果
+          确认
         </button>
       )}
     </aside>

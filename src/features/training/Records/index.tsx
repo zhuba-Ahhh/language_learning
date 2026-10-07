@@ -1,19 +1,30 @@
+import { useState } from 'react';
 import { LESSONS } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
+import TrainingIcon from '@/components/TrainingIcon';
 import AudioHistory from '../components/AudioHistory';
 import PageHeading from '../components/PageHeading';
-import Settings from './Settings';
 import LegacyHistory from './LegacyHistory';
 import KanaHistory from './KanaHistory';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
 
+const localDay = (date: Date) =>
+  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+
 export default function Records({
   onOpen,
+  onSettings,
 }: {
   onOpen: (selection: TrainingSelection) => void;
+  onSettings: () => void;
 }) {
-  const { data } = useTraining();
+  const { data, now } = useTraining();
+  const [month, setMonth] = useState(() => {
+    const date = new Date(now);
+    return new Date(date.getFullYear(), date.getMonth(), 1);
+  });
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const results = data.results.filter(
     (result) => result.lang === data.language,
   );
@@ -30,80 +41,156 @@ export default function Records({
           100,
       )
     : null;
-  const now = new Date();
-  const localDay = (date: Date) =>
-    `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   const activeDates = new Set(
     results.map((result) => localDay(new Date(result.completedAt))),
   );
-  const days = Array.from({ length: 7 }, (_, index) => {
-    const date = new Date(now);
-    date.setDate(date.getDate() - 6 + index);
-    return date;
-  });
+  const first = (month.getDay() + 6) % 7;
+  const count = new Date(
+    month.getFullYear(),
+    month.getMonth() + 1,
+    0,
+  ).getDate();
+  const cells = Array.from(
+    { length: Math.ceil((first + count) / 7) * 7 },
+    (_, index) =>
+      index >= first && index < first + count
+        ? new Date(month.getFullYear(), month.getMonth(), index - first + 1)
+        : null,
+  );
+  const visibleResults = selectedDate
+    ? results.filter(
+        (result) => localDay(new Date(result.completedAt)) === selectedDate,
+      )
+    : results;
+  const moveMonth = (offset: number) => {
+    setMonth(new Date(month.getFullYear(), month.getMonth() + offset, 1));
+    setSelectedDate(null);
+  };
+
   return (
     <div>
-      <PageHeading
-        title="每一次练习，都算数。"
-        description="看见真实的阅读结果，听见自己的变化。"
-      />
-      <div className={styles.metricGrid}>
-        <section>
-          <small>阅读正确率</small>
-          <strong>{accuracy === null ? '—' : `${accuracy}%`}</strong>
-          <span>
-            {reading.length} 次阅读 · {totalQuestions} 道题
-          </span>
-        </section>
-        <section>
-          <small>口语练习</small>
-          <strong>
-            {speaking.length}
-            <em>次</em>
-          </strong>
-          <span>每次录音分别保存</span>
-        </section>
-        <section>
-          <small>已记录的练习时间</small>
-          <strong>
-            {Math.round(
-              results.reduce((n, result) => n + result.durationMs, 0) / 60000,
-            )}
-            <em>分钟</em>
-          </strong>
-          <span>口语录音与阅读作答</span>
-        </section>
+      <div className={styles.headingRow}>
+        <PageHeading title="记录" />
+        <button type="button" className={styles.secondary} onClick={onSettings}>
+          <TrainingIcon name="settings" size={18} />
+          设置
+        </button>
       </div>
-      <section className={styles.weekSection}>
-        <div className={styles.sectionHeading}>
-          <h2>最近七天</h2>
-          <span>{data.language === 'en' ? '英语' : '日语'}</span>
+      <div className={styles.recordsOverview}>
+        <section className={styles.calendarPaper} aria-label="练习日历">
+          <div className={styles.calendarHeading}>
+            <button
+              type="button"
+              aria-label="上个月"
+              onClick={() => moveMonth(-1)}
+            >
+              ‹
+            </button>
+            <h2>
+              {month.getFullYear()} 年 {month.getMonth() + 1} 月
+            </h2>
+            <button
+              type="button"
+              aria-label="下个月"
+              onClick={() => moveMonth(1)}
+            >
+              ›
+            </button>
+          </div>
+          <div className={styles.calendarWeek}>
+            {['一', '二', '三', '四', '五', '六', '日'].map((day) => (
+              <span key={day}>{day}</span>
+            ))}
+          </div>
+          <div className={styles.calendarGrid}>
+            {cells.map((date, index) =>
+              date ? (
+                <button
+                  key={localDay(date)}
+                  type="button"
+                  aria-label={`${date.getMonth() + 1}月${date.getDate()}日${activeDates.has(localDay(date)) ? '，已练习' : ''}`}
+                  aria-pressed={selectedDate === localDay(date)}
+                  className={`${activeDates.has(localDay(date)) ? styles.calendarActive : ''} ${localDay(date) === localDay(new Date(now)) ? styles.calendarToday : ''}`}
+                  onClick={() =>
+                    setSelectedDate(
+                      selectedDate === localDay(date) ? null : localDay(date),
+                    )
+                  }
+                >
+                  {date.getDate()}
+                  {activeDates.has(localDay(date)) && <i />}
+                </button>
+              ) : (
+                <span key={index} />
+              ),
+            )}
+          </div>
+          <div className={styles.calendarLegend}>
+            <i />
+            已练习
+            {selectedDate && (
+              <button type="button" onClick={() => setSelectedDate(null)}>
+                显示全部
+              </button>
+            )}
+          </div>
+        </section>
+        <div className={styles.metricGrid}>
+          <section>
+            <TrainingIcon name="reading" />
+            <small>阅读正确率</small>
+            <strong>{accuracy === null ? '—' : `${accuracy}%`}</strong>
+            <span>
+              {reading.length} 次 · {totalQuestions} 道题
+            </span>
+          </section>
+          <section>
+            <TrainingIcon name="speaking" />
+            <small>口语练习</small>
+            <strong>
+              {speaking.length}
+              <em>次</em>
+            </strong>
+            <span>
+              {Math.round(
+                speaking.reduce((n, result) => n + result.durationMs, 0) /
+                  60000,
+              )}{' '}
+              分钟录音
+            </span>
+          </section>
+          <button
+            type="button"
+            className={styles.targetCard}
+            onClick={onSettings}
+          >
+            <small>当前目标</small>
+            <strong>{data.targets[data.language]}</strong>
+            <TrainingIcon name="arrow" size={20} />
+          </button>
         </div>
-        <div className={styles.weekStrip}>
-          {days.map((date) => (
-            <div key={date.toISOString()}>
-              <small>
-                {['日', '一', '二', '三', '四', '五', '六'][date.getDay()]}
-              </small>
-              <span
-                className={
-                  activeDates.has(localDay(date)) ? styles.dayActive : ''
-                }
-              >
-                {date.getDate()}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
       <section className={styles.recordList}>
         <div className={styles.sectionHeading}>
-          <h2>练习记录</h2>
-          <span>{results.length} 次</span>
+          <h2>
+            {selectedDate
+              ? `${selectedDate.split('-').slice(1).join('/')} 的练习`
+              : '练习记录'}
+          </h2>
+          <span>
+            {visibleResults.length} 次 ·{' '}
+            {Math.round(
+              visibleResults.reduce((n, result) => n + result.durationMs, 0) /
+                60000,
+            )}{' '}
+            分钟
+          </span>
         </div>
-        {!results.length && (
+        {!visibleResults.length && (
           <div className={styles.empty}>
-            <p>完成阅读题，或保存一段录音，第一条记录就会出现在这里。</p>
+            <p>
+              {selectedDate ? '这一天还没有练习记录。' : '还没有练习记录。'}
+            </p>
             <button
               type="button"
               className={styles.primary}
@@ -116,11 +203,11 @@ export default function Records({
                 })
               }
             >
-              开始第一课
+              开始练习
             </button>
           </div>
         )}
-        {results.map((result) => {
+        {visibleResults.map((result) => {
           const lesson = LESSONS.find((item) => item.id === result.lessonId)!;
           const task = lesson.speaking.find(
             (item) => item.id === result.taskId,
@@ -147,8 +234,8 @@ export default function Records({
                   {result.skill === 'reading'
                     ? `${result.correct}/${result.total}`
                     : result.assessment === 'ready'
-                      ? '能独立表达'
-                      : '继续练习'}
+                      ? '已熟悉'
+                      : '再练'}
                 </span>
               </summary>
               <div className={styles.recordBody}>
@@ -178,19 +265,17 @@ export default function Records({
                     })
                   }
                 >
-                  再练一次
+                  重练
                 </button>
               </div>
             </details>
           );
         })}
       </section>
-      <Settings />
+
       <KanaHistory />
       <LegacyHistory />
-      <p className={styles.libraryNote}>
-        这里展示练习表现与自评，不换算正式考试成绩。
-      </p>
+      <p className={styles.libraryNote}>练习表现与自评，不换算考试成绩。</p>
     </div>
   );
 }

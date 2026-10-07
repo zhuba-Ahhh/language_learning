@@ -10,6 +10,7 @@ import Records from './Records';
 import type { TrainingSelection, WorkspaceTab } from './types';
 
 export type { TrainingSelection, WorkspaceTab } from './types';
+export { default as TrainingSettings } from './Records/Settings';
 
 export default function TrainingContent({
   tab,
@@ -18,6 +19,7 @@ export default function TrainingContent({
   onOpen,
   onNavigate,
   onBack,
+  onSettings,
 }: {
   tab: WorkspaceTab;
   selection: TrainingSelection | null;
@@ -25,10 +27,19 @@ export default function TrainingContent({
   onOpen: (selection: TrainingSelection) => void;
   onNavigate: (tab: WorkspaceTab) => void;
   onBack: () => void;
+  onSettings: () => void;
 }) {
   const [kanaOpen, setKanaOpen] = useState(false);
   if (tab === 'today' && kanaOpen && !selection)
-    return <KanaPractice backLabel="今日" onBack={() => setKanaOpen(false)} />;
+    return (
+      <KanaPractice
+        backLabel="今日"
+        onBack={() => {
+          setKanaOpen(false);
+          window.scrollTo({ top: 0 });
+        }}
+      />
+    );
   if (selection && lesson) {
     return selection.skill === 'reading' ? (
       <Reading
@@ -51,11 +62,14 @@ export default function TrainingContent({
       <Today
         onOpen={onOpen}
         onNavigate={onNavigate}
-        onKana={() => setKanaOpen(true)}
+        onKana={() => {
+          setKanaOpen(true);
+          window.scrollTo({ top: 0 });
+        }}
       />
     );
   if (tab === 'reading' || tab === 'speaking')
     return <Library key={tab} skill={tab} onOpen={onOpen} />;
   if (tab === 'review') return <Review onOpen={onOpen} />;
-  return <Records onOpen={onOpen} />;
+  return <Records onOpen={onOpen} onSettings={onSettings} />;
 }

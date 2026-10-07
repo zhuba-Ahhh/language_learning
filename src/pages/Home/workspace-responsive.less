@@ -1,131 +1,104 @@
-@media (min-width: 1550px) {
-  .content {
-    padding-top: 50px;
+@media (max-width: 1050px) {
+  .appHeader {
+    gap: 12px;
+    padding-inline: 24px;
+  }
+  .navigation {
+    gap: 2px;
+    button {
+      min-width: 60px;
+      padding-inline: 12px;
+    }
+  }
+  .brand strong {
+    font-size: 21px;
+  }
+  .headerActions {
+    gap: 8px;
   }
 }
-@media (max-width: 1100px) {
-  .sidebar {
-    width: 194px;
-    padding-inline: 14px;
-  }
-  .mainArea {
-    margin-left: 194px;
-  }
-  .content {
-    padding: 30px 26px 16px;
-  }
-  .topbar {
-    padding-inline: 26px;
+@media (max-width: 760px) {
+  .appHeader {
+    min-height: 68px;
+    padding: 12px 18px;
+    gap: 8px;
   }
   .brand {
-    gap: 6px;
+    gap: 7px;
+    img {
+      width: 29px;
+      height: 29px;
+    }
     strong {
       font-size: 19px;
     }
   }
-}
-@media (max-width: 760px) {
-  .sidebar {
-    position: sticky;
-    top: 0;
-    inset: auto;
-    width: 100%;
-    height: 73px;
-    padding: 12px 18px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-right: 0;
-    border-bottom: 1px solid #e7ebf3;
-  }
-  .brand {
-    margin: 0;
-    > span {
-      font-size: 25px;
-    }
-    strong {
-      font-size: 18px;
-    }
+  .navigation {
+    display: none;
   }
   .languageSwitch {
-    width: 120px;
     padding: 3px;
     button {
-      padding: 7px 4px;
+      min-width: 45px;
+      padding: 6px 8px;
       font-size: 12px;
-      small {
-        display: none;
-      }
     }
   }
-  .navigation,
-  .sideNote,
-  .sideSettings {
-    display: none;
+  .settingsButton {
+    width: 32px;
+    height: 36px;
   }
-  .mainArea {
-    margin-left: 0;
-    min-height: calc(100vh - 73px);
-  }
-  .topbar {
-    height: 48px;
-    padding: 0 20px;
-    border-bottom: 0;
-    background: transparent;
-    > div {
-      gap: 9px;
-      > span {
-        font-size: 12px;
-      }
-      small {
-        padding-left: 9px;
-        font-size: 10px;
-      }
-    }
-  }
-  .localLabel {
-    display: none;
+  .headerActions {
+    gap: 3px;
   }
   .content {
-    padding: 16px 20px 20px;
-  }
-  .footer {
-    padding: 14px 20px 95px;
-    font-size: 10px;
+    padding: 24px 18px calc(102px + env(safe-area-inset-bottom, 0px));
   }
   .mobileNav {
     position: fixed;
     inset: auto 0 0;
+    z-index: 40;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background: #ffffffed;
+    background: #fcfdf9f5;
     backdrop-filter: blur(12px);
-    padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px));
-    border-top: 1px solid #e7ebf3;
-    z-index: 30;
+    border-top: 1px solid var(--ui-line);
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
     button {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 5px;
-      padding: 6px 0;
-      color: #64748b;
-      font-size: 10px;
-      border-radius: 8px;
+      padding: 7px 0;
+      border-radius: 14px;
+      color: var(--ui-muted);
+      font-size: 11px;
       &[aria-current] {
-        background: #eef2fd;
-        color: #4562d5;
+        background: var(--ui-sage);
+        color: var(--ui-olive);
+        font-weight: 600;
       }
       i {
         position: absolute;
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background: #4562d5;
+        background: var(--ui-olive);
         top: 5px;
-        left: calc(50% + 13px);
+        left: calc(50% + 14px);
       }
     }
+  }
+}
+@media (max-width: 360px) {
+  .content {
+    padding-inline: 12px;
+  }
+  .appHeader {
+    padding-inline: 12px;
+  }
+  .brand strong {
+    font-size: 17px;
   }
 }

@@ -20,6 +20,26 @@ export default function ReviewContent({
       {item.kind === 'word' &&
         (() => {
           const word = lesson.words.find((word) => word.id === item.contentId)!;
+          const terms = [
+            word.term,
+            ...(lesson.marks ?? [])
+              .filter((mark) => mark.wordId === word.id)
+              .map((mark) => mark.text),
+          ];
+          const paragraph = lesson.paragraphs.find((paragraph) =>
+            terms.some((term) =>
+              paragraph.text
+                .toLocaleLowerCase()
+                .includes(term.toLocaleLowerCase()),
+            ),
+          );
+          const context = paragraph?.text
+            .split(/(?<=[.!?。！？])\s*/u)
+            .find((sentence) =>
+              terms.some((term) =>
+                sentence.toLocaleLowerCase().includes(term.toLocaleLowerCase()),
+              ),
+            );
           return (
             <>
               <h2 lang={lesson.lang}>{word.term}</h2>
@@ -28,6 +48,9 @@ export default function ReviewContent({
                 <div className={styles.reviewAnswer}>
                   {word.reading && <small>{word.reading}</small>}
                   <p>{word.meaning}</p>
+                  {context && (
+                    <blockquote lang={lesson.lang}>{context}</blockquote>
+                  )}
                 </div>
               )}
             </>
@@ -72,7 +95,7 @@ export default function ReviewContent({
               })
             }
           >
-            打开录音练习
+            去练口语
           </button>
         </>
       )}

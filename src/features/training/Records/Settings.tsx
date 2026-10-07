@@ -5,8 +5,10 @@ import {
   readTrainingBackup,
 } from '@/study/trainingBackup';
 import styles from '../index.module.less';
+import PageHeading from '../components/PageHeading';
+import TrainingIcon from '@/components/TrainingIcon';
 
-export default function Settings() {
+export default function Settings({ onBack }: { onBack: () => void }) {
   const { data, setTarget, setBudget, restore } = useTraining();
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState('');
@@ -55,73 +57,99 @@ export default function Settings() {
     }
   };
   return (
-    <details className={styles.settings}>
-      <summary>目标与数据</summary>
-      <div className={styles.settingsFields}>
-        <label>
-          英语目标
-          <select
-            value={data.targets.en}
-            onChange={(event) => setTarget('en', event.target.value)}
+    <div className={styles.settingsPage}>
+      <button type="button" className={styles.back} onClick={onBack}>
+        ‹ 记录
+      </button>
+      <PageHeading title="设置" />
+      <section className={styles.settings}>
+        <div className={styles.sectionHeading}>
+          <h2>学习目标</h2>
+          <span>英日分别保存</span>
+        </div>
+        <div className={styles.settingsFields}>
+          <label>
+            英语目标
+            <select
+              value={data.targets.en}
+              onChange={(event) => setTarget('en', event.target.value)}
+            >
+              <option>IELTS 6.5</option>
+              <option>IELTS 7.0</option>
+              <option>基础交流</option>
+              <option>技术阅读与面试</option>
+            </select>
+          </label>
+          <label>
+            日语目标
+            <select
+              value={data.targets.ja}
+              onChange={(event) => setTarget('ja', event.target.value)}
+            >
+              <option>入门 → N5 → N3/N2</option>
+              <option>日本生活交流</option>
+              <option>日语读解与 IT 工作</option>
+            </select>
+          </label>
+        </div>
+        <p>当前材料以入门与专项练习为主，进阶内容持续补充。</p>
+      </section>
+      <section className={styles.settings}>
+        <div className={styles.sectionHeading}>
+          <h2>每日练习</h2>
+        </div>
+        <div className={styles.budgetOptions}>
+          {[15, 30, 45].map((minutes) => (
+            <button
+              key={minutes}
+              type="button"
+              aria-pressed={data.dailyMinutes === minutes}
+              onClick={() => setBudget(minutes)}
+            >
+              {minutes}
+              <small>分钟</small>
+            </button>
+          ))}
+        </div>
+      </section>
+      <section className={styles.settings}>
+        <div className={styles.sectionHeading}>
+          <h2>本地数据</h2>
+          <span>备份含录音</span>
+        </div>
+        <div className={styles.settingsActions}>
+          <button
+            type="button"
+            className={styles.secondary}
+            disabled={busy}
+            onClick={() => void exportData()}
           >
-            <option>IELTS 6.5</option>
-            <option>IELTS 7.0</option>
-            <option>基础交流</option>
-            <option>技术阅读与面试</option>
-          </select>
-        </label>
-        <label>
-          日语路线
-          <select
-            value={data.targets.ja}
-            onChange={(event) => setTarget('ja', event.target.value)}
+            <TrainingIcon name="download" size={18} />
+            {busy ? '处理中…' : '导出备份'}
+          </button>
+          <button
+            type="button"
+            disabled={busy}
+            className={styles.secondary}
+            onClick={() => input.current?.click()}
           >
-            <option>入门 → N5 → N3/N2</option>
-            <option>日本生活交流</option>
-            <option>日语读解与 IT 工作</option>
-          </select>
-        </label>
-        <label>
-          每日预算
-          <select
-            value={data.dailyMinutes}
-            onChange={(event) => setBudget(Number(event.target.value))}
-          >
-            <option value={15}>15 分钟</option>
-            <option value={30}>30 分钟</option>
-            <option value={45}>45 分钟</option>
-          </select>
-        </label>
-      </div>
-      <p>英日路线分别保存。当前提供入门和专项材料，后续阶段随内容增加开放。</p>
-      <div className={styles.settingsActions}>
-        <button
-          type="button"
-          className={styles.secondary}
-          disabled={busy}
-          onClick={() => void exportData()}
-        >
-          {busy ? '处理中…' : '导出备份（含录音）'}
-        </button>
-        <button
-          type="button"
-          disabled={busy}
-          className={styles.secondary}
-          onClick={() => input.current?.click()}
-        >
-          恢复备份
-        </button>
-        <input
-          ref={input}
-          type="file"
-          hidden
-          accept="application/json,.json"
-          onChange={(event) => void importData(event)}
-        />
-      </div>
-      <p role="status">
-        {notice || '记录保存在当前浏览器；换设备时可手动恢复备份。'}
+            <TrainingIcon name="upload" size={18} />
+            恢复备份
+          </button>
+          <input
+            ref={input}
+            type="file"
+            hidden
+            accept="application/json,.json"
+            onChange={(event) => void importData(event)}
+          />
+        </div>
+        <p role="status">{notice || '保存在此设备，换设备请恢复备份。'}</p>
+      </section>
+      <p className={styles.savedStatus}>
+        <TrainingIcon name="check" size={16} />
+        设置自动保存
       </p>
-    </details>
+    </div>
   );
 }

@@ -1,0 +1,22 @@
+{
+  "generator": "built-in imagegen",
+  "transparent_background": true,
+  "assets": [
+    {
+      "name": "book",
+      "prompt": "Use case: stylized-concept. Production UI illustration asset for an adult language study app. One isolated object cluster centered in a square image with ample transparent margins, genuinely transparent background with native alpha. Premium matte soft3D sculptural illustration, warm white paper, light sage green #DDE8D2, olive #3F583B, apricot #F6D6BE, very small straw accents. Gentle daylight from upper left, refined delicate ambient shadow within the object, clean silhouette and fine material detail. No blue, no background plane, no desk, no UI, no frames, NO writing, letters, numbers, captions or watermark. Image contains only the requested study objects. An open cream notebook with thin ruled blank pages, olive cloth cover and a long curved sage bookmark ribbon; beautiful cream and olive over-ear headphones resting along the right edge of the open notebook. Front three-quarter view, entire object visible, physically believable premium materials."
+    },
+    {
+      "name": "microphone",
+      "prompt": "Use case: stylized-concept. Production UI illustration asset for an adult language study app. One isolated object cluster centered in a square image with ample transparent margins, genuinely transparent background with native alpha. Premium matte soft3D sculptural illustration, warm white paper, light sage green #DDE8D2, olive #3F583B, apricot #F6D6BE, very small straw accents. Gentle daylight from upper left, refined delicate ambient shadow within the object, clean silhouette and fine material detail. No blue, no background plane, no desk, no UI, no frames, NO writing, letters, numbers, captions or watermark. Image contains only the requested study objects. One cream mesh desktop microphone on a short olive stand with a small rounded base. Behind the microphone just three translucent apricot waveform bars as sculptural shapes, a small cream headphone earcup at the foot. Entire cluster compact and visible."
+    },
+    {
+      "name": "flashcards",
+      "prompt": "Use case: stylized-concept. Production UI illustration asset for an adult language study app. One isolated object cluster centered in a square image with ample transparent margins, genuinely transparent background with native alpha. Premium matte soft3D sculptural illustration, warm white paper, light sage green #DDE8D2, olive #3F583B, apricot #F6D6BE, very small straw accents. Gentle daylight from upper left, refined delicate ambient shadow within the object, clean silhouette and fine material detail. No blue, no background plane, no desk, no UI, no frames, NO writing, letters, numbers, captions or watermark. Image contains only the requested study objects. Three overlapping blank cream flashcards with sage and apricot backing cards, rounded corners, a small brass-colored ring at top-left, a thin sage bookmark tab. Tiny embossed two-leaf mark on the front card with no words. Front three-quarter view."
+    },
+    {
+      "name": "technology",
+      "prompt": "Use case: stylized-concept. Production UI illustration asset for an adult language study app. One isolated object cluster centered in a square image with ample transparent margins, genuinely transparent background with native alpha. Premium matte soft3D sculptural illustration, warm white paper, light sage green #DDE8D2, olive #3F583B, apricot #F6D6BE, very small straw accents. Gentle daylight from upper left, refined delicate ambient shadow within the object, clean silhouette and fine material detail. No blue, no background plane, no desk, no UI, no frames, NO writing, letters, numbers, captions or watermark. Image contains only the requested study objects. An elegant cream laptop, opened with matte olive screen containing ONLY a simple cream angle-bracket code symbol < >, beside a small stack of two blank cream and sage books with a bookmark. Compact front three-quarter view, entire laptop and books visible, no keyboard letters or text."
+    }
+  ]
+}

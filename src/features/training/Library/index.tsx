@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { LESSONS, TRACK_LABELS, type Track } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
 import TrainingIcon from '@/components/TrainingIcon';
+import StudyArt from '../components/StudyArt';
 import PageHeading from '../components/PageHeading';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
@@ -27,16 +28,7 @@ export default function Library({
   );
   return (
     <div>
-      <PageHeading
-        title={
-          skill === 'speaking' ? '让语言，真正说出来。' : '读得懂，也讲得清。'
-        }
-        description={
-          skill === 'speaking'
-            ? '先跟读，再用自己的话回答。'
-            : '从适合你的短文开始，读后再复述。'
-        }
-      />
+      <PageHeading title={skill === 'speaking' ? '口语' : '阅读'} />
       <div className={styles.libraryToolbar}>
         <div className={styles.filters} aria-label="内容方向">
           {(['all', ...tracks] as const).map((item) => (
@@ -54,15 +46,23 @@ export default function Library({
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="找一个主题"
+          placeholder="搜材料"
           aria-label="搜索训练单元"
         />
       </div>
       <div className={styles.libraryGrid}>
-        {filtered.map((lesson, index) => {
+        {filtered.map((lesson) => {
           const attempts = data.results.filter(
             (result) => result.lessonId === lesson.id && result.skill === skill,
           );
+          const art =
+            lesson.track === 'tech'
+              ? 'technology'
+              : skill === 'speaking'
+                ? 'microphone'
+                : lesson.track === 'ielts' || lesson.track === 'jlpt'
+                  ? 'flashcards'
+                  : 'book';
           return (
             <button
               type="button"
@@ -70,40 +70,33 @@ export default function Library({
               className={styles.lessonTile}
               onClick={() => onOpen({ lessonId: lesson.id, skill })}
             >
-              <div className={styles.tileTop}>
-                <span className={`${styles.tileIcon} ${styles[lesson.track]}`}>
-                  <TrainingIcon name={skill} size={27} />
-                </span>
-                <span>{lesson.stage}</span>
+              <div className={`${styles.tileCover} ${styles[lesson.track]}`}>
+                <StudyArt name={art} className={styles.coverArt} />
               </div>
-              <h2>{lesson.title}</h2>
-              <p>{lesson.subtitle}</p>
-              <div className={styles.tileMeta}>
-                <span>
-                  {skill === 'reading'
-                    ? `${lesson.questions.length} 题`
-                    : `${lesson.speaking.length} 个训练`}
-                  <span className={styles.metaDivider}>·</span>
-                  {lesson.minutes} 分钟
-                </span>
-                <span>
-                  {attempts.length
-                    ? `已练 ${attempts.length} 次`
-                    : index === 0
-                      ? '从这里开始'
-                      : '开始'}
-                </span>
+              <div className={styles.tileBody}>
+                <h2>{lesson.title}</h2>
+                <div className={styles.tileMeta}>
+                  <span>{lesson.stage}</span>
+                  <span>
+                    <TrainingIcon name="clock" size={15} />
+                    {lesson.minutes} 分钟
+                  </span>
+                  {attempts.length > 0 && (
+                    <small>已练 {attempts.length} 次</small>
+                  )}
+                  <i className={styles.entryArrow}>
+                    <TrainingIcon name="arrow" size={19} />
+                  </i>
+                </div>
               </div>
             </button>
           );
         })}
       </div>
-      {!filtered.length && (
-        <p className={styles.empty}>没有匹配的主题，试试其他关键词。</p>
-      )}
-      <p className={styles.libraryNote}>
-        所有正文、题目与解析均内置。考试内容为原创专项练习。
-      </p>
+      {!filtered.length && <p className={styles.empty}>没有匹配的材料。</p>}
+      {filtered.some(
+        (lesson) => lesson.track === 'ielts' || lesson.track === 'jlpt',
+      ) && <p className={styles.libraryNote}>考试材料为原创专项练习。</p>}
     </div>
   );
 }

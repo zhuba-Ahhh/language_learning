@@ -4,6 +4,7 @@ import { findTextRanges } from '@/lib/textTokens';
 import { audioUrlFor } from '@/lib/speech';
 import { useTraining } from '@/study/trainingContext';
 import SpeakButton from '@/components/SpeakButton';
+import TrainingIcon from '@/components/TrainingIcon';
 import styles from './index.module.less';
 
 export default function WordActions({
@@ -52,18 +53,18 @@ export default function WordActions({
           aria-label="关闭词语操作"
           onClick={onClose}
         >
-          ×
+          <TrainingIcon name="close" size={18} />
         </button>
       </div>
       <div className={styles.actionButtons}>
         {directUrl ? (
-            <SpeakButton
-              key={directUrl}
+          <SpeakButton
+            key={directUrl}
             text={word?.term ?? token.text}
             lang={lesson.lang}
             size={30}
             tone="muted"
-            label="读这个词"
+            label="发音"
           />
         ) : (
           <button
@@ -71,7 +72,7 @@ export default function WordActions({
             disabled={!timing}
             onClick={() => timing && onPlay(timing.start, timing.end)}
           >
-            读这个词
+            发音
           </button>
         )}
         <button
@@ -79,14 +80,14 @@ export default function WordActions({
           disabled={!timing}
           onClick={() => timing && onPlay(timing.start)}
         >
-          从这里播放
+          从这里播
         </button>
         <button
           type="button"
           disabled={!timing}
           onClick={() => timing && onPlay(0, timing.end)}
         >
-          播放到这里
+          播到这里
         </button>
         {word && (
           <button
@@ -94,7 +95,8 @@ export default function WordActions({
             disabled={!!saved}
             onClick={() => addWord(lesson, word)}
           >
-            {saved ? '已加入复习' : '加入复习'}
+            <TrainingIcon name="bookmark" size={15} />
+            {saved ? '已收藏' : '复习'}
           </button>
         )}
       </div>

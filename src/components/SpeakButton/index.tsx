@@ -3,6 +3,7 @@ import styles from './index.module.less';
 import { useEffect, useRef, useState } from 'react';
 import { audioUrlFor, playAudio, stopAudio } from '@/lib/speech';
 import type { PlaybackState } from '@/lib/speech';
+import TrainingIcon from '@/components/TrainingIcon';
 
 interface Props {
   text: string;
@@ -66,24 +67,11 @@ export default function SpeakButton({
         width: textLabel ? 'auto' : size,
         height: size,
         ...(textLabel
-          ? { padding: '0 9px', gap: 5, borderRadius: 5, fontSize: 11 }
+          ? { padding: '0 10px', gap: 5, borderRadius: 9, fontSize: 12 }
           : {}),
       }}
     >
-      <svg
-        width={size * 0.5}
-        height={size * 0.5}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor" stroke="none" />
-        <path d="M15.5 8.5a5 5 0 0 1 0 7" />
-        <path d="M18.5 5.5a9 9 0 0 1 0 13" />
-      </svg>
+      <TrainingIcon name="speaker" size={size * 0.5} />
       {textLabel && <span>{textLabel}</span>}
     </button>
   );

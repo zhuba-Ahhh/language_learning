@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Lesson } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
+import { stopSpeak } from '@/lib/speech';
 import ReadingQuestions from './ReadingQuestions';
 import InteractiveReader from '../components/InteractiveReader';
 import type { TrainingSelection } from '../types';
@@ -19,6 +20,9 @@ export default function Reading({
   const [translation, setTranslation] = useState(false);
   const [ruby, setRuby] = useState(lesson.lang === 'ja');
   const [startedAt] = useState(Date.now);
+  const [activeParagraph, setActiveParagraph] = useState(0);
+  const [playerTarget, setPlayerTarget] = useState<HTMLDivElement | null>(null);
+  const [panel, setPanel] = useState<'text' | 'questions'>('text');
 
   return (
     <div>
@@ -32,7 +36,28 @@ export default function Reading({
         </div>
         <span>{lesson.minutes} 分钟</span>
       </div>
-      <div className={styles.readingLayout}>
+      <div className={styles.readingTabs}>
+        <button
+          type="button"
+          aria-pressed={panel === 'text'}
+          onClick={() => setPanel('text')}
+        >
+          正文
+        </button>
+        <button
+          type="button"
+          aria-pressed={panel === 'questions'}
+          onClick={() => {
+            stopSpeak();
+            setPanel('questions');
+          }}
+        >
+          理解
+        </button>
+      </div>
+      <div
+        className={`${styles.readingLayout} ${panel === 'text' ? styles.readingShowText : styles.readingShowQuestions}`}
+      >
         <article className={styles.readingPaper}>
           <div className={styles.readingTools}>
             <span>正文</span>
@@ -55,7 +80,6 @@ export default function Reading({
               </button>
             </div>
           </div>
-          <p className={styles.readingHint}>点词听读 · 实线词汇 · 虚线句式</p>
           <h2 lang={lesson.lang}>{lesson.subtitle}</h2>
           {lesson.paragraphs.map((paragraph, index) => (
             <section
@@ -71,6 +95,12 @@ export default function Reading({
                 lesson={lesson}
                 ruby={ruby ? paragraph.ruby : undefined}
                 label={`段落 ${index + 1}`}
+                active={activeParagraph === index}
+                controlsTarget={playerTarget}
+                onActivate={() => {
+                  if (activeParagraph !== index) stopSpeak();
+                  setActiveParagraph(index);
+                }}
               />
               {translation && (
                 <p className={styles.translation}>{paragraph.translation}</p>
@@ -78,7 +108,7 @@ export default function Reading({
             </section>
           ))}
           <details className={styles.pattern}>
-            <summary>一句话，看懂句型</summary>
+            <summary>句型</summary>
             <strong lang={lesson.lang}>{lesson.pattern.form}</strong>
             <p>{lesson.pattern.meaning}</p>
             <InteractiveReader
@@ -87,8 +117,8 @@ export default function Reading({
               label="句型例句"
             />
           </details>
-          <div className={styles.wordSection}>
-            <h3>带走几个词</h3>
+          <details className={styles.wordSection}>
+            <summary>词汇 · {lesson.words.length}</summary>
             <div className={styles.wordChips}>
               {lesson.words.map((word) => {
                 const saved = data.savedWords.some(
@@ -108,13 +138,18 @@ export default function Reading({
                 );
               })}
             </div>
-          </div>
+          </details>
           <small className={styles.source}>{lesson.source}</small>
+          <div className={styles.readerDock}>
+            <small>段落 {activeParagraph + 1}</small>
+            <div ref={setPlayerTarget} />
+          </div>
         </article>
         <ReadingQuestions
           lesson={lesson}
           startedAt={startedAt}
           onOpen={onOpen}
+          onShowText={() => setPanel('text')}
         />
       </div>
     </div>

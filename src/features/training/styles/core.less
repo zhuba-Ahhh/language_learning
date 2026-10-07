@@ -4,16 +4,21 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 43px;
-  padding: 11px 23px;
-  border-radius: 9px;
-  font-size: 13px;
+  min-height: 44px;
+  padding: 11px 24px;
+  border-radius: 14px;
+  font-size: 14px;
   font-weight: 600;
-  transition: background 0.15s;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+  background: var(--ui-olive);
   color: #fff;
-  background: #4562d5;
   &:hover {
-    background: #354fbe;
+    background: #30472d;
+  }
+  &:active {
+    transform: translateY(1px);
   }
   &:disabled {
     opacity: 0.45;
@@ -21,131 +26,158 @@
   }
 }
 .secondary {
-  background: #fff;
-  color: #536581;
-  border: 1px solid #dce2ee;
+  background: var(--ui-paper);
+  color: var(--ui-olive);
+  border: 1px solid var(--ui-line);
   &:hover {
-    background: #f3f6fb;
+    background: #edf1e5;
   }
 }
 .pageHeading {
-  margin: 4px 0 29px;
+  margin: 0 0 26px;
   h1 {
-    font-size: 29px;
-    line-height: 1.4;
+    font-size: 32px;
+    line-height: 1.3;
     letter-spacing: -1px;
-    font-weight: 650;
+    font-weight: 700;
   }
   p {
     margin-top: 10px;
-    color: #64748b;
+    color: var(--ui-muted);
     font-size: 13px;
   }
+}
+.headingRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
 }
 .sectionHeading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
   h2 {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 650;
   }
   button,
   span {
-    font-size: 11px;
-    color: #64748b;
+    font-size: 12px;
+    color: var(--ui-muted);
   }
 }
 .filters {
   display: flex;
-  gap: 6px;
+  gap: 5px;
   flex-wrap: wrap;
   button {
-    padding: 7px 13px;
-    border-radius: 7px;
-    font-size: 12px;
-    color: #64748b;
+    min-height: 38px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--ui-muted);
+    &:hover {
+      background: #edf0e7;
+    }
     &[aria-pressed='true'] {
-      background: #e9eefa;
-      color: #4562d5;
+      background: var(--ui-sage);
+      color: var(--ui-olive);
+      font-weight: 600;
+    }
+    &:disabled {
+      opacity: 0.55;
     }
   }
 }
 .empty {
-  padding: 35px 15px;
+  padding: 36px 18px;
   text-align: center;
-  color: #64748b;
-  font-size: 13px;
+  color: var(--ui-muted);
+  font-size: 14px;
   line-height: 1.9;
   .primary {
-    margin-top: 17px;
+    margin-top: 18px;
   }
 }
 .back {
-  color: #64748b;
-  font-size: 12px;
-  margin: 0 0 22px;
+  color: var(--ui-muted);
+  font-size: 13px;
+  margin: 0 0 20px;
+  padding: 5px 0;
 }
 .trainingHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  gap: 18px;
+  margin-bottom: 26px;
   h1 {
-    font-size: 28px;
-    font-weight: 650;
+    font-size: 30px;
+    font-weight: 700;
     margin-top: 5px;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.7px;
+    line-height: 1.4;
   }
   p,
   > span {
-    font-size: 11px;
-    color: #64748b;
+    font-size: 12px;
+    color: var(--ui-muted);
+  }
+  > span {
+    flex-shrink: 0;
   }
 }
 .exerciseMeta {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  color: #64748b;
+  font-size: 12px;
+  color: var(--ui-muted);
   gap: 10px;
 }
 .libraryNote {
-  font-size: 11px;
-  color: #64748b;
+  font-size: 12px;
+  color: var(--ui-muted);
   line-height: 1.8;
-  margin-top: 24px;
+  margin-top: 22px;
 }
 .error {
-  font-size: 12px;
-  color: #aa4f5b;
+  font-size: 13px;
+  color: #a34235;
   margin-top: 15px;
   line-height: 1.8;
 }
 .pattern {
-  border: 1px solid #e7ebf2;
-  border-radius: 9px;
-  padding: 14px 16px;
-  margin-top: 25px;
-  font-size: 12px;
-  color: #64748b;
+  border: 1px solid var(--ui-line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--ui-muted);
   summary {
     cursor: pointer;
     font-weight: 600;
   }
   strong {
     display: block;
-    font-size: 15px;
-    color: #435779;
+    font-size: 17px;
+    color: var(--ui-ink);
     margin-top: 15px;
   }
   p {
     line-height: 1.9;
-    margin-top: 11px;
-  }
-  button {
     margin-top: 10px;
   }
+}
+.entryArrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #ffffffb8;
+  color: var(--ui-olive);
+  flex-shrink: 0;
 }

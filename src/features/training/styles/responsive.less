@@ -1,78 +1,436 @@
-@media (max-width: 1150px) {
-  .libraryGrid {
-    grid-template-columns: 1fr 1fr;
-  }
+@media (max-width: 1000px) {
   .readingLayout {
-    grid-template-columns: minmax(0, 1.3fr) minmax(270px, 1fr);
-    gap: 15px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(285px, 1fr);
+    gap: 18px;
   }
   .readingPaper {
     padding: 22px;
   }
-  .questionPaper {
-    padding: 18px;
+  .recordsOverview {
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
   }
-  .speakingLayout {
-    grid-template-columns: 210px minmax(0, 1fr);
-    gap: 20px;
-  }
-}
-@media (max-width: 950px) {
-  .todayGrid {
-    grid-template-columns: 1.4fr 1fr;
-    gap: 16px;
-  }
-  .mainLesson {
-    padding: 24px;
+  .heroArt {
+    width: 235px;
+    right: -5px;
   }
   .heroText h2 {
     font-size: 25px;
   }
-  .sheetMark {
-    font-size: 115px;
-    bottom: 75px;
-    right: 15px;
-  }
-  .reviewSummary,
-  .pathSummary {
-    padding: 20px;
-  }
-  .readingLayout {
-    grid-template-columns: 1fr;
-  }
   .speakingLayout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
   }
-  .speakingGuide {
-    padding: 0;
-    > h2,
-    > p,
-    .guideNote {
-      display: none;
+}
+@media (max-width: 760px) {
+  .pageHeading {
+    margin-bottom: 22px;
+    h1 {
+      font-size: 27px;
     }
   }
-  .speakingTasks {
+  .todayTop {
+    margin-bottom: 22px;
+    h1 {
+      font-size: 29px;
+    }
+    time {
+      font-size: 12px;
+    }
+  }
+  .todayGrid {
+    grid-template-columns: minmax(0, 1fr) 115px;
+    gap: 12px;
+  }
+  .mainLesson {
+    min-height: 275px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+  .lessonKicker {
+    font-size: 10px;
+  }
+  .heroArt {
+    width: 158px;
+    max-width: none;
+    height: 140px;
+    top: 31px;
+    right: -6px;
+    opacity: 0.9;
+  }
+  .heroText {
+    max-width: 100%;
+    margin-top: 112px;
+    margin-bottom: 16px;
+    h2 {
+      font-size: 20px;
+    }
+    small {
+      font-size: 11px;
+      margin-top: 9px;
+    }
+  }
+  .heroBottom .primary {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    min-height: 40px;
+    padding: 9px;
+    font-size: 13px;
+  }
+  .heroBottom {
+    gap: 7px;
+  }
+  .lastLesson {
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .reviewSummary {
+    padding: 15px 12px;
+    border-radius: 22px;
+    align-items: center;
+    > div {
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+    }
+    h2 {
+      font-size: 12px;
+    }
+    > button {
+      font-size: 12px;
+      padding: 8px;
+      min-height: 40px;
+      margin-top: 16px;
+    }
+  }
+  .reviewArt {
+    width: 104px;
+    height: 116px;
+    left: calc(50% - 52px);
+    top: 19px;
+  }
+  .reviewCount {
+    font-size: 33px;
+  }
+  .quickActions {
+    gap: 12px;
+    margin-top: 16px;
+    > button {
+      min-height: 190px;
+      padding: 17px;
+      border-radius: 21px;
+      > div {
+        max-width: 100%;
+      }
+      strong {
+        font-size: 19px;
+        position: relative;
+        z-index: 2;
+      }
+      small {
+        font-size: 11px;
+        margin-top: 82px;
+        padding-right: 9px;
+      }
+      span {
+        font-size: 10px;
+        margin-top: 9px;
+      }
+      .entryArrow {
+        right: 12px;
+        bottom: 12px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  .skillArt {
+    width: 122px;
+    height: 104px;
+    right: 0;
+    top: 30px;
+  }
+  .studyWeek {
+    gap: 12px;
+    padding: 17px 15px;
+    margin-top: 18px;
+    border-radius: 18px;
+    h2 {
+      font-size: 12px;
+    }
+    span {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .libraryToolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 20px;
+    > input {
+      width: 100%;
+    }
+  }
+  .filters {
+    gap: 3px;
+    button {
+      font-size: 12px;
+      padding: 8px 11px;
+    }
+  }
+  .libraryGrid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  .lessonTile {
+    border-radius: 21px;
+  }
+  .tileCover {
+    height: 165px;
+  }
+  .coverArt {
+    height: 180px;
+    width: 215px;
+  }
+  .tileBody {
+    padding: 18px 20px;
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .trainingHeader {
+    margin-bottom: 22px;
+    h1 {
+      font-size: 25px;
+    }
+    > span {
+      font-size: 11px;
+    }
+  }
+  .back {
+    margin-bottom: 14px;
+  }
+  .readingLayout,
+  .speakingLayout,
+  .reviewLayout,
+  .wordBankLayout,
+  .kanaLayout,
+  .recordsOverview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .readingPaper,
+  .questionPaper,
+  .speakingPaper {
+    padding: 22px 20px;
+    border-radius: 21px;
+  }
+  .readingPaper > h2 {
+    font-size: 22px;
+  }
+  .readingTools {
+    padding-right: 22px;
+  }
+  .readingParagraph {
+    padding-top: 22px;
+  }
+  .readingTabs {
     display: flex;
-    margin-top: 0;
+    margin-bottom: 17px;
+    background: #eef2e7;
+    border-radius: 12px;
+    padding: 4px;
     button {
       flex: 1;
+      font-size: 13px;
+      padding: 9px;
+      border-radius: 9px;
+      &[aria-pressed='true'] {
+        background: var(--ui-paper);
+        color: var(--ui-olive);
+        box-shadow: 0 1px 5px #2f402716;
+      }
+    }
+  }
+  .readingShowQuestions .readingPaper,
+  .readingShowQuestions .readerDock,
+  .readingShowText .questionPaper {
+    display: none;
+  }
+  .readerDock {
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    padding: 8px 12px;
+    margin-top: 17px;
+  }
+  .speakingTasks {
+    gap: 8px;
+    button {
+      flex: 1;
+      min-width: 135px;
+      padding: 10px 12px;
+      strong {
+        font-size: 12px;
+      }
+    }
+  }
+  .speakingPaper > h2 {
+    font-size: 21px;
+    padding-right: 65px;
+  }
+  .speakingArt {
+    width: 83px;
+    height: 100px;
+    right: 5px;
+    top: 31px;
+  }
+  .speakingPrompt {
+    font-size: 19px;
+  }
+  .speakingHistory {
+    padding: 22px;
+    border-radius: 21px;
+  }
+  .reviewPaper {
+    padding: 24px 20px;
+    > h2 {
+      font-size: 29px;
+      margin-top: 35px;
+    }
+  }
+  .reviewRail {
+    padding: 22px;
+  }
+  .reviewCounts {
+    display: flex;
+    gap: 20px;
+    > div {
+      flex: 1;
+      gap: 10px;
+    }
+  }
+  .toolRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .wordList {
+    max-height: 290px;
+  }
+  .wordDetail {
+    padding: 24px;
+    > h2 {
+      font-size: 29px;
+    }
+  }
+  .wordContext > p {
+    font-size: 17px;
+  }
+  .kanaBoard {
+    padding: 16px;
+    border-radius: 21px;
+  }
+  .kanaGrid {
+    gap: 7px;
+    button {
+      min-height: 66px;
+      padding: 9px 3px;
+      strong {
+        font-size: 23px;
+      }
+      small {
+        font-size: 10px;
+      }
+    }
+  }
+  .kanaDetail {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 58px 1fr 44px;
+    align-items: center;
+    gap: 0 14px;
+    padding: 20px;
+    h2 {
+      grid-row: 1 / 3;
+      font-size: 43px;
+      line-height: 1.4;
+    }
+    > p {
+      margin: 0;
+      font-size: 20px;
+      text-align: left;
+    }
+    > small {
+      grid-column: 2 / 4;
+      margin-top: 5px;
+      text-align: left;
+      font-size: 12px;
+    }
+    > button {
+      margin: 0;
+    }
+    > .primary {
+      grid-column: 1 / -1;
+      margin-top: 17px;
+      min-height: 40px;
     }
   }
   .metricGrid {
     gap: 12px;
     section {
-      padding: 18px;
+      padding: 21px;
     }
   }
-  .kanaGrid {
-    grid-template-columns: repeat(6, 1fr);
+  .calendarPaper {
+    padding: 22px 17px;
+    border-radius: 21px;
+  }
+  .calendarGrid {
+    gap: 6px;
+    button,
+    > span {
+      min-height: 38px;
+    }
+  }
+  .recordItem summary {
+    padding: 16px;
+    gap: 10px;
+    > div strong {
+      font-size: 13px;
+    }
+    > span:last-child {
+      font-size: 11px;
+    }
+  }
+  .recordBody {
+    padding: 0 16px 20px;
+  }
+  .settings {
+    padding: 22px;
+    border-radius: 20px;
+  }
+  .settingsFields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .budgetOptions {
+    gap: 10px;
+    button {
+      padding: 14px 7px;
+      font-size: 22px;
+      small {
+        margin-left: 4px;
+        font-size: 10px;
+      }
+    }
   }
 }
-@import './mobile-layout.less';
-@import './mobile-training.less';
-@import './mobile-records.less';
-
 @media (prefers-reduced-motion: reduce) {
+  .primary,
+  .secondary,
+  .quickActions > button,
+  .lessonTile {
+    transition: none;
+  }
   .waveActive {
     animation: none;
   }

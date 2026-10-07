@@ -29,14 +29,22 @@
   }
 }
 .active {
-  background-color: rgb(var(--vermilion));
+  background-color: rgb(var(--deepblue));
   color: white;
 }
 .loading {
   cursor: progress;
   opacity: 0.72;
-  svg {
+  > span:first-child {
     animation: pulse 800ms ease-in-out infinite alternate;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+  .loading > span:first-child {
+    animation: none;
   }
 }
 

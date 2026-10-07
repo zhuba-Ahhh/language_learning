@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+import TrainingIcon from '@/components/TrainingIcon';
 import type { Lesson } from '@/content/training';
 import { tokenizeText } from '@/lib/textTokens';
 import { wordTiming } from '@/lib/audioAlignment';
@@ -15,11 +17,17 @@ export default function InteractiveReader({
   lesson,
   ruby,
   label = '示范音频',
+  controlsTarget,
+  active = true,
+  onActivate,
 }: {
   text: string;
   lesson: Lesson;
   ruby?: string;
   label?: string;
+  controlsTarget?: HTMLElement | null;
+  active?: boolean;
+  onActivate?: () => void;
 }) {
   const {
     attachAudio,
@@ -62,6 +70,44 @@ export default function InteractiveReader({
   const playing = state === 'playing';
   const timing =
     token && wordTiming(alignment?.words ?? [], token.from, token.to);
+  const controls = (
+    <div className={styles.controls}>
+      <button
+        type="button"
+        className={styles.play}
+        disabled={!url}
+        aria-label={`${playing || state === 'loading' ? '暂停' : '播放'}${label}`}
+        onClick={toggle}
+      >
+        <TrainingIcon
+          name={playing || state === 'loading' ? 'pause' : 'play'}
+          size={18}
+        />
+      </button>
+      <input
+        type="range"
+        min="0"
+        max={duration || 1}
+        step="0.01"
+        value={Math.min(time, duration || 1)}
+        disabled={!url || !duration}
+        aria-label={`${label}进度`}
+        aria-valuetext={`${clock(time)} / ${clock(duration)}`}
+        onChange={(event) => seek(Number(event.target.value))}
+      />
+      <time>
+        {clock(time)} / {clock(duration)}
+      </time>
+      <select
+        aria-label={`${label}语速`}
+        value={rate}
+        onChange={(event) => changeRate(Number(event.target.value))}
+      >
+        <option value={0.8}>0.8×</option>
+        <option value={1}>1×</option>
+      </select>
+    </div>
+  );
   return (
     <div
       ref={root}
@@ -77,39 +123,26 @@ export default function InteractiveReader({
         aria-label={label}
         onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
       />
-      <div className={styles.controls}>
-        <button
-          type="button"
-          className={styles.play}
-          disabled={!url}
-          aria-label={`${playing || state === 'loading' ? '暂停' : '播放'}${label}`}
-          onClick={toggle}
-        >
-          {state === 'loading' ? '加载中' : playing ? '暂停' : '播放'}
-        </button>
-        <input
-          type="range"
-          min="0"
-          max={duration || 1}
-          step="0.01"
-          value={Math.min(time, duration || 1)}
-          disabled={!url || !duration}
-          aria-label={`${label}进度`}
-          aria-valuetext={`${clock(time)} / ${clock(duration)}`}
-          onChange={(event) => seek(Number(event.target.value))}
-        />
-        <time>
-          {clock(time)} / {clock(duration)}
-        </time>
-        <select
-          aria-label={`${label}语速`}
-          value={rate}
-          onChange={(event) => changeRate(Number(event.target.value))}
-        >
-          <option value={0.8}>0.8×</option>
-          <option value={1}>1×</option>
-        </select>
-      </div>
+      {controlsTarget !== undefined ? (
+        active && controlsTarget ? (
+          createPortal(controls, controlsTarget)
+        ) : (
+          <button
+            type="button"
+            className={styles.paragraphPlay}
+            aria-label={`播放${label}`}
+            disabled={!url}
+            onClick={() => {
+              onActivate?.();
+              toggle();
+            }}
+          >
+            <TrainingIcon name="speaker" size={16} />
+          </button>
+        )
+      ) : (
+        controls
+      )}
       {state === 'error' && (
         <p role="alert" className={styles.notice}>
           音频加载失败，检查网络后点击播放重试。
@@ -125,7 +158,10 @@ export default function InteractiveReader({
         alignment={alignment}
         time={time}
         playing={playing}
-        onSelect={setSelected}
+        onSelect={(index) => {
+          onActivate?.();
+          setSelected(index);
+        }}
       />
       {token && (
         <WordActions

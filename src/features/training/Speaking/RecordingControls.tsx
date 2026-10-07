@@ -48,8 +48,8 @@ export default function RecordingControls({
       </button>
       <p>
         {recorder.status === 'recording'
-          ? '说完可以停止，到时会自动停止。'
-          : '慢一点也没关系，先把想法说完整。'}
+          ? '到时自动停止'
+          : '录音仅保存在此设备'}
       </p>
     </div>
   );
