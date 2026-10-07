@@ -97,13 +97,16 @@ export default function WordBank({
             内置词库
           </button>
         </div>
-        <input
-          type="search"
-          aria-label="搜索词汇"
-          placeholder="搜词、读音或释义"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
+        <label className={styles.searchField}>
+          <TrainingIcon name="search" size={19} />
+          <input
+            type="search"
+            aria-label="搜索词汇"
+            placeholder="搜词、读音或释义"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </label>
       </div>
       {word ? (
         <div className={styles.wordBankLayout}>

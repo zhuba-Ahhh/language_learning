@@ -14,6 +14,7 @@ import bookmark from './icons/bookmark.svg';
 import close from './icons/close.svg';
 import download from './icons/download.svg';
 import upload from './icons/upload.svg';
+import search from './icons/search.svg';
 
 const icons = {
   home,
@@ -32,6 +33,7 @@ const icons = {
   close,
   download,
   upload,
+  search,
 };
 
 export default function TrainingIcon({

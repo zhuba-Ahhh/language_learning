@@ -88,6 +88,10 @@
     padding: 7px 12px;
     border-radius: 20px;
     font-size: 13px;
+    transition:
+      background 0.15s,
+      color 0.15s,
+      box-shadow 0.15s;
     &[aria-pressed='true'] {
       background: var(--ui-olive);
       color: white;
@@ -102,6 +106,7 @@
   place-items: center;
   border-radius: 50%;
   color: var(--ui-olive);
+  transition: background 0.15s;
   &:hover {
     background: var(--ui-sage);
   }
@@ -122,5 +127,13 @@
   padding: 12px;
   margin-bottom: 16px;
   font-size: 13px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .workspace *,
+  .workspace *::before,
+  .workspace *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 @import './workspace-responsive.less';

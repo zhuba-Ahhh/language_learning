@@ -54,9 +54,12 @@ test('填空忽略大小写、空格和结尾标点，错误答案仍判错', ()
   assert.equal(normalizeAnswer('  FIVE.  '), 'five');
   assert.equal(
     scoreReading(english, { ...correctAnswers, next: '  FIVE. ' }),
-    3,
+    english.questions.length,
   );
-  assert.equal(scoreReading(english, { ...correctAnswers, next: 'six' }), 2);
+  assert.equal(
+    scoreReading(english, { ...correctAnswers, next: 'six' }),
+    english.questions.length - 1,
+  );
 });
 test('错题进入复习，重做保留每次结果且不重复加入同题', () => {
   const wrong = { ...correctAnswers, next: 'six' };
@@ -65,7 +68,7 @@ test('错题进入复习，重做保留每次结果且不重复加入同题', ()
   assert.equal(data.results.length, 2);
   assert.equal(data.reviews.length, 1);
   assert.equal(data.reviews[0].contentId, 'next');
-  assert.equal(data.results[1].correct, 2);
+  assert.equal(data.results[1].correct, english.questions.length - 1);
 });
 test('同一个词重复收藏不产生重复复习，英日保存独立', () => {
   let data = saveWord(initial(), english, english.words[0], now);

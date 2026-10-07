@@ -108,6 +108,43 @@
         "evidence": 1,
         "explanation": "下一步是 ask five students to try it。",
         "maxWords": 1
+      },
+      {
+        "id": "explain-idea",
+        "kind": "choice",
+        "prompt": "What helps Lin understand an idea better?",
+        "options": [
+          "Explaining it to another person",
+          "Avoiding difficult courses",
+          "Working on it alone"
+        ],
+        "answer": "Explaining it to another person",
+        "evidence": 0,
+        "explanation": "第一段末句说，向别人解释想法能帮助自己更好地理解。"
+      },
+      {
+        "id": "classmate-discussion",
+        "kind": "truth",
+        "prompt": "Lin discusses difficult courses with classmates.",
+        "answer": "True",
+        "evidence": 0,
+        "explanation": "Some courses are difficult, so I often discuss them with my classmates 与题干一致。"
+      },
+      {
+        "id": "data-role",
+        "kind": "truth",
+        "prompt": "Lin is responsible for the website’s data.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "Lin 负责用户看到的页面，朋友负责数据；注意不要把分工颠倒。"
+      },
+      {
+        "id": "programming-language",
+        "kind": "truth",
+        "prompt": "Lin uses Python in all his courses.",
+        "answer": "Not Given",
+        "evidence": 0,
+        "explanation": "正文提到 programming，但没有说明使用哪一种编程语言。"
       }
     ],
     "speaking": [
@@ -130,9 +167,20 @@
         "translation": "我学计算机科学，因为我喜欢解决问题。这学期，我正在和同学制作一个小网站。",
         "hints": ["我学什么", "一个原因", "正在做的事"],
         "seconds": 60
+      },
+      {
+        "id": "extra-choice-reason",
+        "title": "选择与原因",
+        "mode": "answer",
+        "prompt": "What subject did you choose? Give one reason using “I chose … because …”.",
+        "hints": ["说出专业", "用 because 接一个具体原因"],
+        "seconds": 30,
+        "sample": "I chose computer science because I like building useful things.",
+        "translation": "我选择计算机科学，因为我喜欢制作有用的东西。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -234,6 +282,44 @@
         "evidence": 1,
         "explanation": "第二段第一句给出 fifteen minutes。",
         "maxWords": 1
+      },
+      {
+        "id": "stuck-action",
+        "kind": "choice",
+        "prompt": "What does Maya do when she gets stuck?",
+        "options": [
+          "She checks her phone",
+          "She takes a short walk",
+          "She finishes every task"
+        ],
+        "answer": "She takes a short walk",
+        "evidence": 0,
+        "explanation": "When she gets stuck 后面的动作是 takes a short walk。instead of 排除了看手机。"
+      },
+      {
+        "id": "library-time",
+        "kind": "gap",
+        "prompt": "After lunch, Maya spends _____ in the library.（最多两个词）",
+        "answer": "an hour",
+        "evidence": 0,
+        "explanation": "第一段写了 spends an hour in the library。保留不定冠词 an。",
+        "maxWords": 2
+      },
+      {
+        "id": "listen-count",
+        "kind": "truth",
+        "prompt": "Maya listens to each recording ten times.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "正文是 listens once，表示回听一次，而不是十次。"
+      },
+      {
+        "id": "friend-home",
+        "kind": "truth",
+        "prompt": "Maya’s friend lives near the library.",
+        "answer": "Not Given",
+        "evidence": 1,
+        "explanation": "正文只说周六与朋友一起学习，没有提到朋友住在哪里。"
       }
     ],
     "speaking": [
@@ -256,9 +342,20 @@
         "translation": "我上午上课，午饭后去图书馆学习。晚上读一篇英语短文，再出声复述。",
         "hints": ["上午的安排", "什么时候学英语", "先做什么，再做什么"],
         "seconds": 60
+      },
+      {
+        "id": "extra-study-steps",
+        "title": "学习的两步",
+        "mode": "retell",
+        "prompt": "Give two steps for practising English. Use “First … Then …”.",
+        "hints": ["先读什么", "然后如何复述"],
+        "seconds": 30,
+        "sample": "First, I read a short text. Then I explain it in my own words.",
+        "translation": "先读一篇短文，再用自己的话解释它。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -363,6 +460,44 @@
         "answer": "Install the dependencies",
         "evidence": 1,
         "explanation": "文档依次列出安装、启动、打开地址。"
+      },
+      {
+        "id": "document-purpose",
+        "kind": "choice",
+        "prompt": "What does a README usually explain?",
+        "options": [
+          "What a project does and how to start it",
+          "How to create an account for every project",
+          "Why every command gives the same result"
+        ],
+        "answer": "What a project does and how to start it",
+        "evidence": 0,
+        "explanation": "第一段第二句并列说明项目用途与启动方式。"
+      },
+      {
+        "id": "write-access",
+        "kind": "gap",
+        "prompt": "Saving changes requires _____ to write to the project folder.（一个词）",
+        "answer": "permission",
+        "evidence": 1,
+        "explanation": "saving your changes requires permission to write to the project folder 给出答案。",
+        "maxWords": 1
+      },
+      {
+        "id": "step-order",
+        "kind": "truth",
+        "prompt": "The setup steps can be completed in any order.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "must be completed in order 表示必须按顺序完成，与 any order 相反。"
+      },
+      {
+        "id": "project-license",
+        "kind": "truth",
+        "prompt": "The text identifies the project’s licence.",
+        "answer": "Not Given",
+        "evidence": 0,
+        "explanation": "正文介绍要求和启动方式，没有说明许可证类型。"
       }
     ],
     "speaking": [
@@ -385,9 +520,20 @@
         "translation": "先检查 Node.js 版本，再安装依赖并启动开发服务器，最后在浏览器打开本地地址。",
         "hints": ["先检查什么", "三个步骤", "使用 First / Then / Finally"],
         "seconds": 60
+      },
+      {
+        "id": "extra-before-start",
+        "title": "操作前确认",
+        "mode": "answer",
+        "prompt": "A classmate wants to start the server. What should they check first? Use “Before …, check …”.",
+        "hints": ["先说明要做的操作", "提醒检查 Node.js 版本"],
+        "seconds": 30,
+        "sample": "Before starting the server, check your Node.js version.",
+        "translation": "启动服务器前，检查你的 Node.js 版本。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -487,6 +633,44 @@
         "answer": "Not Given",
         "evidence": 0,
         "explanation": "文章没有说明问题的根因，不能用自己的猜测补充。"
+      },
+      {
+        "id": "environment-detail",
+        "kind": "choice",
+        "prompt": "Which environment detail should the report include?",
+        "options": [
+          "The developer’s favourite editor",
+          "The browser version",
+          "The number of people in the team"
+        ],
+        "answer": "The browser version",
+        "evidence": 1,
+        "explanation": "第二段明确要求 Include the browser version。"
+      },
+      {
+        "id": "repeat-check",
+        "kind": "gap",
+        "prompt": "After a fix, repeat the _____ to check the result.（最多两个词）",
+        "answer": "same steps",
+        "evidence": 1,
+        "explanation": "repeat the same steps 说明应使用同样的复现步骤检查修复。",
+        "maxWords": 2
+      },
+      {
+        "id": "unexpected-cause",
+        "kind": "truth",
+        "prompt": "A teammate may find a cause that the reporter did not expect.",
+        "answer": "True",
+        "evidence": 1,
+        "explanation": "A teammate might find a cause you did not expect 是题干的同义表述。"
+      },
+      {
+        "id": "exact-version",
+        "kind": "truth",
+        "prompt": "The text names the exact browser version used when the bug occurred.",
+        "answer": "Not Given",
+        "evidence": 1,
+        "explanation": "正文建议写出浏览器版本，但没有给出某个具体版本号。"
       }
     ],
     "speaking": [
@@ -509,9 +693,20 @@
         "translation": "我希望改变筛选条件后结果更新，实际仍看到旧结果。修改两次筛选条件就能复现。",
         "hints": ["预期", "实际", "复现步骤"],
         "seconds": 90
+      },
+      {
+        "id": "extra-expect-actual",
+        "title": "一句话说问题",
+        "mode": "answer",
+        "prompt": "Describe one expected result and one actual result. Use “I expected … Instead, …”.",
+        "hints": ["先说预期", "再说实际", "可换成自己遇到的问题"],
+        "seconds": 30,
+        "sample": "I expected the page to update. Instead, it showed the old data.",
+        "translation": "我希望页面更新，但实际显示的是旧数据。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -616,6 +811,44 @@
         "answer": "You can notice missed details",
         "evidence": 1,
         "explanation": "回听能发现说话时没有察觉的停顿和表达问题。"
+      },
+      {
+        "id": "failed-attempt",
+        "kind": "choice",
+        "prompt": "What can a failed first attempt show?",
+        "options": [
+          "Which part needs attention",
+          "That a skill cannot be learned",
+          "That instructions are unnecessary"
+        ],
+        "answer": "Which part needs attention",
+        "evidence": 0,
+        "explanation": "it shows you which part needs attention 说明失败可帮助定位需要改进的部分。"
+      },
+      {
+        "id": "all-mistakes",
+        "kind": "truth",
+        "prompt": "The learner should aim to remove every mistake at once.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "The aim is not to remove every mistake at once 明确与题干相反。"
+      },
+      {
+        "id": "useful-change",
+        "kind": "gap",
+        "prompt": "Choose one useful _____ and test it in the next attempt.（一个词）",
+        "answer": "change",
+        "evidence": 1,
+        "explanation": "第二段最后一句是 choose one useful change and test it in your next attempt。",
+        "maxWords": 1
+      },
+      {
+        "id": "session-length",
+        "kind": "truth",
+        "prompt": "The author recommends practising for exactly twenty minutes a day.",
+        "answer": "Not Given",
+        "evidence": 0,
+        "explanation": "文章强调短而规律的练习，但未规定每天的具体分钟数。"
       }
     ],
     "speaking": [
@@ -649,9 +882,20 @@
         "translation": "两者都重要。理论帮助理解原理，实践展示如何使用。在编程中，我需要两者才能做出可靠的软件。",
         "hints": ["先表达立场", "比较两种方式", "用专业经验举例"],
         "seconds": 90
+      },
+      {
+        "id": "extra-specific-example",
+        "title": "举例支撑观点",
+        "mode": "answer",
+        "prompt": "What kind of courses do you enjoy? Give one specific example.",
+        "hints": ["直接回答", "用 For example 接具体经历"],
+        "seconds": 45,
+        "sample": "I enjoy practical courses. For example, I built a website in a programming class.",
+        "translation": "我喜欢实践课程。例如，我在编程课上制作了一个网站。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创专项练习，非官方真题"
   },
   {
@@ -755,6 +999,49 @@
         "evidence": 1,
         "explanation": "末句明确并列 layout 和 long-term care。",
         "maxWords": 1
+      },
+      {
+        "id": "small-park-reason",
+        "kind": "choice",
+        "prompt": "Why do some communities use unused plots for small parks?",
+        "options": [
+          "Land in city centres can be expensive",
+          "Every resident wants to play sport there",
+          "Trees do not need maintenance"
+        ],
+        "answer": "Land in city centres can be expensive",
+        "evidence": 0,
+        "explanation": "expensive 后的 therefore 建立因果：市中心土地贵，因此利用闲置地建小公园。"
+      },
+      {
+        "id": "older-needs",
+        "kind": "choice",
+        "prompt": "Which needs of older residents are mentioned?",
+        "options": [
+          "A sports field and a long running track",
+          "Comfortable seating and shade",
+          "A larger office and car park"
+        ],
+        "answer": "Comfortable seating and shade",
+        "evidence": 1,
+        "explanation": "第二段明确列出 comfortable seating and shade。"
+      },
+      {
+        "id": "lunch-visits",
+        "kind": "truth",
+        "prompt": "Office workers may visit a park during a lunch break.",
+        "answer": "True",
+        "evidence": 1,
+        "explanation": "office workers may visit only during a lunch break 支持题干，不需要推测其他时间。"
+      },
+      {
+        "id": "maintenance-items",
+        "kind": "gap",
+        "prompt": "Which features require care? Write the three words from the text: _____.",
+        "answer": "trees and paths",
+        "evidence": 1,
+        "explanation": "Trees and paths require care 明确给出需要维护的两类设施。",
+        "maxWords": 3
       }
     ],
     "speaking": [
@@ -777,9 +1064,20 @@
         "translation": "小公园要满足当地人的需求，也需要长期照料。公园开放后，树木和步道仍须维护。",
         "hints": ["不同人有不同需求", "长期维护", "举一个例子"],
         "seconds": 90
+      },
+      {
+        "id": "extra-compare-needs",
+        "title": "比较不同需求",
+        "mode": "retell",
+        "prompt": "Compare what families and older residents may need in a park. Use “while”.",
+        "hints": ["家庭需要什么", "老年人需要什么", "用 while 连接对比"],
+        "seconds": 45,
+        "sample": "Families may need a play area, while older residents may need shade.",
+        "translation": "家庭可能需要游乐区，而老年人可能需要遮阴。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创专项练习，非官方真题"
   }
 ]

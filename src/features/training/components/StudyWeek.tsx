@@ -18,13 +18,19 @@ export default function StudyWeek() {
           const date = new Date(start);
           date.setDate(start.getDate() + index);
           const active = dates.has(date.toDateString());
+          const today = date.toDateString() === new Date(now).toDateString();
           return (
             <div key={label}>
               <span
-                className={active ? styles.dayActive : ''}
+                className={`${active ? styles.dayActive : ''} ${today ? styles.dayToday : ''}`}
+                aria-current={today ? 'date' : undefined}
                 aria-label={`${date.toLocaleDateString('zh-CN')} ${active ? '已练习' : '未练习'}`}
               >
-                {active && <TrainingIcon name="check" size={16} />}
+                {active ? (
+                  <TrainingIcon name="check" size={16} />
+                ) : (
+                  date.getDate()
+                )}
               </span>
               <small>{label}</small>
             </div>

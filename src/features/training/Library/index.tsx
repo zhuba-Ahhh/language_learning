@@ -42,13 +42,16 @@ export default function Library({
             </button>
           ))}
         </div>
-        <input
-          type="search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="搜材料"
-          aria-label="搜索训练单元"
-        />
+        <label className={styles.searchField}>
+          <TrainingIcon name="search" size={19} />
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="搜材料"
+            aria-label="搜索训练单元"
+          />
+        </label>
       </div>
       <div className={styles.libraryGrid}>
         {filtered.map((lesson) => {
@@ -78,8 +81,9 @@ export default function Library({
                 <div className={styles.tileMeta}>
                   <span>{lesson.stage}</span>
                   <span>
-                    <TrainingIcon name="clock" size={15} />
-                    {lesson.minutes} 分钟
+                    {skill === 'reading'
+                      ? `${lesson.questions.length} 题`
+                      : `${lesson.speaking.length} 个训练`}
                   </span>
                   {attempts.length > 0 && (
                     <small>已练 {attempts.length} 次</small>

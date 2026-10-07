@@ -54,7 +54,9 @@ export default function Speaking({
             </span>
             <div>
               <strong>{item.title}</strong>
-              <small>{item.seconds} 秒</small>
+              <small>
+                {item.seconds} 秒{item.optional ? ' · 加练' : ''}
+              </small>
             </div>
           </button>
         ))}

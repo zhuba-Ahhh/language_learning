@@ -39,6 +39,7 @@ export default function Today({
   const nextSpeaking =
     lesson.speaking.find(
       (task) =>
+        !task.optional &&
         !results.some(
           (result) =>
             result.lessonId === lesson.id && result.taskId === task.id,

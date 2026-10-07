@@ -3,6 +3,7 @@ import type { Lesson } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
 import { normalizeAnswer, scoreReading } from '@/study/trainingState';
 import type { TrainingSelection } from '../types';
+import TrainingIcon from '@/components/TrainingIcon';
 import styles from '../index.module.less';
 
 export default function ReadingQuestions({
@@ -46,6 +47,11 @@ export default function ReadingQuestions({
             ? `${correct}/${lesson.questions.length}`
             : `${answered}/${lesson.questions.length}`}
         </span>
+        <progress
+          aria-label={submitted ? '答对题数' : '作答进度'}
+          value={submitted ? correct : answered}
+          max={lesson.questions.length}
+        />
       </div>
       {lesson.questions.map((question, index) => {
         const isCorrect =
@@ -62,14 +68,15 @@ export default function ReadingQuestions({
             disabled={submitted}
           >
             <legend>
-              {index + 1}. {question.prompt}
+              <span className={styles.questionNumber}>{index + 1}</span>
+              {question.prompt}
             </legend>
             {options ? (
               <div className={styles.options}>
                 {options.map((option) => (
                   <label
                     key={option}
-                    className={`${answers[question.id] === option ? styles.optionSelected : ''} ${submitted && option === question.answer ? styles.optionCorrect : ''}`}
+                    className={`${answers[question.id] === option ? styles.optionSelected : ''} ${submitted && option === question.answer ? styles.optionCorrect : ''} ${submitted && answers[question.id] === option && !isCorrect ? styles.optionIncorrect : ''}`}
                   >
                     <input
                       type="radio"
@@ -83,22 +90,36 @@ export default function ReadingQuestions({
                       }
                     />
                     <span>{option}</span>
+                    {submitted && option === question.answer && (
+                      <TrainingIcon name="check" size={17} />
+                    )}
                   </label>
                 ))}
               </div>
             ) : (
-              <input
-                className={styles.gapInput}
-                type="text"
-                aria-label={question.prompt}
-                value={answers[question.id] ?? ''}
-                onChange={(event) =>
-                  setAnswers((current) => ({
-                    ...current,
-                    [question.id]: event.target.value,
-                  }))
-                }
-              />
+              <div className={styles.gapField}>
+                <input
+                  className={`${styles.formControl} ${submitted && isCorrect ? styles.inputCorrect : ''}`}
+                  type="text"
+                  aria-label={question.prompt}
+                  aria-invalid={submitted && !isCorrect}
+                  aria-describedby={`${lesson.id}-${question.id}-hint`}
+                  placeholder="按原文填写"
+                  autoComplete="off"
+                  value={answers[question.id] ?? ''}
+                  onChange={(event) =>
+                    setAnswers((current) => ({
+                      ...current,
+                      [question.id]: event.target.value,
+                    }))
+                  }
+                />
+                <small id={`${lesson.id}-${question.id}-hint`}>
+                  {question.maxWords
+                    ? `最多 ${question.maxWords} 词`
+                    : '填写原文中的答案'}
+                </small>
+              </div>
             )}
             {submitted && (
               <div
@@ -133,7 +154,8 @@ export default function ReadingQuestions({
               onOpen({
                 lessonId: lesson.id,
                 skill: 'speaking',
-                taskId: lesson.speaking.at(-1)?.id,
+                taskId: lesson.speaking.filter((task) => !task.optional).at(-1)
+                  ?.id,
               })
             }
           >

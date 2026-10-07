@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 import TrainingIcon from '@/components/TrainingIcon';
 import type { Lesson } from '@/content/training';
@@ -76,6 +77,7 @@ export default function InteractiveReader({
         type="button"
         className={styles.play}
         disabled={!url}
+        aria-busy={state === 'loading'}
         aria-label={`${playing || state === 'loading' ? '暂停' : '播放'}${label}`}
         onClick={toggle}
       >
@@ -90,6 +92,11 @@ export default function InteractiveReader({
         max={duration || 1}
         step="0.01"
         value={Math.min(time, duration || 1)}
+        style={
+          {
+            '--reader-progress': `${duration ? Math.min(100, (time / duration) * 100) : 0}%`,
+          } as CSSProperties
+        }
         disabled={!url || !duration}
         aria-label={`${label}进度`}
         aria-valuetext={`${clock(time)} / ${clock(duration)}`}

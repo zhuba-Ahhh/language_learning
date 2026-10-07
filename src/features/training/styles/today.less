@@ -11,6 +11,7 @@
   time {
     font-size: 14px;
     color: var(--ui-muted);
+    font-variant-numeric: tabular-nums;
   }
 }
 .todayGrid {
@@ -25,7 +26,9 @@
   border: 1px solid #cedac2;
   border-radius: 26px;
   background: var(--ui-sage);
-  box-shadow: var(--ui-shadow);
+  box-shadow:
+    inset 0 1px 0 #ffffff70,
+    var(--ui-shadow);
   overflow: hidden;
   &::after {
     content: '';
@@ -95,6 +98,10 @@
   font-size: 13px;
   color: var(--ui-olive);
   background: #ffffff40;
+  transition: background 0.15s;
+  &:hover {
+    background: #ffffff80;
+  }
 }
 .reviewSummary {
   position: relative;
@@ -156,6 +163,9 @@
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 9px 25px #35442c12;
+      .entryArrow {
+        transform: translateX(3px);
+      }
     }
     > div {
       position: relative;
@@ -226,7 +236,7 @@
     width: 100%;
     text-align: center;
   }
-  span {
+  > div > div > span {
     display: grid;
     place-items: center;
     width: 30px;
@@ -235,6 +245,9 @@
     border: 1px solid var(--ui-line);
     background: #f6f8f0;
     border-radius: 50%;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ui-muted);
   }
   small {
     font-size: 11px;
@@ -244,7 +257,15 @@
 .dayActive {
   background: var(--ui-olive) !important;
   border-color: var(--ui-olive) !important;
-  color: #fff;
+  color: #fff !important;
+}
+.dayToday {
+  outline: 1px solid #91a77f;
+  outline-offset: 3px;
+  + small {
+    color: var(--ui-olive);
+    font-weight: 650;
+  }
 }
 .startKana {
   display: flex;

@@ -18,6 +18,12 @@
     border-radius: 14px;
     padding: 12px 17px;
     background: var(--ui-paper);
+    transition:
+      background 0.15s,
+      border-color 0.15s;
+    &:hover {
+      border-color: #b3c79e;
+    }
     > span {
       width: 24px;
       height: 24px;
@@ -42,6 +48,10 @@
     &[aria-pressed='true'] {
       background: var(--ui-sage);
       border-color: #b3c79e;
+      > span {
+        background: var(--ui-olive);
+        color: #fff;
+      }
     }
   }
 }
@@ -180,6 +190,19 @@
   min-width: 180px;
   padding: 12px 22px;
   border-radius: 14px;
+  min-height: 44px;
+  box-shadow:
+    inset 0 1px 0 #ffffff18,
+    0 3px 8px #35442c18;
+  transition:
+    filter 0.15s,
+    transform 0.15s;
+  &:hover:not(:disabled) {
+    filter: brightness(0.92);
+  }
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
 }
 .recording {
   background: #a34235;

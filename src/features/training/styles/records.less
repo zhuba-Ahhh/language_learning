@@ -46,6 +46,10 @@
     color: var(--ui-olive);
     background: #f0f4e7;
     border-radius: 10px;
+    transition: background 0.15s;
+    &:hover {
+      background: var(--ui-sage);
+    }
   }
 }
 .calendarWeek,
@@ -139,6 +143,7 @@
       font-weight: 600;
       line-height: 1.2;
       margin-top: 12px;
+      font-variant-numeric: tabular-nums;
       em {
         font-style: normal;
         font-size: 12px;
@@ -261,6 +266,15 @@
 .settingsPage {
   max-width: 940px;
   margin: 0 auto;
+  > .headingRow {
+    align-items: center;
+    .pageHeading {
+      margin: 0;
+    }
+    .savedStatus {
+      margin-top: 0;
+    }
+  }
 }
 .settings {
   border: 1px solid var(--ui-line);
@@ -269,6 +283,23 @@
   padding: 27px;
   margin-top: 22px;
   box-shadow: var(--ui-shadow);
+  .sectionHeading {
+    margin-bottom: 22px;
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      > i {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 11px;
+        background: #edf3e5;
+        color: var(--ui-olive);
+      }
+    }
+  }
   summary {
     font-size: 14px;
     font-weight: 550;
@@ -285,36 +316,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
-  margin-top: 20px;
-  label {
-    font-size: 13px;
-    color: var(--ui-muted);
-    select {
-      display: block;
-      width: 100%;
-      padding: 13px 15px;
-      border: 1px solid var(--ui-line);
-      background: #f1f5e9;
-      border-radius: 12px;
-      margin-top: 10px;
-      font-size: 15px;
-      color: var(--ui-ink);
-    }
-  }
+  margin-top: 0;
 }
 .budgetOptions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 0;
   button {
+    position: relative;
     border: 1px solid var(--ui-line);
     border-radius: 15px;
-    padding: 16px;
+    padding: 20px 36px 20px 16px;
     font-size: 24px;
     font-weight: 600;
     color: var(--ui-muted);
     background: #f9faf5;
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
+    &:hover {
+      border-color: #a8bf94;
+    }
     small {
       font-size: 12px;
       margin-left: 7px;
@@ -325,21 +350,42 @@
       border-color: #a8bf94;
       color: var(--ui-olive);
       box-shadow: inset 0 0 0 1px #a8bf94;
+      .budgetCheck {
+        background: var(--ui-olive);
+        border-color: var(--ui-olive);
+        color: #fff;
+      }
     }
   }
+}
+.budgetCheck {
+  position: absolute;
+  right: 14px;
+  top: calc(50% - 9px);
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccd7c0;
+  border-radius: 50%;
 }
 .settingsActions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 22px;
+  margin-top: 0;
 }
 .savedStatus {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  color: var(--ui-muted);
-  margin-top: 24px;
+  margin-top: 9px;
+  white-space: nowrap;
   font-size: 12px;
+  color: var(--ui-olive);
+  padding: 7px 11px;
+  background: #edf3e5;
+  border: 1px solid #dbe5cf;
+  border-radius: 20px;
 }

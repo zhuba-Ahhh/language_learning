@@ -80,6 +80,7 @@ export default function WordActions({
           disabled={!timing}
           onClick={() => timing && onPlay(timing.start)}
         >
+          <TrainingIcon name="play" size={14} />
           从这里播
         </button>
         <button
@@ -87,6 +88,7 @@ export default function WordActions({
           disabled={!timing}
           onClick={() => timing && onPlay(0, timing.end)}
         >
+          <TrainingIcon name="clock" size={14} />
           播到这里
         </button>
         {word && (

@@ -42,11 +42,12 @@
       min-width: 45px;
       padding: 6px 8px;
       font-size: 12px;
+      min-height: 34px;
     }
   }
   .settingsButton {
-    width: 32px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
   }
   .headerActions {
     gap: 3px;
@@ -74,6 +75,9 @@
       border-radius: 14px;
       color: var(--ui-muted);
       font-size: 11px;
+      transition:
+        background 0.15s,
+        color 0.15s;
       &[aria-current] {
         background: var(--ui-sage);
         color: var(--ui-olive);

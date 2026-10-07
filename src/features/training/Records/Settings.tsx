@@ -61,42 +61,64 @@ export default function Settings({ onBack }: { onBack: () => void }) {
       <button type="button" className={styles.back} onClick={onBack}>
         ‹ 记录
       </button>
-      <PageHeading title="设置" />
+      <div className={styles.headingRow}>
+        <PageHeading title="设置" />
+        <p className={styles.savedStatus}>
+          <TrainingIcon name="check" size={16} />
+          自动保存
+        </p>
+      </div>
       <section className={styles.settings}>
         <div className={styles.sectionHeading}>
-          <h2>学习目标</h2>
+          <h2>
+            <i>
+              <TrainingIcon name="bookmark" size={18} />
+            </i>
+            学习目标
+          </h2>
           <span>英日分别保存</span>
         </div>
         <div className={styles.settingsFields}>
-          <label>
+          <label className={styles.formField}>
             英语目标
-            <select
-              value={data.targets.en}
-              onChange={(event) => setTarget('en', event.target.value)}
-            >
-              <option>IELTS 6.5</option>
-              <option>IELTS 7.0</option>
-              <option>基础交流</option>
-              <option>技术阅读与面试</option>
-            </select>
+            <span className={styles.selectField}>
+              <select
+                value={data.targets.en}
+                onChange={(event) => setTarget('en', event.target.value)}
+              >
+                <option>IELTS 6.5</option>
+                <option>IELTS 7.0</option>
+                <option>基础交流</option>
+                <option>技术阅读与面试</option>
+              </select>
+              <TrainingIcon name="arrow" size={17} />
+            </span>
           </label>
-          <label>
+          <label className={styles.formField}>
             日语目标
-            <select
-              value={data.targets.ja}
-              onChange={(event) => setTarget('ja', event.target.value)}
-            >
-              <option>入门 → N5 → N3/N2</option>
-              <option>日本生活交流</option>
-              <option>日语读解与 IT 工作</option>
-            </select>
+            <span className={styles.selectField}>
+              <select
+                value={data.targets.ja}
+                onChange={(event) => setTarget('ja', event.target.value)}
+              >
+                <option>入门 → N5 → N3/N2</option>
+                <option>日本生活交流</option>
+                <option>日语读解与 IT 工作</option>
+              </select>
+              <TrainingIcon name="arrow" size={17} />
+            </span>
           </label>
         </div>
         <p>当前材料以入门与专项练习为主，进阶内容持续补充。</p>
       </section>
       <section className={styles.settings}>
         <div className={styles.sectionHeading}>
-          <h2>每日练习</h2>
+          <h2>
+            <i>
+              <TrainingIcon name="clock" size={18} />
+            </i>
+            每日练习
+          </h2>
         </div>
         <div className={styles.budgetOptions}>
           {[15, 30, 45].map((minutes) => (
@@ -108,13 +130,23 @@ export default function Settings({ onBack }: { onBack: () => void }) {
             >
               {minutes}
               <small>分钟</small>
+              <i className={styles.budgetCheck}>
+                {data.dailyMinutes === minutes && (
+                  <TrainingIcon name="check" size={14} />
+                )}
+              </i>
             </button>
           ))}
         </div>
       </section>
       <section className={styles.settings}>
         <div className={styles.sectionHeading}>
-          <h2>本地数据</h2>
+          <h2>
+            <i>
+              <TrainingIcon name="download" size={18} />
+            </i>
+            本地数据
+          </h2>
           <span>备份含录音</span>
         </div>
         <div className={styles.settingsActions}>
@@ -146,10 +178,6 @@ export default function Settings({ onBack }: { onBack: () => void }) {
         </div>
         <p role="status">{notice || '保存在此设备，换设备请恢复备份。'}</p>
       </section>
-      <p className={styles.savedStatus}>
-        <TrainingIcon name="check" size={16} />
-        设置自动保存
-      </p>
     </div>
   );
 }

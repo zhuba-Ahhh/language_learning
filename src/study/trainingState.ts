@@ -133,13 +133,15 @@ export function lessonCompleted(data: TrainingData, lesson: Lesson) {
     data.results.some(
       (result) => result.lessonId === lesson.id && result.skill === 'reading',
     ) &&
-    lesson.speaking.every((task) =>
-      data.results.some(
-        (result) =>
-          result.lessonId === lesson.id &&
-          result.skill === 'speaking' &&
-          result.taskId === task.id,
-      ),
+    lesson.speaking.every(
+      (task) =>
+        task.optional ||
+        data.results.some(
+          (result) =>
+            result.lessonId === lesson.id &&
+            result.skill === 'speaking' &&
+            result.taskId === task.id,
+        ),
     )
   );
 }

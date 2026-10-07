@@ -36,6 +36,7 @@ export interface SpeakingTask {
   hints: string[];
   seconds: number;
   prepareSeconds?: number;
+  optional?: boolean;
 }
 
 export interface Lesson {

@@ -105,6 +105,42 @@
         "answer": "日语",
         "evidence": 1,
         "explanation": "第二段「日本語を勉強しています」。"
+      },
+      {
+        "id": "major-subject",
+        "kind": "choice",
+        "prompt": "リン在大学学习什么？",
+        "options": ["日本历史", "计算机", "医学"],
+        "answer": "计算机",
+        "evidence": 0,
+        "explanation": "「大学でコンピューターを勉強しています」中，コンピューター 是学习的对象。"
+      },
+      {
+        "id": "language-level",
+        "kind": "choice",
+        "prompt": "リン如何描述自己的日语？",
+        "options": ["已经很熟练", "还不熟练", "完全没有学习"],
+        "answer": "还不熟练",
+        "evidence": 1,
+        "explanation": "「まだ上手ではありません」表示还不熟练；不等于没有在学习。"
+      },
+      {
+        "id": "greeting-purpose",
+        "kind": "choice",
+        "prompt": "「よろしくお願いします」在这里用来做什么？",
+        "options": ["结束购物并结账", "说明上课时间", "初次见面时请对方多关照"],
+        "answer": "初次见面时请对方多关照",
+        "evidence": 1,
+        "explanation": "它出现在自我介绍结尾，是初次见面时的礼貌表达。"
+      },
+      {
+        "id": "major-gap",
+        "kind": "gap",
+        "prompt": "按第一段原文填空：大学で _____ を勉強しています。",
+        "answer": "コンピューター",
+        "evidence": 0,
+        "explanation": "原文是「大学でコンピューターを勉強しています」，填写片假名词。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -127,9 +163,20 @@
         "translation": "初次见面。我叫林，是大学生。请多多关照。",
         "hints": ["はじめまして", "私は + 你的名字 + です", "大学生です"],
         "seconds": 30
+      },
+      {
+        "id": "extra-my-identity",
+        "title": "说出自己的身份",
+        "mode": "answer",
+        "prompt": "用「私は〜です」说自己的身份，先模仿示范，再替换成你的信息。",
+        "hints": ["私は", "身份 + です"],
+        "seconds": 20,
+        "sample": "私は大学生です。",
+        "translation": "我是大学生。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -233,6 +280,42 @@
         "answer": "电脑",
         "evidence": 1,
         "explanation": "回答是「パソコンです」。"
+      },
+      {
+        "id": "bag-owner",
+        "kind": "choice",
+        "prompt": "包是谁的？",
+        "options": ["老师的", "朋友的", "说话人的"],
+        "answer": "老师的",
+        "evidence": 0,
+        "explanation": "「先生のかばん」表示老师的包；「の」连接所属者与物品。"
+      },
+      {
+        "id": "book-language",
+        "kind": "choice",
+        "prompt": "书是什么语言的书？",
+        "options": ["英语", "中文", "日语"],
+        "answer": "日语",
+        "evidence": 0,
+        "explanation": "「本は日本語の本です」直接说明书的语言。"
+      },
+      {
+        "id": "confirmation-reply",
+        "kind": "choice",
+        "prompt": "「はい、そうです」在第二段确认了什么？",
+        "options": ["书是老师的", "回答者的电脑", "包是蓝色的"],
+        "answer": "回答者的电脑",
+        "evidence": 1,
+        "explanation": "前一句问「あなたのパソコンですか」，回答肯定了电脑的所属。"
+      },
+      {
+        "id": "object-word",
+        "kind": "gap",
+        "prompt": "按第二段原文填空：「これは何ですか。」「_____ です。」",
+        "answer": "パソコン",
+        "evidence": 1,
+        "explanation": "第二段对物品的回答是「パソコンです」，填写电脑的片假名。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -255,9 +338,20 @@
         "translation": "这是书。这是我的电脑。",
         "hints": ["这是书：これは本です", "这是我的：これは私の〜です"],
         "seconds": 30
+      },
+      {
+        "id": "extra-describe-object",
+        "title": "介绍一个物品",
+        "mode": "answer",
+        "prompt": "指着书说一句，再换成桌上的另一个物品。使用「これは〜です」。",
+        "hints": ["これは", "物品名称 + です"],
+        "seconds": 20,
+        "sample": "これは本です。",
+        "translation": "这是书。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -356,6 +450,42 @@
         "answer": "日曜日",
         "evidence": 1,
         "explanation": "周六兼职，周日休息。"
+      },
+      {
+        "id": "breakfast-time",
+        "kind": "choice",
+        "prompt": "何時に朝ご飯を食べますか。",
+        "options": ["七時", "八時", "九時"],
+        "answer": "八時",
+        "evidence": 0,
+        "explanation": "「八時に朝ご飯を食べます」说明八点吃早饭，不是七点起床的时间。"
+      },
+      {
+        "id": "lunch-place",
+        "kind": "choice",
+        "prompt": "昼はどこでご飯を食べますか。",
+        "options": ["食堂", "家", "駅"],
+        "answer": "食堂",
+        "evidence": 0,
+        "explanation": "「友だちと食堂でご飯を食べます」中，食堂で 表示用餐地点。"
+      },
+      {
+        "id": "saturday-plan",
+        "kind": "choice",
+        "prompt": "土曜日は何がありますか。",
+        "options": ["日本語の試験", "大学の授業", "アルバイト"],
+        "answer": "アルバイト",
+        "evidence": 1,
+        "explanation": "第二段写「土曜日はアルバイトがあります」，周六有兼职。"
+      },
+      {
+        "id": "return-time",
+        "kind": "gap",
+        "prompt": "按第二段原文填空：午後 _____ に家に帰ります。",
+        "answer": "五時",
+        "evidence": 1,
+        "explanation": "「午後五時に家に帰ります」表示下午五点回家。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -378,9 +508,20 @@
         "translation": "我七点起床，晚上学习日语。",
         "hints": ["私は〜時に起きます", "夜、〜を勉強します"],
         "seconds": 45
+      },
+      {
+        "id": "extra-evening-action",
+        "title": "晚上做什么",
+        "mode": "answer",
+        "prompt": "用「夜、〜ます」说一个晚上的行动。可以先说学习日语，再换成自己的安排。",
+        "hints": ["夜", "动作的礼貌形式 〜ます"],
+        "seconds": 25,
+        "sample": "夜、日本語を勉強します。",
+        "translation": "晚上学习日语。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -483,6 +624,42 @@
         "answer": "五分",
         "evidence": 1,
         "explanation": "「歩いて五分」给出步行时间。"
+      },
+      {
+        "id": "ask-person",
+        "kind": "choice",
+        "prompt": "リンはだれに駅の場所を聞きますか。",
+        "options": ["店の人", "大学の先生", "友だち"],
+        "answer": "店の人",
+        "evidence": 0,
+        "explanation": "第一段的「店の人に聞きます」说明询问店里的人。"
+      },
+      {
+        "id": "first-direction",
+        "kind": "choice",
+        "prompt": "最初にどうしますか。",
+        "options": ["左に曲がります", "まっすぐ行きます", "電車に乗ります"],
+        "answer": "まっすぐ行きます",
+        "evidence": 1,
+        "explanation": "指路的第一步是「この道をまっすぐ行ってください」，先直走。"
+      },
+      {
+        "id": "station-side",
+        "kind": "choice",
+        "prompt": "駅はどちらにありますか。",
+        "options": ["右", "前", "左"],
+        "answer": "左",
+        "evidence": 1,
+        "explanation": "在银行前右转之后，原文明确说「駅は左にあります」。"
+      },
+      {
+        "id": "thanks-word",
+        "kind": "gap",
+        "prompt": "按第一段和第二段的情境，在得到指路后说：_____。",
+        "answer": "ありがとうございます",
+        "evidence": 1,
+        "explanation": "第二段末尾写リン说「ありがとうございます」，表达感谢。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -505,9 +682,20 @@
         "translation": "请问车站在哪里？请再慢一点说一遍。谢谢。",
         "hints": ["すみません", "〜はどこですか", "ありがとうございます"],
         "seconds": 45
+      },
+      {
+        "id": "extra-ask-destination",
+        "title": "独立询问地点",
+        "mode": "answer",
+        "prompt": "不看示范，询问车站在哪里。然后尝试把目的地换成图书馆。",
+        "hints": ["地点 + は", "どこですか"],
+        "seconds": 25,
+        "sample": "駅はどこですか。",
+        "translation": "车站在哪里？",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   },
   {
@@ -612,6 +800,42 @@
         "answer": "三冊",
         "evidence": 1,
         "explanation": "「三冊まで」表示最多三本。"
+      },
+      {
+        "id": "weekday-opening",
+        "kind": "choice",
+        "prompt": "平日は何時に開きますか。",
+        "options": ["午前九時", "午後五時", "午後七時"],
+        "answer": "午前九時",
+        "evidence": 0,
+        "explanation": "「平日は午前九時から午後七時まで」中，から 前是开门时间。"
+      },
+      {
+        "id": "return-deadline",
+        "kind": "choice",
+        "prompt": "本はいつまでに返しますか。",
+        "options": ["一週間", "二週間", "一か月"],
+        "answer": "二週間",
+        "evidence": 1,
+        "explanation": "「二週間で返してください」要求两周内归还。"
+      },
+      {
+        "id": "special-closure",
+        "kind": "choice",
+        "prompt": "来週の水曜日に図書館を使えない理由は何ですか。",
+        "options": ["試験", "新しい本の整理", "掃除"],
+        "answer": "掃除",
+        "evidence": 1,
+        "explanation": "「掃除のため」给出临时不能使用图书馆的原因。"
+      },
+      {
+        "id": "regular-closing",
+        "kind": "gap",
+        "prompt": "按第一段原文填空：_____ は休みです。",
+        "answer": "日曜日",
+        "evidence": 0,
+        "explanation": "第一段明确写「日曜日は休みです」。临时闭馆的水曜日在第二段。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -634,9 +858,20 @@
         "translation": "周六下午五点关闭，周日休息。",
         "hints": ["土曜日は〜", "日曜日は休みです"],
         "seconds": 45
+      },
+      {
+        "id": "extra-opening-hours",
+        "title": "说明营业时间",
+        "mode": "retell",
+        "prompt": "用「〜から〜まで」说明图书馆工作日的营业时间，保留上午和下午的信息。",
+        "hints": ["午前九時から", "午後七時まで"],
+        "seconds": 30,
+        "sample": "午前九時から午後七時までです。",
+        "translation": "从上午九点到下午七点。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创专项练习，非官方真题"
   },
   {
@@ -740,6 +975,46 @@
         "answer": "スマートフォンでも使うか",
         "evidence": 1,
         "explanation": "第二段询问页面是否也在手机上使用。"
+      },
+      {
+        "id": "yesterday-work",
+        "kind": "choice",
+        "prompt": "昨日、何を修正しましたか。",
+        "options": ["ログイン画面", "テストの結果", "会議の予定"],
+        "answer": "ログイン画面",
+        "evidence": 0,
+        "explanation": "昨天做的是「ログイン画面を修正しました」，不要与今天的测试混淆。"
+      },
+      {
+        "id": "result-recipient",
+        "kind": "choice",
+        "prompt": "テストの結果はだれに送りますか。",
+        "options": ["先生", "チーム", "図書館の人"],
+        "answer": "チーム",
+        "evidence": 0,
+        "explanation": "第一段最后一句是「結果をチームに送ります」。"
+      },
+      {
+        "id": "mobile-condition",
+        "kind": "choice",
+        "prompt": "小さい画面でも確認するのは、どんな場合ですか。",
+        "options": [
+          "テストをしない場合",
+          "学校で使う場合",
+          "スマートフォンでも使う場合"
+        ],
+        "answer": "スマートフォンでも使う場合",
+        "evidence": 1,
+        "explanation": "「使う場合」承接前面的スマートフォンでも使いますか，指也在手机上使用的情况。"
+      },
+      {
+        "id": "unknown-action",
+        "kind": "gap",
+        "prompt": "按第二段原文填空：分からないことがあったら、_____ します。",
+        "answer": "質問",
+        "evidence": 1,
+        "explanation": "末句「分からないことがあったら、質問します」表示不懂时会提问。",
+        "maxWords": 1
       }
     ],
     "speaking": [
@@ -762,9 +1037,20 @@
         "translation": "昨天修复了登录页面，今天进行测试。请多关照。",
         "hints": ["昨日、〜しました", "今日は〜ます", "只说明自己确定的信息"],
         "seconds": 60
+      },
+      {
+        "id": "extra-request-check",
+        "title": "发起一次确认",
+        "mode": "answer",
+        "prompt": "用一句礼貌的日语告诉同事：有一件事想确认。",
+        "hints": ["一つ", "確認したいことがあります"],
+        "seconds": 25,
+        "sample": "一つ確認したいことがあります。",
+        "translation": "有一件事想确认。",
+        "optional": true
       }
     ],
-    "version": 1,
+    "version": 2,
     "source": "LinguaDesk 原创训练材料"
   }
 ]
