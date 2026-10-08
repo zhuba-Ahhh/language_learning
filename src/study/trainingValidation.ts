@@ -2,6 +2,7 @@ import { LESSONS } from '../content/training/index.ts';
 import type { TrainingData } from './trainingTypes';
 import { scoreQuestions } from './trainingScoring.ts';
 import { GRAMMAR } from '../content/training/grammar.ts';
+import { vocabularyKey } from '../content/vocabularyIndex.ts';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -163,8 +164,20 @@ export function isTrainingData(value: unknown): value is TrainingData {
       !text(word.term) ||
       !text(word.meaning) ||
       !text(word.id) ||
-      validLesson(word.lessonId)?.lang !== word.lang ||
+      !['en', 'ja'].includes(String(word.lang)) ||
+      (word.lessonId !== undefined &&
+        validLesson(word.lessonId)?.lang !== word.lang) ||
+      (word.key !== `${word.lang}:${word.term}` &&
+        word.key !== vocabularyKey(word.term, word.lang as 'en' | 'ja')) ||
       (word.reading !== undefined && !text(word.reading))
+    )
+      return false;
+    if (
+      ['partOfSpeech', 'lemma', 'note', 'example', 'exampleZh', 'origin'].some(
+        (field) => word[field] !== undefined && !text(word[field]),
+      ) ||
+      (word.forms !== undefined &&
+        (!Array.isArray(word.forms) || !word.forms.every(text)))
     )
       return false;
   }
@@ -181,8 +194,22 @@ export function isTrainingData(value: unknown): value is TrainingData {
     )
       return false;
     const lesson = validLesson(item.lessonId);
+    if (item.kind === 'word' && item.lessonId === undefined) {
+      if (
+        !value.savedWords.some(
+          (word) =>
+            isRecord(word) &&
+            word.key === item.contentId &&
+            word.lang === item.lang,
+        ) ||
+        (item.lastReviewedAt !== undefined && !date(item.lastReviewedAt))
+      )
+        return false;
+      continue;
+    }
     if (
       !lesson ||
+      (item.lang !== undefined && item.lang !== lesson.lang) ||
       !['word', 'question', 'speaking', 'grammar', 'listening'].includes(
         String(item.kind),
       ) ||

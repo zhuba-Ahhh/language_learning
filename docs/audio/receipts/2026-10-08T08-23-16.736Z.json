@@ -1,0 +1,137 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "en:At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+    "en:I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+    "en:finish",
+    "en:Yesterday, I finished the search page.",
+    "en:review",
+    "en:I need a review.",
+    "en:blocked",
+    "en:I am not blocked.",
+    "en:next step",
+    "en:My next step is to test the page."
+  ],
+  "spoken_texts": {
+    "en:At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.": "At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+    "en:I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.": "I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+    "en:finish": "finish",
+    "en:Yesterday, I finished the search page.": "Yesterday, I finished the search page.",
+    "en:review": "review",
+    "en:I need a review.": "I need a review.",
+    "en:blocked": "blocked",
+    "en:I am not blocked.": "I am not blocked.",
+    "en:next step": "next step",
+    "en:My next step is to test the page.": "My next step is to test the page."
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac752f568694fc9cedd372f",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f932cb5-d33c-4d0b-8510-3250d399caa6.mp3",
+        "duration": 16.855167,
+        "index": 0,
+        "item_id": "linguadesk-en-xs819k",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"At our team meeting, I give a short update. \",\"words\":[{\"word\":\"At\",\"startTime\":0.275,\"endTime\":0.465,\"confidence\":0.8374893},{\"word\":\"our\",\"startTime\":0.465,\"endTime\":0.645,\"confidence\":0.87774545},{\"word\":\"team\",\"startTime\":0.645,\"endTime\":0.905,\"confidence\":0.9163716},{\"word\":\"meeting,\",\"startTime\":0.905,\"endTime\":1.435,\"confidence\":0.939166},{\"word\":\"I\",\"startTime\":1.975,\"endTime\":2.145,\"confidence\":0.8771551},{\"word\":\"give\",\"startTime\":2.145,\"endTime\":2.375,\"confidence\":0.8287098},{\"word\":\"a\",\"startTime\":2.375,\"endTime\":2.415,\"confidence\":0.81593686},{\"word\":\"short\",\"startTime\":2.415,\"endTime\":2.785,\"confidence\":0.943447},{\"word\":\"update.\",\"startTime\":2.855,\"endTime\":3.405,\"confidence\":0.8637557}]},{\"text\":\"Yesterday, I finished the search page. \",\"words\":[{\"word\":\"Yesterday,\",\"startTime\":4.0000415,\"endTime\":4.6950417,\"confidence\":0.88697135},{\"word\":\"I\",\"startTime\":5.175041,\"endTime\":5.3150415,\"confidence\":0.9764267},{\"word\":\"finished\",\"startTime\":5.3150415,\"endTime\":5.7850413,\"confidence\":0.9589245},{\"word\":\"the\",\"startTime\":5.7850413,\"endTime\":5.8650417,\"confidence\":0.9603354},{\"word\":\"search\",\"startTime\":5.8650417,\"endTime\":6.2550416,\"confidence\":0.9527106},{\"word\":\"page.\",\"startTime\":6.2550416,\"endTime\":6.7750416,\"confidence\":0.9110624}]},{\"text\":\"At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.\\n\"},{\"text\":\"Today, I will test it on my phone. \",\"words\":[{\"word\":\"Today,\",\"startTime\":7.3050833,\"endTime\":7.8950834,\"confidence\":0.9658097},{\"word\":\"I\",\"startTime\":8.385083,\"endTime\":8.545083,\"confidence\":0.9586075},{\"word\":\"will\",\"startTime\":8.545083,\"endTime\":8.685083,\"confidence\":0.96879005},{\"word\":\"test\",\"startTime\":8.685083,\"endTime\":9.045083,\"confidence\":0.9553119},{\"word\":\"it\",\"startTime\":9.045083,\"endTime\":9.195084,\"confidence\":0.8677618},{\"word\":\"on\",\"startTime\":9.195084,\"endTime\":9.335083,\"confidence\":0.8461936},{\"word\":\"my\",\"startTime\":9.335083,\"endTime\":9.475083,\"confidence\":0.90552855},{\"word\":\"phone.\",\"startTime\":9.475083,\"endTime\":9.875083,\"confidence\":0.88662225}]},{\"text\":\"The page works on my laptop, but the text is too small on a phone. \",\"words\":[{\"word\":\"The\",\"startTime\":10.485125,\"endTime\":10.575125,\"confidence\":0.95601314},{\"word\":\"page\",\"startTime\":10.575125,\"endTime\":10.965125,\"confidence\":0.95158607},{\"word\":\"works\",\"startTime\":10.965125,\"endTime\":11.325125,\"confidence\":0.95913756},{\"word\":\"on\",\"startTime\":11.325125,\"endTime\":11.435125,\"confidence\":0.7403866},{\"word\":\"my\",\"startTime\":11.435125,\"endTime\":11.5651245,\"confidence\":0.9245942},{\"word\":\"laptop,\",\"startTime\":11.5651245,\"endTime\":12.255125,\"confidence\":0.9005503},{\"word\":\"but\",\"startTime\":12.695125,\"endTime\":12.855125,\"confidence\":0.98147583},{\"word\":\"the\",\"startTime\":12.855125,\"endTime\":12.935125,\"confidence\":0.9789436},{\"word\":\"text\",\"startTime\":12.935125,\"endTime\":13.435125,\"confidence\":0.9440096},{\"word\":\"is\",\"startTime\":13.475124,\"endTime\":13.675125,\"confidence\":0.9522552},{\"word\":\"too\",\"startTime\":13.675125,\"endTime\":13.885125,\"confidence\":0.9642025},{\"word\":\"small\",\"startTime\":13.885125,\"endTime\":14.365125,\"confidence\":0.9122563},{\"word\":\"on\",\"startTime\":14.365125,\"endTime\":14.495125,\"confidence\":0.81058675},{\"word\":\"a\",\"startTime\":14.495125,\"endTime\":14.545125,\"confidence\":0.9187135},{\"word\":\"phone.\",\"startTime\":14.545125,\"endTime\":14.915125,\"confidence\":0.8564603}]},{\"text\":\"I am fixing that now.\\n\",\"words\":[{\"word\":\"I\",\"startTime\":15.520166,\"endTime\":15.695167,\"confidence\":0.95547414},{\"word\":\"am\",\"startTime\":15.695167,\"endTime\":15.805166,\"confidence\":0.8610201},{\"word\":\"fixing\",\"startTime\":15.805166,\"endTime\":16.255167,\"confidence\":0.9601008},{\"word\":\"that\",\"startTime\":16.255167,\"endTime\":16.465166,\"confidence\":0.97997},{\"word\":\"now.\",\"startTime\":16.465166,\"endTime\":16.855167,\"confidence\":0.9644976}]}]",
+        "text": "At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c03447e-b9e2-48f1-98f6-0570c8e1b3eb.mp3",
+        "duration": 14.305126,
+        "index": 1,
+        "item_id": "linguadesk-en-1fw9iz6",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I am not blocked, but I need a review. \",\"words\":[{\"word\":\"I\",\"startTime\":0.245,\"endTime\":0.455,\"confidence\":0.8896409},{\"word\":\"am\",\"startTime\":0.455,\"endTime\":0.585,\"confidence\":0.95616406},{\"word\":\"not\",\"startTime\":0.585,\"endTime\":0.905,\"confidence\":0.94614774},{\"word\":\"blocked,\",\"startTime\":0.905,\"endTime\":1.485,\"confidence\":0.93917763},{\"word\":\"but\",\"startTime\":1.965,\"endTime\":2.205,\"confidence\":0.9457824},{\"word\":\"I\",\"startTime\":2.205,\"endTime\":2.295,\"confidence\":0.91744655},{\"word\":\"need\",\"startTime\":2.295,\"endTime\":2.535,\"confidence\":0.93064415},{\"word\":\"a\",\"startTime\":2.535,\"endTime\":2.625,\"confidence\":0.9369273},{\"word\":\"review.\",\"startTime\":2.625,\"endTime\":3.105,\"confidence\":0.9461892}]},{\"text\":\"My teammate will check the page this afternoon. \",\"words\":[{\"word\":\"My\",\"startTime\":3.7400417,\"endTime\":3.9750416,\"confidence\":0.9628751},{\"word\":\"teammate\",\"startTime\":3.9750416,\"endTime\":4.6950417,\"confidence\":0.8743383},{\"word\":\"will\",\"startTime\":4.955042,\"endTime\":5.0950418,\"confidence\":0.8591966},{\"word\":\"check\",\"startTime\":5.0950418,\"endTime\":5.455042,\"confidence\":0.93086934},{\"word\":\"the\",\"startTime\":5.455042,\"endTime\":5.555042,\"confidence\":0.93338346},{\"word\":\"page\",\"startTime\":5.555042,\"endTime\":6.0250416,\"confidence\":0.91508055},{\"word\":\"this\",\"startTime\":6.0250416,\"endTime\":6.255042,\"confidence\":0.91792226},{\"word\":\"afternoon.\",\"startTime\":6.255042,\"endTime\":6.785042,\"confidence\":0.90842795}]},{\"text\":\"I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.\\n\"},{\"text\":\"My next step is to make the text easier to read. \",\"words\":[{\"word\":\"My\",\"startTime\":7.435084,\"endTime\":7.6150837,\"confidence\":0.95893097},{\"word\":\"next\",\"startTime\":7.6150837,\"endTime\":8.015083,\"confidence\":0.96308637},{\"word\":\"step\",\"startTime\":8.015083,\"endTime\":8.415084,\"confidence\":0.9539088},{\"word\":\"is\",\"startTime\":8.805083,\"endTime\":8.995084,\"confidence\":0.90233815},{\"word\":\"to\",\"startTime\":8.995084,\"endTime\":9.115084,\"confidence\":0.9754048},{\"word\":\"make\",\"startTime\":9.115084,\"endTime\":9.385084,\"confidence\":0.9761961},{\"word\":\"the\",\"startTime\":9.385084,\"endTime\":9.485084,\"confidence\":0.9765749},{\"word\":\"text\",\"startTime\":9.485084,\"endTime\":9.925083,\"confidence\":0.94618636},{\"word\":\"easier\",\"startTime\":9.955084,\"endTime\":10.345083,\"confidence\":0.9729773},{\"word\":\"to\",\"startTime\":10.345083,\"endTime\":10.495084,\"confidence\":0.97876453},{\"word\":\"read.\",\"startTime\":10.495084,\"endTime\":10.995084,\"confidence\":0.8575535}]},{\"text\":\"I will ask for help if I find another problem.\\n\",\"words\":[{\"word\":\"I\",\"startTime\":11.5251255,\"endTime\":11.685126,\"confidence\":0.9698372},{\"word\":\"will\",\"startTime\":11.685126,\"endTime\":11.825126,\"confidence\":0.832234},{\"word\":\"ask\",\"startTime\":11.925126,\"endTime\":12.155126,\"confidence\":0.9510836},{\"word\":\"for\",\"startTime\":12.155126,\"endTime\":12.335126,\"confidence\":0.9635557},{\"word\":\"help\",\"startTime\":12.335126,\"endTime\":12.795126,\"confidence\":0.9727145},{\"word\":\"if\",\"startTime\":12.975126,\"endTime\":13.175126,\"confidence\":0.96367306},{\"word\":\"I\",\"startTime\":13.175126,\"endTime\":13.245126,\"confidence\":0.9598537},{\"word\":\"find\",\"startTime\":13.245126,\"endTime\":13.565126,\"confidence\":0.95099896},{\"word\":\"another\",\"startTime\":13.565126,\"endTime\":13.865126,\"confidence\":0.92882013},{\"word\":\"problem.\",\"startTime\":13.865126,\"endTime\":14.305126,\"confidence\":0.974194}]}]",
+        "text": "I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5633a220-7623-45c1-a781-6ad95304e562.mp3",
+        "duration": 1.005,
+        "index": 2,
+        "item_id": "linguadesk-en-1dycbrn",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"finish\\n\"},{\"text\":\"finish\\n\",\"words\":[{\"word\":\"finish\",\"startTime\":0.315,\"endTime\":1.005,\"confidence\":0.9124121}]}]",
+        "text": "finish"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/856e4627-b2b9-44a1-abaa-b989f0b6dab8.mp3",
+        "duration": 2.785,
+        "index": 3,
+        "item_id": "linguadesk-en-1ws9bmf",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"Yesterday, I finished the search page.\\n\"},{\"text\":\"Yesterday, I finished the search page.\\n\",\"words\":[{\"word\":\"Yesterday,\",\"startTime\":0.235,\"endTime\":0.855,\"confidence\":0.9507472},{\"word\":\"I\",\"startTime\":1.335,\"endTime\":1.495,\"confidence\":0.9730541},{\"word\":\"finished\",\"startTime\":1.495,\"endTime\":1.925,\"confidence\":0.9545046},{\"word\":\"the\",\"startTime\":1.925,\"endTime\":1.985,\"confidence\":0.812941},{\"word\":\"search\",\"startTime\":1.985,\"endTime\":2.305,\"confidence\":0.9637994},{\"word\":\"page.\",\"startTime\":2.305,\"endTime\":2.785,\"confidence\":0.92956954}]}]",
+        "text": "Yesterday, I finished the search page."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6dfb4762-6e45-44e1-aeef-a9a51eb59210.mp3",
+        "duration": 1.055,
+        "index": 4,
+        "item_id": "linguadesk-en-1jktpp4",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"review\\n\"},{\"text\":\"review\\n\",\"words\":[{\"word\":\"review\",\"startTime\":0.345,\"endTime\":1.055,\"confidence\":0.86984754}]}]",
+        "text": "review"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/633a5515-ad41-4ff3-ba61-f0bff4a7aeab.mp3",
+        "duration": 1.315,
+        "index": 5,
+        "item_id": "linguadesk-en-1p42shw",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I need a review.\\n\"},{\"text\":\"I need a review.\\n\",\"words\":[{\"word\":\"I\",\"startTime\":0.245,\"endTime\":0.365,\"confidence\":0.8654786},{\"word\":\"need\",\"startTime\":0.365,\"endTime\":0.685,\"confidence\":0.86397976},{\"word\":\"a\",\"startTime\":0.685,\"endTime\":0.775,\"confidence\":0.80579543},{\"word\":\"review.\",\"startTime\":0.775,\"endTime\":1.315,\"confidence\":0.92925125}]}]",
+        "text": "I need a review."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4246d683-eb6f-436e-a87d-1cbed8939123.mp3",
+        "duration": 0.625,
+        "index": 6,
+        "item_id": "linguadesk-en-1yockbw",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"blocked\\n\"},{\"text\":\"blocked\\n\",\"words\":[{\"word\":\"blocked\",\"startTime\":0.435,\"endTime\":0.625,\"confidence\":0.49164727}]}]",
+        "text": "blocked"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ca3c9a62-1b35-4063-9cdf-5ab43d6cf238.mp3",
+        "duration": 1.565,
+        "index": 7,
+        "item_id": "linguadesk-en-bqvrpo",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"I am not blocked.\\n\"},{\"text\":\"I am not blocked.\\n\",\"words\":[{\"word\":\"I\",\"startTime\":0.205,\"endTime\":0.455,\"confidence\":0.9346663},{\"word\":\"am\",\"startTime\":0.455,\"endTime\":0.575,\"confidence\":0.95575666},{\"word\":\"not\",\"startTime\":0.575,\"endTime\":0.885,\"confidence\":0.95422804},{\"word\":\"blocked.\",\"startTime\":0.885,\"endTime\":1.565,\"confidence\":0.8971815}]}]",
+        "text": "I am not blocked."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68fc2347-7969-46b8-9b84-35630e5703fa.mp3",
+        "duration": 0.975,
+        "index": 8,
+        "item_id": "linguadesk-en-j61wbd",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"next step\\n\"},{\"text\":\"next step\\n\",\"words\":[{\"word\":\"next\",\"startTime\":0.215,\"endTime\":0.555,\"confidence\":0.93536925},{\"word\":\"step\",\"startTime\":0.555,\"endTime\":0.975,\"confidence\":0.9688496}]}]",
+        "text": "next step"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c3049e8c-674e-4085-a588-b51b893d7862.mp3",
+        "duration": 2.535,
+        "index": 9,
+        "item_id": "linguadesk-en-1g4f8uk",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"My next step is to test the page.\\n\"},{\"text\":\"My next step is to test the page.\\n\",\"words\":[{\"word\":\"My\",\"startTime\":0.205,\"endTime\":0.385,\"confidence\":0.95086426},{\"word\":\"next\",\"startTime\":0.385,\"endTime\":0.675,\"confidence\":0.89037305},{\"word\":\"step\",\"startTime\":0.675,\"endTime\":1.105,\"confidence\":0.9296824},{\"word\":\"is\",\"startTime\":1.195,\"endTime\":1.385,\"confidence\":0.93855095},{\"word\":\"to\",\"startTime\":1.385,\"endTime\":1.515,\"confidence\":0.96301407},{\"word\":\"test\",\"startTime\":1.515,\"endTime\":1.865,\"confidence\":0.9476609},{\"word\":\"the\",\"startTime\":1.865,\"endTime\":1.945,\"confidence\":0.93801713},{\"word\":\"page.\",\"startTime\":1.945,\"endTime\":2.535,\"confidence\":0.9339493}]}]",
+        "text": "My next step is to test the page."
+      }
+    ]
+  }
+}

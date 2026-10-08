@@ -1,0 +1,53 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:見ます",
+    "ja:土曜日に部屋を見ます。",
+    "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。"
+  ],
+  "spoken_texts": {
+    "ja:見ます": "見ます",
+    "ja:土曜日に部屋を見ます。": "土曜日に部屋を見ます。",
+    "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。": "家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac752fa68694fc9cedd3745",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78dbdfa6-f623-4436-b560-8a417e9ceda7.mp3",
+        "duration": 0.995,
+        "index": 0,
+        "item_id": "linguadesk-ja-kdrvq",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"見ます\\n\"},{\"text\":\"見ます\\n\",\"words\":[{\"word\":\"見\",\"endTime\":0.075,\"confidence\":0.45143527},{\"word\":\"ま\",\"startTime\":0.825,\"endTime\":0.855,\"confidence\":0.49373317},{\"word\":\"す\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.4016608}]}]",
+        "text": "見ます"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a3f97997-9c17-4ac1-982a-810f476ed8b1.mp3",
+        "duration": 1.915,
+        "index": 1,
+        "item_id": "linguadesk-ja-56kkg8",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"土曜日に部屋を見ます。\"},{\"text\":\"土曜日に部屋を見ます。\",\"words\":[{\"word\":\"土\",\"startTime\":0.205,\"endTime\":0.445,\"confidence\":0.8458803},{\"word\":\"曜\",\"startTime\":0.445,\"endTime\":0.625,\"confidence\":0.7838636},{\"word\":\"日\",\"startTime\":0.625,\"endTime\":0.765,\"confidence\":0.6481416},{\"word\":\"に\",\"startTime\":0.895,\"endTime\":0.925,\"confidence\":0.14938825},{\"word\":\"部\",\"startTime\":0.925,\"endTime\":1.075,\"confidence\":0.5816264},{\"word\":\"屋\",\"startTime\":1.355,\"endTime\":1.385,\"confidence\":0.32501018},{\"word\":\"を\",\"startTime\":1.385,\"endTime\":1.415,\"confidence\":0.22699629},{\"word\":\"見\",\"startTime\":1.415,\"endTime\":1.555,\"confidence\":0.37713227},{\"word\":\"ま\",\"startTime\":1.555,\"endTime\":1.675,\"confidence\":0.43644923},{\"word\":\"す。\",\"startTime\":1.885,\"endTime\":1.915,\"confidence\":0.48369852}]}]",
+        "text": "土曜日に部屋を見ます。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/67d76dcc-f100-49db-81fc-3248fc841bd1.mp3",
+        "duration": 7.4850836,
+        "index": 2,
+        "item_id": "linguadesk-ja-1dh9c8y",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"家賃はいくらですか。\",\"words\":[{\"word\":\"家\",\"startTime\":0.355,\"endTime\":0.595,\"confidence\":0.9247455},{\"word\":\"賃\",\"startTime\":0.595,\"endTime\":0.715,\"confidence\":0.6714793},{\"word\":\"は\",\"startTime\":0.715,\"endTime\":0.745,\"confidence\":0.20840888},{\"word\":\"い\",\"startTime\":0.805,\"endTime\":0.835,\"confidence\":0.2688264},{\"word\":\"く\",\"startTime\":1.455,\"endTime\":1.485,\"confidence\":0.20790756},{\"word\":\"ら\",\"startTime\":1.575,\"endTime\":1.605,\"confidence\":0.34416777},{\"word\":\"で\",\"startTime\":1.635,\"endTime\":1.665,\"confidence\":0.40005735},{\"word\":\"す\",\"startTime\":1.695,\"endTime\":1.725,\"confidence\":0.3726276},{\"word\":\"か。\",\"startTime\":1.755,\"endTime\":1.785,\"confidence\":0.3135354}]},{\"text\":\"家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。\"},{\"text\":\"土曜日に部屋を見たいです。\",\"words\":[{\"word\":\"土\",\"startTime\":2.6850417,\"endTime\":2.8850417,\"confidence\":0.6933827},{\"word\":\"曜\",\"startTime\":2.8850417,\"endTime\":3.0650415,\"confidence\":0.79025143},{\"word\":\"日\",\"startTime\":3.0650415,\"endTime\":3.1350417,\"confidence\":0.52175033},{\"word\":\"に\",\"startTime\":4.0650415,\"endTime\":4.0950418,\"confidence\":0.27712077},{\"word\":\"部\",\"startTime\":4.0950418,\"endTime\":4.1550417,\"confidence\":0.38280505},{\"word\":\"屋\",\"startTime\":4.1550417,\"endTime\":4.1850414,\"confidence\":0.2925584},{\"word\":\"を\",\"startTime\":4.1850414,\"endTime\":4.2150416,\"confidence\":0.18945906},{\"word\":\"見\",\"startTime\":4.2750416,\"endTime\":4.3450418,\"confidence\":0.30809218},{\"word\":\"た\",\"startTime\":4.3950415,\"endTime\":4.4250417,\"confidence\":0.18809487},{\"word\":\"い\",\"startTime\":4.495042,\"endTime\":4.5250416,\"confidence\":0.24250874},{\"word\":\"で\",\"startTime\":4.6750417,\"endTime\":4.705042,\"confidence\":0.33427244},{\"word\":\"す。\",\"startTime\":6.575042,\"endTime\":6.6050415,\"confidence\":0.36310032}]},{\"text\":\"よろしくお願いします。\",\"words\":[{\"word\":\"よ\",\"startTime\":6.6100836,\"endTime\":6.6550837,\"confidence\":0.5372339},{\"word\":\"ろ\",\"startTime\":7.2150836,\"endTime\":7.245084,\"confidence\":0.17708492},{\"word\":\"し\",\"startTime\":7.245084,\"endTime\":7.2750835,\"confidence\":0.23015915},{\"word\":\"く\",\"startTime\":7.2750835,\"endTime\":7.3050838,\"confidence\":0.2777559},{\"word\":\"お\",\"startTime\":7.3050838,\"endTime\":7.3350835,\"confidence\":0.3596535},{\"word\":\"願\",\"startTime\":7.3350835,\"endTime\":7.3650837,\"confidence\":0.20729946},{\"word\":\"い\",\"startTime\":7.3650837,\"endTime\":7.3950834,\"confidence\":0.28923535},{\"word\":\"し\",\"startTime\":7.3950834,\"endTime\":7.4250836,\"confidence\":0.3339574},{\"word\":\"ま\",\"startTime\":7.4250836,\"endTime\":7.455084,\"confidence\":0.31612673},{\"word\":\"す。\",\"startTime\":7.455084,\"endTime\":7.4850836,\"confidence\":0.3485996}]}]",
+        "text": "家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。"
+      }
+    ]
+  }
+}

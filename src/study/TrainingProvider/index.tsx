@@ -6,6 +6,7 @@ import {
   reviewResult,
   saveResult,
   saveWord,
+  saveVocabularyWord,
   saveDrillResult,
 } from '../trainingState';
 import type { TrainingData } from '../trainingTypes';
@@ -73,6 +74,13 @@ export function TrainingProvider({ children }: { children: ReactNode }) {
           setNow(time.getTime());
           setData((current) =>
             saveWord(current, lesson, word, time.toISOString()),
+          );
+        },
+        addVocabularyWord: (word) => {
+          const time = new Date();
+          setNow(time.getTime());
+          setData((current) =>
+            saveVocabularyWord(current, word, time.toISOString()),
           );
         },
         addResult: (result) => {

@@ -21,7 +21,8 @@ export interface PracticeResult {
 
 export interface ReviewItem {
   id: string;
-  lessonId: string;
+  lessonId?: string;
+  lang?: Language;
   kind: 'word' | 'question' | 'speaking' | 'grammar' | 'listening';
   contentId: string;
   dueAt: string;
@@ -56,8 +57,9 @@ export type DrillInput = Omit<
 
 export interface SavedWord extends TrainingWord {
   key: string;
-  lessonId: string;
+  lessonId?: string;
   lang: Language;
+  origin?: string;
 }
 
 export interface TrainingData {

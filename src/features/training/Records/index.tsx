@@ -8,7 +8,11 @@ import LegacyHistory from './LegacyHistory';
 import KanaHistory from './KanaHistory';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
-import { lessonMastered, lessonsForTarget } from '@/study/trainingState';
+import {
+  lessonMastered,
+  lessonsForTarget,
+  reviewLanguage,
+} from '@/study/trainingState';
 
 const localDay = (date: Date) =>
   `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -54,11 +58,7 @@ export default function Records({
     for (const result of data.kanaResults ?? [])
       activeDates.add(localDay(new Date(result.completedAt)));
   for (const item of data.reviews)
-    if (
-      item.lastReviewedAt &&
-      LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
-        data.language
-    )
+    if (item.lastReviewedAt && reviewLanguage(item) === data.language)
       activeDates.add(localDay(new Date(item.lastReviewedAt)));
   const first = (month.getDay() + 6) % 7;
   const count = new Date(

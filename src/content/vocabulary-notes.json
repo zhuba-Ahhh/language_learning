@@ -1,0 +1,140 @@
+{
+  "ja:私": { "partOfSpeech": "代词", "note": "礼貌场合常用的“我”。" },
+  "ja:大学生": { "partOfSpeech": "名词", "note": "大学生です：是大学生。" },
+  "ja:勉強": {
+    "partOfSpeech": "名词・する动词",
+    "lemma": "勉強する",
+    "forms": ["勉強します", "勉強しています"],
+    "note": "勉強する：学习；〜ています可表示正在做或持续状态。"
+  },
+  "ja:日本語": {
+    "partOfSpeech": "名词",
+    "note": "日本語を勉強する：学习日语。"
+  },
+  "ja:本": { "partOfSpeech": "名词" },
+  "ja:何": {
+    "partOfSpeech": "疑问词",
+    "note": "何ですか 中读 なん；读音随搭配变化。"
+  },
+  "ja:パソコン": {
+    "partOfSpeech": "名词",
+    "note": "个人电脑；来自パーソナルコンピューター的缩略。"
+  },
+  "ja:先生": { "partOfSpeech": "名词" },
+  "ja:毎朝": { "partOfSpeech": "时间名词" },
+  "ja:起きます": {
+    "partOfSpeech": "动词",
+    "lemma": "起きる",
+    "forms": ["起き", "起きました"],
+    "note": "起きます是礼貌形式；此处表示起床。"
+  },
+  "ja:帰ります": {
+    "partOfSpeech": "动词",
+    "lemma": "帰る",
+    "forms": ["帰り", "帰りました"],
+    "note": "帰ります是礼貌形式；表示返回或回家。"
+  },
+  "ja:夜": { "partOfSpeech": "时间名词" },
+  "ja:駅": { "partOfSpeech": "名词" },
+  "ja:まっすぐ": { "partOfSpeech": "副词", "note": "まっすぐ行く：直走。" },
+  "ja:右": { "partOfSpeech": "名词" },
+  "ja:左": { "partOfSpeech": "名词" },
+  "ja:図書館": { "partOfSpeech": "名词" },
+  "ja:平日": { "partOfSpeech": "时间名词" },
+  "ja:返します": {
+    "partOfSpeech": "动词",
+    "lemma": "返す",
+    "forms": ["返し", "返しました"],
+    "note": "归还物品；与表示自己返回的帰る区分。"
+  },
+  "ja:入口": { "partOfSpeech": "名词" },
+  "ja:修正": {
+    "partOfSpeech": "名词・する动词",
+    "lemma": "修正する",
+    "forms": ["修正します", "修正しました"],
+    "note": "修正しました：已经修正，用于汇报完成的工作。"
+  },
+  "ja:結果": { "partOfSpeech": "名词" },
+  "ja:確認": {
+    "partOfSpeech": "名词・する动词",
+    "lemma": "確認する",
+    "forms": ["確認します", "確認したい"],
+    "note": "確認したい：想确认；并不表示已经确认。"
+  },
+  "ja:質問": {
+    "partOfSpeech": "名词・する动词",
+    "lemma": "質問する",
+    "forms": ["質問します"],
+    "note": "質問する：提问。"
+  },
+  "ja:予約": {
+    "partOfSpeech": "名词・する动词",
+    "lemma": "予約する",
+    "forms": ["予約します", "予約しました"],
+    "note": "提前预约餐厅、看房或服务。"
+  },
+  "ja:仕様": {
+    "partOfSpeech": "名词",
+    "note": "软件规格或功能要求；与“使用”区分。"
+  },
+  "ja:開発": { "partOfSpeech": "名词・する动词", "lemma": "開発する" },
+  "ja:環境": { "partOfSpeech": "名词", "note": "開発環境：开发环境。" },
+  "ja:設定": { "partOfSpeech": "名词・する动词", "lemma": "設定する" },
+  "ja:進捗": {
+    "partOfSpeech": "名词",
+    "note": "工作的进展情况，常用于进度汇报。"
+  },
+  "ja:納期": { "partOfSpeech": "名词", "note": "交付期限，不是会议日期。" },
+  "ja:対応": { "partOfSpeech": "名词・する动词", "lemma": "対応する" },
+  "ja:報告": { "partOfSpeech": "名词・する动词", "lemma": "報告する" },
+  "ja:家賃": {
+    "partOfSpeech": "名词",
+    "note": "此练习中的月租；实际租房费用以具体合同为准。"
+  },
+  "ja:部屋": { "partOfSpeech": "名词" },
+  "ja:近い": {
+    "partOfSpeech": "い形容词",
+    "forms": ["近く"],
+    "note": "駅に近い：离车站近；近くに表示在附近。"
+  },
+  "ja:見ます": {
+    "partOfSpeech": "动词",
+    "lemma": "見る",
+    "forms": ["見", "見たい"],
+    "note": "見たいです：想看；这里指看房。"
+  },
+  "en:subject": {
+    "partOfSpeech": "名词",
+    "note": "这里指学习的学科，而不是邮件主题。"
+  },
+  "en:confusing": {
+    "partOfSpeech": "形容词",
+    "lemma": "confuse",
+    "note": "confusing：事物令人困惑；confused：人感到困惑。"
+  },
+  "en:solve a problem": {
+    "partOfSpeech": "动词短语",
+    "forms": ["solving problems"],
+    "note": "solve 后接问题；solving 是 -ing 形式。"
+  },
+  "en:finish": {
+    "partOfSpeech": "动词",
+    "lemma": "finish",
+    "forms": ["finished"],
+    "note": "finished 表示已经完成。"
+  },
+  "en:review": {
+    "partOfSpeech": "名词・动词",
+    "note": "此处是请同伴检查工作，不是学习复习。"
+  },
+  "en:blocked": {
+    "partOfSpeech": "形容词",
+    "lemma": "block",
+    "note": "工作受阻；汇报时说明具体原因和需要的帮助。"
+  },
+  "en:next step": {
+    "partOfSpeech": "名词短语",
+    "forms": ["next steps"],
+    "note": "下一步要采取的具体行动。"
+  }
+}

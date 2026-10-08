@@ -9,6 +9,7 @@ import KanaPractice from './KanaPractice';
 import styles from '../index.module.less';
 import StudyArt from '../components/StudyArt';
 import { stopSpeak } from '@/lib/speech';
+import { reviewLanguage } from '@/study/trainingState';
 
 export default function Review({
   onOpen,
@@ -27,8 +28,8 @@ export default function Review({
     data.reviews
       .filter(
         (item) =>
-          LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
-            data.language && Date.parse(item.dueAt) <= Date.now(),
+          reviewLanguage(item) === data.language &&
+          Date.parse(item.dueAt) <= Date.now(),
       )
       .map((item) => item.id)
       .slice(0, 10),
@@ -36,10 +37,13 @@ export default function Review({
   const [index, setIndex] = useState(0);
   const item = data.reviews.find((review) => review.id === batch[index]);
   const lesson = LESSONS.find((unit) => unit.id === item?.lessonId);
+  const word =
+    item?.kind === 'word' && !lesson
+      ? data.savedWords.find((word) => word.key === item.contentId)
+      : undefined;
   const upcoming = data.reviews.filter(
     (item) =>
-      LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
-        data.language && Date.parse(item.dueAt) > now,
+      reviewLanguage(item) === data.language && Date.parse(item.dueAt) > now,
   ).length;
   const finish = (remembered: boolean) => {
     if (!item) return;
@@ -52,8 +56,8 @@ export default function Review({
       data.reviews
         .filter(
           (item) =>
-            LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
-              data.language && Date.parse(item.dueAt) <= Date.now(),
+            reviewLanguage(item) === data.language &&
+            Date.parse(item.dueAt) <= Date.now(),
         )
         .map((item) => item.id)
         .slice(0, 10),
@@ -68,7 +72,7 @@ export default function Review({
     <div>
       <PageHeading title="复习" />
       <div className={styles.reviewLayout}>
-        {item && lesson ? (
+        {item && (lesson || word) ? (
           <section className={styles.reviewPaper} key={item.id}>
             <div className={styles.exerciseMeta}>
               <span>
@@ -86,10 +90,13 @@ export default function Review({
                 {index + 1} / {batch.length}
               </span>
             </div>
-            <p className={styles.reviewOrigin}>{lesson.title}</p>
+            <p className={styles.reviewOrigin}>
+              {lesson?.title ?? word?.origin ?? '内置词库'}
+            </p>
             <ReviewContent
               item={item}
               lesson={lesson}
+              word={word}
               revealed={revealed}
               onOpen={onOpen}
             />

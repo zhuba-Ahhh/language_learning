@@ -1079,5 +1079,168 @@
     ],
     "version": 2,
     "source": "LinguaDesk 原创专项练习，非官方真题"
+  },
+  {
+    "id": "en-project-update",
+    "lang": "en",
+    "title": "项目进度汇报",
+    "subtitle": "A short team update",
+    "stage": "英语基础应用",
+    "track": "tech",
+    "minutes": 15,
+    "goal": "读懂完成项、当前问题与下一步，用三句话汇报进度。",
+    "paragraphs": [
+      {
+        "text": "At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+        "translation": "在团队会议上，我做简短汇报。昨天完成了搜索页面，今天会在手机上测试。页面在笔记本电脑上运行正常，但手机上的文字太小。我正在修复这个问题。"
+      },
+      {
+        "text": "I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+        "translation": "我的工作没有受阻，但需要别人检查。队友今天下午会检查页面。下一步是让文字更容易阅读。如果发现另一个问题，我会寻求帮助。"
+      }
+    ],
+    "words": [
+      {
+        "id": "finish",
+        "term": "finish",
+        "meaning": "完成",
+        "example": "Yesterday, I finished the search page.",
+        "exampleZh": "昨天完成了搜索页面。"
+      },
+      {
+        "id": "review",
+        "term": "review",
+        "meaning": "检查；评审",
+        "example": "I need a review.",
+        "exampleZh": "我需要别人检查。"
+      },
+      {
+        "id": "blocked",
+        "term": "blocked",
+        "meaning": "工作受阻的",
+        "example": "I am not blocked.",
+        "exampleZh": "我的工作没有受阻。"
+      },
+      {
+        "id": "next-step",
+        "term": "next step",
+        "meaning": "下一步",
+        "example": "My next step is to test the page.",
+        "exampleZh": "下一步是测试页面。"
+      }
+    ],
+    "marks": [
+      {
+        "text": "finished",
+        "kind": "phrase",
+        "note": "finish 的过去式，表示已完成。",
+        "wordId": "finish"
+      },
+      {
+        "text": "too small",
+        "kind": "phrase",
+        "note": "too + 形容词：过于……，这里表示字太小。"
+      },
+      {
+        "text": "My next step is to",
+        "kind": "pattern",
+        "note": "说明下一步的具体动作。"
+      },
+      { "text": "ask for help", "kind": "phrase", "note": "寻求帮助。" }
+    ],
+    "pattern": {
+      "form": "My next step is to …",
+      "meaning": "用 to + 动词原形说明下一步。",
+      "example": "My next step is to test the page."
+    },
+    "questions": [
+      {
+        "id": "finished-work",
+        "kind": "choice",
+        "prompt": "What did the writer finish yesterday?",
+        "options": ["The search page", "The phone test", "The team review"],
+        "answer": "The search page",
+        "evidence": 0,
+        "explanation": "Yesterday, I finished the search page 明确说明完成项。"
+      },
+      {
+        "id": "phone-problem",
+        "kind": "choice",
+        "prompt": "What is the problem on a phone?",
+        "options": [
+          "The page does not open",
+          "The text is too small",
+          "The search is too slow"
+        ],
+        "answer": "The text is too small",
+        "evidence": 0,
+        "explanation": "问题是文字太小，没有说页面打不开或搜索太慢。"
+      },
+      {
+        "id": "review-time",
+        "kind": "gap",
+        "prompt": "The teammate will check the page this _____.",
+        "answer": "afternoon",
+        "evidence": 1,
+        "explanation": "第二段给出的时间是 this afternoon。",
+        "maxWords": 1
+      },
+      {
+        "id": "blocked-status",
+        "kind": "truth",
+        "prompt": "The writer cannot continue working until the review is finished.",
+        "answer": "False",
+        "evidence": 1,
+        "explanation": "I am not blocked 表示工作没有受阻；需要检查不等于不能继续。"
+      },
+      {
+        "id": "next-action",
+        "kind": "choice",
+        "prompt": "What will the writer improve next?",
+        "options": [
+          "How easy the text is to read",
+          "The meeting time",
+          "The laptop battery"
+        ],
+        "answer": "How easy the text is to read",
+        "evidence": 1,
+        "explanation": "make the text easier to read 是下一步行动。"
+      }
+    ],
+    "speaking": [
+      {
+        "id": "update-shadow",
+        "mode": "shadow",
+        "title": "昨天与今天",
+        "prompt": "听一遍，再跟读。注意 finished 和 will test。",
+        "sample": "Yesterday, I finished the search page. Today, I will test it on my phone.",
+        "translation": "昨天完成了搜索页面，今天会在手机上测试。",
+        "hints": ["Yesterday：已经完成", "Today：今天的计划"],
+        "seconds": 25
+      },
+      {
+        "id": "update-answer",
+        "mode": "answer",
+        "title": "做一次进度汇报",
+        "prompt": "What have you finished, what are you doing now, and what is your next step?",
+        "sample": "Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+        "translation": "昨天完成了搜索页面，现在正在调整手机上的文字。下一步是请队友检查。",
+        "hints": ["一个完成项", "一个当前动作", "一个下一步"],
+        "seconds": 45
+      },
+      {
+        "id": "extra-next-step",
+        "mode": "answer",
+        "title": "替换下一步",
+        "prompt": "用 My next step is to 说一件你下一步要做的事。",
+        "sample": "My next step is to test the page.",
+        "translation": "下一步是测试页面。",
+        "hints": ["to 后用动词原形", "只说一个具体动作"],
+        "seconds": 20,
+        "optional": true
+      }
+    ],
+    "version": 1,
+    "source": "LinguaDesk 原创训练材料，情境为虚构"
   }
 ]

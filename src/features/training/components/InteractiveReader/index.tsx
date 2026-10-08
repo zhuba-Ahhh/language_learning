@@ -9,6 +9,7 @@ import useCdnReader from './useCdnReader';
 import ReaderWords from './ReaderWords';
 import WordActions from './WordActions';
 import styles from './index.module.less';
+import { VOCABULARY } from '@/content/vocabulary';
 
 const clock = (time: number) =>
   `${Math.floor(time / 60)}:${String(Math.floor(time % 60)).padStart(2, '0')}`;
@@ -64,6 +65,12 @@ export default function InteractiveReader({
     () =>
       tokenizeText(text, lesson.lang, [
         ...lesson.words.map((word) => word.term),
+        ...VOCABULARY.filter((word) => word.lang === lesson.lang).flatMap(
+          (word) =>
+            [word.term, word.lemma, ...(word.forms ?? [])].filter(
+              (term): term is string => !!term,
+            ),
+        ),
         ...(lesson.lang === 'ja'
           ? (alignment?.words ?? [])
               .map(([from, to]) => text.slice(from, to))

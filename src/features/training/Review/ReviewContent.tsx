@@ -1,21 +1,39 @@
 import type { Lesson } from '@/content/training';
-import type { ReviewItem } from '@/study/trainingTypes';
+import type { ReviewItem, SavedWord } from '@/study/trainingTypes';
 import SpeakButton from '@/components/SpeakButton';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
 import { GRAMMAR } from '@/content/training/grammar';
+import WordDetails from '../components/WordDetails';
 
 export default function ReviewContent({
   item,
   lesson,
+  word,
   revealed,
   onOpen,
 }: {
   item: ReviewItem;
-  lesson: Lesson;
+  lesson?: Lesson;
+  word?: SavedWord;
   revealed: boolean;
   onOpen: (selection: TrainingSelection) => void;
 }) {
+  if (!lesson && word)
+    return (
+      <>
+        <h2 lang={word.lang}>{word.term}</h2>
+        <SpeakButton text={word.term} lang={word.lang} size={38} />
+        {revealed && (
+          <div className={styles.reviewAnswer}>
+            {word.reading && <small>{word.reading}</small>}
+            <p>{word.meaning}</p>
+            <WordDetails word={word} lang={word.lang} />
+          </div>
+        )}
+      </>
+    );
+  if (!lesson) return null;
   return (
     <>
       {item.kind === 'word' &&

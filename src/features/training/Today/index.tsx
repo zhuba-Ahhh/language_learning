@@ -3,6 +3,7 @@ import {
   lessonCompleted,
   lessonMastered,
   lessonsForTarget,
+  reviewLanguage,
 } from '@/study/trainingState';
 import { todayPlan } from '@/study/trainingPlan';
 import { useTraining } from '@/study/trainingContext';
@@ -32,8 +33,7 @@ export default function Today({
   const mastered = all.filter((item) => lessonMastered(data, item)).length;
   const due = data.reviews.filter(
     (item) =>
-      LESSONS.find((unit) => unit.id === item.lessonId)?.lang ===
-        data.language && Date.parse(item.dueAt) <= now,
+      reviewLanguage(item) === data.language && Date.parse(item.dueAt) <= now,
   );
   const nextSpeaking = plan.speaking;
   const done = plan.tasks.filter((task) => task.done).length;

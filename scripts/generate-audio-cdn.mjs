@@ -105,6 +105,7 @@ async function collectTexts(urls) {
       for (const word of lesson.words) {
         if (language === 'ja') readings.set(word.term, word.reading);
         add(language, word.term);
+        if (word.example) add(language, word.example);
       }
       for (const task of lesson.speaking)
         add(language, task.sample, undefined, true);

@@ -164,5 +164,5 @@ assert.equal(reviewed.reviews[0].lastReviewedAt, now);
 assert.equal(isTrainingData(reviewed), true);
 assert.equal(isTrainingData(initial()), true);
 console.log(
-  'P0 workflow passed: 12 grammar units, budget/target routing, 80% mastery, local drill records and review, legacy compatibility.',
+  `P0 workflow passed: ${LESSONS.length} grammar units, budget/target routing, 80% mastery, local drill records and review, legacy compatibility.`,
 );

@@ -8,6 +8,65 @@ export const GRAMMAR: Record<
     questions: Question[];
   }
 > = {
+  'en-project-update': {
+    tips: ['to 后接动词原形。', '下一步说一个具体行动，避免只说“继续努力”。'],
+    chunks: [
+      { text: 'My next step ', role: '下一步' },
+      { text: 'is to ', role: '引出行动' },
+      { text: 'test the page.', role: '具体行动' },
+    ],
+    questions: [
+      {
+        id: 'next-verb',
+        kind: 'gap',
+        prompt: '按例句填空：My next step is to _____ the page.',
+        answer: 'test',
+        maxWords: 1,
+        evidence: 0,
+        explanation: 'to 后接动词原形 test。',
+      },
+      {
+        id: 'next-action',
+        kind: 'choice',
+        prompt: '这个句型主要说明什么？',
+        options: ['下一步行动', '昨天的结果', '同事的身份'],
+        answer: '下一步行动',
+        evidence: 0,
+        explanation: 'My next step is to 引出接下来要做的具体行动。',
+      },
+    ],
+  },
+  'ja-room-visit': {
+    tips: [
+      '見ます去掉ます，得到見，再加たいです。',
+      'たい表示自己的愿望，不表示已经完成。',
+    ],
+    chunks: [
+      { text: 'この部屋を', role: '想看的对象' },
+      { text: '見たい', role: '想看的愿望' },
+      { text: 'です。', role: '礼貌结尾' },
+    ],
+    questions: [
+      {
+        id: 'wish-form',
+        kind: 'gap',
+        prompt: '按例句填空：この部屋を見 _____ です。',
+        answer: 'たい',
+        maxWords: 1,
+        evidence: 0,
+        explanation: '見ます去掉ます，加たい，表示想看。',
+      },
+      {
+        id: 'wish-meaning',
+        kind: 'choice',
+        prompt: '見たいです表达什么？',
+        options: ['已经看过', '想看', '不能看'],
+        answer: '想看',
+        evidence: 0,
+        explanation: 'たいです表示想做某事。',
+      },
+    ],
+  },
   'en-my-major': {
     tips: [
       'chose 是 choose 的过去式，描述已经作出的选择。',

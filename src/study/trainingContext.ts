@@ -1,6 +1,7 @@
 import { createContext, useContext } from 'react';
 import type { Language, Lesson, TrainingWord } from '@/content/training';
 import type { DrillInput, PracticeResult, TrainingData } from './trainingTypes';
+import type { VocabularyWord } from '@/content/vocabularyIndex';
 
 export interface TrainingState {
   data: TrainingData;
@@ -12,6 +13,7 @@ export interface TrainingState {
   setTarget: (lang: Language, target: string) => void;
   openLesson: (lesson: Lesson) => void;
   addWord: (lesson: Lesson, word: TrainingWord) => void;
+  addVocabularyWord: (word: VocabularyWord) => void;
   addResult: (result: Omit<PracticeResult, 'id' | 'completedAt'>) => void;
   addDrillResult: (result: DrillInput) => void;
   review: (id: string, remembered: boolean) => void;

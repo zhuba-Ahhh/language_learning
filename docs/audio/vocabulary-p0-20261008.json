@@ -1,0 +1,310 @@
+{
+  "date": "2026-10-08",
+  "speaker": "S_olwRWVfN1",
+  "lessonIds": ["en-project-update", "ja-room-visit"],
+  "assetsAdded": 23,
+  "previousAssetsUnchanged": 650,
+  "previousTimingsUnchanged": 61,
+  "trainingAlignmentTexts": 70,
+  "entries": [
+    {
+      "key": "en:At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+      "spokenText": "At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f932cb5-d33c-4d0b-8510-3250d399caa6.mp3",
+      "duration": 16.855167,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:At our team meeting, I give a short update. Yesterday, I finished the search page. Today, I will test it on my phone. The page works on my laptop, but the text is too small on a phone. I am fixing that now.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 136557
+      }
+    },
+    {
+      "key": "en:I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+      "spokenText": "I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c03447e-b9e2-48f1-98f6-0570c8e1b3eb.mp3",
+      "duration": 14.305126,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:I am not blocked, but I need a review. My teammate will check the page this afternoon. My next step is to make the text easier to read. I will ask for help if I find another problem.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 117357
+      }
+    },
+    {
+      "key": "en:finish",
+      "spokenText": "finish",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5633a220-7623-45c1-a781-6ad95304e562.mp3",
+      "duration": 1.005,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:finish",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "en:Yesterday, I finished the search page.",
+      "spokenText": "Yesterday, I finished the search page.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/856e4627-b2b9-44a1-abaa-b989f0b6dab8.mp3",
+      "duration": 2.785,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:Yesterday, I finished the search page.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24429
+      }
+    },
+    {
+      "key": "en:review",
+      "spokenText": "review",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6dfb4762-6e45-44e1-aeef-a9a51eb59210.mp3",
+      "duration": 1.055,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:review",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      }
+    },
+    {
+      "key": "en:I need a review.",
+      "spokenText": "I need a review.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/633a5515-ad41-4ff3-ba61-f0bff4a7aeab.mp3",
+      "duration": 1.315,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:I need a review.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      }
+    },
+    {
+      "key": "en:blocked",
+      "spokenText": "blocked",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4246d683-eb6f-436e-a87d-1cbed8939123.mp3",
+      "duration": 0.625,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:blocked",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "en:I am not blocked.",
+      "spokenText": "I am not blocked.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ca3c9a62-1b35-4063-9cdf-5ab43d6cf238.mp3",
+      "duration": 1.565,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:I am not blocked.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      }
+    },
+    {
+      "key": "en:next step",
+      "spokenText": "next step",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68fc2347-7969-46b8-9b84-35630e5703fa.mp3",
+      "duration": 0.975,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:next step",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "en:My next step is to test the page.",
+      "spokenText": "My next step is to test the page.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c3049e8c-674e-4085-a588-b51b893d7862.mp3",
+      "duration": 2.535,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-16.736Z.json",
+      "cdnCheck": {
+        "key": "en:My next step is to test the page.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      }
+    },
+    {
+      "key": "en:Yesterday, I finished the search page. Today, I will test it on my phone.",
+      "spokenText": "Yesterday, I finished the search page. Today, I will test it on my phone.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/35ff9f9d-ce0f-4520-a0dc-0123376d6e84.mp3",
+      "duration": 6.455042,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "en:Yesterday, I finished the search page. Today, I will test it on my phone.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 54765
+      }
+    },
+    {
+      "key": "en:Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+      "spokenText": "Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87487128-379f-443b-aeb3-7584b3b1a332.mp3",
+      "duration": 9.955083,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "en:Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 82029
+      }
+    },
+    {
+      "key": "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+      "spokenText": "私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7a316e4-e83e-4806-9d52-aaceac7650fc.mp3",
+      "duration": 12.215125,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 98349
+      }
+    },
+    {
+      "key": "ja:土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+      "spokenText": "土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2391df46-f487-4e17-9879-5cd3e390811c.mp3",
+      "duration": 10.435083,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 85485
+      }
+    },
+    {
+      "key": "ja:家賃",
+      "spokenText": "やちん",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/374efa46-f409-4e93-b8dd-9f855813eff5.mp3",
+      "duration": 0.875,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:家賃",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:家賃はいくらですか。",
+      "spokenText": "家賃はいくらですか。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/749e1abf-d095-4f09-b7d9-58321f385fd5.mp3",
+      "duration": 1.795,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:家賃はいくらですか。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 14829
+      }
+    },
+    {
+      "key": "ja:部屋",
+      "spokenText": "へや",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3c5b4fda-2694-4d8c-8710-fa8e0b9e1788.mp3",
+      "duration": 0.985,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:部屋",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:この部屋を見たいです。",
+      "spokenText": "この部屋を見たいです。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1dc8294e-a31d-4b2f-841e-93801ab78892.mp3",
+      "duration": 1.015,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:この部屋を見たいです。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      }
+    },
+    {
+      "key": "ja:近い",
+      "spokenText": "近い",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/be1e6c06-be3f-4ef6-8d1b-95635016ca5e.mp3",
+      "duration": 0.445,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:近い",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:駅に近い部屋です。",
+      "spokenText": "駅に近い部屋です。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a706ff66-3058-4f09-826e-b53c23114366.mp3",
+      "duration": 1.515,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-19.994Z.json",
+      "cdnCheck": {
+        "key": "ja:駅に近い部屋です。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      }
+    },
+    {
+      "key": "ja:見ます",
+      "spokenText": "見ます",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78dbdfa6-f623-4436-b560-8a417e9ceda7.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-22.665Z.json",
+      "cdnCheck": {
+        "key": "ja:見ます",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:土曜日に部屋を見ます。",
+      "spokenText": "土曜日に部屋を見ます。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a3f97997-9c17-4ac1-982a-810f476ed8b1.mp3",
+      "duration": 1.915,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-22.665Z.json",
+      "cdnCheck": {
+        "key": "ja:土曜日に部屋を見ます。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      }
+    },
+    {
+      "key": "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。",
+      "spokenText": "家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/67d76dcc-f100-49db-81fc-3248fc841bd1.mp3",
+      "duration": 7.4850836,
+      "receipt": "docs/audio/receipts/2026-10-08T08-23-22.665Z.json",
+      "cdnCheck": {
+        "key": "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 61101
+      }
+    }
+  ]
+}

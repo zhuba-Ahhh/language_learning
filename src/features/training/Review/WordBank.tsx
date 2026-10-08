@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { DECKS } from '@/content/words';
 import { LESSONS } from '@/content/training';
+import { VOCABULARY, lookupVocabulary } from '@/content/vocabulary';
+import { vocabularyKey } from '@/content/vocabularyIndex';
 import { useTraining } from '@/study/trainingContext';
 import SpeakButton from '@/components/SpeakButton';
 import TrainingIcon from '@/components/TrainingIcon';
 import PageHeading from '../components/PageHeading';
 import InteractiveReader from '../components/InteractiveReader';
+import WordDetails from '../components/WordDetails';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
 
@@ -16,36 +18,24 @@ export default function WordBank({
   onBack: () => void;
   onOpen: (selection: TrainingSelection) => void;
 }) {
-  const { data, addWord } = useTraining();
+  const { data, addVocabularyWord } = useTraining();
   const [query, setQuery] = useState('');
   const [onlySaved, setOnlySaved] = useState(true);
   const [selected, setSelected] = useState('');
-  const builtIn = [
-    ...DECKS.filter((deck) => deck.lang === data.language).flatMap((deck) =>
-      deck.words.map((word) => ({ ...word, origin: deck.title })),
-    ),
-    ...LESSONS.filter((lesson) => lesson.lang === data.language).flatMap(
-      (lesson) =>
-        lesson.words.map((word) => ({ ...word, origin: lesson.title })),
-    ),
-  ];
-  const unique = [
-    ...new Map(
-      builtIn.map((word) => [word.term.toLocaleLowerCase(), word]),
-    ).values(),
-  ];
   const words = onlySaved
     ? data.savedWords
         .filter((word) => word.lang === data.language)
         .map((word) => ({
+          ...lookupVocabulary(word.term, word.lang),
           ...word,
           origin:
             LESSONS.find((lesson) => lesson.id === word.lessonId)?.title ??
+            lookupVocabulary(word.term, word.lang)?.origin ??
             '我的词',
         }))
-    : unique;
+    : VOCABULARY.filter((word) => word.lang === data.language);
   const filtered = words.filter((word) =>
-    `${word.term} ${word.meaning} ${word.reading ?? ''}`
+    `${word.term} ${word.meaning} ${word.reading ?? ''} ${word.lemma ?? ''} ${(word.forms ?? []).join(' ')}`
       .toLocaleLowerCase()
       .includes(query.toLocaleLowerCase()),
   );
@@ -55,7 +45,7 @@ export default function WordBank({
     LESSONS.find(
       (lesson) =>
         lesson.lang === data.language &&
-        lesson.title === word.origin &&
+        lesson.id === word.lessonId &&
         lesson.words.some((item) => item.term === word.term),
     );
   const entry = lesson?.words.find((item) => item.term === word?.term);
@@ -72,7 +62,9 @@ export default function WordBank({
   const saved =
     word &&
     data.savedWords.some(
-      (item) => item.key === `${data.language}:${word.term}`,
+      (item) =>
+        vocabularyKey(item.term, item.lang) ===
+        vocabularyKey(word.term, data.language),
     );
   return (
     <div>
@@ -144,6 +136,7 @@ export default function WordBank({
             {word.reading && <small>{word.reading}</small>}
             <SpeakButton text={word.term} lang={data.language} size={40} />
             <p>{word.meaning}</p>
+            <WordDetails word={word} lang={data.language} />
             {context && lesson && (
               <div className={styles.wordContext}>
                 <small>原文</small>
@@ -158,12 +151,14 @@ export default function WordBank({
                 </button>
               </div>
             )}
-            {entry && lesson && (
+            {lookupVocabulary(word.term, data.language) && (
               <button
                 type="button"
                 className={styles.primary}
                 disabled={!!saved}
-                onClick={() => addWord(lesson, entry)}
+                onClick={() =>
+                  addVocabularyWord(lookupVocabulary(word.term, data.language)!)
+                }
               >
                 <TrainingIcon name="bookmark" size={17} />
                 {saved ? '已加入复习' : '加入复习'}

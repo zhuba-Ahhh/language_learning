@@ -6,6 +6,12 @@ export interface TrainingWord {
   term: string;
   meaning: string;
   reading?: string;
+  partOfSpeech?: string;
+  lemma?: string;
+  note?: string;
+  forms?: string[];
+  example?: string;
+  exampleZh?: string;
 }
 
 export interface TextMark {

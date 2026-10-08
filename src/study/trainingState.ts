@@ -6,6 +6,7 @@ import {
 import type { PracticeResult, ReviewItem, TrainingData } from './trainingTypes';
 import type { DrillInput } from './trainingTypes';
 import { GRAMMAR } from '../content/training/grammar.ts';
+import type { VocabularyWord } from '../content/vocabularyIndex';
 
 export const initialTrainingData: TrainingData = {
   version: 1,
@@ -56,6 +57,34 @@ export function saveWord(
   };
   return addReview(next, lesson.id, 'word', word.id, now);
 }
+
+export function saveVocabularyWord(
+  data: TrainingData,
+  word: VocabularyWord,
+  now: string,
+): TrainingData {
+  const lesson = LESSONS.find((item) => item.id === word.lessonId);
+  if (lesson) return saveWord(data, lesson, word, now);
+  if (data.savedWords.some((item) => item.key === word.key)) return data;
+  return {
+    ...data,
+    savedWords: [...data.savedWords, { ...word }],
+    reviews: [
+      ...data.reviews,
+      {
+        id: `word:${word.key}`,
+        kind: 'word',
+        lang: word.lang,
+        contentId: word.key,
+        dueAt: now,
+        intervalDays: 0,
+      },
+    ],
+  };
+}
+
+export const reviewLanguage = (item: ReviewItem) =>
+  item.lang ?? LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang;
 
 export function saveResult(
   data: TrainingData,

@@ -1,5 +1,8 @@
-import { LESSONS } from '../content/training/index.ts';
-import { lessonsForTarget, nextLesson } from './trainingState.ts';
+import {
+  lessonsForTarget,
+  nextLesson,
+  reviewLanguage,
+} from './trainingState.ts';
 import type { TrainingData } from './trainingTypes';
 
 const day = (value: string | number) =>
@@ -36,9 +39,7 @@ export function todayPlan(data: TrainingData, now: number) {
         ),
     ) ?? lesson.speaking[0];
   const reviews = data.reviews.filter(
-    (item) =>
-      LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
-      data.language,
+    (item) => reviewLanguage(item) === data.language,
   );
   const due = reviews.filter((item) => Date.parse(item.dueAt) <= now).length;
   const reviewed = reviews.filter(

@@ -225,6 +225,41 @@
     text-decoration: underline;
   }
 }
+.wordFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 10px 0;
+  color: var(--ui-olive);
+  font: 12px / 1.7 var(--font-body);
+  strong {
+    font-size: inherit;
+    font-weight: 600;
+  }
+}
+.wordNote {
+  margin: 8px 0;
+  color: var(--ui-muted);
+  font: 13px / 1.8 var(--font-body);
+}
+.wordExample {
+  margin-top: 12px;
+  font: 13px / 1.8 var(--font-body);
+  summary {
+    cursor: pointer;
+    color: var(--ui-olive);
+    width: fit-content;
+  }
+  p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+  }
+  small {
+    display: block;
+    margin: 4px 0 10px;
+    color: var(--ui-muted);
+  }
+}
 .kanaLayout {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(240px, 1fr);

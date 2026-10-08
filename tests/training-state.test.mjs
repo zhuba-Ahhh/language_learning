@@ -39,7 +39,7 @@ const result = (id, answers = correctAnswers) => ({
 });
 
 test('内容必须完整，引用、语言和答案依据合法', () => {
-  assert.equal(LESSONS.length, 12);
+  assert.equal(LESSONS.length, 14);
   assert.doesNotThrow(() => validateLessons(LESSONS));
   const bad = structuredClone(english);
   bad.questions[0].evidence = 99;
@@ -160,6 +160,7 @@ test('新单元的朗读文本和扩展假名全部有预生成音频', () => {
     [
       ...lesson.paragraphs.map((p) => p.text),
       ...lesson.words.map((w) => w.term),
+      ...lesson.words.flatMap((w) => (w.example ? [w.example] : [])),
       ...lesson.speaking.map((task) => task.sample),
       lesson.pattern.example,
     ].map((text) => `${lesson.lang}:${text}`),
@@ -240,7 +241,7 @@ test('分词保留原文与日语词汇边界，划线不会命中单词内部',
   );
 });
 
-test('61 段训练文本的时间轴绑定当前 CDN；所有词边界均可定位', () => {
+test('70 段训练文本的时间轴绑定当前 CDN；所有词边界均可定位', () => {
   const urls = JSON.parse(
     fs.readFileSync(
       new URL('../src/lib/audio.generated.json', import.meta.url),
@@ -292,7 +293,7 @@ test('61 段训练文本的时间轴绑定当前 CDN；所有词边界均可定�
       }
     }
   }
-  assert.equal(keys.size, 61);
+  assert.equal(keys.size, 70);
   assert.ok(Object.values(urls).every((url) => url.startsWith('https://')));
 });
 

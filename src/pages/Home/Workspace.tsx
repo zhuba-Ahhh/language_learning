@@ -11,6 +11,7 @@ import TrainingContent, {
   type WorkspaceTab,
 } from '@/features/training';
 import styles from './workspace.module.less';
+import { reviewLanguage } from '@/study/trainingState';
 
 const TABS: {
   id: WorkspaceTab;
@@ -37,8 +38,7 @@ function Workspace() {
   const lesson = LESSONS.find((item) => item.id === selection?.lessonId);
   const due = data.reviews.filter(
     (item) =>
-      LESSONS.find((unit) => unit.id === item.lessonId)?.lang ===
-        data.language && Date.parse(item.dueAt) <= now,
+      reviewLanguage(item) === data.language && Date.parse(item.dueAt) <= now,
   ).length;
   const navigate = (next: WorkspaceTab) => {
     if (!canLeave()) return;

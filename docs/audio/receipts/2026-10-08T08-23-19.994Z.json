@@ -1,0 +1,137 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "en:Yesterday, I finished the search page. Today, I will test it on my phone.",
+    "en:Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+    "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+    "ja:土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+    "ja:家賃",
+    "ja:家賃はいくらですか。",
+    "ja:部屋",
+    "ja:この部屋を見たいです。",
+    "ja:近い",
+    "ja:駅に近い部屋です。"
+  ],
+  "spoken_texts": {
+    "en:Yesterday, I finished the search page. Today, I will test it on my phone.": "Yesterday, I finished the search page. Today, I will test it on my phone.",
+    "en:Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.": "Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.",
+    "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。": "私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+    "ja:土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。": "土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+    "ja:家賃": "やちん",
+    "ja:家賃はいくらですか。": "家賃はいくらですか。",
+    "ja:部屋": "へや",
+    "ja:この部屋を見たいです。": "この部屋を見たいです。",
+    "ja:近い": "近い",
+    "ja:駅に近い部屋です。": "駅に近い部屋です。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac752f868694fc9cedd373a",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/35ff9f9d-ce0f-4520-a0dc-0123376d6e84.mp3",
+        "duration": 6.455042,
+        "index": 0,
+        "item_id": "linguadesk-en-1o1vz39",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"Yesterday, I finished the search page. Today, I will test it on my phone.\\n\"},{\"text\":\"Yesterday, I finished the search page. \",\"words\":[{\"word\":\"Yesterday,\",\"startTime\":0.225,\"endTime\":0.885,\"confidence\":0.94665676},{\"word\":\"I\",\"startTime\":1.635,\"endTime\":1.745,\"confidence\":0.9803345},{\"word\":\"finished\",\"startTime\":1.745,\"endTime\":2.325,\"confidence\":0.94101894},{\"word\":\"the\",\"startTime\":2.325,\"endTime\":2.385,\"confidence\":0.94106597},{\"word\":\"search\",\"startTime\":2.385,\"endTime\":2.755,\"confidence\":0.9574543},{\"word\":\"page.\",\"startTime\":2.755,\"endTime\":3.215,\"confidence\":0.8875958}]},{\"text\":\"Today, I will test it on my phone.\\n\",\"words\":[{\"word\":\"Today,\",\"startTime\":3.7850418,\"endTime\":4.375042,\"confidence\":0.9671853},{\"word\":\"I\",\"startTime\":5.055042,\"endTime\":5.1350417,\"confidence\":0.9346937},{\"word\":\"will\",\"startTime\":5.1350417,\"endTime\":5.285042,\"confidence\":0.69507545},{\"word\":\"test\",\"startTime\":5.285042,\"endTime\":5.6550417,\"confidence\":0.9348755},{\"word\":\"it\",\"startTime\":5.6550417,\"endTime\":5.765042,\"confidence\":0.69443345},{\"word\":\"on\",\"startTime\":5.765042,\"endTime\":5.9050417,\"confidence\":0.79819536},{\"word\":\"my\",\"startTime\":5.9050417,\"endTime\":6.035042,\"confidence\":0.938418},{\"word\":\"phone.\",\"startTime\":6.035042,\"endTime\":6.455042,\"confidence\":0.8390985}]}]",
+        "text": "Yesterday, I finished the search page. Today, I will test it on my phone."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87487128-379f-443b-aeb3-7584b3b1a332.mp3",
+        "duration": 9.955083,
+        "index": 1,
+        "item_id": "linguadesk-en-1qi74bw",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"Yesterday, I finished the search page. \",\"words\":[{\"word\":\"Yesterday,\",\"startTime\":0.215,\"endTime\":0.915,\"confidence\":0.9255026},{\"word\":\"I\",\"startTime\":1.345,\"endTime\":1.455,\"confidence\":0.93191767},{\"word\":\"finished\",\"startTime\":1.455,\"endTime\":1.945,\"confidence\":0.9560538},{\"word\":\"the\",\"startTime\":1.945,\"endTime\":2.015,\"confidence\":0.9680636},{\"word\":\"search\",\"startTime\":2.015,\"endTime\":2.385,\"confidence\":0.97094774},{\"word\":\"page.\",\"startTime\":2.385,\"endTime\":2.925,\"confidence\":0.91023713}]},{\"text\":\"Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review.\\n\"},{\"text\":\"I am fixing the text on mobile now. \",\"words\":[{\"word\":\"I\",\"startTime\":3.7750416,\"endTime\":3.9350417,\"confidence\":0.86012435},{\"word\":\"am\",\"startTime\":3.9350417,\"endTime\":4.0450416,\"confidence\":0.8908867},{\"word\":\"fixing\",\"startTime\":4.0450416,\"endTime\":4.555042,\"confidence\":0.9465393},{\"word\":\"the\",\"startTime\":4.555042,\"endTime\":4.6450415,\"confidence\":0.95083964},{\"word\":\"text\",\"startTime\":4.6450415,\"endTime\":5.1050415,\"confidence\":0.93839484},{\"word\":\"on\",\"startTime\":5.1350417,\"endTime\":5.295042,\"confidence\":0.90265167},{\"word\":\"mobile\",\"startTime\":5.295042,\"endTime\":5.6450415,\"confidence\":0.9430188},{\"word\":\"now.\",\"startTime\":5.6450415,\"endTime\":6.035042,\"confidence\":0.9667558}]},{\"text\":\"My next step is to ask a teammate for a review.\\n\",\"words\":[{\"word\":\"My\",\"startTime\":6.875083,\"endTime\":7.035083,\"confidence\":0.9634227},{\"word\":\"next\",\"startTime\":7.035083,\"endTime\":7.375083,\"confidence\":0.92212284},{\"word\":\"step\",\"startTime\":7.375083,\"endTime\":7.795083,\"confidence\":0.9494306},{\"word\":\"is\",\"startTime\":7.955083,\"endTime\":8.145082,\"confidence\":0.93050086},{\"word\":\"to\",\"startTime\":8.145082,\"endTime\":8.345083,\"confidence\":0.9085568},{\"word\":\"ask\",\"startTime\":8.345083,\"endTime\":8.605083,\"confidence\":0.93490326},{\"word\":\"a\",\"startTime\":8.605083,\"endTime\":8.665083,\"confidence\":0.6698863},{\"word\":\"teammate\",\"startTime\":8.665083,\"endTime\":9.185083,\"confidence\":0.8688286},{\"word\":\"for\",\"startTime\":9.185083,\"endTime\":9.405083,\"confidence\":0.9339979},{\"word\":\"a\",\"startTime\":9.405083,\"endTime\":9.435083,\"confidence\":0.5733458},{\"word\":\"review.\",\"startTime\":9.435083,\"endTime\":9.955083,\"confidence\":0.9327958}]}]",
+        "text": "Yesterday, I finished the search page. I am fixing the text on mobile now. My next step is to ask a teammate for a review."
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7a316e4-e83e-4806-9d52-aaceac7650fc.mp3",
+        "duration": 12.215125,
+        "index": 2,
+        "item_id": "linguadesk-ja-194dlox",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"私は駅に近い部屋を探しています。\",\"words\":[{\"word\":\"私\",\"startTime\":0.245,\"endTime\":0.495,\"confidence\":0.6784845},{\"word\":\"は\",\"startTime\":0.495,\"endTime\":0.565,\"confidence\":0.37846747},{\"word\":\"駅\",\"startTime\":0.565,\"endTime\":0.805,\"confidence\":0.49563953},{\"word\":\"に\",\"startTime\":0.805,\"endTime\":0.835,\"confidence\":0.21850483},{\"word\":\"近\",\"startTime\":0.835,\"endTime\":1.005,\"confidence\":0.5738325},{\"word\":\"い\",\"startTime\":1.615,\"endTime\":1.645,\"confidence\":0.26832956},{\"word\":\"部\",\"startTime\":1.645,\"endTime\":1.705,\"confidence\":0.36373526},{\"word\":\"屋\",\"startTime\":1.705,\"endTime\":1.735,\"confidence\":0.3348339},{\"word\":\"を\",\"startTime\":1.735,\"endTime\":1.765,\"confidence\":0.30238047},{\"word\":\"探\",\"startTime\":1.865,\"endTime\":1.955,\"confidence\":0.51122785},{\"word\":\"し\",\"startTime\":1.955,\"endTime\":1.985,\"confidence\":0.1950633},{\"word\":\"て\",\"startTime\":2.375,\"endTime\":2.405,\"confidence\":0.21101792},{\"word\":\"い\",\"startTime\":2.505,\"endTime\":2.535,\"confidence\":0.26963422},{\"word\":\"ま\",\"startTime\":2.715,\"endTime\":2.745,\"confidence\":0.23455799},{\"word\":\"す。\",\"startTime\":2.925,\"endTime\":2.955,\"confidence\":0.3127002}]},{\"text\":\"私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。\"},{\"text\":\"この部屋は駅から歩いて十分です。\",\"words\":[{\"word\":\"こ\",\"startTime\":2.9600418,\"endTime\":3.0050418,\"confidence\":0.4643088},{\"word\":\"の\",\"startTime\":4.6150417,\"endTime\":4.6450415,\"confidence\":0.4577547},{\"word\":\"部\",\"startTime\":4.7750416,\"endTime\":4.8450418,\"confidence\":0.45326117},{\"word\":\"屋\",\"startTime\":4.8450418,\"endTime\":4.875042,\"confidence\":0.33914158},{\"word\":\"は\",\"startTime\":4.875042,\"endTime\":4.9050417,\"confidence\":0.41124785},{\"word\":\"駅\",\"startTime\":4.9050417,\"endTime\":5.055042,\"confidence\":0.7588921},{\"word\":\"か\",\"startTime\":5.265042,\"endTime\":5.295042,\"confidence\":0.18284316},{\"word\":\"ら\",\"startTime\":5.295042,\"endTime\":5.325042,\"confidence\":0.37542596},{\"word\":\"歩\",\"startTime\":5.325042,\"endTime\":5.4450417,\"confidence\":0.5563012},{\"word\":\"い\",\"startTime\":5.4450417,\"endTime\":5.475042,\"confidence\":0.18119182},{\"word\":\"て\",\"startTime\":5.765042,\"endTime\":5.795042,\"confidence\":0.206796},{\"word\":\"十\",\"startTime\":5.795042,\"endTime\":6.035042,\"confidence\":0.75472057},{\"word\":\"分\",\"startTime\":6.035042,\"endTime\":6.255042,\"confidence\":0.9434192},{\"word\":\"で\",\"startTime\":6.255042,\"endTime\":6.285042,\"confidence\":0.25606254},{\"word\":\"す。\",\"startTime\":8.015041,\"endTime\":8.045042,\"confidence\":0.35583112}]},{\"text\":\"家賃は一か月六万円です。\",\"words\":[{\"word\":\"家\",\"startTime\":8.050083,\"endTime\":8.125083,\"confidence\":0.41334334},{\"word\":\"賃\",\"startTime\":8.125083,\"endTime\":8.185083,\"confidence\":0.15955871},{\"word\":\"は\",\"startTime\":8.185083,\"endTime\":8.215083,\"confidence\":0.26657173},{\"word\":\"一\",\"startTime\":8.215083,\"endTime\":8.245083,\"confidence\":0.31911886},{\"word\":\"か\",\"startTime\":8.245083,\"endTime\":8.275084,\"confidence\":0.2509898},{\"word\":\"月\",\"startTime\":8.275084,\"endTime\":8.5650835,\"confidence\":0.9349745},{\"word\":\"六\",\"startTime\":8.755083,\"endTime\":8.945084,\"confidence\":0.8963795},{\"word\":\"万\",\"startTime\":9.025084,\"endTime\":9.125083,\"confidence\":0.84920424},{\"word\":\"円\",\"startTime\":9.125083,\"endTime\":9.345083,\"confidence\":0.9279653},{\"word\":\"で\",\"startTime\":9.445084,\"endTime\":9.475083,\"confidence\":0.3417639},{\"word\":\"す。\",\"startTime\":11.095083,\"endTime\":11.125083,\"confidence\":0.3372982}]},{\"text\":\"近くにスーパーがあります。\",\"words\":[{\"word\":\"近\",\"startTime\":11.130125,\"endTime\":11.205125,\"confidence\":0.4060963},{\"word\":\"く\",\"startTime\":11.205125,\"endTime\":11.235125,\"confidence\":0.2635611},{\"word\":\"に\",\"startTime\":11.235125,\"endTime\":11.265125,\"confidence\":0.2628395},{\"word\":\"ス\",\"startTime\":11.265125,\"endTime\":11.295125,\"confidence\":0.26983497},{\"word\":\"ー\",\"startTime\":11.295125,\"endTime\":11.325125,\"confidence\":0.23495154},{\"word\":\"パ\",\"startTime\":11.365125,\"endTime\":11.395125,\"confidence\":0.32450262},{\"word\":\"ー\",\"startTime\":11.695125,\"endTime\":11.725125,\"confidence\":0.19184215},{\"word\":\"が\",\"startTime\":11.725125,\"endTime\":11.755125,\"confidence\":0.21879785},{\"word\":\"あ\",\"startTime\":11.755125,\"endTime\":11.785125,\"confidence\":0.20291767},{\"word\":\"り\",\"startTime\":11.785125,\"endTime\":11.815125,\"confidence\":0.21110843},{\"word\":\"ま\",\"startTime\":11.815125,\"endTime\":11.845125,\"confidence\":0.24832971},{\"word\":\"す。\",\"startTime\":12.185125,\"endTime\":12.215125,\"confidence\":0.3951422}]}]",
+        "text": "私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2391df46-f487-4e17-9879-5cd3e390811c.mp3",
+        "duration": 10.435083,
+        "index": 3,
+        "item_id": "linguadesk-ja-1da7kcn",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"土曜日の午後二時に部屋を見ます。\",\"words\":[{\"word\":\"土\",\"startTime\":0.215,\"endTime\":0.435,\"confidence\":0.8655063},{\"word\":\"曜\",\"startTime\":0.435,\"endTime\":0.605,\"confidence\":0.83216155},{\"word\":\"日\",\"startTime\":0.605,\"endTime\":0.705,\"confidence\":0.7175082},{\"word\":\"の\",\"startTime\":0.765,\"endTime\":0.795,\"confidence\":0.22722822},{\"word\":\"午\",\"startTime\":0.795,\"endTime\":0.985,\"confidence\":0.7419939},{\"word\":\"後\",\"startTime\":0.985,\"endTime\":1.175,\"confidence\":0.7742513},{\"word\":\"二\",\"startTime\":1.175,\"endTime\":1.315,\"confidence\":0.7064308},{\"word\":\"時\",\"startTime\":1.315,\"endTime\":1.825,\"confidence\":0.96601456},{\"word\":\"に\",\"startTime\":2.305,\"endTime\":2.335,\"confidence\":0.2330078},{\"word\":\"部\",\"startTime\":2.335,\"endTime\":2.395,\"confidence\":0.32153744},{\"word\":\"屋\",\"startTime\":2.395,\"endTime\":2.425,\"confidence\":0.30181977},{\"word\":\"を\",\"startTime\":2.425,\"endTime\":2.455,\"confidence\":0.33632937},{\"word\":\"見\",\"startTime\":2.455,\"endTime\":2.615,\"confidence\":0.5938195},{\"word\":\"ま\",\"startTime\":2.615,\"endTime\":2.645,\"confidence\":0.1589522},{\"word\":\"す。\",\"startTime\":2.725,\"endTime\":2.755,\"confidence\":0.2952508}]},{\"text\":\"土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。\"},{\"text\":\"見学の前に、住所をメールで確認します。\",\"words\":[{\"word\":\"見\",\"startTime\":4.160042,\"endTime\":4.2350416,\"confidence\":0.53531384},{\"word\":\"学\",\"startTime\":4.2350416,\"endTime\":4.295042,\"confidence\":0.19091724},{\"word\":\"の\",\"startTime\":4.295042,\"endTime\":4.325042,\"confidence\":0.18975957},{\"word\":\"前\",\"startTime\":4.325042,\"endTime\":4.3850417,\"confidence\":0.16721603},{\"word\":\"に、\",\"startTime\":4.3850417,\"endTime\":4.415042,\"confidence\":0.15718848},{\"word\":\"住\",\"startTime\":5.015042,\"endTime\":5.2350416,\"confidence\":0.8820274},{\"word\":\"所\",\"startTime\":5.2350416,\"endTime\":5.5250416,\"confidence\":0.6042128},{\"word\":\"を\",\"startTime\":5.5250416,\"endTime\":5.555042,\"confidence\":0.20386757},{\"word\":\"メ\",\"startTime\":5.895042,\"endTime\":5.9250417,\"confidence\":0.17987773},{\"word\":\"ー\",\"startTime\":5.9850416,\"endTime\":6.015042,\"confidence\":0.128723},{\"word\":\"ル\",\"startTime\":6.015042,\"endTime\":6.045042,\"confidence\":0.1649491},{\"word\":\"で\",\"startTime\":6.045042,\"endTime\":6.075042,\"confidence\":0.18614525},{\"word\":\"確\",\"startTime\":6.075042,\"endTime\":6.295042,\"confidence\":0.8970411},{\"word\":\"認\",\"startTime\":6.295042,\"endTime\":6.425042,\"confidence\":0.81875193},{\"word\":\"し\",\"startTime\":6.425042,\"endTime\":6.455042,\"confidence\":0.1634779},{\"word\":\"ま\",\"startTime\":6.535042,\"endTime\":6.5650415,\"confidence\":0.2185165},{\"word\":\"す。\",\"startTime\":8.085042,\"endTime\":8.115042,\"confidence\":0.3241449}]},{\"text\":\"分からないことがあったら、質問します。\",\"words\":[{\"word\":\"分\",\"startTime\":8.335084,\"endTime\":8.415084,\"confidence\":0.2765797},{\"word\":\"か\",\"startTime\":8.415084,\"endTime\":8.445084,\"confidence\":0.140003},{\"word\":\"ら\",\"startTime\":8.445084,\"endTime\":8.475083,\"confidence\":0.172686},{\"word\":\"な\",\"startTime\":8.475083,\"endTime\":8.505084,\"confidence\":0.306396},{\"word\":\"い\",\"startTime\":8.505084,\"endTime\":8.535084,\"confidence\":0.34098136},{\"word\":\"こ\",\"startTime\":8.535084,\"endTime\":8.5650835,\"confidence\":0.32332364},{\"word\":\"と\",\"startTime\":8.5650835,\"endTime\":8.595084,\"confidence\":0.3029673},{\"word\":\"が\",\"startTime\":8.595084,\"endTime\":8.625084,\"confidence\":0.2955374},{\"word\":\"あ\",\"startTime\":8.905084,\"endTime\":8.935083,\"confidence\":0.2487655},{\"word\":\"っ\",\"startTime\":8.935083,\"endTime\":8.965084,\"confidence\":0.27536973},{\"word\":\"た\",\"startTime\":8.965084,\"endTime\":8.995084,\"confidence\":0.27869216},{\"word\":\"ら、\",\"startTime\":8.995084,\"endTime\":9.025084,\"confidence\":0.30679995},{\"word\":\"質\",\"startTime\":9.685083,\"endTime\":9.825084,\"confidence\":0.49360627},{\"word\":\"問\",\"startTime\":9.825084,\"endTime\":9.885084,\"confidence\":0.35413334},{\"word\":\"し\",\"startTime\":9.885084,\"endTime\":9.915084,\"confidence\":0.22947843},{\"word\":\"ま\",\"startTime\":10.205084,\"endTime\":10.235084,\"confidence\":0.30562475},{\"word\":\"す。\",\"startTime\":10.405084,\"endTime\":10.435083,\"confidence\":0.44670385}]}]",
+        "text": "土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/374efa46-f409-4e93-b8dd-9f855813eff5.mp3",
+        "duration": 0.875,
+        "index": 4,
+        "item_id": "linguadesk-ja-gde5",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"やちん\\n\"},{\"text\":\"やちん\\n\",\"words\":[{\"word\":\"や\",\"startTime\":0.785,\"endTime\":0.815,\"confidence\":0.18216549},{\"word\":\"ち\",\"startTime\":0.815,\"endTime\":0.845,\"confidence\":0.20486985},{\"word\":\"ん\",\"startTime\":0.845,\"endTime\":0.875,\"confidence\":0.2537796}]}]",
+        "text": "やちん"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/749e1abf-d095-4f09-b7d9-58321f385fd5.mp3",
+        "duration": 1.795,
+        "index": 5,
+        "item_id": "linguadesk-ja-1m6elol",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"家賃はいくらですか。\"},{\"text\":\"家賃はいくらですか。\",\"words\":[{\"word\":\"家\",\"startTime\":0.225,\"endTime\":0.435,\"confidence\":0.9469075},{\"word\":\"賃\",\"startTime\":0.435,\"endTime\":0.585,\"confidence\":0.7151231},{\"word\":\"は\",\"startTime\":0.585,\"endTime\":0.615,\"confidence\":0.26406902},{\"word\":\"い\",\"startTime\":0.675,\"endTime\":0.705,\"confidence\":0.30298054},{\"word\":\"く\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.16304849},{\"word\":\"ら\",\"startTime\":0.765,\"endTime\":0.795,\"confidence\":0.18157108},{\"word\":\"で\",\"startTime\":0.795,\"endTime\":0.825,\"confidence\":0.21143824},{\"word\":\"す\",\"startTime\":1.495,\"endTime\":1.525,\"confidence\":0.38213274},{\"word\":\"か。\",\"startTime\":1.765,\"endTime\":1.795,\"confidence\":0.42674634}]}]",
+        "text": "家賃はいくらですか。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3c5b4fda-2694-4d8c-8710-fa8e0b9e1788.mp3",
+        "duration": 0.985,
+        "index": 6,
+        "item_id": "linguadesk-ja-p5k3",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"へや\\n\"},{\"text\":\"へや\\n\",\"words\":[{\"word\":\"へ\",\"startTime\":0.775,\"endTime\":0.805,\"confidence\":0.50446486},{\"word\":\"や\",\"startTime\":0.955,\"endTime\":0.985,\"confidence\":0.4796766}]}]",
+        "text": "へや"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1dc8294e-a31d-4b2f-841e-93801ab78892.mp3",
+        "duration": 1.015,
+        "index": 7,
+        "item_id": "linguadesk-ja-1sbo3dg",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"この部屋を見たいです。\"},{\"text\":\"この部屋を見たいです。\",\"words\":[{\"word\":\"こ\",\"endTime\":0.045,\"confidence\":0.5040593},{\"word\":\"の\",\"startTime\":0.595,\"endTime\":0.625,\"confidence\":0.1515682},{\"word\":\"部\",\"startTime\":0.625,\"endTime\":0.695,\"confidence\":0.3590297},{\"word\":\"屋\",\"startTime\":0.695,\"endTime\":0.735,\"confidence\":0.45821917},{\"word\":\"を\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.21035747},{\"word\":\"見\",\"startTime\":0.765,\"endTime\":0.825,\"confidence\":0.26657397},{\"word\":\"た\",\"startTime\":0.825,\"endTime\":0.855,\"confidence\":0.24550338},{\"word\":\"い\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.23451471},{\"word\":\"で\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.24707069},{\"word\":\"す。\",\"startTime\":0.985,\"endTime\":1.015,\"confidence\":0.23986658}]}]",
+        "text": "この部屋を見たいです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/be1e6c06-be3f-4ef6-8d1b-95635016ca5e.mp3",
+        "duration": 0.445,
+        "index": 8,
+        "item_id": "linguadesk-ja-oq6r",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"近い\\n\"},{\"text\":\"近い\\n\",\"words\":[{\"word\":\"近\",\"startTime\":0.255,\"endTime\":0.415,\"confidence\":0.8797138},{\"word\":\"い\",\"startTime\":0.415,\"endTime\":0.445,\"confidence\":0.2000253}]}]",
+        "text": "近い"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a706ff66-3058-4f09-826e-b53c23114366.mp3",
+        "duration": 1.515,
+        "index": 9,
+        "item_id": "linguadesk-ja-1uakwvo",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"駅に近い部屋です。\"},{\"text\":\"駅に近い部屋です。\",\"words\":[{\"word\":\"駅\",\"startTime\":0.455,\"endTime\":0.485,\"confidence\":0.20304362},{\"word\":\"に\",\"startTime\":0.485,\"endTime\":0.515,\"confidence\":0.21762411},{\"word\":\"近\",\"startTime\":0.515,\"endTime\":0.695,\"confidence\":0.73482305},{\"word\":\"い\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.20063625},{\"word\":\"部\",\"startTime\":1.215,\"endTime\":1.275,\"confidence\":0.18929914},{\"word\":\"屋\",\"startTime\":1.275,\"endTime\":1.305,\"confidence\":0.22069609},{\"word\":\"で\",\"startTime\":1.305,\"endTime\":1.395,\"confidence\":0.46075267},{\"word\":\"す。\",\"startTime\":1.485,\"endTime\":1.515,\"confidence\":0.3562097}]}]",
+        "text": "駅に近い部屋です。"
+      }
+    ]
+  }
+}

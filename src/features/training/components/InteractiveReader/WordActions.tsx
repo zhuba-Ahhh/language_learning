@@ -6,6 +6,9 @@ import { useTraining } from '@/study/trainingContext';
 import SpeakButton from '@/components/SpeakButton';
 import TrainingIcon from '@/components/TrainingIcon';
 import styles from './index.module.less';
+import { lookupVocabulary } from '@/content/vocabulary';
+import { vocabularyKey } from '@/content/vocabularyIndex';
+import WordDetails from '../WordDetails';
 
 export default function WordActions({
   token,
@@ -22,18 +25,27 @@ export default function WordActions({
   onPlay: (from: number, to?: number) => void;
   onClose: () => void;
 }) {
-  const { data, addWord } = useTraining();
+  const { data, addWord, addVocabularyWord } = useTraining();
   const contains = (phrase: string) =>
     findTextRanges(text, phrase, lesson.lang).some(
       (range) => range.from <= token.from && range.to >= token.to,
     );
   const mark = lesson.marks?.find((mark) => contains(mark.text));
-  const word = lesson.words.find(
+  const localWord = lesson.words.find(
     (word) => contains(word.term) || word.id === mark?.wordId,
   );
+  const dictionaryWord = lookupVocabulary(
+    localWord?.term ?? token.text,
+    lesson.lang,
+  );
+  const word = localWord ? { ...dictionaryWord, ...localWord } : dictionaryWord;
   const saved =
     word &&
-    data.savedWords.some((item) => item.key === `${lesson.lang}:${word.term}`);
+    data.savedWords.some(
+      (item) =>
+        vocabularyKey(item.term, item.lang) ===
+        vocabularyKey(word.term, lesson.lang),
+    );
   const directUrl = audioUrlFor(word?.term ?? token.text, lesson.lang);
   return (
     <aside className={styles.actions} aria-label={`${token.text} 的词语操作`}>
@@ -46,6 +58,12 @@ export default function WordActions({
               (mark ? mark.note : '未收录释义，可听原文中的读音。')}
           </p>
           {word && mark && <p>{mark.note}</p>}
+          {word && (
+            <WordDetails
+              word={mark ? { ...word, note: undefined } : word}
+              lang={lesson.lang}
+            />
+          )}
         </div>
         <button
           type="button"
@@ -95,7 +113,10 @@ export default function WordActions({
           <button
             type="button"
             disabled={!!saved}
-            onClick={() => addWord(lesson, word)}
+            onClick={() => {
+              if (localWord) addWord(lesson, word);
+              else if (dictionaryWord) addVocabularyWord(dictionaryWord);
+            }}
           >
             <TrainingIcon name="bookmark" size={15} />
             {saved ? '已收藏' : '复习'}
