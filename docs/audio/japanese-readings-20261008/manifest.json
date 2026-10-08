@@ -1,0 +1,747 @@
+{
+  "created_at": "2026-10-08",
+  "speaker": "S_olwRWVfN1",
+  "mode": "existing-kana-readings",
+  "status": "completed",
+  "entries": [
+    {
+      "key": "ja:駅",
+      "text": "駅",
+      "speechText": "えき",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/93d68a90-ebd4-4d50-a0b4-d40015e0bafb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3ead54db-a119-45f4-8abd-15d354885211.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:駅",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:予約",
+      "text": "予約",
+      "speechText": "よやく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/16dc66d0-a9c1-449c-96c0-c4945e465f4e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c74d1915-a90e-4916-aeff-d88066c7fabb.mp3",
+      "duration": 0.765,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:予約",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:荷物",
+      "text": "荷物",
+      "speechText": "にもつ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e227420b-df6c-4290-9fb9-504824a2d8f1.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2ff69998-65b4-4caa-87bd-78f10d4874cf.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:荷物",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:薬局",
+      "text": "薬局",
+      "speechText": "やっきょく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f28c164b-b74b-4e4e-bcf1-f3a08cfa484f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/298cf59c-1a0f-428b-8f37-d6e8f13bc965.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:薬局",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:病院",
+      "text": "病院",
+      "speechText": "びょういん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9c706a42-1801-4db2-8c1c-cfb63125c528.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5af74290-a840-424e-bfb0-c7db2cd150a0.mp3",
+      "duration": 0.675,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:病院",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:銀行",
+      "text": "銀行",
+      "speechText": "ぎんこう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0b28050f-561f-4d63-9b60-6513a75b658b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/13b3b950-0f54-400c-8f71-319659ad4b5e.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:銀行",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:郵便局",
+      "text": "郵便局",
+      "speechText": "ゆうびんきょく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db8cb4c3-91f2-4228-abad-5b8a8107a89e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/80fcd8e0-138e-46e4-9cc5-3277440ad3e4.mp3",
+      "duration": 1.395,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:郵便局",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:会計",
+      "text": "会計",
+      "speechText": "かいけい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fd660dad-7ceb-4bb7-b4ad-286e63e9be60.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b7c6fcfa-4e7d-4009-afd9-a3645f7eee40.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:会計",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:切符",
+      "text": "切符",
+      "speechText": "きっぷ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6527c114-260d-4f26-acd4-908a7823f857.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e24a7b68-d0a5-440e-842f-d5561b4ac169.mp3",
+      "duration": 0.105,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:切符",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:住所",
+      "text": "住所",
+      "speechText": "じゅうしょ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/973b7b5f-b4e7-4c33-aa9d-f3be014e5cfa.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4fafc32c-62d4-433d-88ce-06bb337e03f0.mp3",
+      "duration": 1.405,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-30.679Z.json",
+      "cdn_check": {
+        "key": "ja:住所",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:趣味",
+      "text": "趣味",
+      "speechText": "しゅみ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8aae8837-6ed1-491f-9be7-7bd71d366979.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/21b5bb70-f0b5-4cc6-bd10-321521165af5.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:趣味",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:天気",
+      "text": "天気",
+      "speechText": "てんき",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/935ac5b7-c198-4974-b9e9-05bb83864e57.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8eb14a1f-7b03-4b1b-8883-62667a793d4e.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:天気",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:約束",
+      "text": "約束",
+      "speechText": "やくそく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4e078349-1133-4d2e-af04-518749d0f5e5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/10589013-1005-420c-91d2-f96e3c16260f.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:約束",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:道",
+      "text": "道",
+      "speechText": "みち",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aea16c9f-a713-4dcb-80cf-da7493c0af77.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/568c4554-dd53-4ca7-8f17-7a25ecec6390.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:道",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:理由",
+      "text": "理由",
+      "speechText": "りゆう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6193aecf-db59-4e6d-9bfe-0607410f79e5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/988c7c3f-c290-4416-b3e1-40e9a0a03a9f.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:理由",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:結果",
+      "text": "結果",
+      "speechText": "けっか",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/89f895c9-2326-4ca9-9a11-debae3ead1ab.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4d269269-a044-419f-b7ba-bc72cb40ab7e.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:結果",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:場合",
+      "text": "場合",
+      "speechText": "ばあい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0aeec0a5-f65e-40be-94e8-238fb114fb6b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/02a8b772-9bb7-48b2-9ac0-7873e9662285.mp3",
+      "duration": 0.355,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:場合",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:必要",
+      "text": "必要",
+      "speechText": "ひつよう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f567eeea-8a65-41f9-822f-beb09bbc0af0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a2389960-9917-4d95-88c6-f1f7aa3535d0.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:必要",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:一方",
+      "text": "一方",
+      "speechText": "いっぽう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6b271ec4-11c3-4f1b-b894-eda9a7fa13a0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b17b3693-c329-40fc-bf34-40aafd91ef75.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:一方",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:変化",
+      "text": "変化",
+      "speechText": "へんか",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5e51a1bb-2013-4ca2-b3a3-d22bbe43fb3e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/646937db-1ba4-4227-b498-acd370b71b13.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-32.122Z.json",
+      "cdn_check": {
+        "key": "ja:変化",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:目的",
+      "text": "目的",
+      "speechText": "もくてき",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/79c09e60-b22e-4666-9e71-addb376f01c5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4be75c05-4220-4808-8d4b-0a89919cdadd.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:目的",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      }
+    },
+    {
+      "key": "ja:開発",
+      "text": "開発",
+      "speechText": "かいはつ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bee43c78-7b14-43c8-9501-d435c8d7febd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/31b16593-8f67-434a-9c82-023aea6fccfe.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:開発",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:環境",
+      "text": "環境",
+      "speechText": "かんきょう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ca5d254e-73d2-4e69-8c99-727ab01d7cd9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d0db4b19-8aa9-4b0a-8245-ebce018081f4.mp3",
+      "duration": 0.945,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:環境",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:設定",
+      "text": "設定",
+      "speechText": "せってい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/556569ee-51d1-4396-a693-f91a89f6c98d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/72203614-5e76-46f2-94ae-5e220d766c9b.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:設定",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:確認",
+      "text": "確認",
+      "speechText": "かくにん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a46530e4-d37f-4f23-ad35-5dcc990330a9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d94b0fd8-087a-406f-a1a2-788f0f37af7e.mp3",
+      "duration": 0.935,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:確認",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:修正",
+      "text": "修正",
+      "speechText": "しゅうせい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7dbda61e-8c50-4915-bdd6-b2a9d65ff169.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/67b931d1-408d-444e-b862-fc793b544100.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:修正",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:仕様",
+      "text": "仕様",
+      "speechText": "しよう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/434b2b48-eea8-4b7d-8fd7-8771b4ff63ab.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bf2ce178-c20c-4457-a958-d6edb8729ca2.mp3",
+      "duration": 1.005,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:仕様",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8685
+      }
+    },
+    {
+      "key": "ja:納期",
+      "text": "納期",
+      "speechText": "のうき",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/82ebbdf1-e234-4231-baa6-5778ccf8bc2a.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/88cd0228-10fc-4337-bbcf-2eaff88b6286.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:納期",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:進捗",
+      "text": "進捗",
+      "speechText": "しんちょく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4a448d00-7f26-4e1c-949a-03b8d9b109bb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/31dcc230-316b-4372-ba4f-5f397b49c996.mp3",
+      "duration": 1.055,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:進捗",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      }
+    },
+    {
+      "key": "ja:課題",
+      "text": "課題",
+      "speechText": "かだい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7d6b1343-f614-4e07-ab3f-026efae7f139.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/36cf8609-041e-4e8c-b992-514113145047.mp3",
+      "duration": 0.735,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-33.636Z.json",
+      "cdn_check": {
+        "key": "ja:課題",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:対応",
+      "text": "対応",
+      "speechText": "たいおう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/748a1f9b-33b6-4369-be88-ac29c0c374e6.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8cd17d64-b8e4-4c45-b1bc-dbb5a2f54ebb.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:対応",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:報告",
+      "text": "報告",
+      "speechText": "ほうこく",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/21db4fb2-0a30-469c-8fdc-bd4fe587bcdb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2adaaffe-943e-43b6-96cb-6342c554b3c2.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:報告",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:遅延",
+      "text": "遅延",
+      "speechText": "ちえん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9d79204e-f2a0-462e-a03a-7812cc2db202.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0102bed6-4178-4bdb-91fa-cf45f306aa1b.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:遅延",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:品質",
+      "text": "品質",
+      "speechText": "ひんしつ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fd95f18e-ac11-4373-99d8-71989c8bbbe9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6c9d7bbf-0f93-467e-8cf8-da53a038ef13.mp3",
+      "duration": 1.395,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:品質",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:私",
+      "text": "私",
+      "speechText": "わたし",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d4a36911-a319-4288-9842-6afbea8b401e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f0419d80-132b-4660-95e7-db2018c48d10.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:私",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      }
+    },
+    {
+      "key": "ja:大学生",
+      "text": "大学生",
+      "speechText": "だいがくせい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c655f639-160f-446b-b8f5-7b385f0c65df.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7b065ef-9910-4200-b0ca-e4e7e551f0e3.mp3",
+      "duration": 1.385,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:大学生",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:勉強",
+      "text": "勉強",
+      "speechText": "べんきょう",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9f028c6a-33eb-4e2c-9cf7-2dd7299f976e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e446b14c-5923-4366-8978-2c1a0044d6d4.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:勉強",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:日本語",
+      "text": "日本語",
+      "speechText": "にほんご",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/82707dfa-04fa-45e9-a922-e5c89989721a.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/695c3fc0-c220-4bf1-8cb9-76058e5f96ad.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:日本語",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:本",
+      "text": "本",
+      "speechText": "ほん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/85ca114c-41b7-4e97-9c50-61b393065e9b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d6fe5138-74ae-4208-9b55-c78abc414ea2.mp3",
+      "duration": 0.77498996,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:本",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 6765
+      }
+    },
+    {
+      "key": "ja:何",
+      "text": "何",
+      "speechText": "なん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7f877d93-6276-41fa-86a7-2df5ac0874e4.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68aca068-31d4-448a-9ba9-151e412cd109.mp3",
+      "duration": 0.77498996,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-34.847Z.json",
+      "cdn_check": {
+        "key": "ja:何",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 6765
+      }
+    },
+    {
+      "key": "ja:先生",
+      "text": "先生",
+      "speechText": "せんせい",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cc95f3bc-116e-4878-8340-c62a53bc0abd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/88bc5eae-65b9-4e33-8acc-0211dbde58bd.mp3",
+      "duration": 1.005,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:先生",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:毎朝",
+      "text": "毎朝",
+      "speechText": "まいあさ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d6fd8713-c023-4cbe-b0e4-85065c0bf9ae.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f446fbfe-dd93-4508-b3e8-4ceb7558a622.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:毎朝",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:夜",
+      "text": "夜",
+      "speechText": "よる",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/26dbe49e-5834-4b5d-9ed8-19cd50489b58.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3d9a79d2-b8d4-4457-bc17-f9a2b0b997c5.mp3",
+      "duration": 0.985,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:夜",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:右",
+      "text": "右",
+      "speechText": "みぎ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/74477dce-6a6b-4f35-a4b3-741ad2b76c89.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9bf5342f-e9b9-4aab-a88c-52a0bfab8ab3.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:右",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:左",
+      "text": "左",
+      "speechText": "ひだり",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/493f2ee0-4d1f-4647-a917-2052b817bae0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4ac34204-28c7-4e0c-8ab8-c07cef70777b.mp3",
+      "duration": 0.995,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:左",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      }
+    },
+    {
+      "key": "ja:図書館",
+      "text": "図書館",
+      "speechText": "としょかん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/505c0013-176d-40e5-b6a0-5a8702202437.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ba71b8fc-9dd8-4995-8992-eaa4d093d451.mp3",
+      "duration": 1.175,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:図書館",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      }
+    },
+    {
+      "key": "ja:平日",
+      "text": "平日",
+      "speechText": "へいじつ",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/73879a2a-cc3d-4d16-8210-309b1968f61d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/47a283bb-fec6-4718-a410-ed8a25197870.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:平日",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    },
+    {
+      "key": "ja:入口",
+      "text": "入口",
+      "speechText": "いりぐち",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87f11ea5-421a-419d-9ff7-05d19a549cec.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1e16dbde-0e0f-4885-8448-17bc8fc1426d.mp3",
+      "duration": 1.155,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:入口",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      }
+    },
+    {
+      "key": "ja:質問",
+      "text": "質問",
+      "speechText": "しつもん",
+      "previous_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/304498e6-25e1-4f2f-838b-bbc99a12f64d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1e1b99c4-3cc6-4917-9da3-932a0c7f785b.mp3",
+      "duration": 1.165,
+      "receipt": "docs/audio/receipts/2026-10-08T07-37-35.939Z.json",
+      "cdn_check": {
+        "key": "ja:質問",
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      }
+    }
+  ],
+  "verified_at": "2026-10-08T07:42:24Z",
+  "total_assets": 650,
+  "unchanged_assets": 601,
+  "unchanged_sentence_timings": 61
+}

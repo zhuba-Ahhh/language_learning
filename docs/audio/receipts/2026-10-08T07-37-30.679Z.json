@@ -1,0 +1,137 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:駅",
+    "ja:予約",
+    "ja:荷物",
+    "ja:薬局",
+    "ja:病院",
+    "ja:銀行",
+    "ja:郵便局",
+    "ja:会計",
+    "ja:切符",
+    "ja:住所"
+  ],
+  "spoken_texts": {
+    "ja:駅": "えき",
+    "ja:予約": "よやく",
+    "ja:荷物": "にもつ",
+    "ja:薬局": "やっきょく",
+    "ja:病院": "びょういん",
+    "ja:銀行": "ぎんこう",
+    "ja:郵便局": "ゆうびんきょく",
+    "ja:会計": "かいけい",
+    "ja:切符": "きっぷ",
+    "ja:住所": "じゅうしょ"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac7483a68694fc9cedd36f9",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3ead54db-a119-45f4-8abd-15d354885211.mp3",
+        "duration": 0.995,
+        "index": 0,
+        "item_id": "linguadesk-ja-udh",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"えき\\n\"},{\"text\":\"えき\\n\",\"words\":[{\"word\":\"え\",\"endTime\":0.045,\"confidence\":0.54280466},{\"word\":\"き\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.46118435}]}]",
+        "text": "えき"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c74d1915-a90e-4916-aeff-d88066c7fabb.mp3",
+        "duration": 0.765,
+        "index": 1,
+        "item_id": "linguadesk-ja-e1ks",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"よやく\\n\"},{\"text\":\"よやく\\n\",\"words\":[{\"word\":\"よ\",\"startTime\":0.675,\"endTime\":0.705,\"confidence\":0.31729048},{\"word\":\"や\",\"startTime\":0.705,\"endTime\":0.735,\"confidence\":0.26880732},{\"word\":\"く\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.23944902}]}]",
+        "text": "よやく"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2ff69998-65b4-4caa-87bd-78f10d4874cf.mp3",
+        "duration": 1.165,
+        "index": 2,
+        "item_id": "linguadesk-ja-mzma",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"にもつ\\n\"},{\"text\":\"にもつ\\n\",\"words\":[{\"word\":\"に\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.26841995},{\"word\":\"も\",\"startTime\":0.805,\"endTime\":0.835,\"confidence\":0.28811616},{\"word\":\"つ\",\"startTime\":1.135,\"endTime\":1.165,\"confidence\":0.3774191}]}]",
+        "text": "にもつ"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/298cf59c-1a0f-428b-8f37-d6e8f13bc965.mp3",
+        "duration": 1.175,
+        "index": 3,
+        "item_id": "linguadesk-ja-n8r8",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"やっきょく\\n\"},{\"text\":\"やっきょく\\n\",\"words\":[{\"word\":\"や\",\"endTime\":0.045,\"confidence\":0.48774678},{\"word\":\"っ\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.24812338},{\"word\":\"き\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.21710357},{\"word\":\"ょ\",\"startTime\":1.025,\"endTime\":1.055,\"confidence\":0.25299004},{\"word\":\"く\",\"startTime\":1.145,\"endTime\":1.175,\"confidence\":0.33151534}]}]",
+        "text": "やっきょく"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5af74290-a840-424e-bfb0-c7db2cd150a0.mp3",
+        "duration": 0.675,
+        "index": 4,
+        "item_id": "linguadesk-ja-kuv1",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"びょういん\\n\"},{\"text\":\"びょういん\\n\",\"words\":[{\"word\":\"び\",\"startTime\":0.525,\"endTime\":0.555,\"confidence\":0.2380428},{\"word\":\"ょ\",\"startTime\":0.555,\"endTime\":0.585,\"confidence\":0.24007367},{\"word\":\"う\",\"startTime\":0.585,\"endTime\":0.615,\"confidence\":0.28719166},{\"word\":\"い\",\"startTime\":0.615,\"endTime\":0.645,\"confidence\":0.2762062},{\"word\":\"ん\",\"startTime\":0.645,\"endTime\":0.675,\"confidence\":0.2598747}]}]",
+        "text": "びょういん"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/13b3b950-0f54-400c-8f71-319659ad4b5e.mp3",
+        "duration": 1.165,
+        "index": 5,
+        "item_id": "linguadesk-ja-po0c",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ぎんこう\\n\"},{\"text\":\"ぎんこう\\n\",\"words\":[{\"word\":\"ぎ\",\"endTime\":0.045,\"confidence\":0.47969234},{\"word\":\"ん\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.2460257},{\"word\":\"こ\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.21838681},{\"word\":\"う\",\"startTime\":1.135,\"endTime\":1.165,\"confidence\":0.2725198}]}]",
+        "text": "ぎんこう"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/80fcd8e0-138e-46e4-9cc5-3277440ad3e4.mp3",
+        "duration": 1.395,
+        "index": 6,
+        "item_id": "linguadesk-ja-lmfbq",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ゆうびんきょく\\n\"},{\"text\":\"ゆうびんきょく\\n\",\"words\":[{\"word\":\"ゆ\",\"endTime\":0.045,\"confidence\":0.4846828},{\"word\":\"う\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.11371872},{\"word\":\"び\",\"startTime\":0.975,\"endTime\":1.005,\"confidence\":0.15093394},{\"word\":\"ん\",\"startTime\":1.005,\"endTime\":1.035,\"confidence\":0.18999213},{\"word\":\"き\",\"startTime\":1.035,\"endTime\":1.065,\"confidence\":0.16913335},{\"word\":\"ょ\",\"startTime\":1.065,\"endTime\":1.095,\"confidence\":0.19025365},{\"word\":\"く\",\"startTime\":1.365,\"endTime\":1.395,\"confidence\":0.3062582}]}]",
+        "text": "ゆうびんきょく"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b7c6fcfa-4e7d-4009-afd9-a3645f7eee40.mp3",
+        "duration": 0.995,
+        "index": 7,
+        "item_id": "linguadesk-ja-e7n2",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"かいけい\\n\"},{\"text\":\"かいけい\\n\",\"words\":[{\"word\":\"か\",\"endTime\":0.045,\"confidence\":0.5273892},{\"word\":\"い\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.3136},{\"word\":\"け\",\"startTime\":0.865,\"endTime\":0.895,\"confidence\":0.41610822},{\"word\":\"い\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.40059727}]}]",
+        "text": "かいけい"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e24a7b68-d0a5-440e-842f-d5561b4ac169.mp3",
+        "duration": 0.105,
+        "index": 8,
+        "item_id": "linguadesk-ja-emm7",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"きっぷ\\n\"},{\"text\":\"きっぷ\\n\",\"words\":[{\"word\":\"き\",\"endTime\":0.045,\"confidence\":0.54524153},{\"word\":\"っ\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.30624968},{\"word\":\"ぷ\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.3507585}]}]",
+        "text": "きっぷ"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4fafc32c-62d4-433d-88ce-06bb337e03f0.mp3",
+        "duration": 1.405,
+        "index": 9,
+        "item_id": "linguadesk-ja-e11t",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"じゅうしょ\\n\"},{\"text\":\"じゅうしょ\\n\",\"words\":[{\"word\":\"じ\",\"endTime\":0.045,\"confidence\":0.48228586},{\"word\":\"ゅ\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.22863752},{\"word\":\"う\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.21010646},{\"word\":\"し\",\"startTime\":0.105,\"endTime\":0.135,\"confidence\":0.18358834},{\"word\":\"ょ\",\"startTime\":1.375,\"endTime\":1.405,\"confidence\":0.29301208}]}]",
+        "text": "じゅうしょ"
+      }
+    ]
+  }
+}

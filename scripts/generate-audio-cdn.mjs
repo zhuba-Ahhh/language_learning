@@ -52,6 +52,7 @@ function saveTimings(timings) {
 
 async function collectTexts(urls) {
   const texts = new Map();
+  const readings = new Map();
   const add = (lang, text, audioUrl, aligned = false) => {
     const key = `${lang}:${text}`;
     texts.set(key, {
@@ -69,6 +70,7 @@ async function collectTexts(urls) {
   for (const file of wordFiles) {
     const deck = JSON.parse(fs.readFileSync(file, 'utf8'));
     for (const word of deck.words) {
+      if (deck.lang === 'ja') readings.set(word.term, word.reading);
       add(deck.lang, word.term, word.audioUrl);
       add(deck.lang, word.example);
     }
@@ -100,7 +102,10 @@ async function collectTexts(urls) {
     for (const lesson of lessons) {
       for (const paragraph of lesson.paragraphs)
         add(language, paragraph.text, undefined, true);
-      for (const word of lesson.words) add(language, word.term);
+      for (const word of lesson.words) {
+        if (language === 'ja') readings.set(word.term, word.reading);
+        add(language, word.term);
+      }
       for (const task of lesson.speaking)
         add(language, task.sample, undefined, true);
       add(language, lesson.pattern.example, undefined, true);
@@ -112,7 +117,43 @@ async function collectTexts(urls) {
   for (const group of kanaGroups)
     for (const cell of group.cells) add('ja', cell.kana[0]);
 
-  return [...texts.values()];
+  return [...texts.values()].map((entry) => {
+    let speechText = entry.text;
+    // ponytail: AVG 尚未透传语种，只对孤立汉字词使用已有读音；透传后改用 explicit_language。
+    if (
+      entry.lang === 'ja' &&
+      !entry.aligned &&
+      /^\p{Script=Han}+$/u.test(entry.text)
+    ) {
+      const reading = readings.get(entry.text)?.trim();
+      if (
+        !reading ||
+        !/^[\p{Script=Hiragana}\p{Script=Katakana}ー\s]+$/u.test(reading)
+      )
+        throw new Error(`Missing or invalid Japanese reading: ${entry.key}`);
+      speechText = reading;
+    }
+    return { ...entry, speechText };
+  });
+}
+
+function buildRequest(batch) {
+  return {
+    items: batch.map(({ lang, text, speechText }) => ({
+      item_id: itemId(lang, text),
+      text: speechText,
+    })),
+    common_request: {
+      speaker: SPEAKER,
+      audio_config: {
+        format: 'mp3',
+        sample_rate: 24000,
+        speech_rate: 0,
+        pitch: 0,
+        enable_subtitle: true,
+      },
+    },
+  };
 }
 
 async function generate(batch) {
@@ -121,6 +162,9 @@ async function generate(batch) {
   const requestRecord = {
     speaker: SPEAKER,
     keys: batch.map(({ key }) => key),
+    spoken_texts: Object.fromEntries(
+      batch.map(({ key, speechText }) => [key, speechText]),
+    ),
     status: 'submitted',
   };
   fs.writeFileSync(receipt, `${JSON.stringify(requestRecord, null, 2)}\n`);
@@ -134,22 +178,7 @@ async function generate(batch) {
       'x-tt-env': 'ppe_voice',
       'x-use-ppe': '1',
     },
-    body: JSON.stringify({
-      items: batch.map(({ lang, text }) => ({
-        item_id: itemId(lang, text),
-        text,
-      })),
-      common_request: {
-        speaker: SPEAKER,
-        audio_config: {
-          format: 'mp3',
-          sample_rate: 24000,
-          speech_rate: 0,
-          pitch: 0,
-          enable_subtitle: true,
-        },
-      },
-    }),
+    body: JSON.stringify(buildRequest(batch)),
   });
 
   if (!response.ok) throw new Error(`TTS HTTP ${response.status}`);
@@ -163,12 +192,12 @@ async function generate(batch) {
   }
 
   const byId = new Map(result.items?.map((item) => [item.item_id, item]));
-  return batch.map(({ key, lang, text }) => {
+  return batch.map(({ key, lang, text, speechText }) => {
     const item = byId.get(itemId(lang, text));
     if (item?.status_code !== 0 || !item.audio_url) {
       throw new Error(item?.status_text || `Missing audio URL for ${key}`);
     }
-    return [key, item];
+    return [key, item, speechText];
   });
 }
 
@@ -192,6 +221,15 @@ if (process.argv.includes('--refresh-timings')) {
       const key = receipt.keys.find(
         (key) => itemId(key.slice(0, 2), key.slice(3)) === item.item_id,
       );
+      if (
+        key &&
+        item.audio_url === urls[key] &&
+        receipt.spoken_texts?.[key] &&
+        receipt.spoken_texts[key] !== key.slice(3)
+      ) {
+        delete timings[key];
+        continue;
+      }
       if (key && item.audio_url === urls[key] && item.subtitle_json)
         timings[key] = {
           url: item.audio_url,
@@ -208,6 +246,7 @@ for (const [key, entry] of Object.entries(timings)) {
   }
 }
 const align = process.argv.includes('--align');
+const regenerateReadings = process.argv.includes('--regenerate-readings');
 const texts = await collectTexts(urls);
 const targetKey = process.argv
   .find((argument) => argument.startsWith('--key='))
@@ -215,12 +254,32 @@ const targetKey = process.argv
 if (targetKey && !texts.some(({ key }) => key === targetKey))
   throw new Error('Unknown audio key');
 const pending = texts
-  .filter(({ key, aligned }) =>
+  .filter(({ key, aligned, text, speechText }) =>
     targetKey
       ? key === targetKey
-      : !urls[key] || (align && aligned && timings[key]?.url !== urls[key]),
+      : regenerateReadings
+        ? text !== speechText
+        : !urls[key] || (align && aligned && timings[key]?.url !== urls[key]),
   )
   .slice(0, limit);
+
+if (process.argv.includes('--dry-run')) {
+  console.log(
+    JSON.stringify(
+      {
+        total: texts.length,
+        normalized: texts
+          .filter(({ text, speechText }) => text !== speechText)
+          .map(({ key, text, speechText }) => ({ key, text, speechText })),
+        pending: pending.map(({ key }) => key),
+        request: buildRequest(pending.slice(0, BATCH_SIZE)),
+      },
+      null,
+      2,
+    ),
+  );
+  process.exit(0);
+}
 
 save(urls);
 console.log(`Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
@@ -228,9 +287,10 @@ console.log(`Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
 for (let index = 0; index < pending.length; index += BATCH_SIZE) {
   const batch = pending.slice(index, index + BATCH_SIZE);
   const generated = await generate(batch);
-  for (const [key, item] of generated) {
+  for (const [key, item, speechText] of generated) {
     urls[key] = item.audio_url;
-    if (item.subtitle_json)
+    delete timings[key];
+    if (item.subtitle_json && speechText === key.slice(3))
       timings[key] = {
         url: item.audio_url,
         duration: item.duration,

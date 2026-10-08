@@ -46,3 +46,11 @@
 CDN 地址在 `src/lib/audio.generated.json`。时间轴在 `src/lib/audio.timings.json`，每条保存同一 MP3 的 URL、秒单位时长及 `[原文起点, 原文终点, 音频起点, 音频终点]` 数组；文本偏移是 JavaScript UTF-16 下标。界面只在时间轴与音频 URL 一致、词边界完整时启用定位，不按字数估算。日语同时保留词汇整体边界和振假名。
 
 脚本每次请求前写入 `docs/audio/receipts/`，返回后保存原始结果。请求结果不明时先检查回执，不盲目重发。仅重新解析已有字幕、不发生成请求：`pnpm audio:generate --refresh-timings --limit=0`。配音仍需人工听感校对，服务提供的字幕时间不代表经过人工逐词审校。
+
+AVG 入口尚未透传 `explicit_language`。制作脚本只对孤立的纯汉字日语词使用词库中已有的假名 `reading`（例如 `仕様` 请求文本为 `しよう`），原文、映射键和业务 ID 不变；英语、假名及句子原样发送。缺少合法假名读音时停止，不猜测。实际请求文本保存在回执的 `spoken_texts` 中；音译词不建立汉字原文时间轴，也不将其假名字幕套用到原文。
+
+只读预览：`pnpm audio:generate --dry-run`；单词请求预览：`pnpm audio:generate --dry-run --key='ja:仕様' --limit=1`。预览不会发请求、写回执或更改 CDN/时间轴文件。运行 `node scripts/check-audio-requests.mjs` 检查请求和只读约束。已有 CDN 不因脚本修改而自动替换；确认要重制某一条后，去掉 `--dry-run` 才会实际生成并更新其 CDN 映射。
+
+定向重制所有纯汉字日语词：先执行 `pnpm audio:generate --dry-run --regenerate-readings` 核对清单，再在明确授权后去掉 `--dry-run`。该开关会重制已有配音；执行中断后不得直接重跑，应先检查回执与已替换的映射，避免重复生成。
+
+2026-10-08 已按上述读音重制并替换 49 个词的 CDN；英语、句子及 61 条句子时间轴未变。新旧链接、回执与验收边界见 [配音替换清单](../../../docs/audio/japanese-readings-20261008/README.md)。
