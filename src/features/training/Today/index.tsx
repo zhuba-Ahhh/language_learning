@@ -1,5 +1,10 @@
 import { LESSONS } from '@/content/training';
-import { lessonCompleted, nextLesson } from '@/study/trainingState';
+import {
+  lessonCompleted,
+  lessonMastered,
+  lessonsForTarget,
+} from '@/study/trainingState';
+import { todayPlan } from '@/study/trainingPlan';
 import { useTraining } from '@/study/trainingContext';
 import TrainingIcon from '@/components/TrainingIcon';
 import StudyArt from '../components/StudyArt';
@@ -17,34 +22,32 @@ export default function Today({
   onKana: () => void;
 }) {
   const { data, now } = useTraining();
-  const lesson = nextLesson(data);
+  const plan = todayPlan(data, now);
+  const { lesson } = plan;
   const last = LESSONS.find(
     (item) => item.id === data.lastLesson[data.language],
   );
-  const all = LESSONS.filter((item) => item.lang === data.language);
+  const all = lessonsForTarget(data);
   const learned = all.filter((item) => lessonCompleted(data, item)).length;
+  const mastered = all.filter((item) => lessonMastered(data, item)).length;
   const due = data.reviews.filter(
     (item) =>
       LESSONS.find((unit) => unit.id === item.lessonId)?.lang ===
         data.language && Date.parse(item.dueAt) <= now,
   );
-  const results = data.results.filter(
-    (result) => result.lang === data.language,
-  );
-  const startSkill = results.some(
-    (result) => result.lessonId === lesson.id && result.skill === 'reading',
-  )
-    ? 'speaking'
-    : 'reading';
-  const nextSpeaking =
-    lesson.speaking.find(
-      (task) =>
-        !task.optional &&
-        !results.some(
-          (result) =>
-            result.lessonId === lesson.id && result.taskId === task.id,
-        ),
-    ) ?? lesson.speaking[0];
+  const nextSpeaking = plan.speaking;
+  const done = plan.tasks.filter((task) => task.done).length;
+  const openTask = (kind: (typeof plan.tasks)[number]['kind']) => {
+    if (kind === 'review') onNavigate('review');
+    else if (kind === 'kana') onKana();
+    else
+      onOpen({
+        lessonId: lesson.id,
+        skill: kind === 'speaking' ? 'speaking' : 'reading',
+        taskId: kind === 'speaking' ? nextSpeaking.id : undefined,
+        panel: kind === 'grammar' || kind === 'listening' ? kind : undefined,
+      });
+  };
   const date = new Date(now);
   return (
     <div>
@@ -68,7 +71,7 @@ export default function Today({
             <h2>{lesson.title}</h2>
             <small>
               <TrainingIcon name="clock" size={17} />
-              {lesson.minutes} 分钟
+              预计 {plan.minutes} 分钟
             </small>
           </div>
           <div className={styles.heroBottom}>
@@ -76,16 +79,17 @@ export default function Today({
               type="button"
               className={styles.primary}
               onClick={() =>
-                onOpen({
-                  lessonId: lesson.id,
-                  skill: startSkill,
-                  taskId:
-                    startSkill === 'speaking' ? nextSpeaking.id : undefined,
-                })
+                openTask(
+                  plan.tasks.find((task) => !task.done)?.kind ?? 'reading',
+                )
               }
             >
               <TrainingIcon name="play" size={17} />
-              {data.lastLesson[data.language] ? '继续' : '开始'}
+              {done === plan.tasks.length
+                ? '自由练习'
+                : data.lastLesson[data.language]
+                  ? '继续'
+                  : '开始'}
             </button>
             {last && (
               <button
@@ -114,6 +118,42 @@ export default function Today({
           </button>
         </section>
       </div>
+      <section className={styles.dailyPlan} aria-label="今日安排">
+        <div className={styles.sectionHeading}>
+          <h2>
+            今日安排{' '}
+            <small>
+              {done}/{plan.tasks.length}
+            </small>
+          </h2>
+          <span>{data.dailyMinutes} 分钟预算</span>
+        </div>
+        <p>
+          {data.targets[data.language]} · 已完成 {learned}/{all.length} · 已掌握{' '}
+          {mastered}/{all.length}
+        </p>
+        <ol>
+          {plan.tasks.map((task) => (
+            <li key={task.kind}>
+              <button
+                type="button"
+                onClick={() => openTask(task.kind)}
+                aria-label={`${task.title}${task.done ? '，已完成' : `，约 ${task.minutes} 分钟`}`}
+              >
+                <i className={task.done ? styles.taskDone : ''}>
+                  {task.done ? (
+                    <TrainingIcon name="check" size={15} />
+                  ) : (
+                    <TrainingIcon name="arrow" size={15} />
+                  )}
+                </i>
+                <strong>{task.title}</strong>
+                <span>{task.done ? '已完成' : `${task.minutes} 分钟`}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      </section>
       <div className={styles.quickActions}>
         <button
           type="button"

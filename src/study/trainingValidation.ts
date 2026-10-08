@@ -1,6 +1,7 @@
 import { LESSONS } from '../content/training/index.ts';
 import type { TrainingData } from './trainingTypes';
 import { scoreQuestions } from './trainingScoring.ts';
+import { GRAMMAR } from '../content/training/grammar.ts';
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -95,6 +96,65 @@ export function isTrainingData(value: unknown): value is TrainingData {
       return false;
     if (result.lessonTitle !== undefined && !text(result.lessonTitle))
       return false;
+    if (
+      result.selfChecks !== undefined &&
+      (!Array.isArray(result.selfChecks) ||
+        !result.selfChecks.every((item) =>
+          ['pause', 'message', 'pattern'].includes(String(item)),
+        ) ||
+        new Set(result.selfChecks).size !== result.selfChecks.length)
+    )
+      return false;
+  }
+  if (value.drillResults !== undefined) {
+    if (!Array.isArray(value.drillResults)) return false;
+    for (const result of value.drillResults) {
+      if (!isRecord(result) || !text(result.id) || ids.has(result.id))
+        return false;
+      ids.add(result.id);
+      const lesson = validLesson(result.lessonId);
+      if (
+        !lesson ||
+        lesson.lang !== result.lang ||
+        !['grammar', 'listening'].includes(String(result.kind)) ||
+        !date(result.completedAt) ||
+        typeof result.assisted !== 'boolean' ||
+        typeof result.durationMs !== 'number' ||
+        !Number.isFinite(result.durationMs) ||
+        result.durationMs < 0 ||
+        typeof result.contentVersion !== 'number' ||
+        !Number.isInteger(result.contentVersion) ||
+        result.contentVersion < 1 ||
+        !isRecord(result.answers) ||
+        !Object.values(result.answers).every(
+          (answer) => typeof answer === 'string',
+        )
+      )
+        return false;
+      const questions = result.questionSnapshot;
+      const allowed =
+        result.kind === 'grammar'
+          ? GRAMMAR[lesson.id].questions
+          : [{ id: 'sentence' }];
+      if (
+        !Array.isArray(questions) ||
+        !questions.length ||
+        new Set(questions.map((q) => isRecord(q) && q.id)).size !==
+          questions.length ||
+        !questions.every(
+          (q) =>
+            isRecord(q) &&
+            text(q.id) &&
+            text(q.prompt) &&
+            text(q.answer) &&
+            allowed.some((item) => item.id === q.id),
+        ) ||
+        result.total !== questions.length ||
+        result.correct !==
+          scoreQuestions(questions, result.answers as Record<string, string>)
+      )
+        return false;
+    }
   }
   for (const word of value.savedWords) {
     if (
@@ -123,7 +183,10 @@ export function isTrainingData(value: unknown): value is TrainingData {
     const lesson = validLesson(item.lessonId);
     if (
       !lesson ||
-      !['word', 'question', 'speaking'].includes(String(item.kind))
+      !['word', 'question', 'speaking', 'grammar', 'listening'].includes(
+        String(item.kind),
+      ) ||
+      (item.lastReviewedAt !== undefined && !date(item.lastReviewedAt))
     )
       return false;
     const contents =
@@ -131,7 +194,11 @@ export function isTrainingData(value: unknown): value is TrainingData {
         ? lesson.words
         : item.kind === 'question'
           ? lesson.questions
-          : lesson.speaking;
+          : item.kind === 'speaking'
+            ? lesson.speaking
+            : item.kind === 'grammar'
+              ? GRAMMAR[lesson.id].questions
+              : [{ id: 'sentence' }];
     if (!contents.some((content) => content.id === item.contentId))
       return false;
   }

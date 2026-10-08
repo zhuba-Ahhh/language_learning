@@ -5,4 +5,5 @@ export interface TrainingSelection {
   lessonId: string;
   skill: 'reading' | 'speaking';
   taskId?: string;
+  panel?: 'text' | 'questions' | 'grammar' | 'listening';
 }

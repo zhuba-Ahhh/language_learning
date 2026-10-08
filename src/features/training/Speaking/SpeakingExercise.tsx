@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Lesson, SpeakingTask } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
 import { saveRecording } from '@/lib/recordings';
-import { stopSpeak } from '@/lib/speech';
+import { playAudio, speak, stopSpeak } from '@/lib/speech';
+import AudioHistory from '../components/AudioHistory';
+import type { PracticeResult } from '@/study/trainingTypes';
 import SpeakingSample from './SpeakingSample';
 import StudyArt from '../components/StudyArt';
 import { formatClock, useRecorder } from './useRecorder';
@@ -16,7 +18,7 @@ export default function SpeakingExercise({
   lesson: Lesson;
   task: SpeakingTask;
 }) {
-  const { addResult, setDraftActive } = useTraining();
+  const { data, addResult, setDraftActive } = useTraining();
   const recorder = useRecorder(task.seconds);
   const [assessment, setAssessment] = useState<'again' | 'ready'>('again');
   const [saving, setSaving] = useState(false);
@@ -24,6 +26,18 @@ export default function SpeakingExercise({
   const [saveError, setSaveError] = useState('');
   const [prepareUntil, setPrepareUntil] = useState(0);
   const [preparation, setPreparation] = useState(0);
+  const [checks, setChecks] = useState<
+    NonNullable<PracticeResult['selfChecks']>
+  >([]);
+  const [savedId, setSavedId] = useState('');
+  const ownAudio = useRef<HTMLAudioElement>(null);
+  const previous = data.results.find(
+    (result) =>
+      result.lessonId === lesson.id &&
+      result.taskId === task.id &&
+      result.recordingId &&
+      result.recordingId !== savedId,
+  );
 
   useEffect(() => {
     if (!prepareUntil) return;
@@ -38,7 +52,13 @@ export default function SpeakingExercise({
     return () => clearInterval(timer);
   }, [prepareUntil]);
 
-  useEffect(() => () => setDraftActive(false), [setDraftActive]);
+  useEffect(
+    () => () => {
+      stopSpeak();
+      setDraftActive(false);
+    },
+    [setDraftActive],
+  );
 
   const startRecording = async () => {
     if (
@@ -49,6 +69,8 @@ export default function SpeakingExercise({
       return;
     setSaved(false);
     setSaveError('');
+    setChecks([]);
+    setSavedId('');
     setDraftActive(true);
     stopSpeak();
     const started = await recorder.start();
@@ -69,7 +91,9 @@ export default function SpeakingExercise({
         recordingId: id,
         durationMs: recorder.duration.current,
         assessment,
+        selfChecks: checks,
       });
+      setSavedId(id);
       setSaved(true);
       setDraftActive(false);
     } catch {
@@ -102,6 +126,35 @@ export default function SpeakingExercise({
         ))}
       </ul>
       <SpeakingSample task={task} lesson={lesson} />
+      <section className={styles.speakingChecklist} aria-label="口语自检">
+        <h3>听一遍，再改一处</h3>
+        <div>
+          {(
+            [
+              ['pause', '停顿自然'],
+              ['message', '信息完整'],
+              ['pattern', '用上句式'],
+            ] as const
+          ).map(([key, label]) => (
+            <label key={key}>
+              <input
+                type="checkbox"
+                checked={checks.includes(key)}
+                disabled={saved || recorder.status === 'recording'}
+                onChange={(event) =>
+                  setChecks((current) =>
+                    event.target.checked
+                      ? [...current, key]
+                      : current.filter((item) => item !== key),
+                  )
+                }
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+        <small>回听后自检，不是自动发音评分。</small>
+      </section>
       {task.prepareSeconds && (
         <div className={styles.preparation}>
           <p>
@@ -141,7 +194,38 @@ export default function SpeakingExercise({
       {recorder.url && (
         <div className={styles.recordFeedback}>
           <h3>回听与自评</h3>
-          <audio controls src={recorder.url} aria-label="本次练习录音" />
+          <audio
+            ref={ownAudio}
+            controls
+            src={recorder.url}
+            aria-label="本次练习录音"
+          />
+          <div className={styles.drillActions}>
+            <button
+              type="button"
+              className={styles.secondary}
+              onClick={() => {
+                ownAudio.current?.pause();
+                void speak(task.sample, lesson.lang).catch(() =>
+                  setSaveError('示范加载失败，请重试。'),
+                );
+              }}
+            >
+              听示范
+            </button>
+            <button
+              type="button"
+              className={styles.secondary}
+              onClick={() => {
+                if (ownAudio.current)
+                  void playAudio(ownAudio.current).catch(() =>
+                    setSaveError('录音播放失败，请重试。'),
+                  );
+              }}
+            >
+              听自己
+            </button>
+          </div>
           <div className={styles.selfAssessment}>
             <button
               type="button"
@@ -176,6 +260,12 @@ export default function SpeakingExercise({
             </p>
           )}
         </div>
+      )}
+      {previous?.recordingId && (
+        <details className={styles.historyDetails}>
+          <summary>对照上一次录音</summary>
+          <AudioHistory id={previous.recordingId} />
+        </details>
       )}
     </section>
   );

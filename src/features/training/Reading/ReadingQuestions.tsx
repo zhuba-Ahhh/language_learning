@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import type { Lesson } from '@/content/training';
+import type { Lesson, Question } from '@/content/training';
 import { useTraining } from '@/study/trainingContext';
-import { normalizeAnswer, scoreReading } from '@/study/trainingState';
+import { normalizeAnswer } from '@/study/trainingState';
+import { scoreQuestions } from '@/study/trainingScoring';
 import type { TrainingSelection } from '../types';
 import TrainingIcon from '@/components/TrainingIcon';
 import styles from '../index.module.less';
@@ -11,49 +12,63 @@ export default function ReadingQuestions({
   startedAt,
   onOpen,
   onShowText,
+  questions = lesson.questions,
+  mode = 'reading',
 }: {
   lesson: Lesson;
   startedAt: number;
   onOpen: (selection: TrainingSelection) => void;
-  onShowText: () => void;
+  onShowText?: () => void;
+  questions?: Question[];
+  mode?: 'reading' | 'grammar';
 }) {
-  const { addResult } = useTraining();
+  const { addResult, addDrillResult } = useTraining();
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const correct = scoreReading(lesson, answers);
-  const answered = lesson.questions.filter((question) =>
+  const correct = scoreQuestions(questions, answers);
+  const answered = questions.filter((question) =>
     answers[question.id]?.trim(),
   ).length;
   const submit = () => {
-    if (submitted || answered !== lesson.questions.length) return;
-    addResult({
-      lessonId: lesson.id,
-      lang: lesson.lang,
-      skill: 'reading',
-      answers,
-      correct,
-      total: lesson.questions.length,
-      durationMs: Date.now() - startedAt,
-    });
+    if (submitted || answered !== questions.length) return;
+    if (mode === 'grammar')
+      addDrillResult({
+        lessonId: lesson.id,
+        lang: lesson.lang,
+        kind: 'grammar',
+        answers,
+        durationMs: Date.now() - startedAt,
+        assisted: false,
+      });
+    else
+      addResult({
+        lessonId: lesson.id,
+        lang: lesson.lang,
+        skill: 'reading',
+        answers,
+        correct,
+        total: questions.length,
+        durationMs: Date.now() - startedAt,
+      });
     setSubmitted(true);
   };
 
   return (
     <aside className={styles.questionPaper}>
       <div className={styles.questionHeading}>
-        <h2>{submitted ? '结果' : '理解'}</h2>
+        <h2>{submitted ? '结果' : mode === 'grammar' ? '句型练习' : '理解'}</h2>
         <span>
           {submitted
-            ? `${correct}/${lesson.questions.length}`
-            : `${answered}/${lesson.questions.length}`}
+            ? `${correct}/${questions.length}`
+            : `${answered}/${questions.length}`}
         </span>
         <progress
           aria-label={submitted ? '答对题数' : '作答进度'}
           value={submitted ? correct : answered}
-          max={lesson.questions.length}
+          max={questions.length}
         />
       </div>
-      {lesson.questions.map((question, index) => {
+      {questions.map((question, index) => {
         const isCorrect =
           normalizeAnswer(answers[question.id] ?? '') ===
           normalizeAnswer(question.answer);
@@ -130,10 +145,16 @@ export default function ReadingQuestions({
                 </strong>
                 <p>{question.explanation}</p>
                 <a
-                  href={`#paragraph-${question.evidence + 1}`}
+                  href={
+                    mode === 'grammar'
+                      ? '#pattern-example'
+                      : `#paragraph-${question.evidence + 1}`
+                  }
                   onClick={onShowText}
                 >
-                  看段落 {question.evidence + 1} 的依据
+                  {mode === 'grammar'
+                    ? '看例句依据'
+                    : `看段落 ${question.evidence + 1} 的依据`}
                 </a>
               </div>
             )}
@@ -143,7 +164,7 @@ export default function ReadingQuestions({
       {submitted ? (
         <div className={styles.resultBlock}>
           <p>
-            {correct === lesson.questions.length
+            {correct === questions.length
               ? '全部答对，试试复述。'
               : '错题已加入复习。'}
           </p>
@@ -166,7 +187,7 @@ export default function ReadingQuestions({
         <button
           type="button"
           className={styles.primary}
-          disabled={answered !== lesson.questions.length}
+          disabled={answered !== questions.length}
           onClick={submit}
         >
           确认

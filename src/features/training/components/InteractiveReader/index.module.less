@@ -4,6 +4,19 @@
     display: none;
   }
 }
+.loop {
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 6px 9px;
+  border: 1px solid var(--ui-line);
+  border-radius: 9px;
+  font-size: 12px;
+  &[aria-pressed='true'] {
+    background: var(--ui-sage);
+    border-color: #a8bd92;
+    color: var(--ui-olive);
+  }
+}
 .controls {
   display: flex;
   align-items: center;

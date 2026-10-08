@@ -8,6 +8,7 @@ import LegacyHistory from './LegacyHistory';
 import KanaHistory from './KanaHistory';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
+import { lessonMastered, lessonsForTarget } from '@/study/trainingState';
 
 const localDay = (date: Date) =>
   `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -42,8 +43,23 @@ export default function Records({
       )
     : null;
   const activeDates = new Set(
-    results.map((result) => localDay(new Date(result.completedAt))),
+    [
+      ...results,
+      ...(data.drillResults ?? []).filter(
+        (result) => result.lang === data.language,
+      ),
+    ].map((result) => localDay(new Date(result.completedAt))),
   );
+  if (data.language === 'ja')
+    for (const result of data.kanaResults ?? [])
+      activeDates.add(localDay(new Date(result.completedAt)));
+  for (const item of data.reviews)
+    if (
+      item.lastReviewedAt &&
+      LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
+        data.language
+    )
+      activeDates.add(localDay(new Date(item.lastReviewedAt)));
   const first = (month.getDay() + 6) % 7;
   const count = new Date(
     month.getFullYear(),
@@ -62,6 +78,13 @@ export default function Records({
         (result) => localDay(new Date(result.completedAt)) === selectedDate,
       )
     : results;
+  const route = lessonsForTarget(data);
+  const drills = (data.drillResults ?? []).filter(
+    (result) =>
+      result.lang === data.language &&
+      (!selectedDate ||
+        localDay(new Date(result.completedAt)) === selectedDate),
+  );
   const moveMonth = (offset: number) => {
     setMonth(new Date(month.getFullYear(), month.getMonth() + offset, 1));
     setSelectedDate(null);
@@ -171,6 +194,11 @@ export default function Records({
         </div>
       </div>
       <section className={styles.recordList}>
+        <p className={styles.masteryNote}>
+          当前路线已掌握{' '}
+          {route.filter((lesson) => lessonMastered(data, lesson)).length}/
+          {route.length} · 阅读 ≥80%，必做口语自评熟悉；不换算考试分数。
+        </p>
         <div className={styles.sectionHeading}>
           <h2>
             {selectedDate
@@ -189,7 +217,9 @@ export default function Records({
         {!visibleResults.length && (
           <div className={styles.empty}>
             <p>
-              {selectedDate ? '这一天还没有练习记录。' : '还没有练习记录。'}
+              {selectedDate
+                ? '这一天暂无口语或阅读记录。'
+                : '暂无口语或阅读记录。'}
             </p>
             <button
               type="button"
@@ -272,6 +302,67 @@ export default function Records({
           );
         })}
       </section>
+
+      {drills.length > 0 && (
+        <section className={styles.recordList}>
+          <div className={styles.sectionHeading}>
+            <h2>句型与精听</h2>
+            <span>{drills.length} 次</span>
+          </div>
+          {drills.map((result) => (
+            <details className={styles.recordItem} key={result.id}>
+              <summary>
+                <span className={styles.recordSkill}>
+                  {result.kind === 'grammar' ? '句' : '听'}
+                </span>
+                <div>
+                  <strong>
+                    {
+                      LESSONS.find((lesson) => lesson.id === result.lessonId)!
+                        .title
+                    }
+                  </strong>
+                  <small>
+                    {result.kind === 'grammar'
+                      ? '句型练习'
+                      : result.assisted
+                        ? '精听 · 使用提示'
+                        : '精听 · 独立听写'}{' '}
+                    · {new Date(result.completedAt).toLocaleString('zh-CN')}
+                  </small>
+                </div>
+                <span>
+                  {result.correct}/{result.total}
+                </span>
+              </summary>
+              <div className={styles.recordBody}>
+                {result.questionSnapshot.map((question) => (
+                  <p key={question.id}>
+                    <strong>{question.prompt}</strong>
+                    <span>
+                      你的答案：{result.answers[question.id]} · 答案：
+                      {question.answer}
+                    </span>
+                  </p>
+                ))}
+                <button
+                  type="button"
+                  className={styles.secondary}
+                  onClick={() =>
+                    onOpen({
+                      lessonId: result.lessonId,
+                      skill: 'reading',
+                      panel: result.kind,
+                    })
+                  }
+                >
+                  重练
+                </button>
+              </div>
+            </details>
+          ))}
+        </section>
+      )}
 
       <KanaHistory />
       <LegacyHistory />

@@ -109,7 +109,10 @@ export default function Settings({ onBack }: { onBack: () => void }) {
             </span>
           </label>
         </div>
-        <p>当前材料以入门与专项练习为主，进阶内容持续补充。</p>
+        <p>
+          目标决定今日路线，时长限制任务量。当前内容覆盖入门与专项，不代表完整
+          N3/N2 或雅思课程。
+        </p>
       </section>
       <section className={styles.settings}>
         <div className={styles.sectionHeading}>

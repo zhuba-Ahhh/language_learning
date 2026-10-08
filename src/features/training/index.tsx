@@ -43,10 +43,11 @@ export default function TrainingContent({
   if (selection && lesson) {
     return selection.skill === 'reading' ? (
       <Reading
-        key={lesson.id}
+        key={`${lesson.id}-${selection.panel ?? ''}`}
         lesson={lesson}
         onBack={onBack}
         onOpen={onOpen}
+        initialPanel={selection.panel}
       />
     ) : (
       <Speaking

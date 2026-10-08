@@ -76,7 +76,11 @@ export default function Review({
                   ? '生词'
                   : item.kind === 'question'
                     ? '阅读错题'
-                    : '口语重练'}
+                    : item.kind === 'grammar'
+                      ? '句型复习'
+                      : item.kind === 'listening'
+                        ? '听写复习'
+                        : '口语重练'}
               </span>
               <span>
                 {index + 1} / {batch.length}
@@ -156,6 +160,8 @@ export default function Review({
                 ['word', '词汇'],
                 ['question', '阅读'],
                 ['speaking', '口语'],
+                ['grammar', '句型'],
+                ['listening', '精听'],
               ] as const
             ).map(([kind, label]) => (
               <div key={kind}>

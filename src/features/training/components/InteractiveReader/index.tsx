@@ -21,6 +21,8 @@ export default function InteractiveReader({
   controlsTarget,
   active = true,
   onActivate,
+  hideText = false,
+  loopable = false,
 }: {
   text: string;
   lesson: Lesson;
@@ -29,6 +31,8 @@ export default function InteractiveReader({
   controlsTarget?: HTMLElement | null;
   active?: boolean;
   onActivate?: () => void;
+  hideText?: boolean;
+  loopable?: boolean;
 }) {
   const {
     attachAudio,
@@ -45,6 +49,7 @@ export default function InteractiveReader({
     setDuration,
   } = useCdnReader(text, lesson.lang);
   const [selected, setSelected] = useState<number>();
+  const [loop, setLoop] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (selected === undefined) return;
@@ -113,6 +118,17 @@ export default function InteractiveReader({
         <option value={0.8}>0.8×</option>
         <option value={1}>1×</option>
       </select>
+      {loopable && (
+        <button
+          type="button"
+          className={styles.loop}
+          aria-pressed={loop}
+          disabled={!url}
+          onClick={() => setLoop((value) => !value)}
+        >
+          循环
+        </button>
+      )}
     </div>
   );
   return (
@@ -128,6 +144,7 @@ export default function InteractiveReader({
         src={url}
         preload="none"
         aria-label={label}
+        loop={loop}
         onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
       />
       {controlsTarget !== undefined ? (
@@ -156,21 +173,23 @@ export default function InteractiveReader({
         </p>
       )}
       {!url && <p className={styles.notice}>尚未配音，不会请求生成接口。</p>}
-      <ReaderWords
-        text={text}
-        lesson={lesson}
-        tokens={tokens}
-        ruby={ruby}
-        selected={selected}
-        alignment={alignment}
-        time={time}
-        playing={playing}
-        onSelect={(index) => {
-          onActivate?.();
-          setSelected(index);
-        }}
-      />
-      {token && (
+      {!hideText && (
+        <ReaderWords
+          text={text}
+          lesson={lesson}
+          tokens={tokens}
+          ruby={ruby}
+          selected={selected}
+          alignment={alignment}
+          time={time}
+          playing={playing}
+          onSelect={(index) => {
+            onActivate?.();
+            setSelected(index);
+          }}
+        />
+      )}
+      {!hideText && token && (
         <WordActions
           token={token}
           text={text}

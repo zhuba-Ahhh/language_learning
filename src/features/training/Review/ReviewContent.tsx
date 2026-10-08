@@ -3,6 +3,7 @@ import type { ReviewItem } from '@/study/trainingTypes';
 import SpeakButton from '@/components/SpeakButton';
 import type { TrainingSelection } from '../types';
 import styles from '../index.module.less';
+import { GRAMMAR } from '@/content/training/grammar';
 
 export default function ReviewContent({
   item,
@@ -56,11 +57,13 @@ export default function ReviewContent({
             </>
           );
         })()}
-      {item.kind === 'question' &&
+      {(item.kind === 'question' || item.kind === 'grammar') &&
         (() => {
-          const question = lesson.questions.find(
-            (q) => q.id === item.contentId,
-          )!;
+          const question = (
+            item.kind === 'grammar'
+              ? GRAMMAR[lesson.id].questions
+              : lesson.questions
+          ).find((q) => q.id === item.contentId)!;
           return (
             <>
               <h2>{question.prompt}</h2>
@@ -69,13 +72,46 @@ export default function ReviewContent({
                   <strong>{question.answer}</strong>
                   <p>{question.explanation}</p>
                   <blockquote lang={lesson.lang}>
-                    {lesson.paragraphs[question.evidence].text}
+                    {item.kind === 'grammar'
+                      ? lesson.pattern.example
+                      : lesson.paragraphs[question.evidence].text}
                   </blockquote>
                 </div>
               )}
             </>
           );
         })()}
+      {item.kind === 'listening' && (
+        <>
+          <h2>听清这一句</h2>
+          <SpeakButton
+            text={lesson.pattern.example}
+            lang={lesson.lang}
+            size={38}
+          />
+          {revealed && (
+            <div className={styles.reviewAnswer}>
+              <blockquote lang={lesson.lang}>
+                {lesson.pattern.example}
+              </blockquote>
+              <p>{lesson.pattern.meaning}</p>
+              <button
+                type="button"
+                className={styles.secondary}
+                onClick={() =>
+                  onOpen({
+                    lessonId: lesson.id,
+                    skill: 'reading',
+                    panel: 'listening',
+                  })
+                }
+              >
+                重新听写
+              </button>
+            </div>
+          )}
+        </>
+      )}
       {item.kind === 'speaking' && (
         <>
           <h2>

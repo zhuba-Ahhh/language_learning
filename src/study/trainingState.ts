@@ -4,6 +4,8 @@ import {
   type TrainingWord,
 } from '../content/training/index.ts';
 import type { PracticeResult, ReviewItem, TrainingData } from './trainingTypes';
+import type { DrillInput } from './trainingTypes';
+import { GRAMMAR } from '../content/training/grammar.ts';
 
 export const initialTrainingData: TrainingData = {
   version: 1,
@@ -17,7 +19,7 @@ export const initialTrainingData: TrainingData = {
 };
 
 export { normalizeAnswer, scoreReading } from './trainingScoring.ts';
-import { normalizeAnswer } from './trainingScoring.ts';
+import { normalizeAnswer, scoreQuestions } from './trainingScoring.ts';
 
 function addReview(
   data: TrainingData,
@@ -123,7 +125,12 @@ export function reviewResult(
       const dueAt = new Date(
         now.getTime() + (remembered ? intervalDays * 86400000 : 10 * 60000),
       ).toISOString();
-      return { ...item, intervalDays, dueAt };
+      return {
+        ...item,
+        intervalDays,
+        dueAt,
+        lastReviewedAt: now.toISOString(),
+      };
     }),
   };
 }
@@ -147,8 +154,100 @@ export function lessonCompleted(data: TrainingData, lesson: Lesson) {
 }
 
 export function nextLesson(data: TrainingData) {
-  const lessons = LESSONS.filter((lesson) => lesson.lang === data.language);
-  return lessons.find((lesson) => !lessonCompleted(data, lesson)) ?? lessons[0];
+  const lessons = lessonsForTarget(data);
+  return (
+    lessons.find((lesson) => !lessonCompleted(data, lesson)) ??
+    lessons.find((lesson) => !lessonMastered(data, lesson)) ??
+    lessons[0]
+  );
+}
+
+export function lessonsForTarget(data: TrainingData) {
+  const target = data.targets[data.language];
+  const tracks = target.includes('IELTS')
+    ? ['foundation', 'ielts']
+    : target.includes('技术') || target.includes('IT')
+      ? ['foundation', 'tech']
+      : target.includes('生活')
+        ? ['foundation', 'life']
+        : target === '基础交流'
+          ? ['foundation']
+          : undefined;
+  return LESSONS.filter(
+    (lesson) =>
+      lesson.lang === data.language &&
+      (!tracks || tracks.includes(lesson.track)),
+  );
+}
+
+export function lessonMastered(data: TrainingData, lesson: Lesson) {
+  const results = data.results
+    .filter((result) => result.lessonId === lesson.id)
+    .sort((a, b) => Date.parse(b.completedAt) - Date.parse(a.completedAt));
+  const reading = results.find((result) => result.skill === 'reading');
+  return (
+    !!reading &&
+    reading.contentVersion === lesson.version &&
+    reading.total === lesson.questions.length &&
+    (reading.correct ?? 0) / reading.total >= 0.8 &&
+    lesson.speaking.every(
+      (task) =>
+        task.optional ||
+        results.find(
+          (result) => result.skill === 'speaking' && result.taskId === task.id,
+        )?.assessment === 'ready',
+    )
+  );
+}
+
+export function saveDrillResult(
+  data: TrainingData,
+  input: DrillInput & { id: string; completedAt: string },
+): TrainingData {
+  const lesson = LESSONS.find((item) => item.id === input.lessonId)!;
+  const questions =
+    input.kind === 'grammar'
+      ? GRAMMAR[lesson.id].questions
+      : [
+          {
+            id: 'sentence',
+            prompt: '句型听写',
+            answer: lesson.pattern.example,
+          },
+        ];
+  const correct = scoreQuestions(questions, input.answers);
+  let next: TrainingData = {
+    ...data,
+    drillResults: [
+      {
+        ...input,
+        correct,
+        total: questions.length,
+        contentVersion: lesson.version,
+        questionSnapshot: questions.map(({ id, prompt, answer }) => ({
+          id,
+          prompt,
+          answer,
+        })),
+      },
+      ...(data.drillResults ?? []),
+    ],
+  };
+  for (const question of questions) {
+    if (
+      normalizeAnswer(input.answers[question.id] ?? '') !==
+        normalizeAnswer(question.answer) ||
+      input.assisted
+    )
+      next = addReview(
+        next,
+        lesson.id,
+        input.kind,
+        question.id,
+        input.completedAt,
+      );
+  }
+  return next;
 }
 
 export { isTrainingData } from './trainingValidation.ts';

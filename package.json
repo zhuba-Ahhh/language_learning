@@ -11,6 +11,7 @@
     "format:check": "prettier --check .",
     "preview": "vite preview",
     "test:training": "node --experimental-strip-types --test tests/training-state.test.mjs",
+    "test:workflow": "node --experimental-strip-types scripts/check-study-workflow.mjs",
     "audio:generate": "node scripts/generate-audio-cdn.mjs",
     "words:candidates": "node scripts/generate-word-candidates.mjs"
   },

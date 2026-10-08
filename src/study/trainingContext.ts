@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 import type { Language, Lesson, TrainingWord } from '@/content/training';
-import type { PracticeResult, TrainingData } from './trainingTypes';
+import type { DrillInput, PracticeResult, TrainingData } from './trainingTypes';
 
 export interface TrainingState {
   data: TrainingData;
@@ -13,6 +13,7 @@ export interface TrainingState {
   openLesson: (lesson: Lesson) => void;
   addWord: (lesson: Lesson, word: TrainingWord) => void;
   addResult: (result: Omit<PracticeResult, 'id' | 'completedAt'>) => void;
+  addDrillResult: (result: DrillInput) => void;
   review: (id: string, remembered: boolean) => void;
   recordKana: (result: {
     group: string;

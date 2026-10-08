@@ -6,6 +6,7 @@ import {
   reviewResult,
   saveResult,
   saveWord,
+  saveDrillResult,
 } from '../trainingState';
 import type { TrainingData } from '../trainingTypes';
 
@@ -83,6 +84,15 @@ export function TrainingProvider({ children }: { children: ReactNode }) {
           setNow(Date.parse(completed.completedAt));
           setData((current) => saveResult(current, completed));
         },
+        addDrillResult: (result) => {
+          const completed = {
+            ...result,
+            id: crypto.randomUUID(),
+            completedAt: new Date().toISOString(),
+          };
+          setNow(Date.parse(completed.completedAt));
+          setData((current) => saveDrillResult(current, completed));
+        },
         review: (id, remembered) => {
           const time = new Date();
           setNow(time.getTime());
@@ -99,6 +109,7 @@ export function TrainingProvider({ children }: { children: ReactNode }) {
             id: crypto.randomUUID(),
             completedAt: new Date().toISOString(),
           };
+          setNow(Date.parse(completed.completedAt));
           setData((current) => ({
             ...current,
             kanaResults: [completed, ...(current.kanaResults ?? [])],

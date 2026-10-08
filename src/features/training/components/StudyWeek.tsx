@@ -1,15 +1,26 @@
 import { useTraining } from '@/study/trainingContext';
 import TrainingIcon from '@/components/TrainingIcon';
+import { LESSONS } from '@/content/training';
 import styles from '../index.module.less';
 export default function StudyWeek() {
   const { data, now } = useTraining();
   const start = new Date(now);
   start.setDate(start.getDate() - ((start.getDay() + 6) % 7));
   const dates = new Set(
-    data.results
+    [...data.results, ...(data.drillResults ?? [])]
       .filter((result) => result.lang === data.language)
       .map((result) => new Date(result.completedAt).toDateString()),
   );
+  if (data.language === 'ja')
+    for (const result of data.kanaResults ?? [])
+      dates.add(new Date(result.completedAt).toDateString());
+  for (const item of data.reviews)
+    if (
+      item.lastReviewedAt &&
+      LESSONS.find((lesson) => lesson.id === item.lessonId)?.lang ===
+        data.language
+    )
+      dates.add(new Date(item.lastReviewedAt).toDateString());
   return (
     <section className={styles.studyWeek} aria-label="本周学习记录">
       <h2>本周</h2>
