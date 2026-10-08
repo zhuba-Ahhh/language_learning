@@ -1,6 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
+import {
+  japaneseSpeech,
+  mapJapaneseTimings,
+  completeJapaneseTimings,
+} from './japanese-speech.mjs';
 
 const ENDPOINT =
   'https://douyin-game-ai.bytedance.net/webcast/game/role_agents/generate_avg_text_to_speech_audio';
@@ -8,6 +13,9 @@ const SPEAKER = 'S_olwRWVfN1';
 const OUTPUT = 'src/lib/audio.generated.json';
 const TIMING_OUTPUT = 'src/lib/audio.timings.json';
 const BATCH_SIZE = 10;
+const pronunciation = JSON.parse(
+  fs.readFileSync('scripts/japanese-speech.json', 'utf8'),
+);
 
 function walk(directory) {
   return fs
@@ -120,7 +128,8 @@ async function collectTexts(urls) {
 
   return [...texts.values()].map((entry) => {
     let speechText = entry.text;
-    // ponytail: AVG 尚未透传语种，只对孤立汉字词使用已有读音；透传后改用 explicit_language。
+    let speechRuby;
+    // ponytail: BAM 1.0.171 的 AVG 入口没有语种字段；统一使用已维护的日语读音。
     if (
       entry.lang === 'ja' &&
       !entry.aligned &&
@@ -133,8 +142,16 @@ async function collectTexts(urls) {
       )
         throw new Error(`Missing or invalid Japanese reading: ${entry.key}`);
       speechText = reading;
+    } else if (
+      entry.lang === 'ja' &&
+      /[\p{Script=Han}\p{Script=Latin}\p{N}○]/u.test(entry.text)
+    ) {
+      speechRuby = pronunciation[entry.text];
+      if (!speechRuby)
+        throw new Error(`Missing Japanese pronunciation: ${entry.key}`);
+      speechText = japaneseSpeech(entry.text, speechRuby).speechText;
     }
-    return { ...entry, speechText };
+    return { ...entry, speechText, speechRuby };
   });
 }
 
@@ -166,6 +183,11 @@ async function generate(batch) {
     spoken_texts: Object.fromEntries(
       batch.map(({ key, speechText }) => [key, speechText]),
     ),
+    spoken_ruby: Object.fromEntries(
+      batch
+        .filter(({ speechRuby }) => speechRuby)
+        .map(({ key, speechRuby }) => [key, speechRuby]),
+    ),
     status: 'submitted',
   };
   fs.writeFileSync(receipt, `${JSON.stringify(requestRecord, null, 2)}\n`);
@@ -193,13 +215,46 @@ async function generate(batch) {
   }
 
   const byId = new Map(result.items?.map((item) => [item.item_id, item]));
-  return batch.map(({ key, lang, text, speechText }) => {
+  return batch.map(({ key, lang, text, speechText, speechRuby }) => {
     const item = byId.get(itemId(lang, text));
     if (item?.status_code !== 0 || !item.audio_url) {
       throw new Error(item?.status_text || `Missing audio URL for ${key}`);
     }
-    return [key, item, speechText];
+    if (
+      speechRuby &&
+      !completeJapaneseTimings(
+        text,
+        makeTimings(key, item, speechText, speechRuby)?.words ?? [],
+      )
+    )
+      throw new Error(
+        `Incomplete Japanese subtitles; CDN not published. Inspect receipt before retrying: ${key}`,
+      );
+    return [key, item, speechText, speechRuby];
   });
+}
+
+function makeTimings(key, item, speechText, speechRuby) {
+  const currentRuby = pronunciation[key.slice(3)];
+  if (
+    speechRuby &&
+    currentRuby &&
+    japaneseSpeech(key.slice(3), currentRuby).speechText === speechText
+  )
+    speechRuby = currentRuby;
+  if (!item.subtitle_json || (speechText !== key.slice(3) && !speechRuby))
+    return undefined;
+  const words = alignSubtitles(speechText, JSON.parse(item.subtitle_json));
+  return {
+    url: item.audio_url,
+    duration: item.duration,
+    words: speechRuby
+      ? mapJapaneseTimings(
+          japaneseSpeech(key.slice(3), speechRuby).units,
+          words,
+        )
+      : words,
+  };
 }
 
 const limitArgument = process.argv.find((argument) =>
@@ -213,30 +268,30 @@ const urls = fs.existsSync(OUTPUT)
   : {};
 const timings = JSON.parse(fs.readFileSync(TIMING_OUTPUT, 'utf8'));
 const { alignSubtitles } = await loadDataModule('src/lib/audioAlignment.ts');
+const receipts = (
+  fs.existsSync('docs/audio/receipts') ? walk('docs/audio/receipts') : []
+)
+  .filter((file) => file.endsWith('.json'))
+  .map((file) => ({ file, ...JSON.parse(fs.readFileSync(file, 'utf8')) }));
 if (process.argv.includes('--refresh-timings')) {
-  for (const file of walk('docs/audio/receipts').filter((file) =>
-    file.endsWith('.json'),
-  )) {
-    const receipt = JSON.parse(fs.readFileSync(file, 'utf8'));
+  for (const receipt of receipts) {
     for (const item of receipt.result?.items ?? []) {
       const key = receipt.keys.find(
         (key) => itemId(key.slice(0, 2), key.slice(3)) === item.item_id,
       );
-      if (
-        key &&
-        item.audio_url === urls[key] &&
-        receipt.spoken_texts?.[key] &&
+      if (!key || item.audio_url !== urls[key]) continue;
+      const timing = makeTimings(
+        key,
+        item,
+        receipt.spoken_texts?.[key] ?? key.slice(3),
+        receipt.spoken_ruby?.[key],
+      );
+      if (timing) timings[key] = timing;
+      else if (
+        receipt.spoken_texts?.[key] !== undefined &&
         receipt.spoken_texts[key] !== key.slice(3)
-      ) {
+      )
         delete timings[key];
-        continue;
-      }
-      if (key && item.audio_url === urls[key] && item.subtitle_json)
-        timings[key] = {
-          url: item.audio_url,
-          duration: item.duration,
-          words: alignSubtitles(key.slice(3), JSON.parse(item.subtitle_json)),
-        };
     }
   }
 }
@@ -248,6 +303,7 @@ for (const [key, entry] of Object.entries(timings)) {
 }
 const align = process.argv.includes('--align');
 const regenerateReadings = process.argv.includes('--regenerate-readings');
+const regenerateJapanese = process.argv.includes('--regenerate-japanese');
 const texts = await collectTexts(urls);
 const targetKey = process.argv
   .find((argument) => argument.startsWith('--key='))
@@ -255,31 +311,73 @@ const targetKey = process.argv
 if (targetKey && !texts.some(({ key }) => key === targetKey))
   throw new Error('Unknown audio key');
 const pending = texts
-  .filter(({ key, aligned, text, speechText }) =>
+  .filter(({ key, aligned, text, speechText, speechRuby }) =>
     targetKey
       ? key === targetKey
-      : regenerateReadings
-        ? text !== speechText
-        : !urls[key] || (align && aligned && timings[key]?.url !== urls[key]),
+      : regenerateJapanese
+        ? speechRuby &&
+          !receipts.some(
+            (receipt) =>
+              receipt.spoken_ruby?.[key] &&
+              receipt.spoken_texts?.[key] === speechText &&
+              receipt.result?.items?.some(
+                (item) =>
+                  item.audio_url === urls[key] &&
+                  item.item_id === itemId('ja', text) &&
+                  item.status_code === 0,
+              ),
+          )
+        : regenerateReadings
+          ? text !== speechText && !speechRuby
+          : !urls[key] || (align && aligned && timings[key]?.url !== urls[key]),
   )
   .slice(0, limit);
 
 if (process.argv.includes('--dry-run')) {
-  console.log(
-    JSON.stringify(
-      {
-        total: texts.length,
-        normalized: texts
-          .filter(({ text, speechText }) => text !== speechText)
-          .map(({ key, text, speechText }) => ({ key, text, speechText })),
-        pending: pending.map(({ key }) => key),
-        request: buildRequest(pending.slice(0, BATCH_SIZE)),
-      },
-      null,
-      2,
+  await new Promise((resolve) =>
+    process.stdout.write(
+      `${JSON.stringify(
+        {
+          total: texts.length,
+          normalized: texts
+            .filter(({ text, speechText }) => text !== speechText)
+            .map(({ key, text, speechText }) => ({ key, text, speechText })),
+          pending: pending.map(({ key }) => key),
+          request: buildRequest(pending.slice(0, BATCH_SIZE)),
+        },
+        null,
+        2,
+      )}\n`,
+      resolve,
     ),
   );
   process.exit(0);
+}
+
+for (const receipt of receipts) {
+  if (
+    receipt.status === 'submitted' &&
+    receipt.keys?.some((key) => pending.some((entry) => entry.key === key))
+  )
+    throw new Error(
+      `Previous request outcome unknown; inspect ${receipt.file} before retrying`,
+    );
+  if (
+    receipt.spoken_ruby &&
+    pending.some(
+      (entry) =>
+        receipt.spoken_texts?.[entry.key] === entry.speechText &&
+        receipt.result?.items?.some(
+          (item) =>
+            item.item_id === itemId(entry.lang, entry.text) &&
+            item.status_code === 0 &&
+            item.audio_url !== urls[entry.key],
+        ),
+    )
+  )
+    throw new Error(
+      `Previous matching result not published; inspect ${receipt.file} before generating again`,
+    );
 }
 
 save(urls);
@@ -288,15 +386,11 @@ console.log(`Audio URLs: ${Object.keys(urls).length}/${texts.length}`);
 for (let index = 0; index < pending.length; index += BATCH_SIZE) {
   const batch = pending.slice(index, index + BATCH_SIZE);
   const generated = await generate(batch);
-  for (const [key, item, speechText] of generated) {
+  for (const [key, item, speechText, speechRuby] of generated) {
     urls[key] = item.audio_url;
     delete timings[key];
-    if (item.subtitle_json && speechText === key.slice(3))
-      timings[key] = {
-        url: item.audio_url,
-        duration: item.duration,
-        words: alignSubtitles(key.slice(3), JSON.parse(item.subtitle_json)),
-      };
+    const timing = makeTimings(key, item, speechText, speechRuby);
+    if (timing) timings[key] = timing;
   }
   save(urls);
   saveTimings(timings);

@@ -1,0 +1,149 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:すみません、駅はどこですか。",
+    "ja:お疲れさまです",
+    "ja:先輩、お疲れさまです。",
+    "ja:また明日",
+    "ja:じゃあ、また明日。",
+    "ja:大丈夫です",
+    "ja:大丈夫ですか。手伝いましょうか。",
+    "ja:サーバーが落ちました。",
+    "ja:データベースに接続する。",
+    "ja:本番環境にデプロイしました。"
+  ],
+  "spoken_texts": {
+    "ja:すみません、駅はどこですか。": "すみません、えきはどこですか。",
+    "ja:お疲れさまです": "おつかれさまです",
+    "ja:先輩、お疲れさまです。": "せんぱい、おつかれさまです。",
+    "ja:また明日": "またあした",
+    "ja:じゃあ、また明日。": "じゃあ、またあした。",
+    "ja:大丈夫です": "だいじょうぶです",
+    "ja:大丈夫ですか。手伝いましょうか。": "だいじょうぶですか。てつだいましょうか。",
+    "ja:サーバーが落ちました。": "サーバーがおちました。",
+    "ja:データベースに接続する。": "データベースにせつぞくする。",
+    "ja:本番環境にデプロイしました。": "ほんばんかんきょうにデプロイしました。"
+  },
+  "spoken_ruby": {
+    "ja:すみません、駅はどこですか。": "すみません、駅[えき]はどこですか。",
+    "ja:お疲れさまです": "お疲[つか]れさまです",
+    "ja:先輩、お疲れさまです。": "先輩[せんぱい]、お疲[つか]れさまです。",
+    "ja:また明日": "また明日[あした]",
+    "ja:じゃあ、また明日。": "じゃあ、また明日[あした]。",
+    "ja:大丈夫です": "大丈夫[だいじょうぶ]です",
+    "ja:大丈夫ですか。手伝いましょうか。": "大丈夫[だいじょうぶ]ですか。手伝[てつだ]いましょうか。",
+    "ja:サーバーが落ちました。": "サーバーが落[お]ちました。",
+    "ja:データベースに接続する。": "データベースに接続[せつぞく]する。",
+    "ja:本番環境にデプロイしました。": "本番環境[ほんばんかんきょう]にデプロイしました。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75ba068694fc9cedd3761",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6211597c-be00-4abd-80b7-9b1261fd72fa.mp3",
+        "duration": 3.385,
+        "index": 0,
+        "item_id": "linguadesk-ja-nyuoq6",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"すみません、えきはどこですか。\"},{\"text\":\"すみません、えきはどこですか。\",\"words\":[{\"word\":\"す\",\"endTime\":0.045,\"confidence\":0.45224664},{\"word\":\"み\",\"startTime\":0.705,\"endTime\":0.735,\"confidence\":0.20452933},{\"word\":\"ま\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.20562023},{\"word\":\"せ\",\"startTime\":0.765,\"endTime\":0.795,\"confidence\":0.16088213},{\"word\":\"ん、\",\"startTime\":0.795,\"endTime\":0.825,\"confidence\":0.14246486},{\"word\":\"え\",\"startTime\":0.825,\"endTime\":0.855,\"confidence\":0.16133156},{\"word\":\"き\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.16552849},{\"word\":\"は\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.1691614},{\"word\":\"ど\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.17151581},{\"word\":\"こ\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.24575177},{\"word\":\"で\",\"startTime\":0.975,\"endTime\":1.005,\"confidence\":0.21821167},{\"word\":\"す\",\"startTime\":1.005,\"endTime\":1.035,\"confidence\":0.21941559},{\"word\":\"か。\",\"startTime\":3.355,\"endTime\":3.385,\"confidence\":0.4213015}]}]",
+        "text": "すみません、えきはどこですか。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7b7989a7-68eb-4a46-a9e8-df73a3bca27a.mp3",
+        "duration": 1.575,
+        "index": 1,
+        "item_id": "linguadesk-ja-483mtb",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"おつかれさまです\\n\"},{\"text\":\"おつかれさまです\\n\",\"words\":[{\"word\":\"お\",\"endTime\":0.045,\"confidence\":0.4893177},{\"word\":\"つ\",\"startTime\":1.025,\"endTime\":1.055,\"confidence\":0.18778835},{\"word\":\"か\",\"startTime\":1.055,\"endTime\":1.085,\"confidence\":0.16606846},{\"word\":\"れ\",\"startTime\":1.175,\"endTime\":1.205,\"confidence\":0.17887992},{\"word\":\"さ\",\"startTime\":1.205,\"endTime\":1.235,\"confidence\":0.1603442},{\"word\":\"ま\",\"startTime\":1.235,\"endTime\":1.265,\"confidence\":0.17657208},{\"word\":\"で\",\"startTime\":1.265,\"endTime\":1.295,\"confidence\":0.23709983},{\"word\":\"す\",\"startTime\":1.545,\"endTime\":1.575,\"confidence\":0.32033095}]}]",
+        "text": "おつかれさまです"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b083c1f5-995e-4d56-9f7d-ef93158bb36f.mp3",
+        "duration": 2.765,
+        "index": 2,
+        "item_id": "linguadesk-ja-19hq7s3",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"せんぱい、おつかれさまです。\"},{\"text\":\"せんぱい、おつかれさまです。\",\"words\":[{\"word\":\"せ\",\"startTime\":0.415,\"endTime\":0.445,\"confidence\":0.1588897},{\"word\":\"ん\",\"startTime\":0.445,\"endTime\":0.475,\"confidence\":0.16946624},{\"word\":\"ぱ\",\"startTime\":0.475,\"endTime\":0.505,\"confidence\":0.1611713},{\"word\":\"い、\",\"startTime\":0.505,\"endTime\":0.535,\"confidence\":0.22314996},{\"word\":\"お\",\"startTime\":0.535,\"endTime\":0.565,\"confidence\":0.27086613},{\"word\":\"つ\",\"startTime\":0.565,\"endTime\":0.595,\"confidence\":0.23544301},{\"word\":\"か\",\"startTime\":0.595,\"endTime\":0.625,\"confidence\":0.21598843},{\"word\":\"れ\",\"startTime\":0.625,\"endTime\":0.655,\"confidence\":0.22991504},{\"word\":\"さ\",\"startTime\":0.655,\"endTime\":0.685,\"confidence\":0.24518043},{\"word\":\"ま\",\"startTime\":0.685,\"endTime\":0.715,\"confidence\":0.20629856},{\"word\":\"で\",\"startTime\":0.715,\"endTime\":0.745,\"confidence\":0.2005117},{\"word\":\"す。\",\"startTime\":2.735,\"endTime\":2.765,\"confidence\":0.3313325}]}]",
+        "text": "せんぱい、おつかれさまです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f65a5a50-c0c9-49da-ad3c-3ee998cee7fc.mp3",
+        "duration": 0.995,
+        "index": 3,
+        "item_id": "linguadesk-ja-6brmd4",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"またあした\\n\"},{\"text\":\"またあした\\n\",\"words\":[{\"word\":\"ま\",\"endTime\":0.045,\"confidence\":0.5535462},{\"word\":\"た\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.32357326},{\"word\":\"あ\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.36170086},{\"word\":\"し\",\"startTime\":0.875,\"endTime\":0.905,\"confidence\":0.46978536},{\"word\":\"た\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.4708362}]}]",
+        "text": "またあした"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ec525f20-821d-4bb7-aedb-6b941a4d9f1c.mp3",
+        "duration": 0.765,
+        "index": 4,
+        "item_id": "linguadesk-ja-1asj10g",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"じゃあ、またあした。\"},{\"text\":\"じゃあ、またあした。\",\"words\":[{\"word\":\"じ\",\"startTime\":0.465,\"endTime\":0.495,\"confidence\":0.2531654},{\"word\":\"ゃ\",\"startTime\":0.495,\"endTime\":0.525,\"confidence\":0.2812584},{\"word\":\"あ、\",\"startTime\":0.525,\"endTime\":0.555,\"confidence\":0.2861002},{\"word\":\"ま\",\"startTime\":0.555,\"endTime\":0.585,\"confidence\":0.27867368},{\"word\":\"た\",\"startTime\":0.585,\"endTime\":0.615,\"confidence\":0.26636943},{\"word\":\"あ\",\"startTime\":0.615,\"endTime\":0.645,\"confidence\":0.30245167},{\"word\":\"し\",\"startTime\":0.675,\"endTime\":0.705,\"confidence\":0.4192339},{\"word\":\"た。\",\"startTime\":0.735,\"endTime\":0.765,\"confidence\":0.43241507}]}]",
+        "text": "じゃあ、またあした。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2c662878-a34e-4ab2-ae3d-92187f8a7db5.mp3",
+        "duration": 1.395,
+        "index": 5,
+        "item_id": "linguadesk-ja-3n1yvw",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"だいじょうぶです\\n\"},{\"text\":\"だいじょうぶです\\n\",\"words\":[{\"word\":\"だ\",\"startTime\":0.585,\"endTime\":0.615,\"confidence\":0.18829589},{\"word\":\"い\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.2965011},{\"word\":\"じ\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.30904844},{\"word\":\"ょ\",\"startTime\":1.015,\"endTime\":1.045,\"confidence\":0.2831363},{\"word\":\"う\",\"startTime\":1.045,\"endTime\":1.075,\"confidence\":0.3234787},{\"word\":\"ぶ\",\"startTime\":1.075,\"endTime\":1.105,\"confidence\":0.3152487},{\"word\":\"で\",\"startTime\":1.105,\"endTime\":1.135,\"confidence\":0.3092283},{\"word\":\"す\",\"startTime\":1.365,\"endTime\":1.395,\"confidence\":0.27037102}]}]",
+        "text": "だいじょうぶです"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e127b73c-d97a-495b-a33d-b10a4a7abb18.mp3",
+        "duration": 3.1150417,
+        "index": 6,
+        "item_id": "linguadesk-ja-60xjke",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"だいじょうぶですか。てつだいましょうか。\"},{\"text\":\"だいじょうぶですか。\",\"words\":[{\"word\":\"だ\",\"startTime\":0.765,\"endTime\":0.795,\"confidence\":0.19395386},{\"word\":\"い\",\"startTime\":0.795,\"endTime\":0.825,\"confidence\":0.187214},{\"word\":\"じ\",\"startTime\":0.825,\"endTime\":0.855,\"confidence\":0.17418861},{\"word\":\"ょ\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.17992024},{\"word\":\"う\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.20395663},{\"word\":\"ぶ\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.20921426},{\"word\":\"で\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.23055534},{\"word\":\"す\",\"startTime\":1.035,\"endTime\":1.065,\"confidence\":0.36589286},{\"word\":\"か。\",\"startTime\":2.565,\"endTime\":2.595,\"confidence\":0.3215222}]},{\"text\":\"てつだいましょうか。\",\"words\":[{\"word\":\"て\",\"startTime\":2.6000416,\"endTime\":2.6450417,\"confidence\":0.49889833},{\"word\":\"つ\",\"startTime\":2.8750417,\"endTime\":2.9050417,\"confidence\":0.25085056},{\"word\":\"だ\",\"startTime\":2.9050417,\"endTime\":2.9350417,\"confidence\":0.2423684},{\"word\":\"い\",\"startTime\":2.9350417,\"endTime\":2.9650416,\"confidence\":0.25243202},{\"word\":\"ま\",\"startTime\":2.9650416,\"endTime\":2.9950416,\"confidence\":0.26014945},{\"word\":\"し\",\"startTime\":2.9950416,\"endTime\":3.0250416,\"confidence\":0.28390178},{\"word\":\"ょ\",\"startTime\":3.0250416,\"endTime\":3.0550416,\"confidence\":0.30668366},{\"word\":\"う\",\"startTime\":3.0550416,\"endTime\":3.0850415,\"confidence\":0.3217547},{\"word\":\"か。\",\"startTime\":3.0850415,\"endTime\":3.1150417,\"confidence\":0.38806462}]}]",
+        "text": "だいじょうぶですか。てつだいましょうか。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60720728-3229-4cb1-adce-f90308b8ca24.mp3",
+        "duration": 1.795,
+        "index": 7,
+        "item_id": "linguadesk-ja-vwfpkp",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"サーバーがおちました。\"},{\"text\":\"サーバーがおちました。\",\"words\":[{\"word\":\"サ\",\"startTime\":0.545,\"endTime\":0.575,\"confidence\":0.20842412},{\"word\":\"ー\",\"startTime\":0.575,\"endTime\":0.605,\"confidence\":0.29827455},{\"word\":\"バ\",\"startTime\":0.605,\"endTime\":0.635,\"confidence\":0.34020036},{\"word\":\"ー\",\"startTime\":0.635,\"endTime\":0.665,\"confidence\":0.29567367},{\"word\":\"が\",\"startTime\":0.665,\"endTime\":0.695,\"confidence\":0.26927048},{\"word\":\"お\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.26406962},{\"word\":\"ち\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.26659206},{\"word\":\"ま\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.21751249},{\"word\":\"し\",\"startTime\":0.785,\"endTime\":0.815,\"confidence\":0.21344982},{\"word\":\"た。\",\"startTime\":1.765,\"endTime\":1.795,\"confidence\":0.40630937}]}]",
+        "text": "サーバーがおちました。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b25210fe-3b86-4a32-9314-5eb7233f08ad.mp3",
+        "duration": 2.59499,
+        "index": 8,
+        "item_id": "linguadesk-ja-yhw3y4",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"データベースにせつぞくする。\"},{\"text\":\"データベースにせつぞくする。\",\"words\":[{\"word\":\"デ\",\"endTime\":0.045,\"confidence\":0.4643992},{\"word\":\"ー\",\"startTime\":0.955,\"endTime\":0.985,\"confidence\":0.28296098},{\"word\":\"タ\",\"startTime\":1.075,\"endTime\":1.105,\"confidence\":0.26351896},{\"word\":\"ベ\",\"startTime\":1.555,\"endTime\":1.585,\"confidence\":0.25762993},{\"word\":\"ー\",\"startTime\":1.585,\"endTime\":1.615,\"confidence\":0.20433329},{\"word\":\"ス\",\"startTime\":1.615,\"endTime\":1.645,\"confidence\":0.16885628},{\"word\":\"に\",\"startTime\":1.645,\"endTime\":1.675,\"confidence\":0.18745801},{\"word\":\"せ\",\"startTime\":1.675,\"endTime\":1.705,\"confidence\":0.15056336},{\"word\":\"つ\",\"startTime\":1.705,\"endTime\":1.735,\"confidence\":0.171701},{\"word\":\"ぞ\",\"startTime\":1.735,\"endTime\":1.765,\"confidence\":0.2466582},{\"word\":\"く\",\"startTime\":1.765,\"endTime\":1.795,\"confidence\":0.20478413},{\"word\":\"す\",\"startTime\":2.025,\"endTime\":2.055,\"confidence\":0.17394263},{\"word\":\"る。\",\"startTime\":2.565,\"endTime\":2.59499,\"confidence\":0.3552853}]}]",
+        "text": "データベースにせつぞくする。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68b8aad6-394d-4707-9284-c64377f26bf7.mp3",
+        "duration": 2.775,
+        "index": 9,
+        "item_id": "linguadesk-ja-171pggi",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ほんばんかんきょうにデプロイしました。\"},{\"text\":\"ほんばんかんきょうにデプロイしました。\",\"words\":[{\"word\":\"ほ\",\"endTime\":0.045,\"confidence\":0.4724975},{\"word\":\"ん\",\"startTime\":0.245,\"endTime\":0.275,\"confidence\":0.16554846},{\"word\":\"ば\",\"startTime\":0.275,\"endTime\":0.305,\"confidence\":0.16478454},{\"word\":\"ん\",\"startTime\":0.305,\"endTime\":0.335,\"confidence\":0.19651243},{\"word\":\"か\",\"startTime\":0.335,\"endTime\":0.365,\"confidence\":0.1856562},{\"word\":\"ん\",\"startTime\":0.365,\"endTime\":0.395,\"confidence\":0.15627272},{\"word\":\"き\",\"startTime\":0.395,\"endTime\":0.425,\"confidence\":0.105741605},{\"word\":\"ょ\",\"startTime\":0.425,\"endTime\":0.455,\"confidence\":0.1525008},{\"word\":\"う\",\"startTime\":0.455,\"endTime\":0.485,\"confidence\":0.1470989},{\"word\":\"に\",\"startTime\":0.485,\"endTime\":0.515,\"confidence\":0.15660311},{\"word\":\"デ\",\"startTime\":0.515,\"endTime\":0.545,\"confidence\":0.14575519},{\"word\":\"プ\",\"startTime\":0.545,\"endTime\":0.575,\"confidence\":0.16709174},{\"word\":\"ロ\",\"startTime\":0.905,\"endTime\":0.935,\"confidence\":0.18956898},{\"word\":\"イ\",\"startTime\":2.355,\"endTime\":2.385,\"confidence\":0.19169664},{\"word\":\"し\",\"startTime\":2.385,\"endTime\":2.415,\"confidence\":0.21526153},{\"word\":\"ま\",\"startTime\":2.415,\"endTime\":2.445,\"confidence\":0.28486457},{\"word\":\"し\",\"startTime\":2.445,\"endTime\":2.475,\"confidence\":0.324598},{\"word\":\"た。\",\"startTime\":2.745,\"endTime\":2.775,\"confidence\":0.3814676}]}]",
+        "text": "ほんばんかんきょうにデプロイしました。"
+      }
+    ]
+  }
+}

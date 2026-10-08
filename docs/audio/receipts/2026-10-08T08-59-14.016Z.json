@@ -1,0 +1,32 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:私は大学生です。"
+  ],
+  "spoken_texts": {
+    "ja:私は大学生です。": "わたしはだいがくせいです。"
+  },
+  "spoken_ruby": {
+    "ja:私は大学生です。": "私[わたし]は大学生[だいがくせい]です。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75b6268694fc9cedd3749",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7911a2bd-82e7-4e3c-92fb-e78fb42ebefc.mp3",
+        "duration": 2.205,
+        "index": 0,
+        "item_id": "linguadesk-ja-g0gb1a",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"わたしはだいがくせいです。\"},{\"text\":\"わたしはだいがくせいです。\",\"words\":[{\"word\":\"わ\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.0978208},{\"word\":\"た\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.15718009},{\"word\":\"し\",\"startTime\":0.785,\"endTime\":0.815,\"confidence\":0.20617253},{\"word\":\"は\",\"startTime\":0.815,\"endTime\":0.845,\"confidence\":0.20513798},{\"word\":\"だ\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.17608461},{\"word\":\"い\",\"startTime\":0.975,\"endTime\":1.005,\"confidence\":0.16467923},{\"word\":\"が\",\"startTime\":1.005,\"endTime\":1.035,\"confidence\":0.1884687},{\"word\":\"く\",\"startTime\":1.165,\"endTime\":1.195,\"confidence\":0.29294613},{\"word\":\"せ\",\"startTime\":1.565,\"endTime\":1.595,\"confidence\":0.19428934},{\"word\":\"い\",\"startTime\":1.715,\"endTime\":1.745,\"confidence\":0.27331662},{\"word\":\"で\",\"startTime\":1.775,\"endTime\":1.805,\"confidence\":0.25830057},{\"word\":\"す。\",\"startTime\":2.175,\"endTime\":2.205,\"confidence\":0.32523346}]}]",
+        "text": "わたしはだいがくせいです。"
+      }
+    ]
+  }
+}

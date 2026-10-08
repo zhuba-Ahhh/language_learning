@@ -49,11 +49,15 @@ CDN 地址在 `src/lib/audio.generated.json`。时间轴在 `src/lib/audio.timin
 
 脚本每次请求前写入 `docs/audio/receipts/`，返回后保存原始结果。请求结果不明时先检查回执，不盲目重发。仅重新解析已有字幕、不发生成请求：`pnpm audio:generate --refresh-timings --limit=0`。配音仍需人工听感校对，服务提供的字幕时间不代表经过人工逐词审校。
 
-AVG 入口尚未透传 `explicit_language`。制作脚本只对孤立的纯汉字日语词使用词库中已有的假名 `reading`（例如 `仕様` 请求文本为 `しよう`），原文、映射键和业务 ID 不变；英语、假名及句子原样发送。缺少合法假名读音时停止，不猜测。实际请求文本保存在回执的 `spoken_texts` 中；音译词不建立汉字原文时间轴，也不将其假名字幕套用到原文。
+2026-10-08 已查询 BAM 最新登记的 AVG 接口 `1.0.171`（endpoint `4331126`），公共参数只有 `speaker / audio_config / context_texts`，没有 `explicit_language`。下游 client 能序列化该字段，不代表 AVG HTTP 入口已经暴露；也未将请求成功当作 PPE 透传验证。制作脚本对纯汉字词使用词库已有 `reading`；对含汉字的词句使用 `scripts/japanese-speech.json` 维护的振假名。原文、映射键和业务 ID 不变，英语和纯假名不变。缺少读音或读音无法还原原文时停止，不猜测。实际请求文本与振假名保存在回执的 `spoken_texts / spoken_ruby` 中。
+
+假名字幕先匹配真实合成文本，再按人工读音的完整边界映射到原文。内部没有独立边界的汉字不拆分时间，不按字数估算；只修改振假名边界且合成文本未变时，可从原回执重新映射。纯汉字单词不建立假时间轴。新词句字幕缺失时不发布 CDN；已有结果未发布或请求结果不明时阻止重复生成，先检查回执。
 
 只读预览：`pnpm audio:generate --dry-run`；单词请求预览：`pnpm audio:generate --dry-run --key='ja:仕様' --limit=1`。预览不会发请求、写回执或更改 CDN/时间轴文件。运行 `node scripts/check-audio-requests.mjs` 检查请求和只读约束。已有 CDN 不因脚本修改而自动替换；确认要重制某一条后，去掉 `--dry-run` 才会实际生成并更新其 CDN 映射。
 
 定向重制所有纯汉字日语词：先执行 `pnpm audio:generate --dry-run --regenerate-readings` 核对清单，再在明确授权后去掉 `--dry-run`。该开关会重制已有配音；执行中断后不得直接重跑，应先检查回执与已替换的映射，避免重复生成。
+
+日语词句定向替换：`pnpm audio:generate --dry-run --regenerate-japanese`。该开关跳过已有同文本制作回执且 URL 匹配的资产，不重制英语、纯假名或那 51 个汉字词。新材料须先补齐假名读音。2026-10-08 本轮共制作 156 条词句，144 条已替换；12 条新音频的尾句字幕不完整，保留原 CDN 与原时间轴，尚未完成全量统一。没有修改题目、成绩或用户记录。完整清单见 [日语词句替换记录](../../../docs/audio/japanese-sentences-20261008/README.md)。
 
 2026-10-08 已按上述读音重制并替换 49 个词的 CDN；英语、句子及 61 条句子时间轴未变。新旧链接、回执与验收边界见 [配音替换清单](../../../docs/audio/japanese-readings-20261008/README.md)。
 

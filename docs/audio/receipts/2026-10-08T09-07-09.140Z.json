@@ -1,0 +1,32 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:今、日本語を勉強しています。日本語はまだ上手ではありません。よろしくお願いします。"
+  ],
+  "spoken_texts": {
+    "ja:今、日本語を勉強しています。日本語はまだ上手ではありません。よろしくお願いします。": "いま、にほんごをべんきょうしています。にほんごはまだじょうずではありません。よろしくおねがいします。"
+  },
+  "spoken_ruby": {
+    "ja:今、日本語を勉強しています。日本語はまだ上手ではありません。よろしくお願いします。": "今[いま]、日本語[にほんご]を勉強[べんきょう]しています。日本語[にほんご]はまだ上手[じょうず]ではありません。よろしくお願[ねが]いします。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75d3d68694fc9cedd37f6",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9709d01c-961e-4b29-842b-c06a2251437f.mp3",
+        "duration": 7.4350414,
+        "index": 0,
+        "item_id": "linguadesk-ja-1xsqbog",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"いま、にほんごをべんきょうしています。にほんごはまだじょうずではありません。よろしくおねがいします。\"},{\"text\":\"いま、にほんごをべんきょうしています。\",\"words\":[{\"word\":\"い\",\"endTime\":0.045,\"confidence\":0.47059974},{\"word\":\"ま、\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.2102866},{\"word\":\"に\",\"startTime\":0.475,\"endTime\":0.505,\"confidence\":0.24856117},{\"word\":\"ほ\",\"startTime\":0.505,\"endTime\":0.535,\"confidence\":0.24014354},{\"word\":\"ん\",\"startTime\":0.535,\"endTime\":0.565,\"confidence\":0.2739791},{\"word\":\"ご\",\"startTime\":0.565,\"endTime\":0.595,\"confidence\":0.31067145},{\"word\":\"を\",\"startTime\":0.595,\"endTime\":0.625,\"confidence\":0.28859082},{\"word\":\"べ\",\"startTime\":0.625,\"endTime\":0.655,\"confidence\":0.26101083},{\"word\":\"ん\",\"startTime\":0.655,\"endTime\":0.685,\"confidence\":0.24262074},{\"word\":\"き\",\"startTime\":0.685,\"endTime\":0.715,\"confidence\":0.29480323},{\"word\":\"ょ\",\"startTime\":2.725,\"endTime\":2.755,\"confidence\":0.2370369},{\"word\":\"う\",\"startTime\":2.755,\"endTime\":2.785,\"confidence\":0.29156065},{\"word\":\"し\",\"startTime\":2.785,\"endTime\":2.815,\"confidence\":0.30022657},{\"word\":\"て\",\"startTime\":2.815,\"endTime\":2.845,\"confidence\":0.2764788},{\"word\":\"い\",\"startTime\":2.845,\"endTime\":2.875,\"confidence\":0.31285346},{\"word\":\"ま\",\"startTime\":4.235,\"endTime\":4.265,\"confidence\":0.25773975},{\"word\":\"す。\",\"startTime\":4.465,\"endTime\":4.495,\"confidence\":0.3745469}]},{\"text\":\"にほんごはまだじょうずではありません。\",\"words\":[{\"word\":\"に\",\"startTime\":4.5000415,\"endTime\":4.5450416,\"confidence\":0.5545282},{\"word\":\"ほ\",\"startTime\":4.5450416,\"endTime\":4.5750413,\"confidence\":0.23889445},{\"word\":\"ん\",\"startTime\":4.6850414,\"endTime\":4.7150416,\"confidence\":0.19954187},{\"word\":\"ご\",\"startTime\":4.7950416,\"endTime\":4.8250413,\"confidence\":0.25668505},{\"word\":\"は\",\"startTime\":4.9250417,\"endTime\":4.9550414,\"confidence\":0.20822462},{\"word\":\"ま\",\"startTime\":4.9550414,\"endTime\":4.9850416,\"confidence\":0.2212773},{\"word\":\"だ\",\"startTime\":4.9850416,\"endTime\":5.0150414,\"confidence\":0.21316971},{\"word\":\"じ\",\"startTime\":5.0150414,\"endTime\":5.0450416,\"confidence\":0.1925347},{\"word\":\"ょ\",\"startTime\":5.0950413,\"endTime\":5.1250415,\"confidence\":0.19358985},{\"word\":\"う\",\"startTime\":5.2150416,\"endTime\":5.2450414,\"confidence\":0.23783574},{\"word\":\"ず\",\"startTime\":5.2450414,\"endTime\":5.2750416,\"confidence\":0.18633428},{\"word\":\"で\",\"startTime\":5.2750416,\"endTime\":5.3050413,\"confidence\":0.13978434},{\"word\":\"は\",\"startTime\":5.3050413,\"endTime\":5.3350415,\"confidence\":0.16024442},{\"word\":\"あ\",\"startTime\":5.3350415,\"endTime\":5.3650417,\"confidence\":0.18591124},{\"word\":\"り\",\"startTime\":5.3650417,\"endTime\":5.3950415,\"confidence\":0.22644521},{\"word\":\"ま\",\"startTime\":5.3950415,\"endTime\":5.4250417,\"confidence\":0.25978497},{\"word\":\"せ\",\"startTime\":5.4250417,\"endTime\":5.4550414,\"confidence\":0.30430907},{\"word\":\"ん。\",\"startTime\":7.4050417,\"endTime\":7.4350414,\"confidence\":0.4477794}]}]",
+        "text": "いま、にほんごをべんきょうしています。にほんごはまだじょうずではありません。よろしくおねがいします。"
+      }
+    ]
+  }
+}

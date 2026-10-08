@@ -1,0 +1,3841 @@
+{
+  "date": "2026-10-08",
+  "baseline": "4a3907d4965b69f94d10626f437da37c8cfcee17",
+  "bam": {
+    "version": "1.0.171",
+    "endpoint_id": 4331126,
+    "method": "GenerateAvgTextToSpeechAudio",
+    "common_request_fields": ["speaker", "audio_config", "context_texts"],
+    "explicit_language_not_exposed": true
+  },
+  "changed": 156,
+  "unchanged": 517,
+  "requests": 18,
+  "submitted": 157,
+  "receipts": [
+    {
+      "file": "2026-10-08T08-59-14.016Z.json",
+      "count": 1,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-14.199Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-15.575Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-16.883Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-18.215Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-19.788Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-21.372Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-23.098Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-24.826Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-26.288Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-27.493Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-29.323Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-30.906Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-33.065Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-35.512Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-38.494Z.json",
+      "count": 10,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-00-41.522Z.json",
+      "count": 5,
+      "status": "received"
+    },
+    {
+      "file": "2026-10-08T09-07-09.140Z.json",
+      "count": 1,
+      "status": "received"
+    }
+  ],
+  "rows": [
+    {
+      "key": "ja:「この道をまっすぐ行ってください。銀行の前を右に曲がってください。駅は左にあります。歩いて五分です。」リンは「ありがとうございます」と言います。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5a4b7a3a-74c5-44fe-ba8e-913dbfd368e6.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/52da8d1c-b25f-4d52-a648-b9d941774d1e.mp3",
+      "duration": 15.940166,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 128301
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/52da8d1c-b25f-4d52-a648-b9d941774d1e.mp3"
+    },
+    {
+      "key": "ja:「これは何ですか。」「パソコンです。」「あなたのパソコンですか。」「はい、そうです。」",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ee3c6939-9d2b-4b71-8243-bed94c3f727e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5a81b6ef-86b8-4c78-b299-05ce57c2e0c1.mp3",
+      "duration": 7.1850834,
+      "subtitleGaps": [
+        {
+          "from": 34,
+          "to": 35,
+          "text": "は"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "い"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "そ"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "う"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "で"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 58029
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ee3c6939-9d2b-4b71-8243-bed94c3f727e.mp3"
+    },
+    {
+      "key": "ja:Web開発が得意で、Reactをよく使っています。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/64f25595-842f-431c-9dbd-ab75e0861099.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78500e86-0d00-4f8c-933f-48ccf74e601b.mp3",
+      "duration": 4.915,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 40557
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78500e86-0d00-4f8c-933f-48ccf74e601b.mp3"
+    },
+    {
+      "key": "ja:ええ、私もそう思います。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/27b3c2de-839a-4f85-b7c8-47065a3bb858.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7c9fec28-85dd-4608-ac36-b6d4219aed66.mp3",
+      "duration": 0.925,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24429
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7c9fec28-85dd-4608-ac36-b6d4219aed66.mp3"
+    },
+    {
+      "key": "ja:おはようございます、田中さん。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/21553795-77a0-4c82-bab1-d86f47451183.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/33c6f862-99d3-4b7d-884e-eb80975e41d6.mp3",
+      "duration": 2.475,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/33c6f862-99d3-4b7d-884e-eb80975e41d6.mp3"
+    },
+    {
+      "key": "ja:おはようございます。今日もよろしくお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/09b054e8-fb54-4fea-ad8c-feba6ac3b37d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2578ee08-182c-4eeb-8e01-54b7592903f8.mp3",
+      "duration": 3.6350417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 30957
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2578ee08-182c-4eeb-8e01-54b7592903f8.mp3"
+    },
+    {
+      "key": "ja:おはようございます。昨日、ログイン画面を修正しました。今日はテストを行います。テストが終わったら、結果をチームに送ります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f108751b-0e1b-4ce8-b147-2b40ea9069c9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e7a1b47e-4f02-4588-945b-258f680d51cd.mp3",
+      "duration": 12.385084,
+      "subtitleGaps": [
+        {
+          "from": 39,
+          "to": 40,
+          "text": "テ"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "ス"
+        },
+        {
+          "from": 41,
+          "to": 42,
+          "text": "ト"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "が"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "終"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "わ"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "っ"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "た"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ら"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "結"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "果"
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "text": "を"
+        },
+        {
+          "from": 52,
+          "to": 53,
+          "text": "チ"
+        },
+        {
+          "from": 53,
+          "to": 54,
+          "text": "ー"
+        },
+        {
+          "from": 54,
+          "to": 55,
+          "text": "ム"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "に"
+        },
+        {
+          "from": 56,
+          "to": 57,
+          "text": "送"
+        },
+        {
+          "from": 57,
+          "to": 58,
+          "text": "り"
+        },
+        {
+          "from": 58,
+          "to": 59,
+          "text": "ま"
+        },
+        {
+          "from": 59,
+          "to": 60,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 99693
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f108751b-0e1b-4ce8-b147-2b40ea9069c9.mp3"
+    },
+    {
+      "key": "ja:お会計をお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/24f56207-65e5-4fcb-85fe-76ed80fa9360.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6e8a2dd9-3cf1-4ac1-99bb-cfd42ab1972a.mp3",
+      "duration": 2.605,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6e8a2dd9-3cf1-4ac1-99bb-cfd42ab1972a.mp3"
+    },
+    {
+      "key": "ja:お疲れさまでした。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3170522a-4523-4333-920b-52d4cf4ad1be.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/eb87775a-5366-49d6-8ddb-06640c49aeab.mp3",
+      "duration": 1.435,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 15021
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/eb87775a-5366-49d6-8ddb-06640c49aeab.mp3"
+    },
+    {
+      "key": "ja:お疲れさまです",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/adf33658-59e0-4b66-b2d0-fcac99990d08.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7b7989a7-68eb-4a46-a9e8-df73a3bca27a.mp3",
+      "duration": 1.575,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7b7989a7-68eb-4a46-a9e8-df73a3bca27a.mp3"
+    },
+    {
+      "key": "ja:このアルゴリズムは効率的だ。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2237dea3-f4d0-4bc0-980e-ab7fb1adc94c.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5012f473-f0b7-486e-9b7e-533ebfd9ade1.mp3",
+      "duration": 2.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24621
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5012f473-f0b7-486e-9b7e-533ebfd9ade1.mp3"
+    },
+    {
+      "key": "ja:このコードはリファクタリングが必要です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d307d462-8800-4e02-ae8a-ab0877b36d28.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d3bb02f0-ed71-49ec-b06a-71ea58f1f01c.mp3",
+      "duration": 3.565,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 29037
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d3bb02f0-ed71-49ec-b06a-71ea58f1f01c.mp3"
+    },
+    {
+      "key": "ja:この仕事には経験が必要です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d22e1f2f-518a-419b-b644-87dbc716101b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7dfff0ca-d51f-4191-baa9-33394282d476.mp3",
+      "duration": 3.575,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 29229
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7dfff0ca-d51f-4191-baa9-33394282d476.mp3"
+    },
+    {
+      "key": "ja:この件について、確認してもよろしいですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8d304f15-6870-4c8a-bc02-8973e98c8f94.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aca5edf6-2bce-4001-bb85-8eb07ca24e40.mp3",
+      "duration": 4.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 37293
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aca5edf6-2bce-4001-bb85-8eb07ca24e40.mp3"
+    },
+    {
+      "key": "ja:この件は私が対応します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ae42b255-ee74-48a9-8189-ca20abb83c4b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9dfac5b0-70cc-42f5-9eab-6cec0d1780a0.mp3",
+      "duration": 2.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9dfac5b0-70cc-42f5-9eab-6cec0d1780a0.mp3"
+    },
+    {
+      "key": "ja:この方法は簡単です。しかし、時間がかかります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a6027f4c-6985-4405-b06a-3cc420fb0a4a.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4b797d64-db67-446d-8237-ea6d474dcfe9.mp3",
+      "duration": 5.475042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 45357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4b797d64-db67-446d-8237-ea6d474dcfe9.mp3"
+    },
+    {
+      "key": "ja:この町は便利です。一方、家賃が高いです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ec720393-5ddf-4495-b121-b77ecf2f2646.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b43053ae-55cf-48a0-874f-50cd844e73d7.mp3",
+      "duration": 4.5850415,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 37293
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b43053ae-55cf-48a0-874f-50cd844e73d7.mp3"
+    },
+    {
+      "key": "ja:この言葉はどういう意味ですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2dc7b8cd-13b3-45cb-9ab7-4b4b1095f5e3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d2f5eaf9-81eb-4570-9f48-bb376e8da3fb.mp3",
+      "duration": 2.995,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24429
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d2f5eaf9-81eb-4570-9f48-bb376e8da3fb.mp3"
+    },
+    {
+      "key": "ja:この計画についてどう思いますか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/79f4c1a4-25be-4989-8b12-10aa99cc3724.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db2224bd-bbc5-443b-84aa-ef55f125400e.mp3",
+      "duration": 3.365,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 30957
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db2224bd-bbc5-443b-84aa-ef55f125400e.mp3"
+    },
+    {
+      "key": "ja:この調査の目的は原因を知ることです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d1b4ab6d-c058-48c5-ad1e-294350c2384b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cd7b839a-aedd-4768-95cd-3727a9cff5e1.mp3",
+      "duration": 3.405,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 27885
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cd7b839a-aedd-4768-95cd-3727a9cff5e1.mp3"
+    },
+    {
+      "key": "ja:この部屋を見たいです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1dc8294e-a31d-4b2f-841e-93801ab78892.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8275c9f4-1df9-4c40-af07-4da3f8e33ca6.mp3",
+      "duration": 1.955,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8275c9f4-1df9-4c40-af07-4da3f8e33ca6.mp3"
+    },
+    {
+      "key": "ja:これは本です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f2321246-3447-4676-b67b-0fd4fc9ada1d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/eaac9383-0533-4fd9-9f41-1a2ebe20fdab.mp3",
+      "duration": 1.575,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/eaac9383-0533-4fd9-9f41-1a2ebe20fdab.mp3"
+    },
+    {
+      "key": "ja:これは本です。これは私のパソコンです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b71aeea1-c54c-46f6-a18e-239061ab4ccd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c4e5ebf2-2777-4a20-8780-243eaee40c60.mp3",
+      "duration": 3.5850415,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 29229
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c4e5ebf2-2777-4a20-8780-243eaee40c60.mp3"
+    },
+    {
+      "key": "ja:これは私のノートです。それは友だちの本です。あれは先生のかばんです。ノートは青いです。本は日本語の本です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ecbda090-811c-4fed-b792-f2ea3e98249f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/666e206e-1e22-4856-9448-477650636396.mp3",
+      "duration": 11.565166,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 93165
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/666e206e-1e22-4856-9448-477650636396.mp3"
+    },
+    {
+      "key": "ja:コンテナを起動する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8145b267-d3a5-4f87-ba1f-f278e508dfdb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f8b530c0-b2ec-4607-8b9c-0b3d861a079c.mp3",
+      "duration": 1.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16173
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f8b530c0-b2ec-4607-8b9c-0b3d861a079c.mp3"
+    },
+    {
+      "key": "ja:こんにちは、お元気ですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db3aa5f0-d659-46c6-be42-62e2ef1c2c21.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8cd141bb-357d-4d8a-801f-bf30fe889774.mp3",
+      "duration": 2.555,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8cd141bb-357d-4d8a-801f-bf30fe889774.mp3"
+    },
+    {
+      "key": "ja:コンパイルエラーを直した。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3ab7e114-5bda-4ce6-aeb2-2244b3af4038.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b3f1c5bd-ded7-46d6-a227-af7e4bcdffab.mp3",
+      "duration": 2.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b3f1c5bd-ded7-46d6-a227-af7e4bcdffab.mp3"
+    },
+    {
+      "key": "ja:こんばんは、お疲れさまです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db3ee658-9bb2-49f1-80ea-8580ad372b65.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/32a82b48-9f16-441d-8c4d-0b527cec6d67.mp3",
+      "duration": 1.045,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25965
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/32a82b48-9f16-441d-8c4d-0b527cec6d67.mp3"
+    },
+    {
+      "key": "ja:ご飯をごちそうしてくれて、ありがとうございます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4762f2c0-94eb-4692-b554-bef72e297469.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c27b5e54-4128-4683-9327-67c25ed78380.mp3",
+      "duration": 3.635,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 32301
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c27b5e54-4128-4683-9327-67c25ed78380.mp3"
+    },
+    {
+      "key": "ja:サーバーが落ちました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/07d555a4-b3da-4f32-8e80-2282c1e5a142.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60720728-3229-4cb1-adce-f90308b8ca24.mp3",
+      "duration": 1.795,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 14829
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60720728-3229-4cb1-adce-f90308b8ca24.mp3"
+    },
+    {
+      "key": "ja:じゃあ、また明日。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/24d0e107-2e12-421f-aca8-4567e0fb82d1.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ec525f20-821d-4bb7-aedb-6b941a4d9f1c.mp3",
+      "duration": 0.765,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18285
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ec525f20-821d-4bb7-aedb-6b941a4d9f1c.mp3"
+    },
+    {
+      "key": "ja:すみません、もう一度お願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/db382cf8-3492-41ae-9d0c-00a87f1fa093.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ad4ad6b0-a71f-4e5e-8568-b3f33cdc9c14.mp3",
+      "duration": 3.395,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 27693
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ad4ad6b0-a71f-4e5e-8568-b3f33cdc9c14.mp3"
+    },
+    {
+      "key": "ja:すみません、駅はどこですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c1548dd1-f844-4ac1-b80b-210a4f61d85e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6211597c-be00-4abd-80b7-9b1261fd72fa.mp3",
+      "duration": 3.385,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 27693
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6211597c-be00-4abd-80b7-9b1261fd72fa.mp3"
+    },
+    {
+      "key": "ja:すみません、駅はどこですか。もう一度ゆっくり言ってください。ありがとうございます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fd6004b4-fdb0-4ece-a7e9-f85d8db663fc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/849e7478-c4aa-44ee-84c2-7e0c4b40fe0c.mp3",
+      "duration": 7.8750834,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 64365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/849e7478-c4aa-44ee-84c2-7e0c4b40fe0c.mp3"
+    },
+    {
+      "key": "ja:セキュリティ対策を強化する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6b298ba8-2fa9-4013-a696-492f3f53ffe2.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/89f0e8cb-21c0-4f8b-a02c-8396ecd64a0e.mp3",
+      "duration": 2.795,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24621
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/89f0e8cb-21c0-4f8b-a02c-8396ecd64a0e.mp3"
+    },
+    {
+      "key": "ja:そうは思いません",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bab59135-8dad-4104-8446-cd0dc54423a7.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d2a28705-5639-4758-9fc5-050858975682.mp3",
+      "duration": 1.565,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d2a28705-5639-4758-9fc5-050858975682.mp3"
+    },
+    {
+      "key": "ja:ちょっと考えさせてください",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/514320a2-e0d9-4dda-bed7-f26ec07eecbd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/628f09e5-cf59-4463-9ba3-31334fe4814b.mp3",
+      "duration": 2.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/628f09e5-cf59-4463-9ba3-31334fe4814b.mp3"
+    },
+    {
+      "key": "ja:つまり、この計画は変更する必要があります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8b22d2e9-b746-4b72-b4ca-e9fcb5594cc3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aa847616-22d6-420b-a935-3c7d26a65e09.mp3",
+      "duration": 4.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 37485
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aa847616-22d6-420b-a935-3c7d26a65e09.mp3"
+    },
+    {
+      "key": "ja:データベースに接続する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7fa3b0d1-01f4-4f19-af6e-75413f63fade.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b25210fe-3b86-4a32-9314-5eb7233f08ad.mp3",
+      "duration": 2.59499,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b25210fe-3b86-4a32-9314-5eb7233f08ad.mp3"
+    },
+    {
+      "key": "ja:デバッグに時間がかかった。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/453339e3-39d3-4728-98b8-2970a39c1c84.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c9549452-260a-4844-88bb-79f4c674a508.mp3",
+      "duration": 2.205,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c9549452-260a-4844-88bb-79f4c674a508.mp3"
+    },
+    {
+      "key": "ja:どういう意味ですか",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3bee0cdd-d128-42cd-8ee4-f855951151b4.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c8a2fa54-b2ec-4632-a5ab-794af064c5a9.mp3",
+      "duration": 1.565,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c8a2fa54-b2ec-4632-a5ab-794af064c5a9.mp3"
+    },
+    {
+      "key": "ja:どうぞよろしくお願いいたします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b2080e3d-abd3-4418-bdda-e1ee34cc0eee.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/900c1302-1e77-4f4e-b687-8c9eaa4bf520.mp3",
+      "duration": 2.715,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/900c1302-1e77-4f4e-b687-8c9eaa4bf520.mp3"
+    },
+    {
+      "key": "ja:どう思いますか",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0c9acfb3-de34-468f-b153-f2bbd933bc15.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60ac35a6-ddb2-4fd9-994c-46549f8995ce.mp3",
+      "duration": 1.235,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 13101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60ac35a6-ddb2-4fd9-994c-46549f8995ce.mp3"
+    },
+    {
+      "key": "ja:なるほど、よく分かりました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6c0d47b6-95ff-44b5-af42-9e176df1c71e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/94d37674-2c7b-413b-9bd2-a16803552d01.mp3",
+      "duration": 2.995,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24621
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/94d37674-2c7b-413b-9bd2-a16803552d01.mp3"
+    },
+    {
+      "key": "ja:ネットワークエラーが発生した。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/22c9f034-3c3b-4539-aa41-0f4f78e3af61.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ea771d86-ccef-4d94-970d-447197570a14.mp3",
+      "duration": 2.915,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24621
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ea771d86-ccef-4d94-970d-447197570a14.mp3"
+    },
+    {
+      "key": "ja:はい、分かりました。すぐに対応します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e913f5d9-a929-4917-94bc-8eaa946d2122.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c16963b4-f52d-450e-a959-3e7327f66d05.mp3",
+      "duration": 4.1950417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 34221
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c16963b4-f52d-450e-a959-3e7327f66d05.mp3"
+    },
+    {
+      "key": "ja:バグを修正しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8291705d-c0de-4659-b9de-6c2527635aee.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/29f54857-44f3-4776-af5b-7669dabc7042.mp3",
+      "duration": 1.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/29f54857-44f3-4776-af5b-7669dabc7042.mp3"
+    },
+    {
+      "key": "ja:はじめまして。ソフトウェアエンジニアの○○と申します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/21151c5b-783e-431c-8fe8-2adc1921ab3d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cef1c7c6-adf1-4546-aad1-583da378ac40.mp3",
+      "duration": 4.625042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 38637
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cef1c7c6-adf1-4546-aad1-583da378ac40.mp3"
+    },
+    {
+      "key": "ja:はじめまして。私はリンです。中国から来ました。大学生です。大学でコンピューターを勉強しています。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d74264a9-47fc-40f5-b98b-8d40cd2360a5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0b5edb02-4ee5-47c4-a9f4-ce0de85d5c6a.mp3",
+      "duration": 10.275167,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 85293
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0b5edb02-4ee5-47c4-a9f4-ce0de85d5c6a.mp3"
+    },
+    {
+      "key": "ja:はじめまして。私はリンです。大学生です。よろしくお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/963ba9f7-09e9-44b1-864d-ded73ecd7ba3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d54cb50f-87db-49ff-95ad-163e5974ad9e.mp3",
+      "duration": 4.375042,
+      "subtitleGaps": [
+        {
+          "from": 14,
+          "to": 15,
+          "text": "大"
+        },
+        {
+          "from": 15,
+          "to": 16,
+          "text": "学"
+        },
+        {
+          "from": 16,
+          "to": 17,
+          "text": "生"
+        },
+        {
+          "from": 17,
+          "to": 18,
+          "text": "で"
+        },
+        {
+          "from": 18,
+          "to": 19,
+          "text": "す"
+        },
+        {
+          "from": 20,
+          "to": 21,
+          "text": "よ"
+        },
+        {
+          "from": 21,
+          "to": 22,
+          "text": "ろ"
+        },
+        {
+          "from": 22,
+          "to": 23,
+          "text": "し"
+        },
+        {
+          "from": 23,
+          "to": 24,
+          "text": "く"
+        },
+        {
+          "from": 24,
+          "to": 25,
+          "text": "お"
+        },
+        {
+          "from": 25,
+          "to": 26,
+          "text": "願"
+        },
+        {
+          "from": 26,
+          "to": 27,
+          "text": "い"
+        },
+        {
+          "from": 27,
+          "to": 28,
+          "text": "し"
+        },
+        {
+          "from": 28,
+          "to": 29,
+          "text": "ま"
+        },
+        {
+          "from": 29,
+          "to": 30,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 56493
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/963ba9f7-09e9-44b1-864d-ded73ecd7ba3.mp3"
+    },
+    {
+      "key": "ja:ブラウザの互換性を確認する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e1f1a3cd-9747-4c80-8b05-a412bec53726.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8b2bff27-3bf9-4d27-81e3-73df6b49c397.mp3",
+      "duration": 2.765,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8b2bff27-3bf9-4d27-81e3-73df6b49c397.mp3"
+    },
+    {
+      "key": "ja:また明日",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8cb12699-87ef-4d8b-a15b-128bcf3fbcfc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f65a5a50-c0c9-49da-ad3c-3ee998cee7fc.mp3",
+      "duration": 0.995,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f65a5a50-c0c9-49da-ad3c-3ee998cee7fc.mp3"
+    },
+    {
+      "key": "ja:また連絡しますね。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2c312158-ad2e-4893-8934-1e411cfa27df.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/22664d3f-3468-47aa-aa43-8ced99a0e221.mp3",
+      "duration": 1.445,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 15021
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/22664d3f-3468-47aa-aa43-8ced99a0e221.mp3"
+    },
+    {
+      "key": "ja:ミドルウェアで認証を処理する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5b376838-87f9-47c6-8096-603a50313b42.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/96bccca2-cfb0-4cf7-8865-6b1641093108.mp3",
+      "duration": 2.585,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21165
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/96bccca2-cfb0-4cf7-8865-6b1641093108.mp3"
+    },
+    {
+      "key": "ja:メモリリークを検出した。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c8c096e0-8644-450b-a871-9e15f2ea32d7.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ed07063e-ef4e-44e7-a2f4-3fb54324fe41.mp3",
+      "duration": 2.355,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ed07063e-ef4e-44e7-a2f4-3fb54324fe41.mp3"
+    },
+    {
+      "key": "ja:もう一度お願いします",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0c32e58f-02d6-4efc-88e9-58c99c0d7b61.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c793cea0-4908-4f55-bc88-2219ccc46b94.mp3",
+      "duration": 2.235,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c793cea0-4908-4f55-bc88-2219ccc46b94.mp3"
+    },
+    {
+      "key": "ja:もう一度ゆっくり言ってください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/76acdf65-6f16-4e8a-806a-2294d001119e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9cd21449-b7f9-4420-922f-c0d40f9b1572.mp3",
+      "duration": 2.605,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9cd21449-b7f9-4420-922f-c0d40f9b1572.mp3"
+    },
+    {
+      "key": "ja:ゆっくり話してください",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c5328b21-8861-4265-848d-c9e9bbad4145.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/527464f4-26d4-4e20-a50a-327537ae4398.mp3",
+      "duration": 1.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16173
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/527464f4-26d4-4e20-a50a-327537ae4398.mp3"
+    },
+    {
+      "key": "ja:リリースが遅延している。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bc6d34db-6721-47ff-a7f0-fb274648e161.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/854c565f-0b74-47d7-bf4d-244d9b442ec5.mp3",
+      "duration": 2.365,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/854c565f-0b74-47d7-bf4d-244d9b442ec5.mp3"
+    },
+    {
+      "key": "ja:リンは駅に行きたいです。でも、駅の場所が分かりません。「すみません、駅はどこですか」と店の人に聞きます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7747a7eb-e803-4390-a27d-9782e3c5bf4f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0c1e5371-d90b-43f9-96b5-1093ce72a3ee.mp3",
+      "duration": 7.915042,
+      "subtitleGaps": [
+        {
+          "from": 28,
+          "to": 29,
+          "text": "す"
+        },
+        {
+          "from": 29,
+          "to": 30,
+          "text": "み"
+        },
+        {
+          "from": 30,
+          "to": 31,
+          "text": "ま"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "せ"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "ん"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "駅"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "は"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "ど"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "こ"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "で"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "す"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "か"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "と"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "店"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "の"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "人"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "に"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "聞"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "き"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "ま"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 88557
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7747a7eb-e803-4390-a27d-9782e3c5bf4f.mp3"
+    },
+    {
+      "key": "ja:レストランを予約しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/889c93c3-e010-47a0-a078-0ed73d559672.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/15da8254-47e7-44f8-88cb-4555de9f57cc.mp3",
+      "duration": 2.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/15da8254-47e7-44f8-88cb-4555de9f57cc.mp3"
+    },
+    {
+      "key": "ja:一つ確認したいことがあります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/69ef6ee1-0c57-4bcb-98fa-007ba756cb8a.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ef05f565-697b-40a9-87da-21557033a3a3.mp3",
+      "duration": 3.115,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25965
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ef05f565-697b-40a9-87da-21557033a3a3.mp3"
+    },
+    {
+      "key": "ja:一つ確認したいことがあります。この画面はスマートフォンでも使いますか。使う場合は、小さい画面でも確認します。分からないことがあったら、質問します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d5a6d5fc-3815-4942-98a6-617756ba9dcf.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/20376032-8ba7-467b-b5f4-39d5a6c7e087.mp3",
+      "duration": 14.760125,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 118701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/20376032-8ba7-467b-b5f4-39d5a6c7e087.mp3"
+    },
+    {
+      "key": "ja:不具合を修正しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/edc4b7a2-08ea-42d3-b9a4-2c713c221133.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d241a98e-b848-46ff-89a6-3d2aa8a3b1ec.mp3",
+      "duration": 2.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d241a98e-b848-46ff-89a6-3d2aa8a3b1ec.mp3"
+    },
+    {
+      "key": "ja:予約したいのですが。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1bdc275b-75d3-40e1-817a-ab9282d9bb13.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e0ea9836-3867-4375-8ddf-9a9bb7d5e7fe.mp3",
+      "duration": 2.155,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e0ea9836-3867-4375-8ddf-9a9bb7d5e7fe.mp3"
+    },
+    {
+      "key": "ja:今、日本語を勉強しています。日本語はまだ上手ではありません。よろしくお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7fd9a68c-1e6d-41a5-8946-c974d8989e33.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9709d01c-961e-4b29-842b-c06a2251437f.mp3",
+      "duration": 7.4350414,
+      "subtitleGaps": [
+        {
+          "from": 30,
+          "to": 31,
+          "text": "よ"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "ろ"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "し"
+        },
+        {
+          "from": 33,
+          "to": 34,
+          "text": "く"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "お"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "願"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "い"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "し"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "ま"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 61101
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7fd9a68c-1e6d-41a5-8946-c974d8989e33.mp3"
+    },
+    {
+      "key": "ja:今度一緒にご飯を食べませんか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b10c3d2b-0adc-4feb-a1d9-4d727fa7d656.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a519700c-d5e6-4ae9-9e29-1f1c06c1477c.mp3",
+      "duration": 3.555,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 29229
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a519700c-d5e6-4ae9-9e29-1f1c06c1477c.mp3"
+    },
+    {
+      "key": "ja:今日はいい天気ですね。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e7227e88-be2a-4c22-812d-fa17aeeb567e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/209dd498-85fc-45a9-bcfb-9ca35870a3f3.mp3",
+      "duration": 1.795,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 15021
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/209dd498-85fc-45a9-bcfb-9ca35870a3f3.mp3"
+    },
+    {
+      "key": "ja:今日ははじめてコードレビューに参加しました。先輩は問題を指摘するだけでなく、理由も説明してくれました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/caf7f71f-6063-49d2-9704-5963d4c1c8a2.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6cabed85-1f67-4f4a-b064-6c21a3a92fa1.mp3",
+      "duration": 8.815042,
+      "subtitleGaps": [
+        {
+          "from": 38,
+          "to": 39,
+          "text": "理"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "由"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "も"
+        },
+        {
+          "from": 41,
+          "to": 42,
+          "text": "説"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "明"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "し"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "て"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "く"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "れ"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ま"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "し"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "た"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 72429
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/caf7f71f-6063-49d2-9704-5963d4c1c8a2.mp3"
+    },
+    {
+      "key": "ja:今日は九時から学校で日本語を勉強します。昼は友だちと食堂でご飯を食べます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ddc9025b-5695-4c16-9c99-8db135fd38da.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5a442476-9693-4fe7-8a22-dfb38541204e.mp3",
+      "duration": 7.515042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 61101
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5a442476-9693-4fe7-8a22-dfb38541204e.mp3"
+    },
+    {
+      "key": "ja:仕様を確認しておきます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/482cf842-9f03-45ab-98e2-a67bbca48b6e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/255013f2-1d12-4f57-a7bf-50618387252c.mp3",
+      "duration": 2.555,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/255013f2-1d12-4f57-a7bf-50618387252c.mp3"
+    },
+    {
+      "key": "ja:仕様変更がありました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/853f0aa4-0f2b-4526-a5b4-ff082981de05.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/667bcfb0-cfbe-447f-a51b-9b57822c3b8c.mp3",
+      "duration": 1.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/667bcfb0-cfbe-447f-a51b-9b57822c3b8c.mp3"
+    },
+    {
+      "key": "ja:住所を教えてください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/876a3626-f8d3-41dd-bb6d-29c8bc203f38.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b12e8d41-f52b-4559-9d7d-7bff01389692.mp3",
+      "duration": 2.205,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b12e8d41-f52b-4559-9d7d-7bff01389692.mp3"
+    },
+    {
+      "key": "ja:例えば",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d3e3c2eb-3734-44af-b5d2-2fec08f33e1a.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9f808463-2e66-48e0-986f-6c41ef902fed.mp3",
+      "duration": 0.905,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9f808463-2e66-48e0-986f-6c41ef902fed.mp3"
+    },
+    {
+      "key": "ja:例えば、毎日十分だけ練習します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/498ad5b1-c8ab-4384-be1a-b80ff14af806.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c50bafa0-6ce0-402f-8627-7674c8570593.mp3",
+      "duration": 4.655,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 40365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c50bafa0-6ce0-402f-8627-7674c8570593.mp3"
+    },
+    {
+      "key": "ja:便利なライブラリを見つけた。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e2714239-5f4d-415d-9dd6-6fa3a3e5b0cb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e8524605-97a2-4e6a-bb0a-142b2b2d17dd.mp3",
+      "duration": 2.315,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e8524605-97a2-4e6a-bb0a-142b2b2d17dd.mp3"
+    },
+    {
+      "key": "ja:修正が完了しましたので、ご確認お願いいたします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1bb53744-c9d8-47ed-be4a-f03a2efd55f0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5d7cf5f2-fecc-44e5-87be-65e70cc18e45.mp3",
+      "duration": 4.995,
+      "subtitleGaps": [
+        {
+          "from": 12,
+          "to": 13,
+          "text": "ご"
+        },
+        {
+          "from": 13,
+          "to": 14,
+          "text": "確"
+        },
+        {
+          "from": 14,
+          "to": 15,
+          "text": "認"
+        },
+        {
+          "from": 15,
+          "to": 16,
+          "text": "お"
+        },
+        {
+          "from": 16,
+          "to": 17,
+          "text": "願"
+        },
+        {
+          "from": 17,
+          "to": 18,
+          "text": "い"
+        },
+        {
+          "from": 18,
+          "to": 19,
+          "text": "い"
+        },
+        {
+          "from": 19,
+          "to": 20,
+          "text": "た"
+        },
+        {
+          "from": 20,
+          "to": 21,
+          "text": "し"
+        },
+        {
+          "from": 21,
+          "to": 22,
+          "text": "ま"
+        },
+        {
+          "from": 22,
+          "to": 23,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 40557
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1bb53744-c9d8-47ed-be4a-f03a2efd55f0.mp3"
+    },
+    {
+      "key": "ja:元気ですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/53db4278-5c3f-4298-bf9f-f02911aa71dd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/40caccbd-f582-424e-9b6f-0d4556d73eb5.mp3",
+      "duration": 1.395,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/40caccbd-f582-424e-9b6f-0d4556d73eb5.mp3"
+    },
+    {
+      "key": "ja:先輩、お疲れさまです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c771927c-2b3a-4d7f-a2a2-fe8eafd84329.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b083c1f5-995e-4d56-9f7d-ef93158bb36f.mp3",
+      "duration": 2.765,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b083c1f5-995e-4d56-9f7d-ef93158bb36f.mp3"
+    },
+    {
+      "key": "ja:写真を撮ってもいいですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8801bb42-cf6b-437a-a2c8-323be1bbe9b7.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/05f6f566-90b4-4b46-858f-966b8d1f288e.mp3",
+      "duration": 2.155,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/05f6f566-90b4-4b46-858f-966b8d1f288e.mp3"
+    },
+    {
+      "key": "ja:分かりました",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/58e420c3-4a88-4149-9e1e-89188689a4a9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b1be3927-aaa3-47b3-8218-5d468e743348.mp3",
+      "duration": 1.385,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b1be3927-aaa3-47b3-8218-5d468e743348.mp3"
+    },
+    {
+      "key": "ja:切符を二枚ください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7dbada03-02e7-4e30-b2bc-db4abe1ecc06.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c352a74c-d274-4c52-b16a-ea4660c4137f.mp3",
+      "duration": 1.795,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 15021
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c352a74c-d274-4c52-b16a-ea4660c4137f.mp3"
+    },
+    {
+      "key": "ja:前のプロジェクトでは、パフォーマンス改善を担当しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ed33f3a1-bdf9-4df1-ad29-72a5e650a7c5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/767b101f-20f5-4a19-9e63-d87f2a038bca.mp3",
+      "duration": 4.6550417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 43821
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/767b101f-20f5-4a19-9e63-d87f2a038bca.mp3"
+    },
+    {
+      "key": "ja:努力した結果、試験に合格しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8c76ef53-89fb-485c-ae22-2a906aeba573.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d871438e-5f38-40e8-bc68-304d3e715bfa.mp3",
+      "duration": 3.915,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 32301
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d871438e-5f38-40e8-bc68-304d3e715bfa.mp3"
+    },
+    {
+      "key": "ja:十年で生活は大きく変化しました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9e50a2be-469e-452d-a777-164a9aae3d1c.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4aded4f4-fe24-4262-980d-af6d1904c591.mp3",
+      "duration": 1.445,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 30957
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4aded4f4-fe24-4262-980d-af6d1904c591.mp3"
+    },
+    {
+      "key": "ja:午前九時から午後七時までです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ac94f866-bf2e-436d-bb40-944ab9d8e9fc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2cc30a98-fd42-4a8d-b1a2-43edfc1764f7.mp3",
+      "duration": 2.645,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24429
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2cc30a98-fd42-4a8d-b1a2-43edfc1764f7.mp3"
+    },
+    {
+      "key": "ja:午後2時から打ち合わせです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0b9e1f1c-4412-40dc-94ce-8eabc25c0870.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/261139a9-a6f4-472a-ab91-1601453a76c2.mp3",
+      "duration": 2.125,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/261139a9-a6f4-472a-ab91-1601453a76c2.mp3"
+    },
+    {
+      "key": "ja:午後三時に授業が終わります。そのあと、本屋で辞書を買ってから家に帰ります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/08466fa0-f778-4eff-9a2c-246a1db7f2fb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/afa10210-b03c-4eca-80d9-04413e6f6a10.mp3",
+      "duration": 8.235042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 67629
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/afa10210-b03c-4eca-80d9-04413e6f6a10.mp3"
+    },
+    {
+      "key": "ja:午後五時に家に帰ります。夜は日本語を三十分勉強します。土曜日はアルバイトがあります。日曜日は休みです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0019a9d8-ed23-4df1-a48a-e6ba7653a880.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9d1e56d8-ff5b-4bdf-9861-2792bd3b2df2.mp3",
+      "duration": 11.965083,
+      "subtitleGaps": [
+        {
+          "from": 42,
+          "to": 43,
+          "text": "日"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "曜"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "日"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "は"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "休"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "み"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "で"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 96237
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0019a9d8-ed23-4df1-a48a-e6ba7653a880.mp3"
+    },
+    {
+      "key": "ja:友達と約束がある。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/86e2bdc4-30b4-48dd-b80e-6ab49bde619d.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/53ab1b18-5c88-40da-8200-7bf47273731e.mp3",
+      "duration": 1.915,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/53ab1b18-5c88-40da-8200-7bf47273731e.mp3"
+    },
+    {
+      "key": "ja:品質を担保する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/29b08a7e-44b2-4e05-8950-23b667ae3576.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/85e81ca3-018e-4988-bf3d-88f717795bf8.mp3",
+      "duration": 2.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/85e81ca3-018e-4988-bf3d-88f717795bf8.mp3"
+    },
+    {
+      "key": "ja:図書館は月曜日から土曜日まで開いています。平日は午前九時から午後七時までです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a11eb0be-56a6-4fb9-a77a-bbaa6cd42646.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9318b6c6-2304-4ea5-be32-8c997c998fa2.mp3",
+      "duration": 8.235042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 67629
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9318b6c6-2304-4ea5-be32-8c997c998fa2.mp3"
+    },
+    {
+      "key": "ja:図書館は月曜日から土曜日まで開いています。平日は午前九時から午後七時までです。土曜日は午後五時に閉まります。日曜日は休みです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60d3f406-6a34-48b5-b13c-a90f3bf3c097.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7767090d-8c91-47f0-b476-5ed8e5b892de.mp3",
+      "duration": 13.955083,
+      "subtitleGaps": [
+        {
+          "from": 54,
+          "to": 55,
+          "text": "日"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "曜"
+        },
+        {
+          "from": 56,
+          "to": 57,
+          "text": "日"
+        },
+        {
+          "from": 57,
+          "to": 58,
+          "text": "は"
+        },
+        {
+          "from": 58,
+          "to": 59,
+          "text": "休"
+        },
+        {
+          "from": 59,
+          "to": 60,
+          "text": "み"
+        },
+        {
+          "from": 60,
+          "to": 61,
+          "text": "で"
+        },
+        {
+          "from": 61,
+          "to": 62,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 112173
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/60d3f406-6a34-48b5-b13c-a90f3bf3c097.mp3"
+    },
+    {
+      "key": "ja:土曜日に部屋を見ます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a3f97997-9c17-4ac1-982a-810f476ed8b1.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1b9a2922-d9af-4f2a-a9f6-97035742a1b4.mp3",
+      "duration": 2.095,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1b9a2922-d9af-4f2a-a9f6-97035742a1b4.mp3"
+    },
+    {
+      "key": "ja:土曜日の午後二時に部屋を見ます。見学の前に、住所をメールで確認します。分からないことがあったら、質問します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2391df46-f487-4e17-9879-5cd3e390811c.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e10a8045-ebf5-47af-ae67-acfe55103776.mp3",
+      "duration": 10.915083,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 88557
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e10a8045-ebf5-47af-ae67-acfe55103776.mp3"
+    },
+    {
+      "key": "ja:土曜日は午後五時に閉まります。日曜日と来週の水曜日は休みです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1f5de56f-088d-4ca9-92ef-a1da65d46a07.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2e8024fd-2cac-400b-a65c-080cf3f3d69f.mp3",
+      "duration": 5.6150417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 50157
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2e8024fd-2cac-400b-a65c-080cf3f3d69f.mp3"
+    },
+    {
+      "key": "ja:土曜日は午後五時に閉まります。日曜日は休みです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8ea60596-0d5d-4e8f-b545-50e3f2d2c7a5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e891cb41-8603-4336-abba-101f9425e14a.mp3",
+      "duration": 5.7950416,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 46893
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e891cb41-8603-4336-abba-101f9425e14a.mp3"
+    },
+    {
+      "key": "ja:変更を小さく分けると、確認と修正が簡単になります。失敗しても、元の状態に戻しやすいです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6d4cf9d0-080c-4699-9ecc-524180a17c31.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c9f98c1e-5ebe-4b52-b229-5f7f750123ac.mp3",
+      "duration": 9.955084,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 80301
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c9f98c1e-5ebe-4b52-b229-5f7f750123ac.mp3"
+    },
+    {
+      "key": "ja:夜、日本語を勉強します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ef16ed54-f2f3-40d6-9ace-f9d5d508ede8.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/66bb57f7-7293-41d5-8119-a4aa39b2d6b8.mp3",
+      "duration": 2.765,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/66bb57f7-7293-41d5-8119-a4aa39b2d6b8.mp3"
+    },
+    {
+      "key": "ja:大きな変更を一度にリリースすると、問題の原因を探すことが難しくなります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/49c57d91-f654-489e-b7aa-7fab0dc5487b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/20b78cf2-d825-4c1d-a238-ccf367c82fec.mp3",
+      "duration": 7.4650416,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 62829
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/20b78cf2-d825-4c1d-a238-ccf367c82fec.mp3"
+    },
+    {
+      "key": "ja:大丈夫です",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c3e1f787-d559-4de7-94e1-f7a1ca2d0b89.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2c662878-a34e-4ab2-ae3d-92187f8a7db5.mp3",
+      "duration": 1.395,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2c662878-a34e-4ab2-ae3d-92187f8a7db5.mp3"
+    },
+    {
+      "key": "ja:大丈夫ですか。手伝いましょうか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0fdf9d11-adfb-4498-bea1-a27d633b04c0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e127b73c-d97a-495b-a33d-b10a4a7abb18.mp3",
+      "duration": 3.1150417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25965
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e127b73c-d97a-495b-a33d-b10a4a7abb18.mp3"
+    },
+    {
+      "key": "ja:大学ではコンピューターサイエンスを専攻していました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78e1c58d-33bb-4132-9e28-61537315fe47.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/496855f4-aeb1-48a5-a980-58549fb22e8e.mp3",
+      "duration": 4.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 34029
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/496855f4-aeb1-48a5-a980-58549fb22e8e.mp3"
+    },
+    {
+      "key": "ja:家賃はいくらですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/749e1abf-d095-4f09-b7d9-58321f385fd5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/04607fee-16b9-4dac-b9db-12f45e045c8a.mp3",
+      "duration": 2.385,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/04607fee-16b9-4dac-b9db-12f45e045c8a.mp3"
+    },
+    {
+      "key": "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/67d76dcc-f100-49db-81fc-3248fc841bd1.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/030f346b-61d5-4f8c-827d-6780592594d6.mp3",
+      "duration": 7.0600834,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 58029
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/030f346b-61d5-4f8c-827d-6780592594d6.mp3"
+    },
+    {
+      "key": "ja:少々お待ちいただけますか。今調べております。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/eabb41ff-aab1-4e9d-88cf-a12f0e7e3004.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/99950d5f-ed7e-4429-a689-ba8c0f7269e7.mp3",
+      "duration": 4.4750414,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 37293
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/99950d5f-ed7e-4429-a689-ba8c0f7269e7.mp3"
+    },
+    {
+      "key": "ja:工数の見積もりを出す。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/714fd47f-8eda-4020-8eeb-fba85d35bfb7.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c9521e4-50e8-4308-9bac-c4e33dd3423e.mp3",
+      "duration": 1.855,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19629
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c9521e4-50e8-4308-9bac-c4e33dd3423e.mp3"
+    },
+    {
+      "key": "ja:帰ります",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0432457f-8fa4-477d-999b-69458019e958.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f293f33-5ae4-49b8-80f0-aa5e6dd3f509.mp3",
+      "duration": 0.985,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f293f33-5ae4-49b8-80f0-aa5e6dd3f509.mp3"
+    },
+    {
+      "key": "ja:打ち合わせ",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/308cdb91-45fb-4f24-9399-c7797f44ad14.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4d367834-d1c0-4b6a-8005-0872f12396ce.mp3",
+      "duration": 1.135,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4d367834-d1c0-4b6a-8005-0872f12396ce.mp3"
+    },
+    {
+      "key": "ja:新しいフレームワークを導入した。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/61874148-89b7-4bee-9eb9-77ed6d8261eb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1a30728f-2303-452e-a3ba-4c584933a4a8.mp3",
+      "duration": 2.765,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1a30728f-2303-452e-a3ba-4c584933a4a8.mp3"
+    },
+    {
+      "key": "ja:新機能の開発を進めています。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5dea919d-4df8-4d84-8f77-350c0977b9c4.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68b8792a-f771-47ef-9331-d76c049d8991.mp3",
+      "duration": 3.165,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25965
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68b8792a-f771-47ef-9331-d76c049d8991.mp3"
+    },
+    {
+      "key": "ja:日本語は今勉強中で、毎日練習しています。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/02c34635-e94e-4357-a7b0-248da317788f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/41e26d88-f24a-4475-a9b6-fce6908d247f.mp3",
+      "duration": 6.2750416,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 51693
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/41e26d88-f24a-4475-a9b6-fce6908d247f.mp3"
+    },
+    {
+      "key": "ja:日本語をゆっくり話してください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bf2f9928-3390-4395-8c13-0cf47294cde4.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/61e88960-6172-4417-b3d8-669a5b2144b5.mp3",
+      "duration": 3.675,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 30957
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/61e88960-6172-4417-b3d8-669a5b2144b5.mp3"
+    },
+    {
+      "key": "ja:明日病院に行きます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a8b1d8a3-aa45-4efa-b6b6-a673a8e4f6bd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7e5b5655-a57f-41d4-b0a5-ef3566cc6cf6.mp3",
+      "duration": 1.835,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7e5b5655-a57f-41d4-b0a5-ef3566cc6cf6.mp3"
+    },
+    {
+      "key": "ja:昨日、ログイン画面を修正しました。今日はテストを行います。よろしくお願いします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78a926ac-07bd-4398-bc65-294338237acc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fbff64b5-fe71-4d13-abaa-a54bb0af511a.mp3",
+      "duration": 8.725042,
+      "subtitleGaps": [
+        {
+          "from": 29,
+          "to": 30,
+          "text": "よ"
+        },
+        {
+          "from": 30,
+          "to": 31,
+          "text": "ろ"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "し"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "く"
+        },
+        {
+          "from": 33,
+          "to": 34,
+          "text": "お"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "願"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "い"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "し"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "ま"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 70701
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78a926ac-07bd-4398-bc65-294338237acc.mp3"
+    },
+    {
+      "key": "ja:朝の駅は人が多いです。私は七時半に家を出て、八時ごろ駅に着きます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/17f624aa-1d70-408f-a689-e78279627bdd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2131f414-e704-4172-bfe8-74bc1dbbda0f.mp3",
+      "duration": 9.375042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 75501
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2131f414-e704-4172-bfe8-74bc1dbbda0f.mp3"
+    },
+    {
+      "key": "ja:本は一人三冊まで借りることができます。二週間で返してください。来週の水曜日は掃除のため、図書館を使うことができません。本は入口の箱に返してください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/edb6e120-6d92-44a3-93e2-f137b634d9fc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0bf49d07-a2a8-45e5-b20c-3a186f04736c.mp3",
+      "duration": 14.255124,
+      "subtitleGaps": [
+        {
+          "from": 59,
+          "to": 60,
+          "text": "本"
+        },
+        {
+          "from": 60,
+          "to": 61,
+          "text": "は"
+        },
+        {
+          "from": 61,
+          "to": 62,
+          "text": "入"
+        },
+        {
+          "from": 62,
+          "to": 63,
+          "text": "口"
+        },
+        {
+          "from": 63,
+          "to": 64,
+          "text": "の"
+        },
+        {
+          "from": 64,
+          "to": 65,
+          "text": "箱"
+        },
+        {
+          "from": 65,
+          "to": 66,
+          "text": "に"
+        },
+        {
+          "from": 66,
+          "to": 67,
+          "text": "返"
+        },
+        {
+          "from": 67,
+          "to": 68,
+          "text": "し"
+        },
+        {
+          "from": 68,
+          "to": 69,
+          "text": "て"
+        },
+        {
+          "from": 69,
+          "to": 70,
+          "text": "く"
+        },
+        {
+          "from": 70,
+          "to": 71,
+          "text": "だ"
+        },
+        {
+          "from": 71,
+          "to": 72,
+          "text": "さ"
+        },
+        {
+          "from": 72,
+          "to": 73,
+          "text": "い"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 117357
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/edb6e120-6d92-44a3-93e2-f137b634d9fc.mp3"
+    },
+    {
+      "key": "ja:本番環境にデプロイしました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5107a024-2868-4aa4-9fbe-91d806965ab1.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68b8aad6-394d-4707-9284-c64377f26bf7.mp3",
+      "duration": 2.775,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22893
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/68b8aad6-394d-4707-9284-c64377f26bf7.mp3"
+    },
+    {
+      "key": "ja:来週リリース予定です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/44766a29-a733-400d-a6c3-c9c593f8a140.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5436cafe-fba2-4f65-b060-70c4f4c0ccad.mp3",
+      "duration": 2.585,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5436cafe-fba2-4f65-b060-70c4f4c0ccad.mp3"
+    },
+    {
+      "key": "ja:特に",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3bbdfbef-d5f0-4e2d-abe9-f395b9efe332.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/90ac89d4-1315-40ae-abe6-121e27736505.mp3",
+      "duration": 1.175,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/90ac89d4-1315-40ae-abe6-121e27736505.mp3"
+    },
+    {
+      "key": "ja:申し訳ありませんが、私はそうは思いません。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/35c0e855-f909-4718-b228-52e6b7e62471.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/56d0caac-37ed-4d4f-80f3-1d5216ed6521.mp3",
+      "duration": 4.375,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 35565
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/56d0caac-37ed-4d4f-80f3-1d5216ed6521.mp3"
+    },
+    {
+      "key": "ja:私はソフトウェアエンジニアです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b9c738b7-0c1f-4691-a9aa-f8241a9434f5.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6fc29248-24c4-4bfe-ac5e-0c016653c08c.mp3",
+      "duration": 2.875,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 27693
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6fc29248-24c4-4bfe-ac5e-0c016653c08c.mp3"
+    },
+    {
+      "key": "ja:私は七時に起きます。夜、日本語を勉強します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5f976db9-edf4-4851-822d-0d75a568213f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0871f29e-dd9c-471a-9681-a82ac5b80c7f.mp3",
+      "duration": 5.3850417,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 43629
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0871f29e-dd9c-471a-9681-a82ac5b80c7f.mp3"
+    },
+    {
+      "key": "ja:私は大学生です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c454af0b-e8ca-4c68-b192-49806ad74360.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7911a2bd-82e7-4e3c-92fb-e78fb42ebefc.mp3",
+      "duration": 2.205,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/7911a2bd-82e7-4e3c-92fb-e78fb42ebefc.mp3"
+    },
+    {
+      "key": "ja:私は果物、特にりんごが好きです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a06d7b33-7a07-4efc-9911-f299ef897af8.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cdf7ca10-dbeb-44e4-9439-39c8ae6fcdac.mp3",
+      "duration": 3.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 32301
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cdf7ca10-dbeb-44e4-9439-39c8ae6fcdac.mp3"
+    },
+    {
+      "key": "ja:私は毎朝七時に起きます。八時に朝ご飯を食べます。九時から大学で勉強します。昼は友だちと食堂でご飯を食べます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4e5e061d-eb69-47a3-9495-ab3cda80b57e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/90a0499c-e8e0-4564-9741-ca0c7e4eac11.mp3",
+      "duration": 12.365125,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 99501
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/90a0499c-e8e0-4564-9741-ca0c7e4eac11.mp3"
+    },
+    {
+      "key": "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7a316e4-e83e-4806-9d52-aaceac7650fc.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0e5f3588-a964-4ca5-bf29-aea5cf4add49.mp3",
+      "duration": 12.335083,
+      "subtitleGaps": [
+        {
+          "from": 44,
+          "to": 45,
+          "text": "近"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "く"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "に"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ス"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "ー"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "パ"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "ー"
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "text": "が"
+        },
+        {
+          "from": 52,
+          "to": 53,
+          "text": "あ"
+        },
+        {
+          "from": 53,
+          "to": 54,
+          "text": "り"
+        },
+        {
+          "from": 54,
+          "to": 55,
+          "text": "ま"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "す"
+        }
+      ],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 101421
+      },
+      "published": false,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7a316e4-e83e-4806-9d52-aaceac7650fc.mp3"
+    },
+    {
+      "key": "ja:私も「この名前を変えると、もっと分かりやすくなると思います」と伝えました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5047767d-dbe1-42e2-b7ab-5b4c81e9502e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9522141b-b666-4e20-9854-6c28cfcb2d90.mp3",
+      "duration": 6.585042,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 53229
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/9522141b-b666-4e20-9854-6c28cfcb2d90.mp3"
+    },
+    {
+      "key": "ja:私もそう思います",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6ff8614d-3b2f-42c0-b1e7-0656b719f414.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/dbaf2bfa-553a-41ef-82ec-7b206e31693a.mp3",
+      "duration": 1.575,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/dbaf2bfa-553a-41ef-82ec-7b206e31693a.mp3"
+    },
+    {
+      "key": "ja:納期に間に合わせる。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/dea90e50-94f1-46eb-84ba-dce6c5220a6b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2440d7a6-f0d6-40e8-89b5-0dc81f47ad7d.mp3",
+      "duration": 2.115,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2440d7a6-f0d6-40e8-89b5-0dc81f47ad7d.mp3"
+    },
+    {
+      "key": "ja:結果を報告してください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/21826a85-d02e-4c6d-8b4a-902cafb5a076.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3d349b78-adfb-44c9-8360-0c4b0964a1ff.mp3",
+      "duration": 2.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3d349b78-adfb-44c9-8360-0c4b0964a1ff.mp3"
+    },
+    {
+      "key": "ja:荷物が多いですね。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e76cf326-890c-4542-8de5-3d19a1ce31a0.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4ae785aa-b24b-409b-b6b1-241b4749a9dc.mp3",
+      "duration": 1.735,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4ae785aa-b24b-409b-b6b1-241b4749a9dc.mp3"
+    },
+    {
+      "key": "ja:薬局で薬を買う。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/74420fcf-b907-4a3c-86c3-30aa990331ac.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/409f1532-86c8-460c-acec-681ee85398e5.mp3",
+      "duration": 2.365,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/409f1532-86c8-460c-acec-681ee85398e5.mp3"
+    },
+    {
+      "key": "ja:見ます",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78dbdfa6-f623-4436-b560-8a417e9ceda7.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87660ae1-5008-48ab-b040-56d5715b9d00.mp3",
+      "duration": 0.985,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 8493
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87660ae1-5008-48ab-b040-56d5715b9d00.mp3"
+    },
+    {
+      "key": "ja:見積もり",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/331c6947-def0-416b-bd8a-d54c6bbe7981.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/75a3c538-e20e-47d7-b23d-558d4df53adf.mp3",
+      "duration": 0.965,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/75a3c538-e20e-47d7-b23d-558d4df53adf.mp3"
+    },
+    {
+      "key": "ja:設定ファイルを変更した。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/44cc8f18-90c2-4e4f-994a-5695255ff3e3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4ce27b4c-98ae-4471-a415-78ce2fbb58d2.mp3",
+      "duration": 2.525,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4ce27b4c-98ae-4471-a415-78ce2fbb58d2.mp3"
+    },
+    {
+      "key": "ja:課題が残っている。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0a23a28f-5d87-48ad-8308-e6dd896be4f2.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5ea580d1-ce52-4288-9f91-7e2f4ce8a67e.mp3",
+      "duration": 1.795,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 15021
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5ea580d1-ce52-4288-9f91-7e2f4ce8a67e.mp3"
+    },
+    {
+      "key": "ja:買い物",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c2c3eb3-d16c-4e0a-89f0-b167d54be6f9.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f08f4dc5-3ba5-4a2c-916c-6c9b2aeeac6d.mp3",
+      "duration": 1.175,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/f08f4dc5-3ba5-4a2c-916c-6c9b2aeeac6d.mp3"
+    },
+    {
+      "key": "ja:起きます",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bfc7cdd2-3700-4849-be1d-38a65997def3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/34543a6c-8496-436f-8069-8dfe6ca4e6d6.mp3",
+      "duration": 0.905,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 10029
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/34543a6c-8496-436f-8069-8dfe6ca4e6d6.mp3"
+    },
+    {
+      "key": "ja:趣味は写真撮影です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1f66bfc2-f892-43e1-910e-e0e5cad84dc3.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/622970b9-2d51-42f5-8551-8d81a315e8cf.mp3",
+      "duration": 2.285,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22701
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/622970b9-2d51-42f5-8551-8d81a315e8cf.mp3"
+    },
+    {
+      "key": "ja:近い",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/be1e6c06-be3f-4ef6-8d1b-95635016ca5e.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/090d1bc7-70cb-439f-9ee3-862ad8f6215e.mp3",
+      "duration": 1.395,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 11757
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/090d1bc7-70cb-439f-9ee3-862ad8f6215e.mp3"
+    },
+    {
+      "key": "ja:返します",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/042a2537-04ee-4b85-a3a1-08a741c6857b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ee7f4c7d-b7b0-4023-a271-6e1d0d2caf25.mp3",
+      "duration": 1.165,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 9837
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ee7f4c7d-b7b0-4023-a271-6e1d0d2caf25.mp3"
+    },
+    {
+      "key": "ja:週末に買い物に行きます。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2041c883-bd55-4dbe-ac31-bc582e553beb.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c0c6c47f-d26a-4fef-9814-807fb485ca0e.mp3",
+      "duration": 2.595,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 21357
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c0c6c47f-d26a-4fef-9814-807fb485ca0e.mp3"
+    },
+    {
+      "key": "ja:週末は何をしましたか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a7b3d9f0-4ac0-458c-9f42-03d10b335c22.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/151bf149-aa57-4ed9-8b34-ee20de69894e.mp3",
+      "duration": 2.195,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18093
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/151bf149-aa57-4ed9-8b34-ee20de69894e.mp3"
+    },
+    {
+      "key": "ja:進捗はいかがですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/289fc785-54c7-47f2-9a6c-f75c4e11c8a4.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/38e9d3da-c75f-40b9-bbb1-26410d2c8ff8.mp3",
+      "duration": 2.675,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 22509
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/38e9d3da-c75f-40b9-bbb1-26410d2c8ff8.mp3"
+    },
+    {
+      "key": "ja:進捗を報告します。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0cb36c53-a15b-4afd-a33f-78378b258082.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/04972f3b-2ca2-48f6-a2a1-08fd388834af.mp3",
+      "duration": 2.365,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/04972f3b-2ca2-48f6-a2a1-08fd388834af.mp3"
+    },
+    {
+      "key": "ja:遅れた理由を説明してください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fb3a5620-2155-4a57-b20e-c42a8f383191.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b7f54b95-56ac-41a4-9964-cd0ed01afd5d.mp3",
+      "duration": 3.165,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25965
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/b7f54b95-56ac-41a4-9964-cd0ed01afd5d.mp3"
+    },
+    {
+      "key": "ja:道に迷いました。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/094a45d4-d6da-47bd-858f-16fc3a2c9ebd.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/847302f8-8799-4745-bd91-dafa19d6e551.mp3",
+      "duration": 1.275,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/847302f8-8799-4745-bd91-dafa19d6e551.mp3"
+    },
+    {
+      "key": "ja:郵便局で荷物を送る。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3c3c2c1a-c422-4919-8602-19d6c717e412.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/15e8f30f-07ca-4467-a7e9-1eac790d112c.mp3",
+      "duration": 2.365,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 19437
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/15e8f30f-07ca-4467-a7e9-1eac790d112c.mp3"
+    },
+    {
+      "key": "ja:銀行は三時までです。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/fe583abc-d173-43fd-ae92-42b25606fc0f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0bc5a957-d8af-42fa-8b1d-54906c0c8894.mp3",
+      "duration": 1.905,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 18285
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/0bc5a957-d8af-42fa-8b1d-54906c0c8894.mp3"
+    },
+    {
+      "key": "ja:開発環境を構築する。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a65e41a3-7c07-4ef6-9512-7075df11150f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f17722e-9c62-4074-bb03-c6688f4553aa.mp3",
+      "duration": 3.005,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 24621
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/3f17722e-9c62-4074-bb03-c6688f4553aa.mp3"
+    },
+    {
+      "key": "ja:難しい質問ですね。ちょっと考えさせてください。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6e44efed-ff60-4a5f-bf48-0deed55b466f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/80030230-6199-4894-861a-3db5e52106a2.mp3",
+      "duration": 4.9850416,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 40365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/80030230-6199-4894-861a-3db5e52106a2.mp3"
+    },
+    {
+      "key": "ja:雨の場合、試合は中止です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e5cc6d8f-5956-4f9d-9d2f-f9718e1d746f.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7712939-26a6-4c0f-9412-16d6e7fe6a16.mp3",
+      "duration": 3.165,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 25773
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c7712939-26a6-4c0f-9412-16d6e7fe6a16.mp3"
+    },
+    {
+      "key": "ja:電車を待つ間に、スマートフォンで短いニュースを読みます。分からない言葉は一つだけメモします。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/65b1007e-5efd-4588-a020-ed9830aca5f2.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a2c560f6-149b-4348-ba01-904c9e7c4227.mp3",
+      "duration": 8.555083,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 69165
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a2c560f6-149b-4348-ba01-904c9e7c4227.mp3"
+    },
+    {
+      "key": "ja:駅に近い部屋です。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/a706ff66-3058-4f09-826e-b53c23114366.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bef2f0b1-aed6-4e3f-b872-ccb0504cfb22.mp3",
+      "duration": 1.635,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 16365
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bef2f0b1-aed6-4e3f-b872-ccb0504cfb22.mp3"
+    },
+    {
+      "key": "ja:駅はどこですか。",
+      "before": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/4efdd2d2-c0b8-43f2-9b5c-6c2a8a15509b.mp3",
+      "url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c0720335-c7d2-47ca-96e9-3ea82c17df56.mp3",
+      "duration": 1.785,
+      "subtitleGaps": [],
+      "head": {
+        "status": 200,
+        "type": "audio/mpeg",
+        "bytes": 14829
+      },
+      "published": true,
+      "activeUrl": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/c0720335-c7d2-47ca-96e9-3ea82c17df56.mp3"
+    }
+  ],
+  "headPassed": 156,
+  "assetsWithSubtitleGaps": [
+    {
+      "key": "ja:「これは何ですか。」「パソコンです。」「あなたのパソコンですか。」「はい、そうです。」",
+      "gaps": [
+        {
+          "from": 34,
+          "to": 35,
+          "text": "は"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "い"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "そ"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "う"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "で"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:おはようございます。昨日、ログイン画面を修正しました。今日はテストを行います。テストが終わったら、結果をチームに送ります。",
+      "gaps": [
+        {
+          "from": 39,
+          "to": 40,
+          "text": "テ"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "ス"
+        },
+        {
+          "from": 41,
+          "to": 42,
+          "text": "ト"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "が"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "終"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "わ"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "っ"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "た"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ら"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "結"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "果"
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "text": "を"
+        },
+        {
+          "from": 52,
+          "to": 53,
+          "text": "チ"
+        },
+        {
+          "from": 53,
+          "to": 54,
+          "text": "ー"
+        },
+        {
+          "from": 54,
+          "to": 55,
+          "text": "ム"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "に"
+        },
+        {
+          "from": 56,
+          "to": 57,
+          "text": "送"
+        },
+        {
+          "from": 57,
+          "to": 58,
+          "text": "り"
+        },
+        {
+          "from": 58,
+          "to": 59,
+          "text": "ま"
+        },
+        {
+          "from": 59,
+          "to": 60,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:はじめまして。私はリンです。大学生です。よろしくお願いします。",
+      "gaps": [
+        {
+          "from": 14,
+          "to": 15,
+          "text": "大"
+        },
+        {
+          "from": 15,
+          "to": 16,
+          "text": "学"
+        },
+        {
+          "from": 16,
+          "to": 17,
+          "text": "生"
+        },
+        {
+          "from": 17,
+          "to": 18,
+          "text": "で"
+        },
+        {
+          "from": 18,
+          "to": 19,
+          "text": "す"
+        },
+        {
+          "from": 20,
+          "to": 21,
+          "text": "よ"
+        },
+        {
+          "from": 21,
+          "to": 22,
+          "text": "ろ"
+        },
+        {
+          "from": 22,
+          "to": 23,
+          "text": "し"
+        },
+        {
+          "from": 23,
+          "to": 24,
+          "text": "く"
+        },
+        {
+          "from": 24,
+          "to": 25,
+          "text": "お"
+        },
+        {
+          "from": 25,
+          "to": 26,
+          "text": "願"
+        },
+        {
+          "from": 26,
+          "to": 27,
+          "text": "い"
+        },
+        {
+          "from": 27,
+          "to": 28,
+          "text": "し"
+        },
+        {
+          "from": 28,
+          "to": 29,
+          "text": "ま"
+        },
+        {
+          "from": 29,
+          "to": 30,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:リンは駅に行きたいです。でも、駅の場所が分かりません。「すみません、駅はどこですか」と店の人に聞きます。",
+      "gaps": [
+        {
+          "from": 28,
+          "to": 29,
+          "text": "す"
+        },
+        {
+          "from": 29,
+          "to": 30,
+          "text": "み"
+        },
+        {
+          "from": 30,
+          "to": 31,
+          "text": "ま"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "せ"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "ん"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "駅"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "は"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "ど"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "こ"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "で"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "す"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "か"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "と"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "店"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "の"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "人"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "に"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "聞"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "き"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "ま"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:今、日本語を勉強しています。日本語はまだ上手ではありません。よろしくお願いします。",
+      "gaps": [
+        {
+          "from": 30,
+          "to": 31,
+          "text": "よ"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "ろ"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "し"
+        },
+        {
+          "from": 33,
+          "to": 34,
+          "text": "く"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "お"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "願"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "い"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "し"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "ま"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:今日ははじめてコードレビューに参加しました。先輩は問題を指摘するだけでなく、理由も説明してくれました。",
+      "gaps": [
+        {
+          "from": 38,
+          "to": 39,
+          "text": "理"
+        },
+        {
+          "from": 39,
+          "to": 40,
+          "text": "由"
+        },
+        {
+          "from": 40,
+          "to": 41,
+          "text": "も"
+        },
+        {
+          "from": 41,
+          "to": 42,
+          "text": "説"
+        },
+        {
+          "from": 42,
+          "to": 43,
+          "text": "明"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "し"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "て"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "く"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "れ"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ま"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "し"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "た"
+        }
+      ]
+    },
+    {
+      "key": "ja:修正が完了しましたので、ご確認お願いいたします。",
+      "gaps": [
+        {
+          "from": 12,
+          "to": 13,
+          "text": "ご"
+        },
+        {
+          "from": 13,
+          "to": 14,
+          "text": "確"
+        },
+        {
+          "from": 14,
+          "to": 15,
+          "text": "認"
+        },
+        {
+          "from": 15,
+          "to": 16,
+          "text": "お"
+        },
+        {
+          "from": 16,
+          "to": 17,
+          "text": "願"
+        },
+        {
+          "from": 17,
+          "to": 18,
+          "text": "い"
+        },
+        {
+          "from": 18,
+          "to": 19,
+          "text": "い"
+        },
+        {
+          "from": 19,
+          "to": 20,
+          "text": "た"
+        },
+        {
+          "from": 20,
+          "to": 21,
+          "text": "し"
+        },
+        {
+          "from": 21,
+          "to": 22,
+          "text": "ま"
+        },
+        {
+          "from": 22,
+          "to": 23,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:午後五時に家に帰ります。夜は日本語を三十分勉強します。土曜日はアルバイトがあります。日曜日は休みです。",
+      "gaps": [
+        {
+          "from": 42,
+          "to": 43,
+          "text": "日"
+        },
+        {
+          "from": 43,
+          "to": 44,
+          "text": "曜"
+        },
+        {
+          "from": 44,
+          "to": 45,
+          "text": "日"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "は"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "休"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "み"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "で"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:図書館は月曜日から土曜日まで開いています。平日は午前九時から午後七時までです。土曜日は午後五時に閉まります。日曜日は休みです。",
+      "gaps": [
+        {
+          "from": 54,
+          "to": 55,
+          "text": "日"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "曜"
+        },
+        {
+          "from": 56,
+          "to": 57,
+          "text": "日"
+        },
+        {
+          "from": 57,
+          "to": 58,
+          "text": "は"
+        },
+        {
+          "from": 58,
+          "to": 59,
+          "text": "休"
+        },
+        {
+          "from": 59,
+          "to": 60,
+          "text": "み"
+        },
+        {
+          "from": 60,
+          "to": 61,
+          "text": "で"
+        },
+        {
+          "from": 61,
+          "to": 62,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:昨日、ログイン画面を修正しました。今日はテストを行います。よろしくお願いします。",
+      "gaps": [
+        {
+          "from": 29,
+          "to": 30,
+          "text": "よ"
+        },
+        {
+          "from": 30,
+          "to": 31,
+          "text": "ろ"
+        },
+        {
+          "from": 31,
+          "to": 32,
+          "text": "し"
+        },
+        {
+          "from": 32,
+          "to": 33,
+          "text": "く"
+        },
+        {
+          "from": 33,
+          "to": 34,
+          "text": "お"
+        },
+        {
+          "from": 34,
+          "to": 35,
+          "text": "願"
+        },
+        {
+          "from": 35,
+          "to": 36,
+          "text": "い"
+        },
+        {
+          "from": 36,
+          "to": 37,
+          "text": "し"
+        },
+        {
+          "from": 37,
+          "to": 38,
+          "text": "ま"
+        },
+        {
+          "from": 38,
+          "to": 39,
+          "text": "す"
+        }
+      ]
+    },
+    {
+      "key": "ja:本は一人三冊まで借りることができます。二週間で返してください。来週の水曜日は掃除のため、図書館を使うことができません。本は入口の箱に返してください。",
+      "gaps": [
+        {
+          "from": 59,
+          "to": 60,
+          "text": "本"
+        },
+        {
+          "from": 60,
+          "to": 61,
+          "text": "は"
+        },
+        {
+          "from": 61,
+          "to": 62,
+          "text": "入"
+        },
+        {
+          "from": 62,
+          "to": 63,
+          "text": "口"
+        },
+        {
+          "from": 63,
+          "to": 64,
+          "text": "の"
+        },
+        {
+          "from": 64,
+          "to": 65,
+          "text": "箱"
+        },
+        {
+          "from": 65,
+          "to": 66,
+          "text": "に"
+        },
+        {
+          "from": 66,
+          "to": 67,
+          "text": "返"
+        },
+        {
+          "from": 67,
+          "to": 68,
+          "text": "し"
+        },
+        {
+          "from": 68,
+          "to": 69,
+          "text": "て"
+        },
+        {
+          "from": 69,
+          "to": 70,
+          "text": "く"
+        },
+        {
+          "from": 70,
+          "to": 71,
+          "text": "だ"
+        },
+        {
+          "from": 71,
+          "to": 72,
+          "text": "さ"
+        },
+        {
+          "from": 72,
+          "to": 73,
+          "text": "い"
+        }
+      ]
+    },
+    {
+      "key": "ja:私は駅に近い部屋を探しています。この部屋は駅から歩いて十分です。家賃は一か月六万円です。近くにスーパーがあります。",
+      "gaps": [
+        {
+          "from": 44,
+          "to": 45,
+          "text": "近"
+        },
+        {
+          "from": 45,
+          "to": 46,
+          "text": "く"
+        },
+        {
+          "from": 46,
+          "to": 47,
+          "text": "に"
+        },
+        {
+          "from": 47,
+          "to": 48,
+          "text": "ス"
+        },
+        {
+          "from": 48,
+          "to": 49,
+          "text": "ー"
+        },
+        {
+          "from": 49,
+          "to": 50,
+          "text": "パ"
+        },
+        {
+          "from": 50,
+          "to": 51,
+          "text": "ー"
+        },
+        {
+          "from": 51,
+          "to": 52,
+          "text": "が"
+        },
+        {
+          "from": 52,
+          "to": 53,
+          "text": "あ"
+        },
+        {
+          "from": 53,
+          "to": 54,
+          "text": "り"
+        },
+        {
+          "from": 54,
+          "to": 55,
+          "text": "ま"
+        },
+        {
+          "from": 55,
+          "to": 56,
+          "text": "す"
+        }
+      ]
+    }
+  ],
+  "published": 144,
+  "deferred": 12,
+  "note": "12 candidates have incomplete tail subtitles; preserved original CDN/timing. No claim of complete pronunciation/listening verification."
+}

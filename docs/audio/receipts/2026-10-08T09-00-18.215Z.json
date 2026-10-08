@@ -1,0 +1,149 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:バグを修正しました。",
+    "ja:このコードはリファクタリングが必要です。",
+    "ja:新しいフレームワークを導入した。",
+    "ja:便利なライブラリを見つけた。",
+    "ja:私はソフトウェアエンジニアです。",
+    "ja:来週リリース予定です。",
+    "ja:このアルゴリズムは効率的だ。",
+    "ja:セキュリティ対策を強化する。",
+    "ja:ネットワークエラーが発生した。",
+    "ja:ブラウザの互換性を確認する。"
+  ],
+  "spoken_texts": {
+    "ja:バグを修正しました。": "バグをしゅうせいしました。",
+    "ja:このコードはリファクタリングが必要です。": "このコードはリファクタリングがひつようです。",
+    "ja:新しいフレームワークを導入した。": "あたらしいフレームワークをどうにゅうした。",
+    "ja:便利なライブラリを見つけた。": "べんりなライブラリをみつけた。",
+    "ja:私はソフトウェアエンジニアです。": "わたしはソフトウェアエンジニアです。",
+    "ja:来週リリース予定です。": "らいしゅうリリースよていです。",
+    "ja:このアルゴリズムは効率的だ。": "このアルゴリズムはこうりつてきだ。",
+    "ja:セキュリティ対策を強化する。": "セキュリティたいさくをきょうかする。",
+    "ja:ネットワークエラーが発生した。": "ネットワークエラーがはっせいした。",
+    "ja:ブラウザの互換性を確認する。": "ブラウザのごかんせいをかくにんする。"
+  },
+  "spoken_ruby": {
+    "ja:バグを修正しました。": "バグを修正[しゅうせい]しました。",
+    "ja:このコードはリファクタリングが必要です。": "このコードはリファクタリングが必要[ひつよう]です。",
+    "ja:新しいフレームワークを導入した。": "新[あたら]しいフレームワークを導入[どうにゅう]した。",
+    "ja:便利なライブラリを見つけた。": "便利[べんり]なライブラリを見[み]つけた。",
+    "ja:私はソフトウェアエンジニアです。": "私[わたし]はソフトウェアエンジニアです。",
+    "ja:来週リリース予定です。": "来週[らいしゅう]リリース予定[よてい]です。",
+    "ja:このアルゴリズムは効率的だ。": "このアルゴリズムは効率的[こうりつてき]だ。",
+    "ja:セキュリティ対策を強化する。": "セキュリティ対策[たいさく]を強化[きょうか]する。",
+    "ja:ネットワークエラーが発生した。": "ネットワークエラーが発生[はっせい]した。",
+    "ja:ブラウザの互換性を確認する。": "ブラウザの互換性[ごかんせい]を確認[かくにん]する。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75ba268694fc9cedd376c",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/29f54857-44f3-4776-af5b-7669dabc7042.mp3",
+        "duration": 1.965,
+        "index": 0,
+        "item_id": "linguadesk-ja-1ebi0mk",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"バグをしゅうせいしました。\"},{\"text\":\"バグをしゅうせいしました。\",\"words\":[{\"word\":\"バ\",\"endTime\":0.045,\"confidence\":0.47729424},{\"word\":\"グ\",\"startTime\":1.295,\"endTime\":1.325,\"confidence\":0.19272211},{\"word\":\"を\",\"startTime\":1.325,\"endTime\":1.355,\"confidence\":0.18470535},{\"word\":\"し\",\"startTime\":1.355,\"endTime\":1.385,\"confidence\":0.09907858},{\"word\":\"ゅ\",\"startTime\":1.385,\"endTime\":1.415,\"confidence\":0.10747879},{\"word\":\"う\",\"startTime\":1.415,\"endTime\":1.445,\"confidence\":0.13698247},{\"word\":\"せ\",\"startTime\":1.445,\"endTime\":1.475,\"confidence\":0.13531093},{\"word\":\"い\",\"startTime\":1.475,\"endTime\":1.505,\"confidence\":0.15291882},{\"word\":\"し\",\"startTime\":1.505,\"endTime\":1.535,\"confidence\":0.20156701},{\"word\":\"ま\",\"startTime\":1.535,\"endTime\":1.565,\"confidence\":0.20216174},{\"word\":\"し\",\"startTime\":1.565,\"endTime\":1.595,\"confidence\":0.24364537},{\"word\":\"た。\",\"startTime\":1.935,\"endTime\":1.965,\"confidence\":0.35866722}]}]",
+        "text": "バグをしゅうせいしました。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/d3bb02f0-ed71-49ec-b06a-71ea58f1f01c.mp3",
+        "duration": 3.565,
+        "index": 1,
+        "item_id": "linguadesk-ja-1trh4xf",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"このコードはリファクタリングがひつようです。\"},{\"text\":\"このコードはリファクタリングがひつようです。\",\"words\":[{\"word\":\"こ\",\"endTime\":0.045,\"confidence\":0.49985015},{\"word\":\"の\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.26075155},{\"word\":\"コ\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.2549017},{\"word\":\"ー\",\"startTime\":0.105,\"endTime\":0.135,\"confidence\":0.23937969},{\"word\":\"ド\",\"startTime\":0.135,\"endTime\":0.165,\"confidence\":0.2386769},{\"word\":\"は\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.19189046},{\"word\":\"リ\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.26795378},{\"word\":\"フ\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.299103},{\"word\":\"ァ\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.3146247},{\"word\":\"ク\",\"startTime\":0.975,\"endTime\":1.005,\"confidence\":0.29588407},{\"word\":\"タ\",\"startTime\":1.005,\"endTime\":1.035,\"confidence\":0.29538202},{\"word\":\"リ\",\"startTime\":1.035,\"endTime\":1.065,\"confidence\":0.2800656},{\"word\":\"ン\",\"startTime\":1.065,\"endTime\":1.095,\"confidence\":0.24900155},{\"word\":\"グ\",\"startTime\":1.095,\"endTime\":1.125,\"confidence\":0.31149793},{\"word\":\"が\",\"startTime\":1.405,\"endTime\":1.435,\"confidence\":0.20870174},{\"word\":\"ひ\",\"startTime\":1.545,\"endTime\":1.575,\"confidence\":0.22096893},{\"word\":\"つ\",\"startTime\":1.905,\"endTime\":1.935,\"confidence\":0.19768931},{\"word\":\"よ\",\"startTime\":3.185,\"endTime\":3.215,\"confidence\":0.16139401},{\"word\":\"う\",\"startTime\":3.215,\"endTime\":3.245,\"confidence\":0.19929653},{\"word\":\"で\",\"startTime\":3.245,\"endTime\":3.275,\"confidence\":0.2400776},{\"word\":\"す。\",\"startTime\":3.535,\"endTime\":3.565,\"confidence\":0.35664028}]}]",
+        "text": "このコードはリファクタリングがひつようです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1a30728f-2303-452e-a3ba-4c584933a4a8.mp3",
+        "duration": 2.765,
+        "index": 2,
+        "item_id": "linguadesk-ja-ujytp7",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"あたらしいフレームワークをどうにゅうした。\"},{\"text\":\"あたらしいフレームワークをどうにゅうした。\",\"words\":[{\"word\":\"あ\",\"endTime\":0.045,\"confidence\":0.4810889},{\"word\":\"た\",\"startTime\":0.285,\"endTime\":0.315,\"confidence\":0.4119993},{\"word\":\"ら\",\"startTime\":0.415,\"endTime\":0.445,\"confidence\":0.25229332},{\"word\":\"し\",\"startTime\":0.445,\"endTime\":0.475,\"confidence\":0.17046747},{\"word\":\"い\",\"startTime\":0.475,\"endTime\":0.505,\"confidence\":0.1917252},{\"word\":\"フ\",\"startTime\":0.505,\"endTime\":0.535,\"confidence\":0.24445692},{\"word\":\"レ\",\"startTime\":0.535,\"endTime\":0.565,\"confidence\":0.20610447},{\"word\":\"ー\",\"startTime\":1.025,\"endTime\":1.055,\"confidence\":0.20844227},{\"word\":\"ム\",\"startTime\":1.415,\"endTime\":1.445,\"confidence\":0.23849885},{\"word\":\"ワ\",\"startTime\":1.445,\"endTime\":1.475,\"confidence\":0.23947342},{\"word\":\"ー\",\"startTime\":1.475,\"endTime\":1.505,\"confidence\":0.25638044},{\"word\":\"ク\",\"startTime\":1.505,\"endTime\":1.535,\"confidence\":0.24647675},{\"word\":\"を\",\"startTime\":1.715,\"endTime\":1.745,\"confidence\":0.25650543},{\"word\":\"ど\",\"startTime\":1.745,\"endTime\":1.775,\"confidence\":0.29917642},{\"word\":\"う\",\"startTime\":1.775,\"endTime\":1.805,\"confidence\":0.2876501},{\"word\":\"に\",\"startTime\":1.805,\"endTime\":1.835,\"confidence\":0.27212718},{\"word\":\"ゅ\",\"startTime\":1.835,\"endTime\":1.865,\"confidence\":0.2731642},{\"word\":\"う\",\"startTime\":2.485,\"endTime\":2.515,\"confidence\":0.45313165},{\"word\":\"し\",\"startTime\":2.545,\"endTime\":2.575,\"confidence\":0.44157255},{\"word\":\"た。\",\"startTime\":2.735,\"endTime\":2.765,\"confidence\":0.4724312}]}]",
+        "text": "あたらしいフレームワークをどうにゅうした。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/e8524605-97a2-4e6a-bb0a-142b2b2d17dd.mp3",
+        "duration": 2.315,
+        "index": 3,
+        "item_id": "linguadesk-ja-1r8f2yt",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"べんりなライブラリをみつけた。\"},{\"text\":\"べんりなライブラリをみつけた。\",\"words\":[{\"word\":\"べ\",\"startTime\":0.315,\"endTime\":0.345,\"confidence\":0.18221591},{\"word\":\"ん\",\"startTime\":0.345,\"endTime\":0.375,\"confidence\":0.16158591},{\"word\":\"り\",\"startTime\":0.375,\"endTime\":0.405,\"confidence\":0.17149676},{\"word\":\"な\",\"startTime\":0.615,\"endTime\":0.645,\"confidence\":0.28477937},{\"word\":\"ラ\",\"startTime\":1.305,\"endTime\":1.335,\"confidence\":0.17308009},{\"word\":\"イ\",\"startTime\":1.335,\"endTime\":1.365,\"confidence\":0.16851074},{\"word\":\"ブ\",\"startTime\":1.365,\"endTime\":1.395,\"confidence\":0.16204336},{\"word\":\"ラ\",\"startTime\":1.395,\"endTime\":1.425,\"confidence\":0.19630234},{\"word\":\"リ\",\"startTime\":1.425,\"endTime\":1.455,\"confidence\":0.20182416},{\"word\":\"を\",\"startTime\":1.455,\"endTime\":1.485,\"confidence\":0.20756833},{\"word\":\"み\",\"startTime\":1.485,\"endTime\":1.515,\"confidence\":0.20234628},{\"word\":\"つ\",\"startTime\":1.515,\"endTime\":1.545,\"confidence\":0.19028404},{\"word\":\"け\",\"startTime\":1.545,\"endTime\":1.575,\"confidence\":0.23326513},{\"word\":\"た。\",\"startTime\":2.285,\"endTime\":2.315,\"confidence\":0.35800314}]}]",
+        "text": "べんりなライブラリをみつけた。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/6fc29248-24c4-4bfe-ac5e-0c016653c08c.mp3",
+        "duration": 2.875,
+        "index": 4,
+        "item_id": "linguadesk-ja-1c3usmj",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"わたしはソフトウェアエンジニアです。\"},{\"text\":\"わたしはソフトウェアエンジニアです。\",\"words\":[{\"word\":\"わ\",\"endTime\":0.045,\"confidence\":0.4925692},{\"word\":\"た\",\"startTime\":0.285,\"endTime\":0.315,\"confidence\":0.1851188},{\"word\":\"し\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.29434234},{\"word\":\"は\",\"startTime\":0.815,\"endTime\":0.845,\"confidence\":0.4141382},{\"word\":\"ソ\",\"startTime\":0.875,\"endTime\":0.905,\"confidence\":0.45676947},{\"word\":\"フ\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.5216132},{\"word\":\"ト\",\"startTime\":0.995,\"endTime\":1.045,\"confidence\":0.5574666},{\"word\":\"ウ\",\"startTime\":1.235,\"endTime\":1.265,\"confidence\":0.35775995},{\"word\":\"ェ\",\"startTime\":1.885,\"endTime\":1.915,\"confidence\":0.24639255},{\"word\":\"ア\",\"startTime\":1.915,\"endTime\":1.945,\"confidence\":0.30291504},{\"word\":\"エ\",\"startTime\":1.945,\"endTime\":1.975,\"confidence\":0.28418466},{\"word\":\"ン\",\"startTime\":1.975,\"endTime\":2.005,\"confidence\":0.30708006},{\"word\":\"ジ\",\"startTime\":2.005,\"endTime\":2.035,\"confidence\":0.3399602},{\"word\":\"ニ\",\"startTime\":2.505,\"endTime\":2.535,\"confidence\":0.23186654},{\"word\":\"ア\",\"startTime\":2.565,\"endTime\":2.595,\"confidence\":0.3720084},{\"word\":\"で\",\"startTime\":2.625,\"endTime\":2.665,\"confidence\":0.45188192},{\"word\":\"す。\",\"startTime\":2.845,\"endTime\":2.875,\"confidence\":0.26076087}]}]",
+        "text": "わたしはソフトウェアエンジニアです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5436cafe-fba2-4f65-b060-70c4f4c0ccad.mp3",
+        "duration": 2.585,
+        "index": 5,
+        "item_id": "linguadesk-ja-g8gclx",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"らいしゅうリリースよていです。\"},{\"text\":\"らいしゅうリリースよていです。\",\"words\":[{\"word\":\"ら\",\"endTime\":0.045,\"confidence\":0.48198262},{\"word\":\"い\",\"startTime\":0.905,\"endTime\":0.935,\"confidence\":0.16711321},{\"word\":\"し\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.1997354},{\"word\":\"ゅ\",\"startTime\":1.195,\"endTime\":1.225,\"confidence\":0.20044841},{\"word\":\"う\",\"startTime\":1.225,\"endTime\":1.255,\"confidence\":0.20958836},{\"word\":\"リ\",\"startTime\":1.255,\"endTime\":1.285,\"confidence\":0.19457899},{\"word\":\"リ\",\"startTime\":1.285,\"endTime\":1.315,\"confidence\":0.18747255},{\"word\":\"ー\",\"startTime\":1.315,\"endTime\":1.345,\"confidence\":0.19105412},{\"word\":\"ス\",\"startTime\":1.345,\"endTime\":1.375,\"confidence\":0.23663276},{\"word\":\"よ\",\"startTime\":2.095,\"endTime\":2.125,\"confidence\":0.21566126},{\"word\":\"て\",\"startTime\":2.125,\"endTime\":2.155,\"confidence\":0.25549573},{\"word\":\"い\",\"startTime\":2.155,\"endTime\":2.185,\"confidence\":0.27832195},{\"word\":\"で\",\"startTime\":2.185,\"endTime\":2.215,\"confidence\":0.26702628},{\"word\":\"す。\",\"startTime\":2.555,\"endTime\":2.585,\"confidence\":0.30582735}]}]",
+        "text": "らいしゅうリリースよていです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5012f473-f0b7-486e-9b7e-533ebfd9ade1.mp3",
+        "duration": 2.595,
+        "index": 6,
+        "item_id": "linguadesk-ja-4f1y6h",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"このアルゴリズムはこうりつてきだ。\"},{\"text\":\"このアルゴリズムはこうりつてきだ。\",\"words\":[{\"word\":\"こ\",\"endTime\":0.045,\"confidence\":0.48475578},{\"word\":\"の\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.22716346},{\"word\":\"ア\",\"startTime\":0.515,\"endTime\":0.545,\"confidence\":0.32460293},{\"word\":\"ル\",\"startTime\":0.575,\"endTime\":0.605,\"confidence\":0.3584554},{\"word\":\"ゴ\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.27764693},{\"word\":\"リ\",\"startTime\":1.705,\"endTime\":1.735,\"confidence\":0.41944093},{\"word\":\"ズ\",\"startTime\":1.955,\"endTime\":1.985,\"confidence\":0.13706347},{\"word\":\"ム\",\"startTime\":1.985,\"endTime\":2.015,\"confidence\":0.13872042},{\"word\":\"は\",\"startTime\":2.015,\"endTime\":2.045,\"confidence\":0.14251849},{\"word\":\"こ\",\"startTime\":2.045,\"endTime\":2.075,\"confidence\":0.23097609},{\"word\":\"う\",\"startTime\":2.075,\"endTime\":2.105,\"confidence\":0.21858372},{\"word\":\"り\",\"startTime\":2.105,\"endTime\":2.135,\"confidence\":0.20384409},{\"word\":\"つ\",\"startTime\":2.135,\"endTime\":2.165,\"confidence\":0.21809},{\"word\":\"て\",\"startTime\":2.165,\"endTime\":2.195,\"confidence\":0.27858},{\"word\":\"き\",\"startTime\":2.315,\"endTime\":2.345,\"confidence\":0.18638939},{\"word\":\"だ。\",\"startTime\":2.565,\"endTime\":2.595,\"confidence\":0.2980487}]}]",
+        "text": "このアルゴリズムはこうりつてきだ。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/89f0e8cb-21c0-4f8b-a02c-8396ecd64a0e.mp3",
+        "duration": 2.795,
+        "index": 7,
+        "item_id": "linguadesk-ja-f5s1yj",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"セキュリティたいさくをきょうかする。\"},{\"text\":\"セキュリティたいさくをきょうかする。\",\"words\":[{\"word\":\"セ\",\"endTime\":0.045,\"confidence\":0.47542685},{\"word\":\"キ\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.11029316},{\"word\":\"ュ\",\"startTime\":1.305,\"endTime\":1.335,\"confidence\":0.1984815},{\"word\":\"リ\",\"startTime\":1.335,\"endTime\":1.365,\"confidence\":0.2458145},{\"word\":\"テ\",\"startTime\":1.365,\"endTime\":1.395,\"confidence\":0.25194404},{\"word\":\"ィ\",\"startTime\":1.395,\"endTime\":1.425,\"confidence\":0.2081176},{\"word\":\"た\",\"startTime\":1.535,\"endTime\":1.565,\"confidence\":0.28852525},{\"word\":\"い\",\"startTime\":1.625,\"endTime\":1.655,\"confidence\":0.27049613},{\"word\":\"さ\",\"startTime\":2.435,\"endTime\":2.465,\"confidence\":0.20341982},{\"word\":\"く\",\"startTime\":2.465,\"endTime\":2.495,\"confidence\":0.20052367},{\"word\":\"を\",\"startTime\":2.495,\"endTime\":2.525,\"confidence\":0.18511255},{\"word\":\"き\",\"startTime\":2.525,\"endTime\":2.555,\"confidence\":0.24356805},{\"word\":\"ょ\",\"startTime\":2.555,\"endTime\":2.585,\"confidence\":0.27949578},{\"word\":\"う\",\"startTime\":2.585,\"endTime\":2.615,\"confidence\":0.16280216},{\"word\":\"か\",\"startTime\":2.615,\"endTime\":2.645,\"confidence\":0.1430614},{\"word\":\"す\",\"startTime\":2.645,\"endTime\":2.675,\"confidence\":0.16505265},{\"word\":\"る。\",\"startTime\":2.765,\"endTime\":2.795,\"confidence\":0.4271633}]}]",
+        "text": "セキュリティたいさくをきょうかする。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/ea771d86-ccef-4d94-970d-447197570a14.mp3",
+        "duration": 2.915,
+        "index": 8,
+        "item_id": "linguadesk-ja-189dghg",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ネットワークエラーがはっせいした。\"},{\"text\":\"ネットワークエラーがはっせいした。\",\"words\":[{\"word\":\"ネ\",\"endTime\":0.045,\"confidence\":0.48904592},{\"word\":\"ッ\",\"startTime\":0.365,\"endTime\":0.395,\"confidence\":0.2618408},{\"word\":\"ト\",\"startTime\":0.665,\"endTime\":0.695,\"confidence\":0.19686961},{\"word\":\"ワ\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.24757315},{\"word\":\"ー\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.26129508},{\"word\":\"ク\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.23162192},{\"word\":\"エ\",\"startTime\":0.825,\"endTime\":0.855,\"confidence\":0.30334708},{\"word\":\"ラ\",\"startTime\":1.715,\"endTime\":1.745,\"confidence\":0.23956257},{\"word\":\"ー\",\"startTime\":1.745,\"endTime\":1.775,\"confidence\":0.19729382},{\"word\":\"が\",\"startTime\":1.775,\"endTime\":1.805,\"confidence\":0.22750887},{\"word\":\"は\",\"startTime\":1.805,\"endTime\":1.835,\"confidence\":0.23563077},{\"word\":\"っ\",\"startTime\":1.835,\"endTime\":1.865,\"confidence\":0.18470752},{\"word\":\"せ\",\"startTime\":1.865,\"endTime\":1.895,\"confidence\":0.17146498},{\"word\":\"い\",\"startTime\":1.895,\"endTime\":1.925,\"confidence\":0.1614264},{\"word\":\"し\",\"startTime\":1.925,\"endTime\":1.955,\"confidence\":0.2179306},{\"word\":\"た。\",\"startTime\":2.885,\"endTime\":2.915,\"confidence\":0.31528133}]}]",
+        "text": "ネットワークエラーがはっせいした。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/8b2bff27-3bf9-4d27-81e3-73df6b49c397.mp3",
+        "duration": 2.765,
+        "index": 9,
+        "item_id": "linguadesk-ja-ob1u1q",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ブラウザのごかんせいをかくにんする。\"},{\"text\":\"ブラウザのごかんせいをかくにんする。\",\"words\":[{\"word\":\"ブ\",\"endTime\":0.045,\"confidence\":0.4972797},{\"word\":\"ラ\",\"startTime\":0.255,\"endTime\":0.285,\"confidence\":0.1494919},{\"word\":\"ウ\",\"startTime\":0.285,\"endTime\":0.315,\"confidence\":0.16761182},{\"word\":\"ザ\",\"startTime\":0.315,\"endTime\":0.345,\"confidence\":0.21334963},{\"word\":\"の\",\"startTime\":0.345,\"endTime\":0.375,\"confidence\":0.17022844},{\"word\":\"ご\",\"startTime\":0.375,\"endTime\":0.405,\"confidence\":0.15322924},{\"word\":\"か\",\"startTime\":0.405,\"endTime\":0.435,\"confidence\":0.17765376},{\"word\":\"ん\",\"startTime\":0.435,\"endTime\":0.465,\"confidence\":0.16864647},{\"word\":\"せ\",\"startTime\":0.465,\"endTime\":0.495,\"confidence\":0.16862968},{\"word\":\"い\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.2016518},{\"word\":\"を\",\"startTime\":0.775,\"endTime\":0.805,\"confidence\":0.21279496},{\"word\":\"か\",\"startTime\":1.015,\"endTime\":1.045,\"confidence\":0.18156011},{\"word\":\"く\",\"startTime\":1.495,\"endTime\":1.525,\"confidence\":0.27031162},{\"word\":\"に\",\"startTime\":1.625,\"endTime\":1.655,\"confidence\":0.27082154},{\"word\":\"ん\",\"startTime\":1.725,\"endTime\":1.755,\"confidence\":0.36397937},{\"word\":\"す\",\"startTime\":1.935,\"endTime\":1.965,\"confidence\":0.16766703},{\"word\":\"る。\",\"startTime\":2.735,\"endTime\":2.765,\"confidence\":0.38916987}]}]",
+        "text": "ブラウザのごかんせいをかくにんする。"
+      }
+    ]
+  }
+}

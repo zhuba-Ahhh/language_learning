@@ -1,0 +1,149 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:見積もり",
+    "ja:工数の見積もりを出す。",
+    "ja:はじめまして。ソフトウェアエンジニアの○○と申します。",
+    "ja:大学ではコンピューターサイエンスを専攻していました。",
+    "ja:Web開発が得意で、Reactをよく使っています。",
+    "ja:前のプロジェクトでは、パフォーマンス改善を担当しました。",
+    "ja:日本語は今勉強中で、毎日練習しています。",
+    "ja:どうぞよろしくお願いいたします。",
+    "ja:おはようございます。今日もよろしくお願いします。",
+    "ja:この件について、確認してもよろしいですか。"
+  ],
+  "spoken_texts": {
+    "ja:見積もり": "みつもり",
+    "ja:工数の見積もりを出す。": "こうすうのみつもりをだす。",
+    "ja:はじめまして。ソフトウェアエンジニアの○○と申します。": "はじめまして。ソフトウェアエンジニアのまるまるともうします。",
+    "ja:大学ではコンピューターサイエンスを専攻していました。": "だいがくではコンピューターサイエンスをせんこうしていました。",
+    "ja:Web開発が得意で、Reactをよく使っています。": "ウェブかいはつがとくいで、リアクトをよくつかっています。",
+    "ja:前のプロジェクトでは、パフォーマンス改善を担当しました。": "まえのプロジェクトでは、パフォーマンスかいぜんをたんとうしました。",
+    "ja:日本語は今勉強中で、毎日練習しています。": "にほんごはいまべんきょうちゅうで、まいにちれんしゅうしています。",
+    "ja:どうぞよろしくお願いいたします。": "どうぞよろしくおねがいいたします。",
+    "ja:おはようございます。今日もよろしくお願いします。": "おはようございます。きょうもよろしくおねがいします。",
+    "ja:この件について、確認してもよろしいですか。": "このけんについて、かくにんしてもよろしいですか。"
+  },
+  "spoken_ruby": {
+    "ja:見積もり": "見積[みつ]もり",
+    "ja:工数の見積もりを出す。": "工数[こうすう]の見積[みつ]もりを出[だ]す。",
+    "ja:はじめまして。ソフトウェアエンジニアの○○と申します。": "はじめまして。ソフトウェアエンジニアの○○[まるまる]と申[もう]します。",
+    "ja:大学ではコンピューターサイエンスを専攻していました。": "大学[だいがく]ではコンピューターサイエンスを専攻[せんこう]していました。",
+    "ja:Web開発が得意で、Reactをよく使っています。": "Web[ウェブ]開発[かいはつ]が得意[とくい]で、React[リアクト]をよく使[つか]っています。",
+    "ja:前のプロジェクトでは、パフォーマンス改善を担当しました。": "前[まえ]のプロジェクトでは、パフォーマンス改善[かいぜん]を担当[たんとう]しました。",
+    "ja:日本語は今勉強中で、毎日練習しています。": "日本語[にほんご]は今[いま]勉強中[べんきょうちゅう]で、毎日[まいにち]練習[れんしゅう]しています。",
+    "ja:どうぞよろしくお願いいたします。": "どうぞよろしくお願[ねが]いいたします。",
+    "ja:おはようございます。今日もよろしくお願いします。": "おはようございます。今日[きょう]もよろしくお願[ねが]いします。",
+    "ja:この件について、確認してもよろしいですか。": "この件[けん]について、確認[かくにん]してもよろしいですか。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75bab68694fc9cedd37ae",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/75a3c538-e20e-47d7-b23d-558d4df53adf.mp3",
+        "duration": 0.965,
+        "index": 0,
+        "item_id": "linguadesk-ja-huohre",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"みつもり\\n\"},{\"text\":\"みつもり\\n\",\"words\":[{\"word\":\"み\",\"startTime\":0.845,\"endTime\":0.875,\"confidence\":0.17461747},{\"word\":\"つ\",\"startTime\":0.875,\"endTime\":0.905,\"confidence\":0.20431867},{\"word\":\"も\",\"startTime\":0.905,\"endTime\":0.935,\"confidence\":0.19833621},{\"word\":\"り\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.25111184}]}]",
+        "text": "みつもり"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/5c9521e4-50e8-4308-9bac-c4e33dd3423e.mp3",
+        "duration": 1.855,
+        "index": 1,
+        "item_id": "linguadesk-ja-1gg1xj2",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"こうすうのみつもりをだす。\"},{\"text\":\"こうすうのみつもりをだす。\",\"words\":[{\"word\":\"こ\",\"endTime\":0.045,\"confidence\":0.49440157},{\"word\":\"う\",\"startTime\":1.395,\"endTime\":1.425,\"confidence\":0.11307614},{\"word\":\"す\",\"startTime\":1.425,\"endTime\":1.455,\"confidence\":0.15893734},{\"word\":\"う\",\"startTime\":1.455,\"endTime\":1.485,\"confidence\":0.1840659},{\"word\":\"の\",\"startTime\":1.485,\"endTime\":1.515,\"confidence\":0.1728816},{\"word\":\"み\",\"startTime\":1.515,\"endTime\":1.545,\"confidence\":0.18904647},{\"word\":\"つ\",\"startTime\":1.545,\"endTime\":1.575,\"confidence\":0.1747825},{\"word\":\"も\",\"startTime\":1.575,\"endTime\":1.605,\"confidence\":0.22574247},{\"word\":\"り\",\"startTime\":1.705,\"endTime\":1.735,\"confidence\":0.2324318},{\"word\":\"を\",\"startTime\":1.735,\"endTime\":1.765,\"confidence\":0.26217005},{\"word\":\"だ\",\"startTime\":1.765,\"endTime\":1.795,\"confidence\":0.26478636},{\"word\":\"す。\",\"startTime\":1.825,\"endTime\":1.855,\"confidence\":0.23483244}]}]",
+        "text": "こうすうのみつもりをだす。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/cef1c7c6-adf1-4546-aad1-583da378ac40.mp3",
+        "duration": 4.625042,
+        "index": 2,
+        "item_id": "linguadesk-ja-a388bn",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"はじめまして。ソフトウェアエンジニアのまるまるともうします。\"},{\"text\":\"はじめまして。\",\"words\":[{\"word\":\"は\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.21424992},{\"word\":\"じ\",\"startTime\":0.965,\"endTime\":0.995,\"confidence\":0.20890562},{\"word\":\"め\",\"startTime\":0.995,\"endTime\":1.025,\"confidence\":0.22210869},{\"word\":\"ま\",\"startTime\":1.025,\"endTime\":1.055,\"confidence\":0.21740928},{\"word\":\"し\",\"startTime\":1.055,\"endTime\":1.085,\"confidence\":0.27819532},{\"word\":\"て。\",\"startTime\":2.295,\"endTime\":2.325,\"confidence\":0.3038966}]},{\"text\":\"ソフトウェアエンジニアのまるまるともうします。\",\"words\":[{\"word\":\"ソ\",\"startTime\":2.3300416,\"endTime\":2.3750417,\"confidence\":0.52959645},{\"word\":\"フ\",\"startTime\":2.3750417,\"endTime\":2.4050417,\"confidence\":0.26577565},{\"word\":\"ト\",\"startTime\":2.4050417,\"endTime\":2.4350417,\"confidence\":0.2668035},{\"word\":\"ウ\",\"startTime\":2.4350417,\"endTime\":2.4650416,\"confidence\":0.221111},{\"word\":\"ェ\",\"startTime\":2.4650416,\"endTime\":2.4950416,\"confidence\":0.24062282},{\"word\":\"ア\",\"startTime\":2.8250418,\"endTime\":2.8550415,\"confidence\":0.16484763},{\"word\":\"エ\",\"startTime\":2.8550415,\"endTime\":2.8850417,\"confidence\":0.19118753},{\"word\":\"ン\",\"startTime\":2.8850417,\"endTime\":2.9150417,\"confidence\":0.17237411},{\"word\":\"ジ\",\"startTime\":2.9150417,\"endTime\":2.9450417,\"confidence\":0.2272717},{\"word\":\"ニ\",\"startTime\":2.9450417,\"endTime\":2.9750416,\"confidence\":0.2426726},{\"word\":\"ア\",\"startTime\":2.9750416,\"endTime\":3.0050416,\"confidence\":0.21201032},{\"word\":\"の\",\"startTime\":3.1050415,\"endTime\":3.1350417,\"confidence\":0.25432786},{\"word\":\"ま\",\"startTime\":3.4150417,\"endTime\":3.4450417,\"confidence\":0.24969263},{\"word\":\"る\",\"startTime\":3.4450417,\"endTime\":3.4750416,\"confidence\":0.26435292},{\"word\":\"ま\",\"startTime\":3.4750416,\"endTime\":3.5050416,\"confidence\":0.182832},{\"word\":\"る\",\"startTime\":3.5050416,\"endTime\":3.5350418,\"confidence\":0.17103228},{\"word\":\"と\",\"startTime\":3.5350418,\"endTime\":3.5650415,\"confidence\":0.1721248},{\"word\":\"も\",\"startTime\":3.5650415,\"endTime\":3.5950418,\"confidence\":0.24943955},{\"word\":\"う\",\"startTime\":3.5950418,\"endTime\":3.6250415,\"confidence\":0.22813025},{\"word\":\"し\",\"startTime\":3.6250415,\"endTime\":3.6550417,\"confidence\":0.19654739},{\"word\":\"ま\",\"startTime\":3.7050416,\"endTime\":3.7350416,\"confidence\":0.24646963},{\"word\":\"す。\",\"startTime\":4.5950418,\"endTime\":4.625042,\"confidence\":0.40698275}]}]",
+        "text": "はじめまして。ソフトウェアエンジニアのまるまるともうします。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/496855f4-aeb1-48a5-a980-58549fb22e8e.mp3",
+        "duration": 4.195,
+        "index": 3,
+        "item_id": "linguadesk-ja-egvouc",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"だいがくではコンピューターサイエンスをせんこうしていました。\"},{\"text\":\"だいがくではコンピューターサイエンスをせんこうしていました。\",\"words\":[{\"word\":\"だ\",\"endTime\":0.045,\"confidence\":0.47854376},{\"word\":\"い\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.22219068},{\"word\":\"が\",\"startTime\":0.265,\"endTime\":0.295,\"confidence\":0.18857606},{\"word\":\"く\",\"startTime\":0.295,\"endTime\":0.325,\"confidence\":0.16130264},{\"word\":\"で\",\"startTime\":0.325,\"endTime\":0.355,\"confidence\":0.1492694},{\"word\":\"は\",\"startTime\":0.355,\"endTime\":0.385,\"confidence\":0.14205207},{\"word\":\"コ\",\"startTime\":0.385,\"endTime\":0.415,\"confidence\":0.19762735},{\"word\":\"ン\",\"startTime\":0.415,\"endTime\":0.445,\"confidence\":0.18151763},{\"word\":\"ピ\",\"startTime\":0.445,\"endTime\":0.475,\"confidence\":0.17073695},{\"word\":\"ュ\",\"startTime\":0.475,\"endTime\":0.505,\"confidence\":0.1335848},{\"word\":\"ー\",\"startTime\":0.505,\"endTime\":0.535,\"confidence\":0.119326554},{\"word\":\"タ\",\"startTime\":0.535,\"endTime\":0.565,\"confidence\":0.103832476},{\"word\":\"ー\",\"startTime\":0.565,\"endTime\":0.595,\"confidence\":0.115077026},{\"word\":\"サ\",\"startTime\":0.595,\"endTime\":0.625,\"confidence\":0.14309303},{\"word\":\"イ\",\"startTime\":0.625,\"endTime\":0.655,\"confidence\":0.11051255},{\"word\":\"エ\",\"startTime\":0.655,\"endTime\":0.685,\"confidence\":0.12455572},{\"word\":\"ン\",\"startTime\":0.685,\"endTime\":0.715,\"confidence\":0.17624702},{\"word\":\"ス\",\"startTime\":0.715,\"endTime\":0.745,\"confidence\":0.19666395},{\"word\":\"を\",\"startTime\":0.855,\"endTime\":0.885,\"confidence\":0.26632756},{\"word\":\"せ\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.31145158},{\"word\":\"ん\",\"startTime\":0.915,\"endTime\":0.945,\"confidence\":0.2895247},{\"word\":\"こ\",\"startTime\":0.945,\"endTime\":0.975,\"confidence\":0.27444744},{\"word\":\"う\",\"startTime\":0.975,\"endTime\":1.005,\"confidence\":0.27633795},{\"word\":\"し\",\"startTime\":1.035,\"endTime\":1.065,\"confidence\":0.47256443},{\"word\":\"て\",\"startTime\":1.095,\"endTime\":1.125,\"confidence\":0.44905743},{\"word\":\"い\",\"startTime\":2.045,\"endTime\":2.075,\"confidence\":0.21725935},{\"word\":\"ま\",\"startTime\":2.075,\"endTime\":2.105,\"confidence\":0.29410088},{\"word\":\"し\",\"startTime\":2.105,\"endTime\":2.135,\"confidence\":0.28155026},{\"word\":\"た。\",\"startTime\":4.165,\"endTime\":4.195,\"confidence\":0.4169379}]}]",
+        "text": "だいがくではコンピューターサイエンスをせんこうしていました。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/78500e86-0d00-4f8c-933f-48ccf74e601b.mp3",
+        "duration": 4.915,
+        "index": 4,
+        "item_id": "linguadesk-ja-sefshc",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ウェブかいはつがとくいで、リアクトをよくつかっています。\"},{\"text\":\"ウェブかいはつがとくいで、リアクトをよくつかっています。\",\"words\":[{\"word\":\"ウ\",\"endTime\":0.045,\"confidence\":0.44958842},{\"word\":\"ェ\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.21504319},{\"word\":\"ブ\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.1943283},{\"word\":\"か\",\"startTime\":0.105,\"endTime\":0.135,\"confidence\":0.17935668},{\"word\":\"い\",\"startTime\":0.135,\"endTime\":0.165,\"confidence\":0.19191287},{\"word\":\"は\",\"startTime\":0.165,\"endTime\":0.195,\"confidence\":0.1888273},{\"word\":\"つ\",\"startTime\":0.355,\"endTime\":0.385,\"confidence\":0.14975567},{\"word\":\"が\",\"startTime\":0.425,\"endTime\":0.455,\"confidence\":0.120032765},{\"word\":\"と\",\"startTime\":0.455,\"endTime\":0.485,\"confidence\":0.12598762},{\"word\":\"く\",\"startTime\":0.485,\"endTime\":0.515,\"confidence\":0.13284592},{\"word\":\"い\",\"startTime\":0.515,\"endTime\":0.545,\"confidence\":0.16796616},{\"word\":\"で、\",\"startTime\":0.545,\"endTime\":0.575,\"confidence\":0.13285552},{\"word\":\"リ\",\"startTime\":0.575,\"endTime\":0.605,\"confidence\":0.13071035},{\"word\":\"ア\",\"startTime\":0.605,\"endTime\":0.635,\"confidence\":0.12192512},{\"word\":\"ク\",\"startTime\":0.635,\"endTime\":0.665,\"confidence\":0.15675515},{\"word\":\"ト\",\"startTime\":0.665,\"endTime\":0.695,\"confidence\":0.18311086},{\"word\":\"を\",\"startTime\":0.695,\"endTime\":0.725,\"confidence\":0.16767973},{\"word\":\"よ\",\"startTime\":0.725,\"endTime\":0.755,\"confidence\":0.15273139},{\"word\":\"く\",\"startTime\":0.755,\"endTime\":0.785,\"confidence\":0.16440545},{\"word\":\"つ\",\"startTime\":0.785,\"endTime\":0.815,\"confidence\":0.20202874},{\"word\":\"か\",\"startTime\":1.535,\"endTime\":1.565,\"confidence\":0.1937789},{\"word\":\"っ\",\"startTime\":4.635,\"endTime\":4.665,\"confidence\":0.21787068},{\"word\":\"て\",\"startTime\":4.665,\"endTime\":4.695,\"confidence\":0.2813934},{\"word\":\"い\",\"startTime\":4.695,\"endTime\":4.725,\"confidence\":0.24734664},{\"word\":\"ま\",\"startTime\":4.725,\"endTime\":4.755,\"confidence\":0.2504576},{\"word\":\"す。\",\"startTime\":4.885,\"endTime\":4.915,\"confidence\":0.4296245}]}]",
+        "text": "ウェブかいはつがとくいで、リアクトをよくつかっています。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/767b101f-20f5-4a19-9e63-d87f2a038bca.mp3",
+        "duration": 4.6550417,
+        "index": 5,
+        "item_id": "linguadesk-ja-k0e21d",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"まえのプロジェクトでは、パフォーマンスかいぜんをたんとうしました。\"},{\"text\":\"まえのプロジェクトでは、\",\"words\":[{\"word\":\"ま\",\"startTime\":1.445,\"endTime\":1.475,\"confidence\":0.22576332},{\"word\":\"え\",\"startTime\":1.475,\"endTime\":1.505,\"confidence\":0.18329269},{\"word\":\"の\",\"startTime\":1.505,\"endTime\":1.535,\"confidence\":0.16728781},{\"word\":\"プ\",\"startTime\":1.535,\"endTime\":1.565,\"confidence\":0.17255102},{\"word\":\"ロ\",\"startTime\":1.565,\"endTime\":1.595,\"confidence\":0.23989019},{\"word\":\"ジ\",\"startTime\":1.595,\"endTime\":1.625,\"confidence\":0.26288894},{\"word\":\"ェ\",\"startTime\":1.625,\"endTime\":1.655,\"confidence\":0.25105652},{\"word\":\"ク\",\"startTime\":1.655,\"endTime\":1.685,\"confidence\":0.2840417},{\"word\":\"ト\",\"startTime\":1.715,\"endTime\":1.745,\"confidence\":0.43516505},{\"word\":\"で\",\"startTime\":1.775,\"endTime\":1.805,\"confidence\":0.37601298},{\"word\":\"は、\",\"startTime\":1.945,\"endTime\":1.975,\"confidence\":0.44356847}]},{\"text\":\"パフォーマンスかいぜんをたんとうしました。\",\"words\":[{\"word\":\"パ\",\"startTime\":1.9800416,\"endTime\":2.0250416,\"confidence\":0.48759344},{\"word\":\"フ\",\"startTime\":2.0250416,\"endTime\":2.0550416,\"confidence\":0.23940118},{\"word\":\"ォ\",\"startTime\":2.0550416,\"endTime\":2.0850415,\"confidence\":0.22835994},{\"word\":\"ー\",\"startTime\":2.0850415,\"endTime\":2.1150417,\"confidence\":0.20611142},{\"word\":\"マ\",\"startTime\":2.1150417,\"endTime\":2.1450417,\"confidence\":0.2321257},{\"word\":\"ン\",\"startTime\":2.1450417,\"endTime\":2.1750417,\"confidence\":0.23236309},{\"word\":\"ス\",\"startTime\":2.3750417,\"endTime\":2.4050417,\"confidence\":0.21736719},{\"word\":\"か\",\"startTime\":2.4050417,\"endTime\":2.4350417,\"confidence\":0.230129},{\"word\":\"い\",\"startTime\":2.4350417,\"endTime\":2.4650416,\"confidence\":0.21708506},{\"word\":\"ぜ\",\"startTime\":2.4650416,\"endTime\":2.4950416,\"confidence\":0.18388897},{\"word\":\"ん\",\"startTime\":2.4950416,\"endTime\":2.5250416,\"confidence\":0.20932},{\"word\":\"を\",\"startTime\":3.3550415,\"endTime\":3.3850417,\"confidence\":0.24113011},{\"word\":\"た\",\"startTime\":3.4850416,\"endTime\":3.5150416,\"confidence\":0.14184551},{\"word\":\"ん\",\"startTime\":3.5150416,\"endTime\":3.5450416,\"confidence\":0.19521596},{\"word\":\"と\",\"startTime\":3.5450416,\"endTime\":3.5750418,\"confidence\":0.18551894},{\"word\":\"う\",\"startTime\":3.5750418,\"endTime\":3.6050415,\"confidence\":0.17477086},{\"word\":\"し\",\"startTime\":3.6050415,\"endTime\":3.6350417,\"confidence\":0.20358494},{\"word\":\"ま\",\"startTime\":4.5650415,\"endTime\":4.5950418,\"confidence\":0.25917977},{\"word\":\"し\",\"startTime\":4.5950418,\"endTime\":4.6250415,\"confidence\":0.16695455},{\"word\":\"た。\",\"startTime\":4.6250415,\"endTime\":4.6550417,\"confidence\":0.32101864}]}]",
+        "text": "まえのプロジェクトでは、パフォーマンスかいぜんをたんとうしました。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/41e26d88-f24a-4475-a9b6-fce6908d247f.mp3",
+        "duration": 6.2750416,
+        "index": 6,
+        "item_id": "linguadesk-ja-ig9wha",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"にほんごはいまべんきょうちゅうで、まいにちれんしゅうしています。\"},{\"text\":\"にほんごはいまべんきょうちゅうで、\",\"words\":[{\"word\":\"に\",\"endTime\":0.045,\"confidence\":0.49524754},{\"word\":\"ほ\",\"startTime\":0.255,\"endTime\":0.285,\"confidence\":0.1556284},{\"word\":\"ん\",\"startTime\":0.285,\"endTime\":0.315,\"confidence\":0.23408853},{\"word\":\"ご\",\"startTime\":0.315,\"endTime\":0.345,\"confidence\":0.23393048},{\"word\":\"は\",\"startTime\":0.345,\"endTime\":0.375,\"confidence\":0.18910246},{\"word\":\"い\",\"startTime\":0.375,\"endTime\":0.405,\"confidence\":0.16451351},{\"word\":\"ま\",\"startTime\":0.955,\"endTime\":0.985,\"confidence\":0.24516854},{\"word\":\"べ\",\"startTime\":0.985,\"endTime\":1.015,\"confidence\":0.29077682},{\"word\":\"ん\",\"startTime\":1.015,\"endTime\":1.045,\"confidence\":0.30310288},{\"word\":\"き\",\"startTime\":1.045,\"endTime\":1.075,\"confidence\":0.29083595},{\"word\":\"ょ\",\"startTime\":1.075,\"endTime\":1.105,\"confidence\":0.27891332},{\"word\":\"う\",\"startTime\":1.105,\"endTime\":1.135,\"confidence\":0.3010071},{\"word\":\"ち\",\"startTime\":1.135,\"endTime\":1.165,\"confidence\":0.27651227},{\"word\":\"ゅ\",\"startTime\":1.165,\"endTime\":1.195,\"confidence\":0.27327543},{\"word\":\"う\",\"startTime\":1.195,\"endTime\":1.225,\"confidence\":0.3452345},{\"word\":\"で、\",\"startTime\":5.445,\"endTime\":5.475,\"confidence\":0.28305954}]},{\"text\":\"まいにちれんしゅうしています。\",\"words\":[{\"word\":\"ま\",\"startTime\":5.4800415,\"endTime\":5.5250416,\"confidence\":0.5729392},{\"word\":\"い\",\"startTime\":5.5250416,\"endTime\":5.5550413,\"confidence\":0.25633243},{\"word\":\"に\",\"startTime\":5.5550413,\"endTime\":5.5850415,\"confidence\":0.2742371},{\"word\":\"ち\",\"startTime\":5.5850415,\"endTime\":5.6150417,\"confidence\":0.2770149},{\"word\":\"れ\",\"startTime\":5.6150417,\"endTime\":5.6450415,\"confidence\":0.25254005},{\"word\":\"ん\",\"startTime\":5.6450415,\"endTime\":5.6750417,\"confidence\":0.22278436},{\"word\":\"し\",\"startTime\":6.0350413,\"endTime\":6.0650415,\"confidence\":0.27930915},{\"word\":\"ゅ\",\"startTime\":6.0650415,\"endTime\":6.0950413,\"confidence\":0.29589644},{\"word\":\"う\",\"startTime\":6.0950413,\"endTime\":6.1250415,\"confidence\":0.27472943},{\"word\":\"し\",\"startTime\":6.1250415,\"endTime\":6.1550417,\"confidence\":0.24137983},{\"word\":\"て\",\"startTime\":6.1550417,\"endTime\":6.1850414,\"confidence\":0.26215583},{\"word\":\"い\",\"startTime\":6.1850414,\"endTime\":6.2150416,\"confidence\":0.3120354},{\"word\":\"ま\",\"startTime\":6.2150416,\"endTime\":6.2450414,\"confidence\":0.3628598},{\"word\":\"す。\",\"startTime\":6.2450414,\"endTime\":6.2750416,\"confidence\":0.3470767}]}]",
+        "text": "にほんごはいまべんきょうちゅうで、まいにちれんしゅうしています。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/900c1302-1e77-4f4e-b687-8c9eaa4bf520.mp3",
+        "duration": 2.715,
+        "index": 7,
+        "item_id": "linguadesk-ja-1y9zklf",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"どうぞよろしくおねがいいたします。\"},{\"text\":\"どうぞよろしくおねがいいたします。\",\"words\":[{\"word\":\"ど\",\"endTime\":0.045,\"confidence\":0.49760434},{\"word\":\"う\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.24879302},{\"word\":\"ぞ\",\"startTime\":0.595,\"endTime\":0.625,\"confidence\":0.14757763},{\"word\":\"よ\",\"startTime\":0.625,\"endTime\":0.655,\"confidence\":0.13770252},{\"word\":\"ろ\",\"startTime\":0.655,\"endTime\":0.685,\"confidence\":0.14930421},{\"word\":\"し\",\"startTime\":0.685,\"endTime\":0.715,\"confidence\":0.15839314},{\"word\":\"く\",\"startTime\":0.715,\"endTime\":0.745,\"confidence\":0.18247198},{\"word\":\"お\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.17778486},{\"word\":\"ね\",\"startTime\":0.775,\"endTime\":0.805,\"confidence\":0.19238535},{\"word\":\"が\",\"startTime\":1.055,\"endTime\":1.085,\"confidence\":0.23925169},{\"word\":\"い\",\"startTime\":1.655,\"endTime\":1.685,\"confidence\":0.1939184},{\"word\":\"い\",\"startTime\":2.275,\"endTime\":2.305,\"confidence\":0.18421167},{\"word\":\"た\",\"startTime\":2.305,\"endTime\":2.335,\"confidence\":0.25120455},{\"word\":\"し\",\"startTime\":2.335,\"endTime\":2.365,\"confidence\":0.20486389},{\"word\":\"ま\",\"startTime\":2.365,\"endTime\":2.395,\"confidence\":0.18697223},{\"word\":\"す。\",\"startTime\":2.685,\"endTime\":2.715,\"confidence\":0.42401594}]}]",
+        "text": "どうぞよろしくおねがいいたします。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/2578ee08-182c-4eeb-8e01-54b7592903f8.mp3",
+        "duration": 3.6350417,
+        "index": 8,
+        "item_id": "linguadesk-ja-to6oju",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"おはようございます。きょうもよろしくおねがいします。\"},{\"text\":\"おはようございます。\",\"words\":[{\"word\":\"お\",\"startTime\":0.315,\"endTime\":0.345,\"confidence\":0.21796915},{\"word\":\"は\",\"startTime\":0.345,\"endTime\":0.375,\"confidence\":0.1935656},{\"word\":\"よ\",\"startTime\":0.375,\"endTime\":0.405,\"confidence\":0.20688303},{\"word\":\"う\",\"startTime\":0.405,\"endTime\":0.435,\"confidence\":0.19531934},{\"word\":\"ご\",\"startTime\":0.435,\"endTime\":0.465,\"confidence\":0.1507183},{\"word\":\"ざ\",\"startTime\":0.465,\"endTime\":0.495,\"confidence\":0.15954442},{\"word\":\"い\",\"startTime\":0.495,\"endTime\":0.525,\"confidence\":0.13922821},{\"word\":\"ま\",\"startTime\":0.865,\"endTime\":0.895,\"confidence\":0.26758686},{\"word\":\"す。\",\"startTime\":2.425,\"endTime\":2.455,\"confidence\":0.31089061}]},{\"text\":\"きょうもよろしくおねがいします。\",\"words\":[{\"word\":\"き\",\"startTime\":2.4600418,\"endTime\":2.5050418,\"confidence\":0.4997768},{\"word\":\"ょ\",\"startTime\":2.5050418,\"endTime\":2.5350418,\"confidence\":0.18150795},{\"word\":\"う\",\"startTime\":2.5350418,\"endTime\":2.5650418,\"confidence\":0.12458628},{\"word\":\"も\",\"startTime\":2.5650418,\"endTime\":2.5950418,\"confidence\":0.10028026},{\"word\":\"よ\",\"startTime\":2.5950418,\"endTime\":2.6250417,\"confidence\":0.13124874},{\"word\":\"ろ\",\"startTime\":2.6250417,\"endTime\":2.6550417,\"confidence\":0.105267614},{\"word\":\"し\",\"startTime\":2.6550417,\"endTime\":2.6850417,\"confidence\":0.108849145},{\"word\":\"く\",\"startTime\":3.1750417,\"endTime\":3.205042,\"confidence\":0.18150903},{\"word\":\"お\",\"startTime\":3.205042,\"endTime\":3.2350416,\"confidence\":0.22834381},{\"word\":\"ね\",\"startTime\":3.2350416,\"endTime\":3.2650418,\"confidence\":0.19996677},{\"word\":\"が\",\"startTime\":3.2650418,\"endTime\":3.2950418,\"confidence\":0.19374663},{\"word\":\"い\",\"startTime\":3.2950418,\"endTime\":3.3250418,\"confidence\":0.23876512},{\"word\":\"し\",\"startTime\":3.3250418,\"endTime\":3.3550417,\"confidence\":0.29592243},{\"word\":\"ま\",\"startTime\":3.3550417,\"endTime\":3.3850417,\"confidence\":0.29234317},{\"word\":\"す。\",\"startTime\":3.6050417,\"endTime\":3.6350417,\"confidence\":0.36275908}]}]",
+        "text": "おはようございます。きょうもよろしくおねがいします。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/aca5edf6-2bce-4001-bb85-8eb07ca24e40.mp3",
+        "duration": 4.595,
+        "index": 9,
+        "item_id": "linguadesk-ja-6xtxv4",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"このけんについて、かくにんしてもよろしいですか。\"},{\"text\":\"このけんについて、かくにんしてもよろしいですか。\",\"words\":[{\"word\":\"こ\",\"endTime\":0.045,\"confidence\":0.47188362},{\"word\":\"の\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.21964306},{\"word\":\"け\",\"startTime\":0.075,\"endTime\":0.105,\"confidence\":0.20485683},{\"word\":\"ん\",\"startTime\":0.105,\"endTime\":0.135,\"confidence\":0.18790199},{\"word\":\"に\",\"startTime\":0.135,\"endTime\":0.165,\"confidence\":0.19221373},{\"word\":\"つ\",\"startTime\":0.265,\"endTime\":0.295,\"confidence\":0.16474822},{\"word\":\"い\",\"startTime\":0.295,\"endTime\":0.325,\"confidence\":0.15082766},{\"word\":\"て、\",\"startTime\":0.325,\"endTime\":0.355,\"confidence\":0.18740514},{\"word\":\"か\",\"startTime\":0.355,\"endTime\":0.385,\"confidence\":0.16266538},{\"word\":\"く\",\"startTime\":0.385,\"endTime\":0.415,\"confidence\":0.14034203},{\"word\":\"に\",\"startTime\":0.415,\"endTime\":0.445,\"confidence\":0.15031601},{\"word\":\"ん\",\"startTime\":0.445,\"endTime\":0.475,\"confidence\":0.1693316},{\"word\":\"し\",\"startTime\":0.775,\"endTime\":0.805,\"confidence\":0.14463386},{\"word\":\"て\",\"startTime\":0.805,\"endTime\":0.835,\"confidence\":0.1741048},{\"word\":\"も\",\"startTime\":1.045,\"endTime\":1.075,\"confidence\":0.21570827},{\"word\":\"よ\",\"startTime\":1.325,\"endTime\":1.355,\"confidence\":0.26952407},{\"word\":\"ろ\",\"startTime\":1.385,\"endTime\":1.415,\"confidence\":0.27133626},{\"word\":\"し\",\"startTime\":4.165,\"endTime\":4.195,\"confidence\":0.26132458},{\"word\":\"い\",\"startTime\":4.265,\"endTime\":4.295,\"confidence\":0.30797923},{\"word\":\"で\",\"startTime\":4.325,\"endTime\":4.355,\"confidence\":0.37971082},{\"word\":\"す\",\"startTime\":4.385,\"endTime\":4.415,\"confidence\":0.34899095},{\"word\":\"か。\",\"startTime\":4.565,\"endTime\":4.595,\"confidence\":0.3736338}]}]",
+        "text": "このけんについて、かくにんしてもよろしいですか。"
+      }
+    ]
+  }
+}

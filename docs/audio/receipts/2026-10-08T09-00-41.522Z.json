@@ -1,0 +1,84 @@
+{
+  "speaker": "S_olwRWVfN1",
+  "keys": [
+    "ja:近い",
+    "ja:駅に近い部屋です。",
+    "ja:見ます",
+    "ja:土曜日に部屋を見ます。",
+    "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。"
+  ],
+  "spoken_texts": {
+    "ja:近い": "ちかい",
+    "ja:駅に近い部屋です。": "えきにちかいへやです。",
+    "ja:見ます": "みます",
+    "ja:土曜日に部屋を見ます。": "どようびにへやをみます。",
+    "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。": "やちんはいくらですか。どようびにへやをみたいです。よろしくおねがいします。"
+  },
+  "spoken_ruby": {
+    "ja:近い": "近[ちか]い",
+    "ja:駅に近い部屋です。": "駅[えき]に近[ちか]い部屋[へや]です。",
+    "ja:見ます": "見[み]ます",
+    "ja:土曜日に部屋を見ます。": "土曜日[どようび]に部屋[へや]を見[み]ます。",
+    "ja:家賃はいくらですか。土曜日に部屋を見たいです。よろしくお願いします。": "家賃[やちん]はいくらですか。土曜日[どようび]に部屋[へや]を見[み]たいです。よろしくお願[ねが]いします。"
+  },
+  "status": "received",
+  "result": {
+    "audio_task_id": "6ac75bb968694fc9cedd37f0",
+    "base_resp": {
+      "status_code": 0,
+      "status_message": ""
+    },
+    "items": [
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/090d1bc7-70cb-439f-9ee3-862ad8f6215e.mp3",
+        "duration": 1.395,
+        "index": 0,
+        "item_id": "linguadesk-ja-oq6r",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"ちかい\\n\"},{\"text\":\"ちかい\\n\",\"words\":[{\"word\":\"ち\",\"endTime\":0.045,\"confidence\":0.46523818},{\"word\":\"か\",\"startTime\":0.045,\"endTime\":0.075,\"confidence\":0.20844273},{\"word\":\"い\",\"startTime\":1.365,\"endTime\":1.395,\"confidence\":0.36706167}]}]",
+        "text": "ちかい"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/bef2f0b1-aed6-4e3f-b872-ccb0504cfb22.mp3",
+        "duration": 1.635,
+        "index": 1,
+        "item_id": "linguadesk-ja-1uakwvo",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"えきにちかいへやです。\"},{\"text\":\"えきにちかいへやです。\",\"words\":[{\"word\":\"え\",\"endTime\":0.045,\"confidence\":0.47357762},{\"word\":\"き\",\"startTime\":0.935,\"endTime\":0.965,\"confidence\":0.23046023},{\"word\":\"に\",\"startTime\":1.165,\"endTime\":1.195,\"confidence\":0.2701634},{\"word\":\"ち\",\"startTime\":1.225,\"endTime\":1.255,\"confidence\":0.35120508},{\"word\":\"か\",\"startTime\":1.285,\"endTime\":1.315,\"confidence\":0.41347107},{\"word\":\"い\",\"startTime\":1.415,\"endTime\":1.445,\"confidence\":0.28241974},{\"word\":\"へ\",\"startTime\":1.515,\"endTime\":1.545,\"confidence\":0.21595794},{\"word\":\"や\",\"startTime\":1.545,\"endTime\":1.575,\"confidence\":0.24461535},{\"word\":\"で\",\"startTime\":1.575,\"endTime\":1.605,\"confidence\":0.26652157},{\"word\":\"す。\",\"startTime\":1.605,\"endTime\":1.635,\"confidence\":0.27184477}]}]",
+        "text": "えきにちかいへやです。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/87660ae1-5008-48ab-b040-56d5715b9d00.mp3",
+        "duration": 0.985,
+        "index": 2,
+        "item_id": "linguadesk-ja-kdrvq",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"みます\\n\"},{\"text\":\"みます\\n\",\"words\":[{\"word\":\"み\",\"endTime\":0.045,\"confidence\":0.5397102},{\"word\":\"ま\",\"startTime\":0.885,\"endTime\":0.915,\"confidence\":0.42407447},{\"word\":\"す\",\"startTime\":0.955,\"endTime\":0.985,\"confidence\":0.44423193}]}]",
+        "text": "みます"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/1b9a2922-d9af-4f2a-a9f6-97035742a1b4.mp3",
+        "duration": 2.095,
+        "index": 3,
+        "item_id": "linguadesk-ja-56kkg8",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"どようびにへやをみます。\"},{\"text\":\"どようびにへやをみます。\",\"words\":[{\"word\":\"ど\",\"startTime\":0.745,\"endTime\":0.775,\"confidence\":0.22690938},{\"word\":\"よ\",\"startTime\":0.775,\"endTime\":0.805,\"confidence\":0.26017788},{\"word\":\"う\",\"startTime\":0.805,\"endTime\":0.835,\"confidence\":0.25750196},{\"word\":\"び\",\"startTime\":1.855,\"endTime\":1.885,\"confidence\":0.21271664},{\"word\":\"に\",\"startTime\":1.885,\"endTime\":1.915,\"confidence\":0.27301005},{\"word\":\"へ\",\"startTime\":1.915,\"endTime\":1.945,\"confidence\":0.25045928},{\"word\":\"や\",\"startTime\":1.945,\"endTime\":1.975,\"confidence\":0.17950466},{\"word\":\"を\",\"startTime\":1.975,\"endTime\":2.005,\"confidence\":0.16365722},{\"word\":\"み\",\"startTime\":2.005,\"endTime\":2.035,\"confidence\":0.19727172},{\"word\":\"ま\",\"startTime\":2.035,\"endTime\":2.065,\"confidence\":0.22330654},{\"word\":\"す。\",\"startTime\":2.065,\"endTime\":2.095,\"confidence\":0.29206014}]}]",
+        "text": "どようびにへやをみます。"
+      },
+      {
+        "audio_url": "https://sf1-cdn-tos.huoshanstatic.com/obj/venus/tts/030f346b-61d5-4f8c-827d-6780592594d6.mp3",
+        "duration": 7.0600834,
+        "index": 4,
+        "item_id": "linguadesk-ja-1dh9c8y",
+        "status_code": 0,
+        "status_text": "OK",
+        "subtitle_json": "[{\"text\":\"やちんはいくらですか。どようびにへやをみたいです。よろしくおねがいします。\"},{\"text\":\"やちんはいくらですか。\",\"words\":[{\"word\":\"や\",\"endTime\":0.045,\"confidence\":0.4639446},{\"word\":\"ち\",\"startTime\":2.165,\"endTime\":2.195,\"confidence\":0.36852288},{\"word\":\"ん\",\"startTime\":3.325,\"endTime\":3.355,\"confidence\":0.2111528},{\"word\":\"は\",\"startTime\":3.355,\"endTime\":3.385,\"confidence\":0.24609958},{\"word\":\"い\",\"startTime\":3.385,\"endTime\":3.415,\"confidence\":0.24052455},{\"word\":\"く\",\"startTime\":3.415,\"endTime\":3.445,\"confidence\":0.23223884},{\"word\":\"ら\",\"startTime\":3.445,\"endTime\":3.475,\"confidence\":0.22142172},{\"word\":\"で\",\"startTime\":3.475,\"endTime\":3.505,\"confidence\":0.2209014},{\"word\":\"す\",\"startTime\":3.505,\"endTime\":3.535,\"confidence\":0.24064103},{\"word\":\"か。\",\"startTime\":3.535,\"endTime\":3.565,\"confidence\":0.2723243}]},{\"text\":\"どようびにへやをみたいです。\",\"words\":[{\"word\":\"ど\",\"startTime\":3.7200418,\"endTime\":3.7650418,\"confidence\":0.46949032},{\"word\":\"よ\",\"startTime\":3.7650418,\"endTime\":3.7950418,\"confidence\":0.21685681},{\"word\":\"う\",\"startTime\":3.7950418,\"endTime\":3.8250418,\"confidence\":0.20077032},{\"word\":\"び\",\"startTime\":3.8250418,\"endTime\":3.8550417,\"confidence\":0.17915487},{\"word\":\"に\",\"startTime\":3.8550417,\"endTime\":3.8850417,\"confidence\":0.20044948},{\"word\":\"へ\",\"startTime\":3.8850417,\"endTime\":3.9150417,\"confidence\":0.20686962},{\"word\":\"や\",\"startTime\":3.9150417,\"endTime\":3.9450417,\"confidence\":0.18538},{\"word\":\"を\",\"startTime\":6.575042,\"endTime\":6.6050415,\"confidence\":0.13276564},{\"word\":\"み\",\"startTime\":6.6050415,\"endTime\":6.6350417,\"confidence\":0.14332211},{\"word\":\"た\",\"startTime\":6.6350417,\"endTime\":6.665042,\"confidence\":0.133447},{\"word\":\"い\",\"startTime\":6.665042,\"endTime\":6.6950417,\"confidence\":0.13806002},{\"word\":\"で\",\"startTime\":6.6950417,\"endTime\":6.725042,\"confidence\":0.17385617},{\"word\":\"す。\",\"startTime\":6.725042,\"endTime\":6.755042,\"confidence\":0.28365162}]},{\"text\":\"よろしくおねがいします。\",\"words\":[{\"word\":\"よ\",\"startTime\":6.760083,\"endTime\":6.787356},{\"word\":\"ろ\",\"startTime\":6.787356,\"endTime\":6.8146286},{\"word\":\"し\",\"startTime\":6.8146286,\"endTime\":6.8419013},{\"word\":\"く\",\"startTime\":6.8419013,\"endTime\":6.869174},{\"word\":\"お\",\"startTime\":6.869174,\"endTime\":6.8964467},{\"word\":\"ね\",\"startTime\":6.8964467,\"endTime\":6.9237194},{\"word\":\"が\",\"startTime\":6.9237194,\"endTime\":6.950992},{\"word\":\"い\",\"startTime\":6.950992,\"endTime\":6.978265},{\"word\":\"し\",\"startTime\":6.978265,\"endTime\":7.005538},{\"word\":\"ま\",\"startTime\":7.005538,\"endTime\":7.0328107},{\"word\":\"す。\",\"startTime\":7.0328107,\"endTime\":7.0600834}]}]",
+        "text": "やちんはいくらですか。どようびにへやをみたいです。よろしくおねがいします。"
+      }
+    ]
+  }
+}
